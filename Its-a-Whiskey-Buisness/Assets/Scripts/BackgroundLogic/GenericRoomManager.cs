@@ -39,7 +39,7 @@ public class GenericRoomManager : MonoBehaviour
         {
             Debug.Log("Running...\n");
             //Store the angle the lever was at after exit
-            lever.transform.localPosition = these_objects.gameObjects[0].transform.position;
+            lever.transform.position = these_objects.gameObjects[0].transform.position;
             lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
 
             //--------------------------
