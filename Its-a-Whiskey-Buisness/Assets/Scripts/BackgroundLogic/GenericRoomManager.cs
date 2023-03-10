@@ -34,6 +34,7 @@ public class GenericRoomManager : MonoBehaviour
             firstPlay = false;
             //new_slide_state.StateProperty = false;
             this_room.SetupState();
+            //these_objects.gameObjects[0].transform.rotation = lever.transform.rotation;
         }
         else
         {

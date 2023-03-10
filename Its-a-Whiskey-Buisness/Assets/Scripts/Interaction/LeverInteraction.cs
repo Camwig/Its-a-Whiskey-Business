@@ -27,11 +27,19 @@ public class LeverInteraction : MonoBehaviour
 
     public EventSytem onLeverActivate;
 
+    private void Awake()
+    {
+        selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
     private void Start()
     {
         //curr_point = Cardinal_points.E;
         //power = 0;
         //rotation = 0;
+
+        //selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+
         roatationSpeed = FrictionSpeed.LeverSpeed;
     }
 
