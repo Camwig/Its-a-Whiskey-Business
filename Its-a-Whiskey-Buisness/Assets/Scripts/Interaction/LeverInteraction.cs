@@ -18,6 +18,7 @@ public class LeverInteraction : MonoBehaviour
     //private int power;
     // private int rotation;
 
+    [SerializeField]
     public ObjectPositioing these_objects;
 
     public GameObject selectedObject;
@@ -101,7 +102,7 @@ public class LeverInteraction : MonoBehaviour
 
     private void OnDestroy()
     {
-        these_objects.gameObjects[0].transform.position = selectedObject.transform.position;
+        these_objects.gameObjects[0].transform.position = selectedObject.transform.localPosition;
         these_objects.gameObjects[0].transform.rotation = selectedObject.transform.rotation;
     }
 }

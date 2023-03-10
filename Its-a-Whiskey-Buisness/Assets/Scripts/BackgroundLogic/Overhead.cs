@@ -198,7 +198,7 @@ public class Overhead : MonoBehaviour
 
     //Replace later with clock function
     private float time_;
-    private float Overall_Energy;
+    private static float Overall_Energy;
     private string string_text;
 
     public Text textelement;
@@ -234,6 +234,12 @@ public class Overhead : MonoBehaviour
     //}
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        Overall_Energy = 0;
+    }
+
     void Start()
     {
         time_ = 0;
@@ -264,7 +270,7 @@ public class Overhead : MonoBehaviour
         //    energyTrack2.EnergyProperty = 0;
         //}
 
-        OriginEnergyTrack.EnergyProperty = Overall_Energy;
+        //OriginEnergyTrack.EnergyProperty = Overall_Energy;
 
         // Overall_Energy = PlayerPrefs.GetFloat("Overall_energy");
         //Overall_Energy += PlayerPrefs.GetFloat("Energy");
@@ -333,6 +339,10 @@ public class Overhead : MonoBehaviour
             Overall_Energy += additive;
             energyTrack.EnergyProperty += additive;
         }
+        else
+        {
+            additive = 0.0f;
+        }
 
         //if (energyTrack2.ActivatedProperty == true)
         //{
@@ -359,10 +369,10 @@ public class Overhead : MonoBehaviour
         }
     }
 
-    public void SetEnergy(float new_value)
-    {
-        Overall_Energy = new_value;
-    }
+    //public void SetEnergy(float new_value)
+    //{
+    //    Overall_Energy = new_value;
+    //}
 
 
     //public void AddEnergytototal(float new_energy)

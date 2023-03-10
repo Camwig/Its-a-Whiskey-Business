@@ -142,9 +142,12 @@ public class OverHeadManager : MonoBehaviour
 {
     //static private OverHeadManager Instance = null;
     public Overhead overhead_;
+    [SerializeField]
     public EnergyTracker energyTrack;
+    [SerializeField]
     public EnergyTracker energyTrack2;
 
+    [SerializeField]
     public SliderState slide_state;
     public bool now_state;
     //public EnergyTracker energyTrack3;
@@ -205,10 +208,10 @@ public class OverHeadManager : MonoBehaviour
 
         if (firstPlay == true)
         {
-            //Debug.Log("Starting...\n");
+            Debug.Log("Starting...\n");
             //PlayerPrefs.DeleteAll();
 
-            overhead_.SetEnergy(0);
+            //overhead_.SetEnergy(0);
             //PlayerPrefs.SetFloat("Overall_energy", 0);
             //PlayerPrefs.SetFloat("Energy", 0);
 
@@ -223,20 +226,22 @@ public class OverHeadManager : MonoBehaviour
        //     energyTrack3.ActivatedProperty = false;
 
             energyTrack_amount = 0.0f;
+            new_energyTrack_amount = 0.0f;
             energyTrack2_amount = 0.0f;
-            //     energyTrack3_amount = 0.0f;
+            //energyTrack3_amount = 0.0f;
 
             slide_state.StateProperty = false;
 
             firstPlay = false;
 
-            Screen.SetResolution(1920, 1080, true, 60);
+            //Screen.SetResolution(1920, 1080, true, 60);
         }
         else
         {
-            //Debug.Log("Running...\n");
+            Debug.Log("Running...\n");
 
             now_state = slide_state.StateProperty;
+            energyTrack2.EnergyProperty = energyTrack2_amount;
 
             if (!energyTrack.ActivatedProperty)
             {
@@ -246,8 +251,14 @@ public class OverHeadManager : MonoBehaviour
                     //Not doing anything
                     new_energyTrack_amount = energyTrack.EnergyProperty - energyTrack_amount;
                     energyTrack.EnergyProperty = new_energyTrack_amount;
+                    //new_energyTrack_amount = 0.0f;
                     //Debug.Log(energyTrack.EnergyProperty);
                 }
+            }
+            else
+            {
+                energyTrack_amount = 0.0f;
+                new_energyTrack_amount = 0.0f;
             }
 
             //if (!energyTrack2.ActivatedProperty)
@@ -274,6 +285,7 @@ public class OverHeadManager : MonoBehaviour
     private void OnDestroy()
     {
         energyTrack_amount = energyTrack.EnergyProperty;
+        energyTrack2_amount = energyTrack2.EnergyProperty;
         slide_state.StateProperty = now_state;
         //energyTrack2_amount = energyTrack2.EnergyProperty;
         //energyTrack3_amount = energyTrack3.EnergyProperty;

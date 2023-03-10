@@ -7,11 +7,6 @@ public class EnergyTracker : ScriptableObject
 {
     //propfull then double tap tab
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
     private float NewEnergy;
 
     public float EnergyProperty
