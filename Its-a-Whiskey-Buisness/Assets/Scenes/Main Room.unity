@@ -2790,10 +2790,12 @@ MonoBehaviour:
   overhead_: {fileID: 2025061072}
   energyTrack: {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
   energyTrack2: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
+  energyTrack3: {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
   slide_state: {fileID: 11400000, guid: 1109d850d81ecb046b01149c5454fa69, type: 2}
   now_state: 0
   new_energyTrack_amount: 0
   new_energyTrack2_amount: 0
+  new_energyTrack3_amount: 0
 --- !u!1 &1806202805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,6 +3235,10 @@ PrefabInstance:
       propertyPath: textelement
       value: 
       objectReference: {fileID: 1846016946}
+    - target: {fileID: 6223416667895183708, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
+      propertyPath: energyTrack2
+      value: 
+      objectReference: {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
     - target: {fileID: 6223416667895183708, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: OriginEnergyTrack
       value: 

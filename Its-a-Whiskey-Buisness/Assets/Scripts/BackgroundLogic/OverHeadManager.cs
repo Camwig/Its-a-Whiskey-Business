@@ -146,20 +146,27 @@ public class OverHeadManager : MonoBehaviour
     public EnergyTracker energyTrack;
     [SerializeField]
     public EnergyTracker energyTrack2;
+    //------------------------------------------
+    [SerializeField]
+    public EnergyTracker energyTrack3;
+    //------------------------------------------
 
     [SerializeField]
     public SliderState slide_state;
     public bool now_state;
-    //public EnergyTracker energyTrack3;
 
     public static float energyTrack_amount;
     public static float energyTrack2_amount;
-   // public static float energyTrack3_amount;
+    //------------------------------------------
+    public static float energyTrack3_amount;
+    //------------------------------------------
 
 
     public float new_energyTrack_amount;
     public float new_energyTrack2_amount;
-   // public float new_energyTrack3_amount;
+    //------------------------------------------
+    public float new_energyTrack3_amount;
+    //------------------------------------------
 
     private static bool firstPlay = true;
 
@@ -217,18 +224,29 @@ public class OverHeadManager : MonoBehaviour
 
             energyTrack.EnergyProperty = 0;
             energyTrack2.EnergyProperty = 0;
-         //   energyTrack3.EnergyProperty = 0;
+            //------------------------------------------
+            energyTrack3.EnergyProperty = 0;
+            //------------------------------------------
             energyTrack.IncreaseProperty = 1;
             energyTrack2.IncreaseProperty = 1;
-       //    energyTrack3.IncreaseProperty = 1;
+            //------------------------------------------
+            energyTrack3.IncreaseProperty = 1;
+            //------------------------------------------
             energyTrack.ActivatedProperty = false;
             energyTrack2.ActivatedProperty = false;
-       //     energyTrack3.ActivatedProperty = false;
+            //------------------------------------------
+            energyTrack3.ActivatedProperty = false;
+            //------------------------------------------
 
             energyTrack_amount = 0.0f;
             new_energyTrack_amount = 0.0f;
+            //------------------------------------------
+            new_energyTrack3_amount = 0.0f;
+            //------------------------------------------
             energyTrack2_amount = 0.0f;
-            //energyTrack3_amount = 0.0f;
+            //------------------------------------------
+            energyTrack3_amount = 0.0f;
+            //------------------------------------------
 
             slide_state.StateProperty = false;
 
@@ -261,6 +279,28 @@ public class OverHeadManager : MonoBehaviour
                 new_energyTrack_amount = 0.0f;
             }
 
+            //------------------------------------------
+
+            if (!energyTrack3.ActivatedProperty)
+            {
+                if (energyTrack3.EnergyProperty > energyTrack3_amount)
+                {
+                    //Debug.Log(energyTrack.EnergyProperty);
+                    //Not doing anything
+                    new_energyTrack3_amount = energyTrack3.EnergyProperty - energyTrack3_amount;
+                    energyTrack3.EnergyProperty = new_energyTrack3_amount;
+                    //new_energyTrack_amount = 0.0f;
+                    //Debug.Log(energyTrack.EnergyProperty);
+                }
+            }
+            else
+            {
+                energyTrack3_amount = 0.0f;
+                new_energyTrack3_amount = 0.0f;
+            }
+
+            //------------------------------------------
+
             //if (!energyTrack2.ActivatedProperty)
             //{
             //    if (energyTrack2.EnergyProperty > energyTrack2_amount)
@@ -287,6 +327,10 @@ public class OverHeadManager : MonoBehaviour
         energyTrack_amount = energyTrack.EnergyProperty;
         energyTrack2_amount = energyTrack2.EnergyProperty;
         slide_state.StateProperty = now_state;
+        //------------------------------------------
+        energyTrack3_amount = energyTrack3.EnergyProperty;
+        //------------------------------------------
+
         //energyTrack2_amount = energyTrack2.EnergyProperty;
         //energyTrack3_amount = energyTrack3.EnergyProperty;
     }

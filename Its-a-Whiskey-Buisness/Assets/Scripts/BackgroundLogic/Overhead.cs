@@ -216,6 +216,12 @@ public class Overhead : MonoBehaviour
 
     [SerializeField]
     private EnergyTracker energyTrack;
+
+    //------------------------------------------
+    [SerializeField]
+    private EnergyTracker energyTrack2;
+    //------------------------------------------
+
     [SerializeField]
     private EnergyTracker OriginEnergyTrack;
     //[SerializeField]
@@ -258,17 +264,21 @@ public class Overhead : MonoBehaviour
 
         Overall_Energy += energyTrack.EnergyProperty;
 
-       // Overall_Energy += energyTrack2.EnergyProperty;
+        //------------------------------------------
+        Overall_Energy += energyTrack2.EnergyProperty;
+        //------------------------------------------
 
         if (!energyTrack.ActivatedProperty)
         {
             energyTrack.EnergyProperty = 0;
         }
 
-        //if (!energyTrack2.ActivatedProperty)
-        //{
-        //    energyTrack2.EnergyProperty = 0;
-        //}
+        //------------------------------------------
+        if (!energyTrack2.ActivatedProperty)
+        {
+            energyTrack2.EnergyProperty = 0;
+        }
+        //------------------------------------------
 
         //OriginEnergyTrack.EnergyProperty = Overall_Energy;
 
@@ -343,6 +353,21 @@ public class Overhead : MonoBehaviour
         {
             additive = 0.0f;
         }
+
+        //------------------------------------------
+        if (energyTrack2.ActivatedProperty == true)
+        {
+            //Calculate the additive
+            additive = 0.1f * energyTrack2.IncreaseProperty;
+            //Add it to the energy of the room and the overall seperatley
+            Overall_Energy += additive;
+            energyTrack2.EnergyProperty += additive;
+        }
+        else
+        {
+            additive = 0.0f;
+        }
+        //------------------------------------------
 
         //if (energyTrack2.ActivatedProperty == true)
         //{
