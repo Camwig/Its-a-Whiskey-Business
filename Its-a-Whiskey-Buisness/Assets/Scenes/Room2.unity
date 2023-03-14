@@ -326,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: onSliderActivate
       value: 
-      objectReference: {fileID: 11400000, guid: 60201f8b334fa6b49b6fe95195be5447, type: 2}
+      objectReference: {fileID: 11400000, guid: 136802344537da241b1b0522e75cac83, type: 2}
     - target: {fileID: 8050844338759452742, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1328,6 +1328,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 394367323}
     - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 151142617}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: this_room
       value: 
       objectReference: {fileID: 340638144}
@@ -1339,6 +1343,10 @@ PrefabInstance:
       propertyPath: these_objects
       value: 
       objectReference: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: new_slide_state
+      value: 
+      objectReference: {fileID: 11400000, guid: 1109d850d81ecb046b01149c5454fa69, type: 2}
     - target: {fileID: 2080543292120628722, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: m_Name
       value: GenericRoom Manager
@@ -1478,7 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.013207495, b: 0.013207495, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

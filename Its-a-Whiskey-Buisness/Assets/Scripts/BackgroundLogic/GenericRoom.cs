@@ -65,6 +65,7 @@ public class GenericRoom : MonoBehaviour
        if(data is float)
         {
             Energy = (float)data;
+            //IncreaseProduct = 1;
         }
     }
 

@@ -243,7 +243,7 @@ public class OverHeadManager : MonoBehaviour
             //------------------------------------------
             new_energyTrack3_amount = 0.0f;
             //------------------------------------------
-            energyTrack2_amount = 0.0f;
+            //energyTrack2_amount = 0.0f;
             //------------------------------------------
             energyTrack3_amount = 0.0f;
             //------------------------------------------
@@ -260,6 +260,9 @@ public class OverHeadManager : MonoBehaviour
 
             now_state = slide_state.StateProperty;
             energyTrack2.EnergyProperty = energyTrack2_amount;
+            //int i;
+            //Gets set to zero
+            //i = energyTrack3.IncreaseProperty;
 
             if (!energyTrack.ActivatedProperty)
             {

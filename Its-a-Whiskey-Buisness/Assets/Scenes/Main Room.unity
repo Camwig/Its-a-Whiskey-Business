@@ -2440,7 +2440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 995635438}
   transitionTime: 1
-  new_loader: {fileID: 0}
+  new_loader: {fileID: 1975913702}
   SceneID: 2
 --- !u!114 &1587661510
 MonoBehaviour:

@@ -358,7 +358,10 @@ public class Overhead : MonoBehaviour
         if (energyTrack2.ActivatedProperty == true)
         {
             //Calculate the additive
+
+            //Increase property has defaulted to zero for some reason
             additive = 0.1f * energyTrack2.IncreaseProperty;
+
             //Add it to the energy of the room and the overall seperatley
             Overall_Energy += additive;
             energyTrack2.EnergyProperty += additive;

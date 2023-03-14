@@ -34,6 +34,8 @@ public class GenericRoomManager : MonoBehaviour
             firstPlay = false;
             //new_slide_state.StateProperty = false;
             this_room.SetupState();
+
+            int i = energyTracker.IncreaseProperty;
             //these_objects.gameObjects[0].transform.rotation = lever.transform.rotation;
         }
         else
@@ -51,5 +53,11 @@ public class GenericRoomManager : MonoBehaviour
             this_room.ActivateRoom(this,energyTracker.ActivatedProperty);
             this_room.SetupInitialEnergy(this, energyTracker.EnergyProperty);
         }
+    }
+
+    //When it is destroyed it is zero
+    private void OnDestroy()
+    {
+        int i = energyTracker.IncreaseProperty;
     }
 }
