@@ -284,6 +284,8 @@ public class OverHeadManager : MonoBehaviour
 
             //------------------------------------------
 
+            //This tracker is getting reset, why?
+
             if (!energyTrack3.ActivatedProperty)
             {
                 if (energyTrack3.EnergyProperty > energyTrack3_amount)
@@ -300,6 +302,11 @@ public class OverHeadManager : MonoBehaviour
             {
                 energyTrack3_amount = 0.0f;
                 new_energyTrack3_amount = 0.0f;
+            }
+
+            if(energyTrack.ActivatedProperty && energyTrack3.ActivatedProperty)
+            {
+                int k = 0;
             }
 
             //------------------------------------------
