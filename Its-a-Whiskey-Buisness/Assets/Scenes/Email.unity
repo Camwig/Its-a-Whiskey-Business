@@ -992,7 +992,7 @@ MonoBehaviour:
   transition: {fileID: 1824860845}
   transitionTime: 1
   new_loader: {fileID: 1824860844}
-  SceneID: 0
+  SceneID: 1
 --- !u!114 &1755725548
 MonoBehaviour:
   m_ObjectHideFlags: 0
