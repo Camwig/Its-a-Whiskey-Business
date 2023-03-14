@@ -20,6 +20,7 @@ public class GenericRoom : MonoBehaviour
     //[Header("Layout")]
 
     //public RoomObject RoomObject_1;
+    private static bool firstPlay = true;
 
     [Header("Events")]
 
@@ -43,10 +44,12 @@ public class GenericRoom : MonoBehaviour
         //}
     }
 
-    private void Awake()
-    {
-        UpdateProductionRate.Raise(this, IncreaseProduct);
-    }
+    //private void Awake()
+    //{
+    //    if(fir)
+    //    IncreaseProduct = 1;
+    //    UpdateProductionRate.Raise(this, IncreaseProduct);
+    //}
 
     public void Setting_factors(float New_rate, float New_Consumption)
     {
