@@ -201,7 +201,13 @@ public class Overhead : MonoBehaviour
     private static float Overall_Energy;
     private string string_text;
 
+    private string string_room1;
+    private string string_room2;
+
     public Text textelement;
+
+    public Text textRoom1;
+    public Text textRoom2;
 
     public static Overhead New_Instance;
 
@@ -308,6 +314,12 @@ public class Overhead : MonoBehaviour
             //Debug.Log(Overall_Energy);
             string_text = Overall_Energy.ToString();
             textelement.text = string_text;
+
+            string_room1 = energyTrack.EnergyProperty.ToString();
+            textRoom1.text = string_room1;
+
+            string_room2 = energyTrack2.EnergyProperty.ToString();
+            textRoom2.text = string_room2;
         }
 
         //Overall_Energy += energyTrack.EnergyProperty;

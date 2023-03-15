@@ -1486,6 +1486,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
     - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: energyTracker2
+      value: 
+      objectReference: {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: new_slide_state
       value: 
       objectReference: {fileID: 11400000, guid: 1109d850d81ecb046b01149c5454fa69, type: 2}

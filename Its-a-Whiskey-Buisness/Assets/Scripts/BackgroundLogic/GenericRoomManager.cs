@@ -21,29 +21,38 @@ public class GenericRoomManager : MonoBehaviour
     public EnergyTracker energyTracker;
 
     [SerializeField]
+    public EnergyTracker energyTracker2;
+
+    [SerializeField]
     public SliderState new_slide_state;
 
-    private static bool firstPlay = true;
+    //private static bool firstPlay = true;
 
 
     void Awake()
     {
-        if (firstPlay == true)
+        if (energyTracker.My_firstPlay == true)
         {
             Debug.Log("Starting...\n");
-            firstPlay = false;
+            //firstPlay = false;
+            energyTracker.My_firstPlay = false;
             //new_slide_state.StateProperty = false;
             this_room.SetupState();
 
-            int i = energyTracker.IncreaseProperty;
+            //int i = energyTracker.IncreaseProperty;
             //these_objects.gameObjects[0].transform.rotation = lever.transform.rotation;
+
+            //if(energyTracker2.ActivatedProperty)
+            //{
+            //    int j = 0;
+            //}
         }
         else
         {
             Debug.Log("Running...\n");
             //Store the angle the lever was at after exit
-            lever.transform.position = these_objects.gameObjects[0].transform.position;
-            lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
+            //lever.transform.position = these_objects.gameObjects[0].transform.position;
+            //lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
 
             //--------------------------
             //slider.transform.position = these_objects.gameObjects[1].transform.position;
@@ -55,9 +64,12 @@ public class GenericRoomManager : MonoBehaviour
         }
     }
 
-    //When it is destroyed it is zero
+    //When it is destroyed it is on
     private void OnDestroy()
     {
-        int i = energyTracker.IncreaseProperty;
+        if (energyTracker2.ActivatedProperty)
+        {
+            int j = 0;
+        }
     }
 }

@@ -32,6 +32,15 @@ public class EnergyTracker : ScriptableObject
         set { Activated = value; }
     }
 
+    private bool first_play;
+
+    public bool My_firstPlay
+    {
+        get { return first_play; }
+        set { first_play = value; }
+    }
+
+
 
     //private void OnValidate()
     //{

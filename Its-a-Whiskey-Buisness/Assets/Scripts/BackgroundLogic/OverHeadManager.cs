@@ -170,9 +170,28 @@ public class OverHeadManager : MonoBehaviour
 
     private static bool firstPlay = true;
 
+    private void OnEnable()
+    {
+        if(energyTrack3.ActivatedProperty == false)
+        {
+            int n = 0;
+        }
+
+        if (energyTrack3.ActivatedProperty == true)
+        {
+            int k = 0;
+        }
+    }
+
 
     void Awake()
     {
+        //This changes on re-open before anything else
+        if (energyTrack3.ActivatedProperty == false)
+        {
+            int j = 0;
+        }
+
         //if(Instance!=null)
         //{
         //    Destroy(this);
@@ -248,6 +267,10 @@ public class OverHeadManager : MonoBehaviour
             energyTrack3_amount = 0.0f;
             //------------------------------------------
 
+            energyTrack.My_firstPlay = true;
+            energyTrack3.My_firstPlay = true;
+
+
             slide_state.StateProperty = false;
 
             firstPlay = false;
@@ -264,7 +287,7 @@ public class OverHeadManager : MonoBehaviour
             //Gets set to zero
             //i = energyTrack3.IncreaseProperty;
 
-            if (!energyTrack.ActivatedProperty)
+            if (energyTrack.ActivatedProperty == false)
             {
                 if (energyTrack.EnergyProperty > energyTrack_amount)
                 {
@@ -286,7 +309,7 @@ public class OverHeadManager : MonoBehaviour
 
             //This tracker is getting reset, why?
 
-            if (!energyTrack3.ActivatedProperty)
+            if (energyTrack3.ActivatedProperty == false)
             {
                 if (energyTrack3.EnergyProperty > energyTrack3_amount)
                 {
@@ -304,10 +327,10 @@ public class OverHeadManager : MonoBehaviour
                 new_energyTrack3_amount = 0.0f;
             }
 
-            if(energyTrack.ActivatedProperty && energyTrack3.ActivatedProperty)
-            {
-                int k = 0;
-            }
+            //if(energyTrack3.ActivatedProperty)
+            //{
+            //    int k = 0;
+            //}
 
             //------------------------------------------
 
