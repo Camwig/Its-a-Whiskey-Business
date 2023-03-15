@@ -172,25 +172,25 @@ public class OverHeadManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if(energyTrack3.ActivatedProperty == false)
-        {
-            int n = 0;
-        }
+        //if(energyTrack3.ActivatedProperty == false)
+        //{
+        //    int n = 0;
+        //}
 
-        if (energyTrack3.ActivatedProperty == true)
-        {
-            int k = 0;
-        }
+        //if (energyTrack3.ActivatedProperty == true)
+        //{
+        //    int k = 0;
+        //}
     }
 
 
     void Awake()
     {
         //This changes on re-open before anything else
-        if (energyTrack3.ActivatedProperty == false)
-        {
-            int j = 0;
-        }
+        //if (energyTrack3.ActivatedProperty == false)
+        //{
+        //    int j = 0;
+        //}
 
         //if(Instance!=null)
         //{
@@ -243,16 +243,21 @@ public class OverHeadManager : MonoBehaviour
 
             energyTrack.EnergyProperty = 0;
             energyTrack2.EnergyProperty = 0;
+
             //------------------------------------------
             energyTrack3.EnergyProperty = 0;
             //------------------------------------------
+
             energyTrack.IncreaseProperty = 1;
             energyTrack2.IncreaseProperty = 1;
+
             //------------------------------------------
             energyTrack3.IncreaseProperty = 1;
             //------------------------------------------
+
             energyTrack.ActivatedProperty = false;
             energyTrack2.ActivatedProperty = false;
+
             //------------------------------------------
             energyTrack3.ActivatedProperty = false;
             //------------------------------------------
@@ -276,6 +281,10 @@ public class OverHeadManager : MonoBehaviour
             firstPlay = false;
 
             //Screen.SetResolution(1920, 1080, true, 60);
+
+
+            energyTrack.My_ActiveOnEntryAndExit = false;
+            energyTrack3.My_ActiveOnEntryAndExit = false;
         }
         else
         {
@@ -287,7 +296,10 @@ public class OverHeadManager : MonoBehaviour
             //Gets set to zero
             //i = energyTrack3.IncreaseProperty;
 
-            if (energyTrack.ActivatedProperty == false)
+
+
+
+            if (energyTrack.ActivatedProperty == false || energyTrack.My_ActiveOnEntryAndExit == true)
             {
                 if (energyTrack.EnergyProperty > energyTrack_amount)
                 {
@@ -309,7 +321,7 @@ public class OverHeadManager : MonoBehaviour
 
             //This tracker is getting reset, why?
 
-            if (energyTrack3.ActivatedProperty == false)
+            if (energyTrack3.ActivatedProperty == false || energyTrack3.My_ActiveOnEntryAndExit == true)
             {
                 if (energyTrack3.EnergyProperty > energyTrack3_amount)
                 {

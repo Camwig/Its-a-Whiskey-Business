@@ -36,7 +36,7 @@ public class GenericRoom : MonoBehaviour
         //Energy = 0;
         //Setting_factors(10.0f, 5.0f);
         string_text = "Default";
-        //IncreaseProduct = 1;
+        IncreaseProduct = 1;
 
         //for(int i=0; i< RoomObject_1.List_of_object.Length;i++)
         //{
@@ -117,7 +117,7 @@ public class GenericRoom : MonoBehaviour
 
     private void IncreasseEnergy()
     {
-        Energy += 0.1f * 1/*IncreaseProduct*/;
+        Energy += 0.01f * /*1*/IncreaseProduct;
     }
 
     // Update is called once per frame

@@ -28,6 +28,8 @@ public class GenericRoomManager : MonoBehaviour
 
     //private static bool firstPlay = true;
 
+    private int check_on_exit = 0;
+
 
     void Awake()
     {
@@ -51,13 +53,22 @@ public class GenericRoomManager : MonoBehaviour
         {
             Debug.Log("Running...\n");
             //Store the angle the lever was at after exit
-            //lever.transform.position = these_objects.gameObjects[0].transform.position;
-            //lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
+            lever.transform.position = these_objects.gameObjects[0].transform.position;
+            lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
 
             //--------------------------
             //slider.transform.position = these_objects.gameObjects[1].transform.position;
             //slider.transform.rotation = these_objects.gameObjects[1].transform.rotation;
             //--------------------------
+
+            if(energyTracker.ActivatedProperty == true)
+            {
+                check_on_exit = 1;
+            }
+            else
+            {
+                check_on_exit = 0;
+            }
 
             this_room.ActivateRoom(this,energyTracker.ActivatedProperty);
             this_room.SetupInitialEnergy(this, energyTracker.EnergyProperty);
@@ -67,9 +78,15 @@ public class GenericRoomManager : MonoBehaviour
     //When it is destroyed it is on
     private void OnDestroy()
     {
-        if (energyTracker2.ActivatedProperty)
+        //if (energyTracker2.ActivatedProperty)
+        //{
+        //    int j = 0;
+        //}
+
+        if(check_on_exit == 1)
         {
-            int j = 0;
+            energyTracker.My_ActiveOnEntryAndExit = true;
+            check_on_exit = 0;
         }
     }
 }

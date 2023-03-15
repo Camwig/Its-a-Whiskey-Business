@@ -40,6 +40,13 @@ public class EnergyTracker : ScriptableObject
         set { first_play = value; }
     }
 
+    private bool ActiveOnEntryAndExit;
+
+    public bool My_ActiveOnEntryAndExit
+    {
+        get { return ActiveOnEntryAndExit; }
+        set { ActiveOnEntryAndExit = value; }
+    }
 
 
     //private void OnValidate()
