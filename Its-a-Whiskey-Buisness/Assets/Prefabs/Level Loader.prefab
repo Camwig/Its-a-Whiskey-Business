@@ -182,8 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 6331493050333806434}
   transitionTime: 1
-  new_loader: {fileID: 0}
-  SceneID: 0
+  cam1: {fileID: 0}
+  cam2: {fileID: 0}
 --- !u!114 &585987086539681795
 MonoBehaviour:
   m_ObjectHideFlags: 0

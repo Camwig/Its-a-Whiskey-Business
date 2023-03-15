@@ -19,7 +19,8 @@ public class ChangeLogo : MonoBehaviour
     private IEnumerator streamVideo(int video)
     {
       
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds((float)7.5);
+      
         SceneManager.LoadScene(SceneID);
     }
 }

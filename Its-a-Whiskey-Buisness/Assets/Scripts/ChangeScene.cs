@@ -8,15 +8,18 @@ public class ChangeScene : MonoBehaviour
 
     public Animator transition;
 
-    public float transitionTime = 1f;
+    public float transitionTime = 0f;
 
-    public LevelLoader new_loader;
+   // public LevelLoader new_loader;
 
-    public int SceneID;
+    //public int SceneID;
+
+    public GameObject cam1;
+    public GameObject cam2;
 
     public void MoveToScene()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel(1));
     }
 
     IEnumerator LoadLevel(int levelIndex)
@@ -25,7 +28,8 @@ public class ChangeScene : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(SceneID);
+        cam1.SetActive(true);
+        cam2.SetActive(false);
     }
 
 }
