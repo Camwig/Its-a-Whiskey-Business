@@ -17,6 +17,9 @@ public class ChangeScene : MonoBehaviour
     public GameObject cam1;
     public GameObject cam2;
 
+    public GameObject pauseButton;
+    public GameObject pauseButton2;
+
     public void MoveToScene()
     {
         StartCoroutine(LoadLevel(1));
@@ -30,6 +33,10 @@ public class ChangeScene : MonoBehaviour
 
         cam1.SetActive(true);
         cam2.SetActive(false);
+
+        pauseButton.SetActive(true);
+        pauseButton2.SetActive(false);
+
     }
 
 }
