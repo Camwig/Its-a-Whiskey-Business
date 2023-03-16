@@ -48,6 +48,15 @@ public class EnergyTracker : ScriptableObject
         set { ActiveOnEntryAndExit = value; }
     }
 
+    private float Energy_to_be_added;
+
+    public float Energy_to_be_added_property
+    {
+        get { return Energy_to_be_added; }
+        set { Energy_to_be_added = value; }
+    }
+
+
 
     //private void OnValidate()
     //{

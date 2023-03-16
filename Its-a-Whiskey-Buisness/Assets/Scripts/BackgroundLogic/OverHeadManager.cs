@@ -275,6 +275,9 @@ public class OverHeadManager : MonoBehaviour
             energyTrack.My_firstPlay = true;
             energyTrack3.My_firstPlay = true;
 
+            energyTrack.Energy_to_be_added_property = 0.0f;
+            energyTrack3.Energy_to_be_added_property = 0.0f;
+
 
             slide_state.StateProperty = false;
 
@@ -306,7 +309,12 @@ public class OverHeadManager : MonoBehaviour
                     //Debug.Log(energyTrack.EnergyProperty);
                     //Not doing anything
                     new_energyTrack_amount = energyTrack.EnergyProperty - energyTrack_amount;
-                    energyTrack.EnergyProperty = new_energyTrack_amount;
+                    energyTrack.Energy_to_be_added_property = new_energyTrack_amount;
+
+                    if (energyTrack.ActivatedProperty == false && energyTrack.My_ActiveOnEntryAndExit == false)
+                    {
+                        energyTrack.EnergyProperty = energyTrack.Energy_to_be_added_property;
+                    }
                     //new_energyTrack_amount = 0.0f;
                     //Debug.Log(energyTrack.EnergyProperty);
                 }
@@ -315,6 +323,8 @@ public class OverHeadManager : MonoBehaviour
             {
                 energyTrack_amount = 0.0f;
                 new_energyTrack_amount = 0.0f;
+                energyTrack.Energy_to_be_added_property = energyTrack.EnergyProperty;
+                energyTrack.My_ActiveOnEntryAndExit = false;
             }
 
             //------------------------------------------
@@ -328,7 +338,12 @@ public class OverHeadManager : MonoBehaviour
                     //Debug.Log(energyTrack.EnergyProperty);
                     //Not doing anything
                     new_energyTrack3_amount = energyTrack3.EnergyProperty - energyTrack3_amount;
-                    energyTrack3.EnergyProperty = new_energyTrack3_amount;
+                    energyTrack3.Energy_to_be_added_property = new_energyTrack3_amount;
+
+                    if (energyTrack.ActivatedProperty == false && energyTrack3.My_ActiveOnEntryAndExit == false)
+                    {
+                        energyTrack3.EnergyProperty = energyTrack3.Energy_to_be_added_property;
+                    }
                     //new_energyTrack_amount = 0.0f;
                     //Debug.Log(energyTrack.EnergyProperty);
                 }
@@ -337,6 +352,8 @@ public class OverHeadManager : MonoBehaviour
             {
                 energyTrack3_amount = 0.0f;
                 new_energyTrack3_amount = 0.0f;
+                energyTrack3.Energy_to_be_added_property = energyTrack3.EnergyProperty;
+                energyTrack3.My_ActiveOnEntryAndExit = false;
             }
 
             //if(energyTrack3.ActivatedProperty)
@@ -375,6 +392,9 @@ public class OverHeadManager : MonoBehaviour
         //------------------------------------------
         energyTrack3_amount = energyTrack3.EnergyProperty;
         //------------------------------------------
+
+        energyTrack.Energy_to_be_added_property = 0;
+        energyTrack3.Energy_to_be_added_property = 0;
 
         //energyTrack2_amount = energyTrack2.EnergyProperty;
         //energyTrack3_amount = energyTrack3.EnergyProperty;
