@@ -56,6 +56,23 @@ public class EnergyTracker : ScriptableObject
         set { Energy_to_be_added = value; }
     }
 
+    private bool EnteringRoomOtherthanUs;
+
+    public bool OtherRoomProperty
+    {
+        get { return EnteringRoomOtherthanUs; }
+        set { EnteringRoomOtherthanUs = value; }
+    }
+
+    //---Look into making all this nicer to use aswell as more efficeint
+
+    private int RoomNum;
+
+    public int MyRoomNum
+    {
+        get { return RoomNum; }
+        set { RoomNum = value; }
+    }
 
 
     //private void OnValidate()

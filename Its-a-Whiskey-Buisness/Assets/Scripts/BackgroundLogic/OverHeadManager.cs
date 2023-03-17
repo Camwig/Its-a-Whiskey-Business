@@ -288,6 +288,17 @@ public class OverHeadManager : MonoBehaviour
 
             energyTrack.My_ActiveOnEntryAndExit = false;
             energyTrack3.My_ActiveOnEntryAndExit = false;
+
+
+            energyTrack.MyRoomNum = 1;
+            energyTrack3.MyRoomNum = 2;
+            energyTrack2.MyRoomNum = 0;
+
+
+            energyTrack.OtherRoomProperty = false;
+            energyTrack2.OtherRoomProperty = false;
+            energyTrack3.OtherRoomProperty = false;
+
         }
         else
         {
@@ -302,7 +313,7 @@ public class OverHeadManager : MonoBehaviour
 
 
 
-            if (energyTrack.ActivatedProperty == false || energyTrack.My_ActiveOnEntryAndExit == true)
+            if (energyTrack.ActivatedProperty == false || energyTrack.My_ActiveOnEntryAndExit == true || energyTrack.OtherRoomProperty == true)
             {
                 if (energyTrack.EnergyProperty > energyTrack_amount)
                 {
@@ -314,6 +325,11 @@ public class OverHeadManager : MonoBehaviour
                     if (energyTrack.ActivatedProperty == false && energyTrack.My_ActiveOnEntryAndExit == false)
                     {
                         energyTrack.EnergyProperty = energyTrack.Energy_to_be_added_property;
+                    }
+
+                    if(energyTrack.OtherRoomProperty == true)
+                    {
+                        energyTrack.OtherRoomProperty = false;
                     }
                     //new_energyTrack_amount = 0.0f;
                     //Debug.Log(energyTrack.EnergyProperty);
@@ -331,7 +347,7 @@ public class OverHeadManager : MonoBehaviour
 
             //This tracker is getting reset, why?
 
-            if (energyTrack3.ActivatedProperty == false || energyTrack3.My_ActiveOnEntryAndExit == true)
+            if (energyTrack3.ActivatedProperty == false || energyTrack3.My_ActiveOnEntryAndExit == true || energyTrack3.OtherRoomProperty == true)
             {
                 if (energyTrack3.EnergyProperty > energyTrack3_amount)
                 {
@@ -346,6 +362,11 @@ public class OverHeadManager : MonoBehaviour
                     }
                     //new_energyTrack_amount = 0.0f;
                     //Debug.Log(energyTrack.EnergyProperty);
+
+                    if (energyTrack3.OtherRoomProperty == true)
+                    {
+                        energyTrack3.OtherRoomProperty = false;
+                    }
                 }
             }
             else
