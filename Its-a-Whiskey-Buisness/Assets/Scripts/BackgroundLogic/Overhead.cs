@@ -358,7 +358,7 @@ public class Overhead : MonoBehaviour
         if (energyTrack.ActivatedProperty == true)
         {
             //Calculate the additive
-            additive = 0.001f * energyTrack.IncreaseProperty;
+            additive = (0.001f * energyTrack.IncreaseProperty) * Time.deltaTime;
             //Add it to the energy of the room and the overall seperatley
             Overall_Energy += additive;
             energyTrack.EnergyProperty += additive;
@@ -374,7 +374,7 @@ public class Overhead : MonoBehaviour
             //Calculate the additive
 
             //Increase property has defaulted to zero for some reason
-            additive = 0.001f * energyTrack2.IncreaseProperty;
+            additive = (0.001f * energyTrack2.IncreaseProperty) * Time.deltaTime;
 
             //Add it to the energy of the room and the overall seperatley
             Overall_Energy += additive;

@@ -117,7 +117,7 @@ public class GenericRoom : MonoBehaviour
 
     private void IncreasseEnergy()
     {
-        Energy += 0.001f * /*1*/IncreaseProduct;
+        Energy += (0.001f * /*1*/IncreaseProduct) * Time.deltaTime;
     }
 
     // Update is called once per frame
