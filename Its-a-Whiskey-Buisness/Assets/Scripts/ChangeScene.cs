@@ -23,16 +23,14 @@ public class ChangeScene : MonoBehaviour
     public GameObject activatingRoom;
     public GameObject deactivatingRoom;
 
-    public Canvas activatingroom;
-    public Canvas deactivatingroom;
 
 
     public void MoveToScene()
     { 
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel());
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevel()
     {
        // transition.SetTrigger("Start");
 
@@ -44,12 +42,8 @@ public class ChangeScene : MonoBehaviour
         activatingpause.SetActive(true);
         deactivatingpause.SetActive(false);
 
-       // activatingRoom.SetActive(true);
-       // deactivatingRoom.SetActive(false);
-
-        activatingroom.GetComponent<Canvas>().enabled = true;
-        deactivatingroom.GetComponent<Canvas>().enabled = false;
-
+        activatingRoom.SetActive(true);
+        deactivatingRoom.SetActive(false);
     }
 
 }
