@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu]
+
 public class Objective : ScriptableObject
 {
     //Starting time - Done
@@ -20,18 +22,19 @@ public class Objective : ScriptableObject
         // -Energy activation
 
     
+    [SerializeField]
+    private Vector2 StartingTime;
 
-    private Dictionary<float,float> StartingTime;
-
-    public Dictionary<float, float> MyStartingTime
+    public Vector2 MyStartingTime
     {
         get { return StartingTime; }
         set { StartingTime = value; }
     }
 
-    private Dictionary<float, float> EndingTime;
+    [SerializeField]
+    private Vector2 EndingTime;
 
-    public Dictionary<float, float> MyEndingTime
+    public Vector2 MyEndingTime
     {
         get { return EndingTime; }
         set { EndingTime = value; }
@@ -39,6 +42,7 @@ public class Objective : ScriptableObject
 
     //Number of the room that these apply to
 
+    [SerializeField]
     private int RoomNum;
 
     public int MyRoomNum
@@ -47,6 +51,7 @@ public class Objective : ScriptableObject
         set { RoomNum = value; }
     }
 
+    [SerializeField]
     private bool Activated;
 
     public bool MyActivated
@@ -55,6 +60,7 @@ public class Objective : ScriptableObject
         set { Activated = value; }
     }
 
+    [SerializeField]
     private float Modifier;
 
     public float MyModifier
@@ -62,6 +68,4 @@ public class Objective : ScriptableObject
         get { return Modifier; }
         set { Modifier = value; }
     }
-
-
 }
