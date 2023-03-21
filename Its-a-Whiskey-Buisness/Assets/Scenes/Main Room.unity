@@ -876,7 +876,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1254,7 +1254,7 @@ GameObject:
   - component: {fileID: 417592117}
   - component: {fileID: 417592119}
   m_Layer: 0
-  m_Name: Room2
+  m_Name: Room2Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,12 +1377,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1014868735}
-  cam2: {fileID: 417592116}
-  pauseButton: {fileID: 187125607}
-  pauseButton2: {fileID: 756406742}
+  activatingcam: {fileID: 1014868735}
+  deactivatingcam: {fileID: 417592116}
+  activatingpause: {fileID: 187125607}
+  deactivatingpause: {fileID: 756406742}
+  activatingRoom: {fileID: 0}
+  deactivatingRoom: {fileID: 2128011560}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &420823470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,7 +2081,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2418,12 +2421,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1014868735}
-  cam2: {fileID: 1815096835}
-  pauseButton: {fileID: 187125607}
-  pauseButton2: {fileID: 1223427478}
+  activatingcam: {fileID: 1014868735}
+  deactivatingcam: {fileID: 1815096835}
+  activatingpause: {fileID: 187125607}
+  deactivatingpause: {fileID: 1223427478}
+  activatingRoom: {fileID: 0}
+  deactivatingRoom: {fileID: 820319418}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &874110223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,7 +2994,7 @@ Transform:
   - {fileID: 1668818231}
   - {fileID: 187125611}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089503858
 GameObject:
@@ -3258,7 +3264,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3416,12 +3422,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1813285340}
-  cam2: {fileID: 1014868735}
-  pauseButton: {fileID: 1929134155}
-  pauseButton2: {fileID: 187125607}
+  activatingcam: {fileID: 1813285340}
+  deactivatingcam: {fileID: 1014868735}
+  activatingpause: {fileID: 1929134155}
+  deactivatingpause: {fileID: 187125607}
+  activatingRoom: {fileID: 1140160510}
+  deactivatingRoom: {fileID: 0}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!1 &1220783749
 GameObject:
   m_ObjectHideFlags: 0
@@ -3435,7 +3444,7 @@ GameObject:
   - component: {fileID: 1220783751}
   - component: {fileID: 1220783750}
   m_Layer: 5
-  m_Name: Camera
+  m_Name: CameraRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4062,12 +4071,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1876931442}
-  cam2: {fileID: 1014868735}
-  pauseButton: {fileID: 1522539817}
-  pauseButton2: {fileID: 187125607}
+  activatingcam: {fileID: 1876931442}
+  deactivatingcam: {fileID: 1014868735}
+  activatingpause: {fileID: 1522539817}
+  deactivatingpause: {fileID: 187125607}
+  activatingRoom: {fileID: 215391712}
+  deactivatingRoom: {fileID: 0}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!1 &1459839397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4513,12 +4525,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1014868735}
-  cam2: {fileID: 1813285340}
-  pauseButton: {fileID: 187125607}
-  pauseButton2: {fileID: 1929134155}
+  activatingcam: {fileID: 1014868735}
+  deactivatingcam: {fileID: 1813285340}
+  activatingpause: {fileID: 187125607}
+  deactivatingpause: {fileID: 1929134155}
+  activatingRoom: {fileID: 0}
+  deactivatingRoom: {fileID: 1140160510}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &1581271669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4665,12 +4680,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 417592116}
-  cam2: {fileID: 1014868735}
-  pauseButton: {fileID: 756406742}
-  pauseButton2: {fileID: 187125607}
+  activatingcam: {fileID: 417592116}
+  deactivatingcam: {fileID: 1014868735}
+  activatingpause: {fileID: 756406742}
+  deactivatingpause: {fileID: 187125607}
+  activatingRoom: {fileID: 2128011560}
+  deactivatingRoom: {fileID: 0}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &1587661510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4917,12 +4935,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1014868735}
-  cam2: {fileID: 2072925177}
-  pauseButton: {fileID: 187125607}
-  pauseButton2: {fileID: 126247124}
+  activatingcam: {fileID: 1014868735}
+  deactivatingcam: {fileID: 2072925177}
+  activatingpause: {fileID: 187125607}
+  deactivatingpause: {fileID: 126247124}
+  activatingRoom: {fileID: 0}
+  deactivatingRoom: {fileID: 843294423}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &1604769467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5440,12 +5461,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1815096835}
-  cam2: {fileID: 1014868735}
-  pauseButton: {fileID: 1223427478}
-  pauseButton2: {fileID: 187125607}
+  activatingcam: {fileID: 1815096835}
+  deactivatingcam: {fileID: 1014868735}
+  activatingpause: {fileID: 1223427478}
+  deactivatingpause: {fileID: 187125607}
+  activatingRoom: {fileID: 820319418}
+  deactivatingRoom: {fileID: 0}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &1806202808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5552,7 +5576,7 @@ GameObject:
   - component: {fileID: 1813285341}
   - component: {fileID: 1813285343}
   m_Layer: 0
-  m_Name: Room3
+  m_Name: Room3Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5735,7 +5759,7 @@ GameObject:
   - component: {fileID: 1815096837}
   - component: {fileID: 1815096836}
   m_Layer: 0
-  m_Name: Room1
+  m_Name: Room1Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5937,12 +5961,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 1014868735}
-  cam2: {fileID: 1876931442}
-  pauseButton: {fileID: 187125607}
-  pauseButton2: {fileID: 1522539817}
+  activatingcam: {fileID: 1014868735}
+  deactivatingcam: {fileID: 1876931442}
+  activatingpause: {fileID: 187125607}
+  deactivatingpause: {fileID: 1522539817}
+  activatingRoom: {fileID: 0}
+  deactivatingRoom: {fileID: 215391712}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &1864031453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6049,7 +6076,7 @@ GameObject:
   - component: {fileID: 1876931443}
   - component: {fileID: 1876931444}
   m_Layer: 0
-  m_Name: Room4
+  m_Name: Room4Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6584,7 +6611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223416667895183711, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6223416667895183711, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6901,7 +6928,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6925,7 +6952,7 @@ GameObject:
   - component: {fileID: 2072925178}
   - component: {fileID: 2072925179}
   m_Layer: 0
-  m_Name: Email
+  m_Name: EmailCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7083,12 +7110,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1719883957}
   transitionTime: 0
-  cam1: {fileID: 2072925177}
-  cam2: {fileID: 1014868735}
-  pauseButton: {fileID: 126247124}
-  pauseButton2: {fileID: 187125607}
+  activatingcam: {fileID: 2072925177}
+  deactivatingcam: {fileID: 1014868735}
+  activatingpause: {fileID: 126247124}
+  deactivatingpause: {fileID: 187125607}
+  activatingRoom: {fileID: 0}
+  deactivatingRoom: {fileID: 0}
+  activatingroom: {fileID: 0}
+  deactivatingroom: {fileID: 0}
 --- !u!114 &2128729499
 MonoBehaviour:
   m_ObjectHideFlags: 0

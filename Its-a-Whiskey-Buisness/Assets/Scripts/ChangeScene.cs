@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 
-    public Animator transition;
+    //public Animator transition;
 
     public float transitionTime = 0f;
 
@@ -14,28 +14,41 @@ public class ChangeScene : MonoBehaviour
 
     //public int SceneID;
 
-    public GameObject cam1;
-    public GameObject cam2;
+    public GameObject activatingcam;
+    public GameObject deactivatingcam;
 
-    public GameObject pauseButton;
-    public GameObject pauseButton2;
+    public GameObject activatingpause;
+    public GameObject deactivatingpause;
+
+    public GameObject activatingRoom;
+    public GameObject deactivatingRoom;
+
+    public Canvas activatingroom;
+    public Canvas deactivatingroom;
+
 
     public void MoveToScene()
-    {
+    { 
         StartCoroutine(LoadLevel(1));
     }
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        transition.SetTrigger("Start");
+       // transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
 
-        cam1.SetActive(true);
-        cam2.SetActive(false);
+        activatingcam.SetActive(true);
+        deactivatingcam.SetActive(false);
 
-        pauseButton.SetActive(true);
-        pauseButton2.SetActive(false);
+        activatingpause.SetActive(true);
+        deactivatingpause.SetActive(false);
+
+       // activatingRoom.SetActive(true);
+       // deactivatingRoom.SetActive(false);
+
+        activatingroom.GetComponent<Canvas>().enabled = true;
+        deactivatingroom.GetComponent<Canvas>().enabled = false;
 
     }
 
