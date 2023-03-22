@@ -61,15 +61,19 @@ public class GenericRoom : MonoBehaviour
         }
     }
 
-
+    //Function that is called from by the event listener
+    //used to activate the room
     public void ActivateRoom(Component sender, object data)
     {
+        //Checks if the data we are checking are booleans
         if (data is bool)
         {
             bool on_off = (bool)data;
 
+            //Checks the boolean value
             if (on_off == true)
             {
+                //Sets the state of the room
                 curr_state = Room_state.Tracking_energy;
             }
             else if (on_off == false)
@@ -82,24 +86,31 @@ public class GenericRoom : MonoBehaviour
         }
     }
 
+    //Function that is called from by the event listener
+    //used to increase the production
     public void IncreaseProduction(Component sender, object data)
     {
+        //Checks if the data we are checking are booleans
         if (data is bool)
         {
             bool on_off = (bool)data;
 
-            if(on_off == true)
+            //Checks the boolean value
+            if (on_off == true)
             {
+                //Sets the Incriment value based off the boolean value
                 IncreaseProduct = 10;
             }
             else
             {
                 IncreaseProduct = 1;
             }
+            //Raises an event for the update production rate function
             UpdateProductionRate.Raise(this, IncreaseProduct);
         }
     }
 
+    //Increases the energy of the room
     private void IncreasseEnergy()
     {
         Energy += (0.001f * /*1*/IncreaseProduct) * Time.deltaTime;
@@ -118,19 +129,18 @@ public class GenericRoom : MonoBehaviour
             case Room_state.Tracking_energy:
                 //Increase energy according to calculation
                 IncreasseEnergy();
+                //Raises the appropriate events
                 onEnergyChanged.Raise(this, Energy);
                 onActivation.Raise(this, true);
-                //Debug.Log(Energy);
                 break;
             case Room_state.Ending_tracking:
-                //onEnergyChanged.Raise(this,Energy);
+                //Raises the appropriate event
                 onActivation.Raise(this, false);
                 Energy = 0;
                 curr_state = Room_state.Inactive;
                 //Stop the track of energy and pass it to the overhead
                 break;
             case Room_state.Inactive:
-                //onEnergyChanged.Raise(this, 0);
                 //Idle
                 break;
         }
