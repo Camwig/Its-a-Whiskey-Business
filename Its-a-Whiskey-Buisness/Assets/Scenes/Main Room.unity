@@ -936,7 +936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.5900269, y: 50.660004}
+  m_AnchoredPosition: {x: -1.5900879, y: 50.660034}
   m_SizeDelta: {x: -1704.18, y: -1039.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516569042
@@ -1619,6 +1619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094947696}
   - component: {fileID: 1094947695}
+  - component: {fileID: 1094947697}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -1692,6 +1693,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1094947697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094947694}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef926a56f4393e04c8a79f4d9002360b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1164250916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,6 +3646,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 199876149446830345, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 51.486
+      objectReference: {fileID: 0}
+    - target: {fileID: 199876149446830345, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 94.4971
+      objectReference: {fileID: 0}
+    - target: {fileID: 199876149446830345, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 560.5542
+      objectReference: {fileID: 0}
+    - target: {fileID: 199876149446830345, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -295.6509
+      objectReference: {fileID: 0}
     - target: {fileID: 847478892977602014, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
       propertyPath: m_Camera
       value: 
