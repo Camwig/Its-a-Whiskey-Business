@@ -27,7 +27,7 @@ public class ChangeScene : MonoBehaviour
 
     public void MoveToScene()
     { 
-        StartCoroutine(LoadLevel());
+            StartCoroutine(LoadLevel()); 
     }
 
     IEnumerator LoadLevel()
@@ -36,14 +36,19 @@ public class ChangeScene : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        activatingcam.SetActive(true);
-        deactivatingcam.SetActive(false);
+         activatingcam.SetActive(true);
+         deactivatingcam.SetActive(false);
 
-        activatingpause.SetActive(true);
-        deactivatingpause.SetActive(false);
+       // activatingRoom.SetActive(true);
 
-        activatingRoom.SetActive(true);
-        deactivatingRoom.SetActive(false);
+
+        //if (activatingRoom == true)
+       // {
+            activatingpause.SetActive(true);
+       //     deactivatingRoom.SetActive(false);
+            deactivatingpause.SetActive(false);
+       // }
+        
     }
 
 }
