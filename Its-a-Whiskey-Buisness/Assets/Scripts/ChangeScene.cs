@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
 
     //public Animator transition;
 
-    public float transitionTime = 0f;
+    //public float transitionTime = 0f;
 
    // public LevelLoader new_loader;
 
@@ -25,30 +25,35 @@ public class ChangeScene : MonoBehaviour
 
 
 
-    public void MoveToScene()
+    public void ActivatingScene()
     { 
-            StartCoroutine(LoadLevel()); 
+        //StartCoroutine(LoadLevel());
+      //  activatingRoom.SetActive(true);
+        activatingpause.SetActive(true);
+        activatingcam.SetActive(true);
     }
 
-    IEnumerator LoadLevel()
+    public void DeactivatingScene()
     {
-       // transition.SetTrigger("Start");
-
-        yield return new WaitForSeconds(transitionTime);
-
-         activatingcam.SetActive(true);
-         deactivatingcam.SetActive(false);
-
-       // activatingRoom.SetActive(true);
-
-
-        //if (activatingRoom == true)
-       // {
-            activatingpause.SetActive(true);
-       //     deactivatingRoom.SetActive(false);
-            deactivatingpause.SetActive(false);
-       // }
-        
+     //   deactivatingRoom.SetActive(false);
+        deactivatingpause.SetActive(false);
+        deactivatingcam.SetActive(false);
     }
+
+
+       //  activatingcam.SetActive(true);
+       //  deactivatingcam.SetActive(false);
+
+       //// activatingRoom.SetActive(true);
+
+
+       // //if (activatingRoom == true)
+       //// {
+       //     activatingpause.SetActive(true);
+       ////     deactivatingRoom.SetActive(false);
+       //     deactivatingpause.SetActive(false);
+       //// }
+       
+    
 
 }
