@@ -17,11 +17,11 @@ public class ChangeScene : MonoBehaviour
     public GameObject activatingcam;
     public GameObject deactivatingcam;
 
-    public GameObject activatingpause;
-    public GameObject deactivatingpause;
+    //public GameObject activatingpause;
+    //public GameObject deactivatingpause;
 
-    public GameObject activatingRoom;
-    public GameObject deactivatingRoom;
+    //public GameObject activatingRoom;
+    //public GameObject deactivatingRoom;
 
 
 
@@ -29,14 +29,14 @@ public class ChangeScene : MonoBehaviour
     { 
         //StartCoroutine(LoadLevel());
       //  activatingRoom.SetActive(true);
-        activatingpause.SetActive(true);
+      //  activatingpause.SetActive(true);
         activatingcam.SetActive(true);
     }
 
     public void DeactivatingScene()
     {
      //   deactivatingRoom.SetActive(false);
-        deactivatingpause.SetActive(false);
+    //    deactivatingpause.SetActive(false);
         deactivatingcam.SetActive(false);
     }
 
