@@ -74,4 +74,44 @@ public class GenericRoomManager : MonoBehaviour
             check_on_exit = 0;
         }
     }
+
+    public void RunSetup()
+    {
+        if (energyTracker.My_firstPlay == true)
+        {
+            Debug.Log("Starting...\n");
+            //firstPlay = false;
+            energyTracker.My_firstPlay = false;
+            //new_slide_state.StateProperty = false;
+            this_room.SetupState();
+        }
+        else
+        {
+            Debug.Log("Running...\n");
+            //Store the angle the lever was at after exit
+
+            //Not super needed at the momenmt but I shall keep it in as its not that harmful at the moment
+            lever.transform.position = these_objects.gameObjects[0].transform.position;
+            lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
+
+            //--------------------------
+            //slider.transform.position = these_objects.gameObjects[1].transform.position;
+            //slider.transform.rotation = these_objects.gameObjects[1].transform.rotation;
+            //--------------------------
+
+            //Checks if this room is active upon re-entry
+            if (energyTracker.ActivatedProperty == true)
+            {
+                check_on_exit = 1;
+            }
+            else
+            {
+                check_on_exit = 0;
+            }
+
+            //Sets up the initial values for the room
+            this_room.ActivateRoom(this, energyTracker.ActivatedProperty);
+            this_room.SetupInitialEnergy(this, energyTracker.EnergyProperty);
+        }
+    }
 }
