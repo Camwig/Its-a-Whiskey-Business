@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
-
+    public Button easy;
+    public Button Normal;
 
     private float timeDuration = 9f * 60f;
     private float timer;
@@ -27,6 +29,7 @@ public class Clock : MonoBehaviour
     {
         if (timer > 0)
         {
+            
             timer += Time.deltaTime;
 
             UpdateTimer(timer);
@@ -69,5 +72,20 @@ public class Clock : MonoBehaviour
     private void Flash()
     {
         Debug.Log("Time reached test");
+    }
+
+    public void SlowTime()
+    {
+        if (easy.GetComponent<Button>() == true)
+        {
+            Time.timeScale = 0.5f;
+        }
+    }
+    public void NormalTime()
+    {
+        if (Normal.GetComponent<Button>() == true)
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 }

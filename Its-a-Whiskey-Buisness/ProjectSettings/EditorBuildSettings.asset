@@ -6,21 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Splash/SplashScreen1.unity
+    guid: e20a0cb743f7d374faa4cf4e1067a2c2
+  - enabled: 1
+    path: Assets/Splash/SplashScreen2.unity
+    guid: e9c7fc824ff716f498efa9a8bdf3b6b8
+  - enabled: 1
+    path: Assets/Scenes/Beginning Scene.unity
+    guid: 5f049652285cb6146902406c7c751271
+  - enabled: 1
     path: Assets/Scenes/Main Room.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Room1.unity
+    path: Assets/Scenes/Settings Scene.unity
+    guid: 29a9b3aaf4876d341bdced4b7f877ad8
+  - enabled: 0
+    path: Assets/Scenes/Blob/Room1.unity
     guid: 5a8282297bbfdc34287931ceaf49477d
-  - enabled: 1
-    path: Assets/Scenes/Room2.unity
+  - enabled: 0
+    path: Assets/Scenes/Blob/Room2.unity
     guid: 59f28f49b41b11645bce8f4aa5ad75f4
-  - enabled: 1
-    path: Assets/Scenes/Room3.unity
+  - enabled: 0
+    path: Assets/Scenes/Blob/Room3.unity
     guid: e50a966d5759b8d4da7a0f824cf2159b
-  - enabled: 1
-    path: Assets/Scenes/Room4.unity
+  - enabled: 0
+    path: Assets/Scenes/Blob/Room4.unity
     guid: 72346e102f5cbae4cbcc496ae4915acf
-  - enabled: 1
-    path: Assets/Scenes/Email.unity
+  - enabled: 0
+    path: Assets/Scenes/Blob/Email.unity
     guid: 460db1104db104f469d936f9ea9b6f6e
   m_configObjects: {}
