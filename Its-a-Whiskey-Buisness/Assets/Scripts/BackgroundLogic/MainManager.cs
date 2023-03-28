@@ -29,15 +29,15 @@ public class MainManager : MonoBehaviour
     //    DontDestroyOnLoad(gameObject);
     //}
 
-    private void Awake()
-    {
-        //CheckActivation.Raise(this, energyTrack.ActivatedProperty);
+    //private void Awake()
+    //{
+    //    //CheckActivation.Raise(this, energyTrack.ActivatedProperty);
 
-        //if(energyTrack.ActivatedProperty == true)
-        //{
-        //    SetupEnergy.Raise(this, energyTrack.EnergyProperty);
-        //}
-    }
+    //    //if(energyTrack.ActivatedProperty == true)
+    //    //{
+    //    //    SetupEnergy.Raise(this, energyTrack.EnergyProperty);
+    //    //}
+    //}
 
     public void Addenergy(Component sender, object data)
     {

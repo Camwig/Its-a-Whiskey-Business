@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
-    public Button easy;
-    public Button Normal;
+    //Listen Im sorry but Im going to fuck with your code
+    //I will highlight what I changed.
 
     private float timeDuration = 9f * 60f;
     private float timer;
@@ -17,10 +16,16 @@ public class Clock : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI TextTimer;
 
+    //--------------------------
+    float hours;
+    float minutes;
+    //--------------------------
+
     // Start is called before the first frame update
     void Start()
     {
-
+        hours = 0f;
+        minutes = 0f;
         Timer();
     }
 
@@ -29,7 +34,6 @@ public class Clock : MonoBehaviour
     {
         if (timer > 0)
         {
-            
             timer += Time.deltaTime;
 
             UpdateTimer(timer);
@@ -57,8 +61,10 @@ public class Clock : MonoBehaviour
 
         if(timeDuration < 10f * 60f)
         {
-            float hours = Mathf.FloorToInt(time / 60);
-            float minutes = Mathf.FloorToInt(time % 60);
+            //float hours = Mathf.FloorToInt(time / 60);
+            //float minutes = Mathf.FloorToInt(time % 60);
+            hours = Mathf.FloorToInt(time / 60);
+            minutes = Mathf.FloorToInt(time % 60);
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
         }
@@ -74,18 +80,11 @@ public class Clock : MonoBehaviour
         Debug.Log("Time reached test");
     }
 
-    public void SlowTime()
+    //--------------------------
+    public Vector2 ReturnTime()
     {
-        if (easy.GetComponent<Button>() == true)
-        {
-            Time.timeScale = 0.5f;
-        }
+        Vector2 this_time = new Vector2(hours, minutes);
+        return this_time;
     }
-    public void NormalTime()
-    {
-        if (Normal.GetComponent<Button>() == true)
-        {
-            Time.timeScale = 1.0f;
-        }
-    }
+    //--------------------------
 }
