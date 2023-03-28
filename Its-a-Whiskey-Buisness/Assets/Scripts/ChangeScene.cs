@@ -6,26 +6,54 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 
-    public Animator transition;
+    //public Animator transition;
 
-    public float transitionTime = 1f;
+    //public float transitionTime = 0f;
 
-    public LevelLoader new_loader;
+   // public LevelLoader new_loader;
 
-    public int SceneID;
+    //public int SceneID;
 
-    public void MoveToScene()
-    {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    public GameObject activatingcam;
+    public GameObject deactivatingcam;
+
+    //public GameObject activatingpause;
+    //public GameObject deactivatingpause;
+
+    //public GameObject activatingRoom;
+    //public GameObject deactivatingRoom;
+
+
+
+    public void ActivatingScene()
+    { 
+        //StartCoroutine(LoadLevel());
+      //  activatingRoom.SetActive(true);
+      //  activatingpause.SetActive(true);
+        activatingcam.SetActive(true);
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    public void DeactivatingScene()
     {
-        transition.SetTrigger("Start");
-
-        yield return new WaitForSeconds(transitionTime);
-
-        SceneManager.LoadScene(SceneID);
+     //   deactivatingRoom.SetActive(false);
+    //    deactivatingpause.SetActive(false);
+        deactivatingcam.SetActive(false);
     }
+
+
+       //  activatingcam.SetActive(true);
+       //  deactivatingcam.SetActive(false);
+
+       //// activatingRoom.SetActive(true);
+
+
+       // //if (activatingRoom == true)
+       //// {
+       //     activatingpause.SetActive(true);
+       ////     deactivatingRoom.SetActive(false);
+       //     deactivatingpause.SetActive(false);
+       //// }
+       
+    
 
 }
