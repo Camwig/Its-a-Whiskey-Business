@@ -21,6 +21,9 @@ public class LeverInteraction : MonoBehaviour
     [SerializeField]
     public ObjectPositioing these_objects;
 
+    [SerializeField]
+    public int Room_num;
+
     public GameObject selectedObject;
 
     [Header("Events")]

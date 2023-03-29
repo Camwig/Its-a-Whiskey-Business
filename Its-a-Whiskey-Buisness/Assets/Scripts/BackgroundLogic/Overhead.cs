@@ -251,7 +251,7 @@ public class Overhead : MonoBehaviour
     CurrentRoom this_room;
 
     [SerializeField]
-    int RoomNum;
+    public int RoomNum;
 
     private void Awake()
     {

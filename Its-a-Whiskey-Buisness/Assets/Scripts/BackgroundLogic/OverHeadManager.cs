@@ -170,6 +170,8 @@ public class OverHeadManager : MonoBehaviour
 
     private static bool firstPlay = true;
 
+    private int RoomNum;
+
     private void OnEnable()
     {
         //if(energyTrack3.ActivatedProperty == false)
@@ -181,6 +183,12 @@ public class OverHeadManager : MonoBehaviour
         //{
         //    int k = 0;
         //}
+    }
+
+    //This can go whereever the new startup is
+    private void Start()
+    {
+        RoomNum = overhead_.RoomNum;
     }
 
 
