@@ -258,10 +258,13 @@ public class GenericRoom : MonoBehaviour
     //used for keeping energy consistent between overhead and each room
     public void SetupInitialEnergy(Component sender, object data)
     {
-        if (data is float)
+        if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num || RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
         {
-            Energy = (float)data;
-            //IncreaseProduct = 1;
+            if (data is float)
+            {
+                Energy = (float)data;
+                //IncreaseProduct = 1;
+            }
         }
     }
 
@@ -276,7 +279,7 @@ public class GenericRoom : MonoBehaviour
         ////    if(sender.GetInstanceID)
         ////}
 
-        if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num)
+        if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num || RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
         {
             if (data is bool)
             {

@@ -140,7 +140,7 @@ public class GenericRoomManager : MonoBehaviour
 
     private int check_on_exit = 0;
 
-    private int Roomnum;
+    public int Roomnum;
 
 
     //This can be in the new awake/start
