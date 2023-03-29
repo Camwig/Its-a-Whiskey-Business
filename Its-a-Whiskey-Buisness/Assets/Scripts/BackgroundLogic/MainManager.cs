@@ -17,6 +17,9 @@ public class MainManager : MonoBehaviour
     [SerializeField]
     private EnergyTracker energyTrack;
 
+    [SerializeField]
+    public int RoomNum;
+
     //private void Awake()
     //{
     //    if(Instance != null)
@@ -41,27 +44,36 @@ public class MainManager : MonoBehaviour
 
     public void Addenergy(Component sender, object data)
     {
-        if(data is float)
+        if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
         {
-            NewEnergy = (float)data;
-            energyTrack.EnergyProperty = NewEnergy;
-            //PlayerPrefs.SetFloat("Energy", NewEnergy);
+            if (data is float)
+            {
+                NewEnergy = (float)data;
+                energyTrack.EnergyProperty = NewEnergy;
+                //PlayerPrefs.SetFloat("Energy", NewEnergy);
+            }
         }
     }
 
     public void SetRoomOn(Component sender, object data)
     {
-        if(data is bool)
+        if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
         {
-            energyTrack.ActivatedProperty = (bool)data;
+            if (data is bool)
+            {
+                energyTrack.ActivatedProperty = (bool)data;
+            }
         }
     }
 
     public void SetRoomIncriment(Component sender, object data)
     {
-       if(data is int)
+        if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
         {
-            energyTrack.IncreaseProperty = (int)data;
+            if (data is int)
+            {
+                energyTrack.IncreaseProperty = (int)data;
+            }
         }
     }
 

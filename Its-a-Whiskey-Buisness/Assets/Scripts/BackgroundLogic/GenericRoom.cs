@@ -279,6 +279,7 @@ public class GenericRoom : MonoBehaviour
         ////    if(sender.GetInstanceID)
         ////}
 
+        //Error here
         if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num || RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
         {
             if (data is bool)
@@ -384,6 +385,8 @@ public class GenericRoom : MonoBehaviour
                 //Increase energy according to calculation
                 IncreasseEnergy();
                 //Raises the appropriate events
+
+                //Never Being raised
                 onEnergyChanged.Raise(this, Energy);
                 onActivation.Raise(this, true);
                 break;

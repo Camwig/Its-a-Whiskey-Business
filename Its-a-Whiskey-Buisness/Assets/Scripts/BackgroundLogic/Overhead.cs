@@ -1163,6 +1163,7 @@ public class Overhead : MonoBehaviour
 
     public void AddEnergy(Component sender, object data)
     {
+        //Doesnt like me doing this it does work however
         if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num)
         {
             if (data is float)
