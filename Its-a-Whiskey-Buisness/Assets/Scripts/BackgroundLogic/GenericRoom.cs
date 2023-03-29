@@ -278,24 +278,22 @@ public class GenericRoom : MonoBehaviour
 
         if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num)
         {
-            int i = 0;
-        }
-
-        if (data is bool)
-        {
-            bool on_off = (bool)data;
-
-            //Checks the boolean value
-            if (on_off == true)
+            if (data is bool)
             {
-                //Sets the state of the room
-                curr_state = Room_state.Tracking_energy;
-            }
-            else if (on_off == false)
-            {
-                if (curr_state == Room_state.Tracking_energy)
+                bool on_off = (bool)data;
+
+                //Checks the boolean value
+                if (on_off == true)
                 {
-                    curr_state = Room_state.Ending_tracking;
+                    //Sets the state of the room
+                    curr_state = Room_state.Tracking_energy;
+                }
+                else if (on_off == false)
+                {
+                    if (curr_state == Room_state.Tracking_energy)
+                    {
+                        curr_state = Room_state.Ending_tracking;
+                    }
                 }
             }
         }
@@ -332,43 +330,43 @@ public class GenericRoom : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        string_text = "Room Energy : " + Energy.ToString();
-        textelement.text = string_text;
-
-        //UpdateProductionRate.Raise(this, IncreaseProduct);
-
-        switch (curr_state)
-        {
-            case Room_state.Tracking_energy:
-                //Increase energy according to calculation
-                IncreasseEnergy();
-                //Raises the appropriate events
-                onEnergyChanged.Raise(this, Energy);
-                onActivation.Raise(this, true);
-                break;
-            case Room_state.Ending_tracking:
-                //Raises the appropriate event
-                onActivation.Raise(this, false);
-                Energy = 0;
-                curr_state = Room_state.Inactive;
-                //Stop the track of energy and pass it to the overhead
-                break;
-            case Room_state.Inactive:
-                //Idle
-                break;
-        }
-    }
-
-    //Update to be used later when we merge the builds
     //void Update()
     //{
-    //    if(this_room.GetRoom() == RoomNum)
+    //    string_text = "Room Energy : " + Energy.ToString();
+    //    textelement.text = string_text;
+
+    //    //UpdateProductionRate.Raise(this, IncreaseProduct);
+
+    //    switch (curr_state)
     //    {
-    //        Run_room();
+    //        case Room_state.Tracking_energy:
+    //            //Increase energy according to calculation
+    //            IncreasseEnergy();
+    //            //Raises the appropriate events
+    //            onEnergyChanged.Raise(this, Energy);
+    //            onActivation.Raise(this, true);
+    //            break;
+    //        case Room_state.Ending_tracking:
+    //            //Raises the appropriate event
+    //            onActivation.Raise(this, false);
+    //            Energy = 0;
+    //            curr_state = Room_state.Inactive;
+    //            //Stop the track of energy and pass it to the overhead
+    //            break;
+    //        case Room_state.Inactive:
+    //            //Idle
+    //            break;
     //    }
     //}
+
+    //Update to be used later when we merge the builds
+    void Update()
+    {
+        if (this_room.GetRoom() == RoomNum)
+        {
+            Run_room();
+        }
+    }
 
     private void Run_room()
     {
