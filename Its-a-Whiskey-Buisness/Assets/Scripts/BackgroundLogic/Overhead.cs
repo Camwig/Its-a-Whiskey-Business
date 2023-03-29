@@ -1163,11 +1163,14 @@ public class Overhead : MonoBehaviour
 
     public void AddEnergy(Component sender, object data)
     {
-        if (data is float)
+        if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num)
         {
-            float energy = (float)data;
-            Overall_Energy += energy;
-            //Debug.Log("ASASHSAJBSh\n");
+            if (data is float)
+            {
+                float energy = (float)data;
+                Overall_Energy += energy;
+                //Debug.Log("ASASHSAJBSh\n");
+            }
         }
     }
 
