@@ -1210,6 +1210,7 @@ public class OverHeadManager : MonoBehaviour
 
 
             overhead_.SetupEnergy();
+            overhead_.Startup();
         }
         else
         {
@@ -1220,9 +1221,6 @@ public class OverHeadManager : MonoBehaviour
             //int i;
             //Gets set to zero
             //i = energyTrack3.IncreaseProperty;
-
-
-            overhead_.SetupEnergy();
 
             if (energyTrack.ActivatedProperty == false || energyTrack.My_ActiveOnEntryAndExit == true || energyTrack.OtherRoomProperty == true)
             {
@@ -1313,6 +1311,9 @@ public class OverHeadManager : MonoBehaviour
             //        energyTrack3.EnergyProperty = new_energyTrack3_amount;
             //    }
             //}
+            overhead_.SetupEnergy();
+            overhead_.Startup();
+
         }
     }
 

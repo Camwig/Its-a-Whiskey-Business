@@ -7666,7 +7666,7 @@ PrefabInstance:
     - target: {fileID: 6223416667895183709, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: gameEvent
       value: 
-      objectReference: {fileID: 11400000, guid: 0c0a3cc37e91a0346ba3792c84503d78, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6223416667895183710, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: m_Name
       value: Overhead

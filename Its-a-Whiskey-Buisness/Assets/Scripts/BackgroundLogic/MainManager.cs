@@ -44,7 +44,7 @@ public class MainManager : MonoBehaviour
 
     public void Addenergy(Component sender, object data)
     {
-        if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
+        if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum || sender.GetComponent<GenericRoom>().RoomNum == 0)
         {
             if (data is float)
             {
