@@ -1311,8 +1311,8 @@ public class OverHeadManager : MonoBehaviour
             //        energyTrack3.EnergyProperty = new_energyTrack3_amount;
             //    }
             //}
-            overhead_.SetupEnergy();
-            overhead_.Startup();
+            //overhead_.SetupEnergy();
+            //overhead_.Startup();
 
         }
     }

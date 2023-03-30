@@ -1118,7 +1118,7 @@ public class Overhead : MonoBehaviour
         if (energyTrack.ActivatedProperty == true)
         {
             //Calculate the additive
-            additive = (0.001f * energyTrack.IncreaseProperty) * Time.deltaTime;
+            additive = (0.1f * energyTrack.IncreaseProperty) * Time.deltaTime;
             //Add it to the energy of the room and the overall seperatley
             Overall_Energy += additive;
             energyTrack.EnergyProperty += additive;
@@ -1134,7 +1134,7 @@ public class Overhead : MonoBehaviour
             //Calculate the additive
 
             //Increase property has defaulted to zero for some reason
-            additive = (0.001f * energyTrack2.IncreaseProperty) * Time.deltaTime;
+            additive = (0.1f * energyTrack2.IncreaseProperty) * Time.deltaTime;
 
             //Add it to the energy of the room and the overall seperatley
             Overall_Energy += additive;
@@ -1145,6 +1145,17 @@ public class Overhead : MonoBehaviour
             additive = 0.0f;
         }
         //------------------------------------------
+
+        if (!energyTrack.ActivatedProperty)
+        {
+            energyTrack.EnergyProperty = 0;
+        }
+
+        //------------------------------------------
+        if (!energyTrack2.ActivatedProperty)
+        {
+            energyTrack2.EnergyProperty = 0;
+        }
 
         //if (energyTrack2.ActivatedProperty == true)
         //{
@@ -1177,10 +1188,10 @@ public class Overhead : MonoBehaviour
 
     void Update()
     {
-        if (this_room.GetRoom() == RoomNum)
-        {
+        //if (this_room.GetRoom() == RoomNum)
+        //{
             RunRoom();
-        }
+        //}
     }
 
     //public void SetEnergy(float new_value)

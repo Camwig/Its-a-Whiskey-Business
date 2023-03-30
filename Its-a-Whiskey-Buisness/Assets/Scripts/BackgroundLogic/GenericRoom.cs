@@ -234,6 +234,8 @@ public class GenericRoom : MonoBehaviour
     public EventSytem onActivation;
     public EventSytem UpdateProductionRate;
 
+    public bool first_run;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -301,10 +303,6 @@ public class GenericRoom : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            return;
-        }
     }
 
     //Function that is called from by the event listener
@@ -334,7 +332,7 @@ public class GenericRoom : MonoBehaviour
     //Increases the energy of the room
     private void IncreasseEnergy()
     {
-        Energy += (0.001f * /*1*/IncreaseProduct) * Time.deltaTime;
+        Energy += (0.1f * /*1*/IncreaseProduct) * Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -370,7 +368,12 @@ public class GenericRoom : MonoBehaviour
     //Update to be used later when we merge the builds
     void Update()
     {
-        if (this_room.GetRoom() == RoomNum)
+        //if (this_room.GetRoom() == RoomNum)
+        //{
+        //    Run_room();
+        //}
+
+        if(first_run == true)
         {
             Run_room();
         }

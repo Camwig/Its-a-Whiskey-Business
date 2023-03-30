@@ -134,8 +134,6 @@ public class GenericRoomManager : MonoBehaviour
     [SerializeField]
     public EnergyTracker energyTracker;
     [SerializeField]
-    public EnergyTracker energyTracker2;
-    [SerializeField]
     public SliderState new_slide_state;
 
     private int check_on_exit = 0;
@@ -213,6 +211,7 @@ public class GenericRoomManager : MonoBehaviour
             //firstPlay = false;
             energyTracker.My_firstPlay = false;
             //new_slide_state.StateProperty = false;
+            this_room.first_run = true;
             this_room.SetupState();
         }
         else
@@ -221,8 +220,8 @@ public class GenericRoomManager : MonoBehaviour
             //Store the angle the lever was at after exit
 
             //Not super needed at the momenmt but I shall keep it in as its not that harmful at the moment
-            lever.transform.position = these_objects.gameObjects[0].transform.position;
-            lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
+            //lever.transform.position = these_objects.gameObjects[0].transform.position;
+            //lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
 
             //--------------------------
             //slider.transform.position = these_objects.gameObjects[1].transform.position;
@@ -240,8 +239,8 @@ public class GenericRoomManager : MonoBehaviour
             }
 
             //Sets up the initial values for the room
-            this_room.ActivateRoom(this, energyTracker.ActivatedProperty);
             this_room.SetupInitialEnergy(this, energyTracker.EnergyProperty);
+            this_room.ActivateRoom(this, energyTracker.ActivatedProperty);
         }
     }
 
