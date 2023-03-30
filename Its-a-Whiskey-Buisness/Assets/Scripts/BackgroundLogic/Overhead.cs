@@ -1080,8 +1080,8 @@ public class Overhead : MonoBehaviour
             string_room1 = energyTrack.EnergyProperty.ToString();
             textRoom1.text = string_room1;
 
-            //string_room2 = energyTrack2.EnergyProperty.ToString();
-            //textRoom2.text = string_room2;
+            string_room2 = energyTrack2.EnergyProperty.ToString();
+            textRoom2.text = string_room2;
         }
 
         //Overall_Energy += energyTrack.EnergyProperty;
