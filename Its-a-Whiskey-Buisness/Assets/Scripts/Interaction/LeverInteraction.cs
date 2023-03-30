@@ -144,7 +144,7 @@ public class LeverInteraction : MonoBehaviour
     public GameObject selectedObject;
 
     [Header("Events")]
-
+    [SerializeField]
     public EventSytem onLeverActivate;
 
     private void Awake()
@@ -207,11 +207,11 @@ public class LeverInteraction : MonoBehaviour
 
             if (angle >= 20)
             {
-                onLeverActivate.Raise(this, true);
+                onLeverActivate.Raise(selectedObject.GetComponent<LeverInteraction>(), true);
             }
             else
             {
-                onLeverActivate.Raise(this, false);
+                onLeverActivate.Raise(selectedObject.GetComponent<LeverInteraction>(), false);
             }
         }
 
@@ -228,9 +228,9 @@ public class LeverInteraction : MonoBehaviour
         is_being_held = false;
     }
 
-    private void OnDestroy()
-    {
-        these_objects.gameObjects[0].transform.position = selectedObject.transform.position;
-        these_objects.gameObjects[0].transform.rotation = selectedObject.transform.rotation;
-    }
+    //private void OnDestroy()
+    //{
+    //    these_objects.gameObjects[0].transform.position = selectedObject.transform.position;
+    //    these_objects.gameObjects[0].transform.rotation = selectedObject.transform.rotation;
+    //}
 }

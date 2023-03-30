@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   these_objects: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
+  Room_num: 0
   selectedObject: {fileID: 7774982586792016292}
   onLeverActivate: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
 --- !u!1001 &3474026119675375048
@@ -306,12 +307,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7408121378422754770, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -61.672604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408121378422754770, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0082517
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408121378422754770, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408121378422754770, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99993855
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408121378422754770, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408121378422754770, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7408121378422754770, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.011089803
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8317736103228282497, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}

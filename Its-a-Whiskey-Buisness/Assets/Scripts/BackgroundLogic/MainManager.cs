@@ -11,7 +11,7 @@ public class MainManager : MonoBehaviour
     [SerializeField]
     public EventSytem CheckActivation;
 
-    [SerializeField]
+   [SerializeField]
     public EventSytem SetupEnergy;
 
     [SerializeField]

@@ -301,6 +301,10 @@ public class GenericRoom : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            return;
+        }
     }
 
     //Function that is called from by the event listener
