@@ -136,6 +136,9 @@ public class GenericRoomManager : MonoBehaviour
     [SerializeField]
     public SliderState new_slide_state;
 
+    [SerializeField]
+    public GameObject this_manager;
+
     private int check_on_exit = 0;
 
     public int Roomnum;
@@ -239,8 +242,10 @@ public class GenericRoomManager : MonoBehaviour
             }
 
             //Sets up the initial values for the room
-            this_room.SetupInitialEnergy(this, energyTracker.EnergyProperty);
-            this_room.ActivateRoom(this, energyTracker.ActivatedProperty);
+
+            //These are not running
+            this_room.SetupInitialEnergy(this_manager.GetComponent<GenericRoomManager>(), energyTracker.EnergyProperty);
+            this_room.ActivateRoom_Manager(this_manager.GetComponent<GenericRoomManager>(), energyTracker.ActivatedProperty);
         }
     }
 

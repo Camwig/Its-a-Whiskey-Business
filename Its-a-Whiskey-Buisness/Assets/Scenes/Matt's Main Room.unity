@@ -1407,7 +1407,7 @@ PrefabInstance:
     - target: {fileID: 8047417593692586231, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: onLeverActivate
       value: 
-      objectReference: {fileID: 11400000, guid: 4e7ffb2684341a04ebfeab2c6369ffba, type: 2}
+      objectReference: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
 --- !u!1 &372260420
@@ -2083,6 +2083,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1837536037}
     - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: this_manager
+      value: 
+      objectReference: {fileID: 1417011100}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: energyTracker
       value: 
       objectReference: {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
@@ -2523,6 +2527,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 784904230}
     - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: this_manager
+      value: 
+      objectReference: {fileID: 1882677777}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: these_objects
       value: 
       objectReference: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
@@ -2735,7 +2743,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 784904230}
         m_TargetAssemblyTypeName: GenericRoom, Assembly-CSharp
-        m_MethodName: ActivateRoom
+        m_MethodName: ActivateRoom_Lever
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3611,7 +3619,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
   m_PrefabInstance: {fileID: 549034734}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1417011100}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba1d260b0957b0e4e93ede9225e24ae4, type: 3}
@@ -5188,12 +5196,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
   m_PrefabInstance: {fileID: 702291528}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1882677777}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba1d260b0957b0e4e93ede9225e24ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1417011100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2080543292120628722, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+  m_PrefabInstance: {fileID: 549034734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1437009918
 GameObject:
   m_ObjectHideFlags: 0
@@ -7854,13 +7867,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 4e7ffb2684341a04ebfeab2c6369ffba, type: 2}
+  gameEvent: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1837536037}
         m_TargetAssemblyTypeName: GenericRoom, Assembly-CSharp
-        m_MethodName: ActivateRoom
+        m_MethodName: ActivateRoom_Lever
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8282,6 +8295,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878562206}
   m_CullTransparentMesh: 1
+--- !u!1 &1882677777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2080543292120628722, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+  m_PrefabInstance: {fileID: 702291528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1909194910
 PrefabInstance:
   m_ObjectHideFlags: 0

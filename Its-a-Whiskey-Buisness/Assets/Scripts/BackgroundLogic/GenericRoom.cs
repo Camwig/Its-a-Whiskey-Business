@@ -260,7 +260,7 @@ public class GenericRoom : MonoBehaviour
     //used for keeping energy consistent between overhead and each room
     public void SetupInitialEnergy(Component sender, object data)
     {
-        if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num || RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
+        if (/*RoomNum == sender.GetComponent<LeverInteraction>().Room_num ||*/ RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
         {
             if (data is float)
             {
@@ -272,7 +272,7 @@ public class GenericRoom : MonoBehaviour
 
     //Function that is called from by the event listener
     //used to activate the room
-    public void ActivateRoom(Component sender, object data)
+    public void ActivateRoom_Manager(Component sender, object data)
     {
         //Checks if the data we are checking are booleans
 
@@ -282,7 +282,40 @@ public class GenericRoom : MonoBehaviour
         ////}
 
         //Error here
-        if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num || RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
+        if (/*RoomNum == sender.GetComponent<LeverInteraction>().Room_num ||*/ RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
+        {
+            if (data is bool)
+            {
+                bool on_off = (bool)data;
+
+                //Checks the boolean value
+                if (on_off == true)
+                {
+                    //Sets the state of the room
+                    curr_state = Room_state.Tracking_energy;
+                }
+                else if (on_off == false)
+                {
+                    if (curr_state == Room_state.Tracking_energy)
+                    {
+                        curr_state = Room_state.Ending_tracking;
+                    }
+                }
+            }
+        }
+    }
+
+    public void ActivateRoom_Lever(Component sender, object data)
+    {
+        //Checks if the data we are checking are booleans
+
+        ////if(sender is LeverInteraction)
+        ////{
+        ////    if(sender.GetInstanceID)
+        ////}
+
+        //Error here
+        if (RoomNum == sender.GetComponent<LeverInteraction>().Room_num /*|| RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum*/)
         {
             if (data is bool)
             {
