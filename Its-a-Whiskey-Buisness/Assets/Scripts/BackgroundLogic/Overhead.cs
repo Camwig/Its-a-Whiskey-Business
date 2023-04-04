@@ -813,16 +813,22 @@ public class Overhead : MonoBehaviour
     //private float EnergyRoom2;
     private float additive;
 
-    [SerializeField]
-    private EnergyTracker energyTrack;
+    //[SerializeField]
+    //private EnergyTracker energyTrack;
 
-    //------------------------------------------
-    [SerializeField]
-    private EnergyTracker energyTrack2;
+    ////------------------------------------------
+    //[SerializeField]
+    //private EnergyTracker energyTrack2;
     //------------------------------------------
 
     [SerializeField]
     private EnergyTracker OriginEnergyTrack;
+
+    //------------------------------------------
+    [SerializeField]
+    private List<EnergyTracker> ListOfTrackers;
+    //------------------------------------------
+
     //[SerializeField]
     //private EnergyTracker energyTrack2;
 
@@ -873,22 +879,34 @@ public class Overhead : MonoBehaviour
         //Once its been added I need to clear the added energy property especially if it is off
 
         //Overall_Energy += energyTrack.EnergyProperty;
-        Overall_Energy += energyTrack.Energy_to_be_added_property;
+        //Overall_Energy += energyTrack.Energy_to_be_added_property;
+
+        ////------------------------------------------
+        ////Overall_Energy += energyTrack2.EnergyProperty;
+        //Overall_Energy += energyTrack2.Energy_to_be_added_property;
+        ////------------------------------------------
+
+        //if (!energyTrack.ActivatedProperty)
+        //{
+        //    energyTrack.EnergyProperty = 0;
+        //}
+
+        ////------------------------------------------
+        //if (!energyTrack2.ActivatedProperty)
+        //{
+        //    energyTrack2.EnergyProperty = 0;
+        //}
+        //------------------------------------------
 
         //------------------------------------------
-        //Overall_Energy += energyTrack2.EnergyProperty;
-        Overall_Energy += energyTrack2.Energy_to_be_added_property;
-        //------------------------------------------
-
-        if (!energyTrack.ActivatedProperty)
+        for (int i =0; i < ListOfTrackers.Count; i++)
         {
-            energyTrack.EnergyProperty = 0;
-        }
+            Overall_Energy += ListOfTrackers[i].Energy_to_be_added_property;
 
-        //------------------------------------------
-        if (!energyTrack2.ActivatedProperty)
-        {
-            energyTrack2.EnergyProperty = 0;
+            if (!ListOfTrackers[i].ActivatedProperty)
+            {
+                ListOfTrackers[i].EnergyProperty = 0;
+            }
         }
         //------------------------------------------
 
@@ -1077,10 +1095,10 @@ public class Overhead : MonoBehaviour
             string_text = Overall_Energy.ToString();
             textelement.text = string_text;
 
-            string_room1 = energyTrack.EnergyProperty.ToString();
+            string_room1 = ListOfTrackers[0].EnergyProperty.ToString();
             textRoom1.text = string_room1;
 
-            string_room2 = energyTrack2.EnergyProperty.ToString();
+            string_room2 = ListOfTrackers[1].EnergyProperty.ToString();
             textRoom2.text = string_room2;
         }
 
@@ -1115,47 +1133,75 @@ public class Overhead : MonoBehaviour
         //        break;
         //}
 
-        if (energyTrack.ActivatedProperty == true)
-        {
-            //Calculate the additive
-            additive = (0.1f * energyTrack.IncreaseProperty) * Time.deltaTime;
-            //Add it to the energy of the room and the overall seperatley
-            Overall_Energy += additive;
-            energyTrack.EnergyProperty += additive;
-        }
-        else
-        {
-            additive = 0.0f;
-        }
+        //if (energyTrack.ActivatedProperty == true)
+        //{
+        //    //Calculate the additive
+        //    additive = (0.1f * energyTrack.IncreaseProperty) * Time.deltaTime;
+        //    //Add it to the energy of the room and the overall seperatley
+        //    Overall_Energy += additive;
+        //    energyTrack.EnergyProperty += additive;
+        //}
+        //else
+        //{
+        //    additive = 0.0f;
+        //}
+
+        ////------------------------------------------
+        //if (energyTrack2.ActivatedProperty == true)
+        //{
+        //    //Calculate the additive
+
+        //    //Increase property has defaulted to zero for some reason
+        //    additive = (0.1f * energyTrack2.IncreaseProperty) * Time.deltaTime;
+
+        //    //Add it to the energy of the room and the overall seperatley
+        //    Overall_Energy += additive;
+        //    energyTrack2.EnergyProperty += additive;
+        //}
+        //else
+        //{
+        //    additive = 0.0f;
+        //}
+        ////------------------------------------------
+
+        //if (!energyTrack.ActivatedProperty)
+        //{
+        //    energyTrack.EnergyProperty = 0;
+        //}
+
+        ////------------------------------------------
+        //if (!energyTrack2.ActivatedProperty)
+        //{
+        //    energyTrack2.EnergyProperty = 0;
+        //}
 
         //------------------------------------------
-        if (energyTrack2.ActivatedProperty == true)
+        for (int i = 0; i < ListOfTrackers.Count; i++)
         {
-            //Calculate the additive
+            if (ListOfTrackers[i].ActivatedProperty == true)
+            {
+                //Calculate the additive
 
-            //Increase property has defaulted to zero for some reason
-            additive = (0.1f * energyTrack2.IncreaseProperty) * Time.deltaTime;
+                //Increase property has defaulted to zero for some reason
+                additive = (0.1f * ListOfTrackers[i].IncreaseProperty) * Time.deltaTime;
 
-            //Add it to the energy of the room and the overall seperatley
-            Overall_Energy += additive;
-            energyTrack2.EnergyProperty += additive;
-        }
-        else
-        {
-            additive = 0.0f;
+                //Add it to the energy of the room and the overall seperatley
+                Overall_Energy += additive;
+                ListOfTrackers[i].EnergyProperty += additive;
+            }
+            else
+            {
+                additive = 0.0f;
+            }
+
+
+            if (!ListOfTrackers[i].ActivatedProperty)
+            {
+                ListOfTrackers[i].EnergyProperty = 0;
+            }
         }
         //------------------------------------------
 
-        if (!energyTrack.ActivatedProperty)
-        {
-            energyTrack.EnergyProperty = 0;
-        }
-
-        //------------------------------------------
-        if (!energyTrack2.ActivatedProperty)
-        {
-            energyTrack2.EnergyProperty = 0;
-        }
 
         //if (energyTrack2.ActivatedProperty == true)
         //{
