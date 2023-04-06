@@ -4,44 +4,26 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    //public static MainManager Instance;
-
+    //The new amount of energy that should be set to the energy tracker
     private float NewEnergy;
 
+    //Event system to check if the room has been activated
     [SerializeField]
     public EventSytem CheckActivation;
 
-   [SerializeField]
+    //Event system tosignal that the energy needs to be initialised
+    [SerializeField]
     public EventSytem SetupEnergy;
 
+    //energy tracker for the appropriate room
     [SerializeField]
     private EnergyTracker energyTrack;
 
+    //Room number that corresoonds to room this object is in
     [SerializeField]
     public int RoomNum;
 
-    //private void Awake()
-    //{
-    //    if(Instance != null)
-    //    {
-    //        Destroy(gameObject);
-    //        return;
-    //    }
-
-    //    Instance = this;
-    //    DontDestroyOnLoad(gameObject);
-    //}
-
-    //private void Awake()
-    //{
-    //    //CheckActivation.Raise(this, energyTrack.ActivatedProperty);
-
-    //    //if(energyTrack.ActivatedProperty == true)
-    //    //{
-    //    //    SetupEnergy.Raise(this, energyTrack.EnergyProperty);
-    //    //}
-    //}
-
+    //Function to add the new energy value to the energy tracker
     public void Addenergy(Component sender, object data)
     {
         if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum || sender.GetComponent<GenericRoom>().RoomNum == 0)
@@ -50,11 +32,11 @@ public class MainManager : MonoBehaviour
             {
                 NewEnergy = (float)data;
                 energyTrack.EnergyProperty = NewEnergy;
-                //PlayerPrefs.SetFloat("Energy", NewEnergy);
             }
         }
     }
 
+    //Function to set the room status (On or Off)
     public void SetRoomOn(Component sender, object data)
     {
         if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
@@ -66,6 +48,7 @@ public class MainManager : MonoBehaviour
         }
     }
 
+    //Function to set the rate of energy increase in the corresponding room 
     public void SetRoomIncriment(Component sender, object data)
     {
         if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
@@ -77,6 +60,7 @@ public class MainManager : MonoBehaviour
         }
     }
 
+    //Function to simply return the new amount of energy in the room
     public float ReturnEnergy()
     {
         return NewEnergy;

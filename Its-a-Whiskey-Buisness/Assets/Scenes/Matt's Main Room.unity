@@ -7190,13 +7190,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overhead_: {fileID: 2025061072}
-  energyTrack2: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
+  OriginenergyTrack: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
   ListOfTrackers:
   - {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
   - {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
   slide_state: {fileID: 11400000, guid: 1109d850d81ecb046b01149c5454fa69, type: 2}
   now_state: 0
-  new_energyTrack2_amount: 0
+  new_OriginenergyTrack_amount: 0
   room_state: {fileID: 1454648273}
 --- !u!1 &1778260739 stripped
 GameObject:
