@@ -14,12 +14,14 @@ public class Overhead : MonoBehaviour
     private string string_room1;
     private string string_room2;
     private string string_room3;
+    private string string_room4;
 
     //Text elements
     public Text textelement;
     public Text textRoom1;
     public Text textRoom2;
     public Text textRoom3;
+    public Text textRoom4;
 
     //I am unsure if this needed aswell so I will into removing this later
     public static Overhead New_Instance;
@@ -99,6 +101,9 @@ public class Overhead : MonoBehaviour
 
             string_room3 = ListOfTrackers[2].EnergyProperty.ToString();
             textRoom3.text = string_room3;
+
+            string_room4 = ListOfTrackers[3].EnergyProperty.ToString();
+            textRoom4.text = string_room4;
         }
 
         //Loop through each energy tracker
