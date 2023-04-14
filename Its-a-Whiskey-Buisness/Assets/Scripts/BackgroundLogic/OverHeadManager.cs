@@ -68,6 +68,9 @@ public class OverHeadManager : MonoBehaviour
             OriginenergyTrack.EnergyProperty = 0;
             OriginenergyTrack.IncreaseProperty = 1;
             OriginenergyTrack.ActivatedProperty = false;
+
+            OriginenergyTrack.MyTemperature = 0.0f;
+
             slide_state.StateProperty = false;
             firstPlay = false;
             OriginenergyTrack.MyRoomNum = 0;
@@ -80,6 +83,9 @@ public class OverHeadManager : MonoBehaviour
                 ListOfTrackers[i].ActivatedProperty = false;
                 ListOfTrackers[i].My_firstPlay = true;
                 ListOfTrackers[i].Energy_to_be_added_property = 0.0f;
+
+                ListOfTrackers[i].MyTemperature = 0.0f;
+
                 ListOfTrackers[i].My_ActiveOnEntryAndExit = false;
                 ListOfTrackers[i].OtherRoomProperty = false;
                 ListOfTrackers[i].MyRoomNum = i + 1;

@@ -81,4 +81,15 @@ public class EnergyTracker : ScriptableObject
     //Will probably look into making the booleans that dont overlap with each other in this Object into
     //an enumerator which will just make it nicer to use.
 
+
+
+    ///----------------Needing to add temperature
+    private float Temperature;
+    public float MyTemperature
+    {
+        get { return Temperature; }
+        set { Temperature = value; }
+    }
+    ///
+
 }

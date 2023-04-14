@@ -245,6 +245,8 @@ public class GenericRoomManager : MonoBehaviour
 
             //These are not running
             this_room.SetupInitialEnergy(this_manager.GetComponent<GenericRoomManager>(), energyTracker.EnergyProperty);
+
+            //Chnage this to take a number value to set instead
             this_room.ActivateRoom_Manager(this_manager.GetComponent<GenericRoomManager>(), energyTracker.ActivatedProperty);
         }
     }
