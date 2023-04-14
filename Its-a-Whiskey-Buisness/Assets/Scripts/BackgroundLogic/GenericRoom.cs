@@ -342,23 +342,27 @@ public class GenericRoom : MonoBehaviour
     //used to increase the production
     public void IncreaseProduction(Component sender, object data)
     {
-        //Checks if the data we are checking are booleans
-        if (data is bool)
+        if (RoomNum == sender.GetComponent<SliderInteractable>().Room_num /*|| RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum*/)
         {
-            bool on_off = (bool)data;
 
-            //Checks the boolean value
-            if (on_off == true)
+            //Checks if the data we are checking are booleans
+            if (data is bool)
             {
-                //Sets the Incriment value based off the boolean value
-                IncreaseProduct = 10;
+                bool on_off = (bool)data;
+
+                //Checks the boolean value
+                if (on_off == true)
+                {
+                    //Sets the Incriment value based off the boolean value
+                    IncreaseProduct = 500;
+                }
+                else
+                {
+                    IncreaseProduct = 1;
+                }
+                //Raises an event for the update production rate function
+                UpdateProductionRate.Raise(this, IncreaseProduct);
             }
-            else
-            {
-                IncreaseProduct = 1;
-            }
-            //Raises an event for the update production rate function
-            UpdateProductionRate.Raise(this, IncreaseProduct);
         }
     }
 
