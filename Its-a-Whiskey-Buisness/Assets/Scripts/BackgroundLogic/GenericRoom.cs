@@ -366,6 +366,19 @@ public class GenericRoom : MonoBehaviour
         }
     }
 
+    public void IncreaseProduction_Variable(Component sender, object data)
+    {
+        if (RoomNum == sender.GetComponent<ClickingSliderInteractable>().Room_num /*|| RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum*/)
+        {
+            //Checks if the data we are checking are booleans
+            if (data is int)
+            {
+                IncreaseProduct = (int)data;
+                UpdateProductionRate.Raise(this, IncreaseProduct);
+            }
+        }
+    }
+
     //Increases the energy of the room
     private void IncreasseEnergy()
     {
