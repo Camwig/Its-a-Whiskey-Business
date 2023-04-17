@@ -68,4 +68,43 @@ public class Objective : ScriptableObject
         get { return Modifier; }
         set { Modifier = value; }
     }
+
+    //Need to have thing to say if you need to track energy rate  and/or temperature
+
+    [SerializeField]
+    private bool RateTrack;
+
+    public bool MyRateTrack
+    {
+        get { return RateTrack; }
+        set { RateTrack = value; }
+    }
+
+    [SerializeField]
+    private float RateValue;
+
+    public float MyRateValue
+    {
+        get { return RateValue; }
+        set { RateValue = value; }
+    }
+
+    [SerializeField]
+    private bool TempTrack;
+
+    public bool MyTempTrack
+    {
+        get { return TempTrack; }
+        set { TempTrack = value; }
+    }
+
+    [SerializeField]
+    private float TempValue;
+
+    public float MyTempValue
+    {
+        get { return TempValue; }
+        set { TempValue = value; }
+    }
+
 }

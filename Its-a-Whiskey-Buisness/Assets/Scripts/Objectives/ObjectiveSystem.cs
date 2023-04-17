@@ -89,6 +89,24 @@ public class ObjectiveSystem : MonoBehaviour
                             {
                                 Objectives[h].MyActivated = true;
                             }
+
+                            if(Objectives[h].MyRateTrack == true)
+                            {
+                                if(EnergyTrackers[j].IncreaseProperty != Objectives[h].MyRateValue)
+                                {
+                                    Objectives[h].MyActivated = false;
+                                    deductionValue -= 0.1f * Time.deltaTime;
+                                }
+                            }
+
+                            if (Objectives[h].MyTempTrack == true)
+                            {
+                                if (EnergyTrackers[j].MyTemperature != Objectives[h].MyTempValue)
+                                {
+                                    Objectives[h].MyActivated = false;
+                                    deductionValue -= 0.1f * Time.deltaTime;
+                                }
+                            }
                         }
                     }
                 }
