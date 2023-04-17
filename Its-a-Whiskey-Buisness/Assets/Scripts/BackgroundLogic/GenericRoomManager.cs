@@ -248,6 +248,9 @@ public class GenericRoomManager : MonoBehaviour
 
             //Chnage this to take a number value to set instead
             this_room.ActivateRoom_Manager(this_manager.GetComponent<GenericRoomManager>(), energyTracker.ActivatedProperty);
+
+            //Update the temperature
+            this_room.SetupInitialTemperature(this_manager.GetComponent<GenericRoomManager>(), energyTracker.MyTemperature);
         }
     }
 

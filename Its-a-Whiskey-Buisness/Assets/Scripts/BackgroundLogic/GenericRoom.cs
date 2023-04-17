@@ -206,12 +206,15 @@ public class GenericRoom : MonoBehaviour
 {
     //Energy variable being produced within the 'Room'
     public float Energy;
+    //Temperature variable of to do with the specific room
+    public float Temperature;
     //Enumerator states of the room
     enum Room_state { Tracking_energy, Inactive, Ending_tracking };
     //Current state of the room
     private Room_state curr_state;
     //String to be used to set the text
-    private string string_text;
+    private string string_text_Energy;
+    private string string_text_Temp;
     //Variable to keep track of the rate at which the enrgy is produced
     private int IncreaseProduct;
 
@@ -233,13 +236,15 @@ public class GenericRoom : MonoBehaviour
     public EventSytem onEnergyChanged;
     public EventSytem onActivation;
     public EventSytem UpdateProductionRate;
+    public EventSytem SetTemperature;
+    //Need a new tempearture event
 
     public bool first_run;
 
     // Start is called before the first frame update
     void Start()
     {
-        string_text = "Default";
+        string_text_Energy = "Default";
         IncreaseProduct = 1;
     }
 
@@ -254,6 +259,7 @@ public class GenericRoom : MonoBehaviour
     {
         curr_state = Room_state.Inactive;
         Energy = 0;
+        Temperature = 60;
     }
 
     //Sets the energy of the room when the player enters it
@@ -265,6 +271,19 @@ public class GenericRoom : MonoBehaviour
             if (data is float)
             {
                 Energy = (float)data;
+                //IncreaseProduct = 1;
+            }
+        }
+    }
+
+    //Setting up intitial temperature
+    public void SetupInitialTemperature(Component sender, object data)
+    {
+        if (/*RoomNum == sender.GetComponent<LeverInteraction>().Room_num ||*/ RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum)
+        {
+            if (data is float)
+            {
+                Temperature = (float)data;
                 //IncreaseProduct = 1;
             }
         }
@@ -385,6 +404,20 @@ public class GenericRoom : MonoBehaviour
         Energy += (0.1f * /*1*/IncreaseProduct) * Time.deltaTime;
     }
 
+    public void DetermineTempearture(Component sender, object data)
+    {
+        //Input appropriate object
+        if (RoomNum == sender.GetComponent<ButtonInteractable>().Room_num)
+        {
+            if (data is float)
+            {
+                Temperature = (float)data;
+                SetTemperature.Raise(this, Temperature);
+                //Raise new temperature
+            }
+        }
+    }
+
     // Update is called once per frame
     //void Update()
     //{
@@ -431,9 +464,11 @@ public class GenericRoom : MonoBehaviour
 
     private void Run_room()
     {
-        string_text = "Room Energy : " + Energy.ToString();
-        textelement.text = string_text;
+        string_text_Energy = "Room Energy : " + Energy.ToString();
+        textelement.text = string_text_Energy;
 
+        string_text_Temp = "Temperature : " + Temperature.ToString();
+        Debug.Log(string_text_Temp);
         //UpdateProductionRate.Raise(this, IncreaseProduct);
 
         switch (curr_state)

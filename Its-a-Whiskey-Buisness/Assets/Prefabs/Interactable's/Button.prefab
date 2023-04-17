@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628374320271886676}
   - component: {fileID: 628374320271886678}
-  - component: {fileID: 4648945116906128782}
+  - component: {fileID: 3419381743955963958}
   - component: {fileID: 628374320271886679}
   m_Layer: 0
   m_Name: ButtonSprite
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.43708515, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4648945116906128782
+--- !u!114 &3419381743955963958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,9 +125,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 628374320271886675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8350bea58e0b3646be29c1da9d732c2, type: 3}
+  m_Script: {fileID: 11500000, guid: d86715046b3efc043a60950c3be7d12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Room_num: 0
+  onButtonActivate: {fileID: 0}
 --- !u!61 &628374320271886679
 BoxCollider2D:
   m_ObjectHideFlags: 0

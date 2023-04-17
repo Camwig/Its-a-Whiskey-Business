@@ -66,4 +66,14 @@ public class MainManager : MonoBehaviour
         return NewEnergy;
     }
 
+    public void SetTemperature(Component sender, object data)
+    {
+        if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
+        {
+            if (data is float)
+            {
+                energyTrack.MyTemperature = (float)data;
+            }
+        }
+    }
 }
