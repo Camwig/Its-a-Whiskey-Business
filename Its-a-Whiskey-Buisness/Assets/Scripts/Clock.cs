@@ -18,6 +18,9 @@ public class Clock : MonoBehaviour
     private TextMeshProUGUI TextTimer;
 
     public GameObject panel;
+
+    float hours;
+    float minutes;
     
     // Start is called before the first frame update
     void Start()
@@ -101,5 +104,11 @@ public class Clock : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
+    }
+
+    public Vector2 ReturnTime()
+    {
+        Vector2 this_time = new Vector2(hours, minutes);
+        return this_time;
     }
 }
