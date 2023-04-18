@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
-    //Listen Im sorry but Im going to fuck with your code
-    //I will highlight what I changed.
+    public Button easy;
+    public Button Normal;
 
     private float timeDuration = 9f * 60f;
     private float timer;
@@ -16,16 +17,12 @@ public class Clock : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI TextTimer;
 
-    //--------------------------
-    float hours;
-    float minutes;
-    //--------------------------
-
+    public GameObject panel;
+    
     // Start is called before the first frame update
     void Start()
     {
-        hours = 0f;
-        minutes = 0f;
+
         Timer();
     }
 
@@ -34,6 +31,7 @@ public class Clock : MonoBehaviour
     {
         if (timer > 0)
         {
+            
             timer += Time.deltaTime;
 
             UpdateTimer(timer);
@@ -58,21 +56,31 @@ public class Clock : MonoBehaviour
     }
     private void UpdateTimer(float time)
     {
+        
 
-        if(timeDuration < 10f * 60f)
+        if (timeDuration < 10f * 60f)
         {
-            //float hours = Mathf.FloorToInt(time / 60);
-            //float minutes = Mathf.FloorToInt(time % 60);
-            hours = Mathf.FloorToInt(time / 60);
-            minutes = Mathf.FloorToInt(time % 60);
+            float hours = Mathf.FloorToInt(time / 60);
+            float minutes = Mathf.FloorToInt(time % 60);
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
+
+
+            if (hours == 17)
+            {
+                panel.SetActive(true);
+                Time.timeScale = 0f;
+            }
+
         }
 
         else if (timeDuration > 11f * 60f)
         {
             Debug.Log("Time reached test");
+
         }
+
+
     }
 
     private void Flash()
@@ -80,11 +88,18 @@ public class Clock : MonoBehaviour
         Debug.Log("Time reached test");
     }
 
-    //--------------------------
-    public Vector2 ReturnTime()
+    public void SlowTime()
     {
-        Vector2 this_time = new Vector2(hours, minutes);
-        return this_time;
+        if (easy.GetComponent<Button>() == true)
+        {
+            Time.timeScale = 0.5f;
+        }
     }
-    //--------------------------
+    public void NormalTime()
+    {
+        if (Normal.GetComponent<Button>() == true)
+        {
+            Time.timeScale = 1.0f;
+        }
+    }
 }
