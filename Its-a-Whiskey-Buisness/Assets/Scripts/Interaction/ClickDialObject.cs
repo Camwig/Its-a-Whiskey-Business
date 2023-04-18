@@ -38,6 +38,11 @@ public class ClickDialObject : MonoBehaviour
         origin_time = 0;
     }
 
+    private void Awake()
+    {
+        this.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
     void Update()
     {
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
@@ -46,7 +51,8 @@ public class ClickDialObject : MonoBehaviour
 
         Vector2 direction = mousePosition - this.transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //angle = Mathf.Clamp(angle, 30, 330);
+        //angle = Mathf.Clamp(angle, -135, 225);
+        angle = Mathf.Clamp(angle, 30, 330);
 
         //Clamps it between certain angles
         //annoying that it isnt in the same format
@@ -64,7 +70,17 @@ public class ClickDialObject : MonoBehaviour
         //Debug.Log(power);
 
         //
-        Quaternion old_rotate = this.transform.rotation;
+        //Quaternion old_rotate = this.transform.rotation;
+
+        //if (angle >= 30)
+        //{
+        //    angle = -30;
+        //}
+
+        //if (angle <= -30)
+        //{
+        //    angle = -30;
+        //}
 
         curr_point = Cardinal_points.None;
 
@@ -90,14 +106,15 @@ public class ClickDialObject : MonoBehaviour
             {
 
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                
                 //Slerping is spherically interpolating
                 this.transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
 
 
-                //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
+                //if (this.transform.rotation.z <= -135 && this.transform.rotation.z >= 135)
                 //{
                 //    //Never runs
-                //    this.transform.rotation = old_rotate.eulerAngles;
+                //    this.transform.eulerAngles = old_rotate.eulerAngles;
                 //}
 
             }

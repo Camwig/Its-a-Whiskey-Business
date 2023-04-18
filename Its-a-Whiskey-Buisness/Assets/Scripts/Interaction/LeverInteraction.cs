@@ -71,8 +71,8 @@ public class LeverInteraction : MonoBehaviour
             angle = 330;
         }
 
-        //Gets the latest rotation before applying the new angle
-        Quaternion old_rotate = selectedObject.transform.rotation;
+        ////Gets the latest rotation before applying the new angle
+        //Quaternion old_rotate = selectedObject.transform.rotation;
 
         //Checks if the object is being held
         if (is_being_held == true)
