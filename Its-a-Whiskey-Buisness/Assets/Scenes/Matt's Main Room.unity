@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: onDialActivate
       value: 
       objectReference: {fileID: 11400000, guid: bfb8183f600e7724da092d1212bd24eb, type: 2}
+    - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: selectedObject
+      value: 
+      objectReference: {fileID: 854967580}
     - target: {fileID: 8146459640334333590, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -350,16 +354,40 @@ PrefabInstance:
       value: ClickDialObject
       objectReference: {fileID: 0}
     - target: {fileID: 8146459641560429676, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429676, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429676, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429676, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.87
+      value: -6.07
       objectReference: {fileID: 0}
     - target: {fileID: 8146459641560429676, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.02
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429677, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429677, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8146459641560429677, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429677, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -3960,6 +3988,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &854967580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8146459641560429679, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+  m_PrefabInstance: {fileID: 79522859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &855107175
 GameObject:
   m_ObjectHideFlags: 0

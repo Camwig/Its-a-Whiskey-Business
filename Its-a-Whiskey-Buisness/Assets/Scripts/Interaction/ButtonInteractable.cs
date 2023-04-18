@@ -8,6 +8,9 @@ public class ButtonInteractable : MonoBehaviour
     private bool on_off;
 
     [SerializeField]
+    public bool temperature_not_power;
+
+    [SerializeField]
     public int Room_num;
 
     [Header("Events")]
@@ -37,6 +40,15 @@ public class ButtonInteractable : MonoBehaviour
                 data = 180;
                 break;
         }
-        onButtonActivate.Raise(this, data);
+
+        if (temperature_not_power == true)
+        {
+            onButtonActivate.Raise(this, data);
+        }
+
+        else if (temperature_not_power == false)
+        {
+            onButtonActivate.Raise(this, on_off);
+        }
     }
 }

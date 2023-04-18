@@ -20,6 +20,9 @@ public class ClickDialObject : MonoBehaviour
     private bool check_time;
     private float origin_time;
 
+    //Object attached to this script
+    public GameObject selectedObject;
+
     [SerializeField]
     public int Room_num;
 
@@ -31,7 +34,7 @@ public class ClickDialObject : MonoBehaviour
         //curr_point = Cardinal_points.E_Active;
         power = 0;
         rotation = 0;
-        roatationSpeed = FrictionSpeed.RotationSpeed;
+        roatationSpeed = FrictionSpeed.LeverSpeed;
 
         check_time = false;
         new_time = 0;
@@ -40,7 +43,8 @@ public class ClickDialObject : MonoBehaviour
 
     private void Awake()
     {
-        this.transform.rotation = Quaternion.Euler(0, 0, 0);
+        //Upon activation will set the rotation
+        selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     void Update()
@@ -49,15 +53,65 @@ public class ClickDialObject : MonoBehaviour
 
         //float roatationSpeed = 10f;
 
-        Vector2 direction = mousePosition - this.transform.position;
+        Vector2 direction = mousePosition - selectedObject.transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //angle = Mathf.Clamp(angle, -135, 225);
-        angle = Mathf.Clamp(angle, 30, 330);
+        //angle = Mathf.Clamp(angle, 30, 330);
 
         //Clamps it between certain angles
         //annoying that it isnt in the same format
         //Have to remeber this 
-        //if((angle > 30))
+        //if ((angle >= 30))
+        //{
+        //    angle = 30;
+        //    Debug.Log(angle);
+        //}
+
+        //if(angle <= 30)
+        //{
+        //    angle += 360;
+        //}
+        //else if(angle >= 330)
+        //{
+        //    angle -= 360;
+        //}
+
+        //angle = Mathf.Repeat(angle, 360);
+
+        //if(angle ==30)
+        //{
+        //    if ((angle >= 30))
+        //    {
+        //        angle = 30;
+        //    }
+        //}
+
+        //else if( angle == 330)
+        //{
+        //    if (angle <= 330)
+        //    {
+        //        angle = 330;
+        //    }
+        //}
+
+
+        //else if (angle <= -30)
+        //{
+        //    angle = -30;
+        //    Debug.Log(angle);
+        //}
+
+        //if(angle < 30 && angle > -30)
+        //{
+        //    angle = 0;
+        //    Debug.Log(angle);
+        //}
+        //else
+        //{
+        //    angle= 180;
+        //    Debug.Log(angle);
+        //}
+
+        //if ((angle > 30))
         //{
         //    angle = 30;
         //}
@@ -67,20 +121,10 @@ public class ClickDialObject : MonoBehaviour
         //    angle = 330;
         //}
 
-        //Debug.Log(power);
+        //Debug.Log(angle);
 
         //
         //Quaternion old_rotate = this.transform.rotation;
-
-        //if (angle >= 30)
-        //{
-        //    angle = -30;
-        //}
-
-        //if (angle <= -30)
-        //{
-        //    angle = -30;
-        //}
 
         curr_point = Cardinal_points.None;
 
@@ -106,20 +150,19 @@ public class ClickDialObject : MonoBehaviour
             {
 
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                
                 //Slerping is spherically interpolating
-                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
+                selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
 
 
-                //if (this.transform.rotation.z <= -135 && this.transform.rotation.z >= 135)
+                //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
                 //{
                 //    //Never runs
-                //    this.transform.eulerAngles = old_rotate.eulerAngles;
+                //    this.transform.rotation = old_rotate.eulerAngles;
                 //}
 
             }
 
-            if (this.transform.eulerAngles.z <= 315 && this.transform.eulerAngles.z >= 225)
+            if (selectedObject.transform.eulerAngles.z <= 315 && selectedObject.transform.eulerAngles.z >= 225)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;
@@ -130,7 +173,7 @@ public class ClickDialObject : MonoBehaviour
                 }
             }
             
-            if (this.transform.eulerAngles.z >= 135 && this.transform.eulerAngles.z <= 225)
+            if (selectedObject.transform.eulerAngles.z >= 135 && selectedObject.transform.eulerAngles.z <= 225)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;

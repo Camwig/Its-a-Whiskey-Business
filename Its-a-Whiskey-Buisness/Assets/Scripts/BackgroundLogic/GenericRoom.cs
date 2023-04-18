@@ -357,6 +357,39 @@ public class GenericRoom : MonoBehaviour
         }
     }
 
+    public void ActivateRoom_Button(Component sender, object data)
+    {
+        //Checks if the data we are checking are booleans
+
+        ////if(sender is LeverInteraction)
+        ////{
+        ////    if(sender.GetInstanceID)
+        ////}
+
+        //Error here
+        if (RoomNum == sender.GetComponent<ButtonInteractable>().Room_num /*|| RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum*/)
+        {
+            if (data is bool)
+            {
+                bool on_off = (bool)data;
+
+                //Checks the boolean value
+                if (on_off == true)
+                {
+                    //Sets the state of the room
+                    curr_state = Room_state.Tracking_energy;
+                }
+                else if (on_off == false)
+                {
+                    if (curr_state == Room_state.Tracking_energy)
+                    {
+                        curr_state = Room_state.Ending_tracking;
+                    }
+                }
+            }
+        }
+    }
+
     //Function that is called from by the event listener
     //used to increase the production
     public void IncreaseProduction(Component sender, object data)
