@@ -4574,8 +4574,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objectives:
   - {fileID: 11400000, guid: 27f8bcf1b32388442a41bff7f2c8c2f4, type: 2}
+  - {fileID: 11400000, guid: de8b9ca85184285458a56ea77d0e86a7, type: 2}
   EnergyTrackers:
   - {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
+  - {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
+  - {fileID: 11400000, guid: cb1c73966a806fe4a98236a59bdc9a30, type: 2}
+  - {fileID: 11400000, guid: a828cc457e28ba342840d7fd4d8386b0, type: 2}
   OverheadTracker: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
   this_clock: {fileID: 516569040}
   textElement: {fileID: 2053206907}
