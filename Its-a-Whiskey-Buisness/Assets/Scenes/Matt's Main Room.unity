@@ -289,6 +289,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2128011561}
     m_Modifications:
+    - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: Room_num
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: onDialActivate
+      value: 
+      objectReference: {fileID: 11400000, guid: bfb8183f600e7724da092d1212bd24eb, type: 2}
     - target: {fileID: 8146459640334333590, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -337,8 +345,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClickDialObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429676, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146459641560429676, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.02
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4604755954967317971, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
 --- !u!1 &119203262
 GameObject:
@@ -424,25 +440,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4657446579688033266, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
   m_PrefabInstance: {fileID: 1909194910}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &138819425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8146459641560429679, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
-  m_PrefabInstance: {fileID: 79522859}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &138819427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138819425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c948bc8fa9c089b4fa317f09d989d6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Room_num: 2
-  onDialActivate: {fileID: 11400000, guid: bfb8183f600e7724da092d1212bd24eb, type: 2}
 --- !u!1001 &143388841
 PrefabInstance:
   m_ObjectHideFlags: 0

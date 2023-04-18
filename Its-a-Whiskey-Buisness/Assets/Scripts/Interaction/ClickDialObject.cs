@@ -28,7 +28,7 @@ public class ClickDialObject : MonoBehaviour
 
     private void Start()
     {
-        curr_point = Cardinal_points.None;
+        //curr_point = Cardinal_points.E_Active;
         power = 0;
         rotation = 0;
         roatationSpeed = FrictionSpeed.RotationSpeed;
@@ -66,6 +66,8 @@ public class ClickDialObject : MonoBehaviour
         //
         Quaternion old_rotate = this.transform.rotation;
 
+        curr_point = Cardinal_points.None;
+
 
         if (check_time == true)
         {
@@ -91,16 +93,16 @@ public class ClickDialObject : MonoBehaviour
                 //Slerping is spherically interpolating
                 this.transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
 
-                //
-                //if(selectedObject.transform.rotation.z >= 330 && selectedObject.transform.rotation.z >= 30)
+
+                //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
                 //{
                 //    //Never runs
-                //    selectedObject.transform.rotation = old_rotate;
+                //    this.transform.rotation = old_rotate.eulerAngles;
                 //}
-                //
+
             }
 
-            if (this.transform.eulerAngles.z <= 45 && this.transform.eulerAngles.z <= 315)
+            if (this.transform.eulerAngles.z <= 315 && this.transform.eulerAngles.z >= 225)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;
@@ -110,10 +112,25 @@ public class ClickDialObject : MonoBehaviour
                     curr_point = Cardinal_points.E;
                 }
             }
-            else
+            
+            if (this.transform.eulerAngles.z >= 135 && this.transform.eulerAngles.z <= 225)
             {
-                curr_point = Cardinal_points.None;
+                check_time = true;
+                origin_time = Time.deltaTime;
+
+                if (curr_point == Cardinal_points.None)
+                {
+                    curr_point = Cardinal_points.S;
+                }
             }
+            //else
+            //{
+                //curr_point = Cardinal_points.None;
+            //}
+            //else
+            //{
+            //curr_point = Cardinal_points.None;
+            //}
 
             CheckState();
         }
@@ -125,6 +142,11 @@ public class ClickDialObject : MonoBehaviour
         {
             onDialActivate.Raise(this, 100);
             curr_point = Cardinal_points.E_Active;
+        }
+        else if (curr_point == Cardinal_points.S)
+        {
+            onDialActivate.Raise(this, 5000);
+            curr_point = Cardinal_points.S_Active;
         }
         else if (curr_point == Cardinal_points.None)
         {
