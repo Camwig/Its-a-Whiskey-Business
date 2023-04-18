@@ -9,7 +9,7 @@ public class ClickDialObject : MonoBehaviour
     private Vector3 offset;
     private bool is_being_held = false;
     private float angle;
-    private enum Cardinal_points { E, S, W, N };
+    private enum Cardinal_points { E, S, W, N , E_Active,S_Active,W_Active,N_Active,None};
     Cardinal_points curr_point;
     private int power;
     private int rotation;
@@ -20,9 +20,15 @@ public class ClickDialObject : MonoBehaviour
     private bool check_time;
     private float origin_time;
 
+    [SerializeField]
+    public int Room_num;
+
+    [Header("Events")]
+    public EventSytem onDialActivate;
+
     private void Start()
     {
-        curr_point = Cardinal_points.E;
+        curr_point = Cardinal_points.None;
         power = 0;
         rotation = 0;
         roatationSpeed = FrictionSpeed.RotationSpeed;
@@ -94,80 +100,48 @@ public class ClickDialObject : MonoBehaviour
                 //
             }
 
-            if(this.transform.eulerAngles.z <= 45 && this.transform.eulerAngles.z <= 315)
+            if (this.transform.eulerAngles.z <= 45 && this.transform.eulerAngles.z <= 315)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;
+
+                if (curr_point == Cardinal_points.None)
+                {
+                    curr_point = Cardinal_points.E;
+                }
+            }
+            else
+            {
+                curr_point = Cardinal_points.None;
             }
 
-            //Only increases rotation at 135 degrees
-
-            //if (this.transform.eulerAngles.z <= 45 && this.transform.eulerAngles.z <= 315)
-            //{
-            //    if (curr_point == Cardinal_points.N)
-            //    {
-            //        if (rotation >= 3)
-            //        {
-            //            //Never runs
-            //            power++;
-            //            rotation = 0;
-            //        }
-            //    }
-
-            //    //if(curr_point==Cardinal_points.S)
-            //    //{
-            //    //    if(rotation >=-3)
-            //    //    {
-            //    //        //Never runs
-            //    //        power--;
-            //    //        rotation = 0;
-            //    //    }
-            //    //}
-
-            //    curr_point = Cardinal_points.E;
-            //}
-
-            //if (this.transform.eulerAngles.z <= 315 && this.transform.eulerAngles.z >= 225)
-            //{
-            //    if (curr_point == Cardinal_points.E)
-            //    {
-            //        rotation++;
-            //    }
-            //    //if(curr_point==Cardinal_points.W)
-            //    //{
-            //    //    rotation--;
-            //    //}
-            //    curr_point = Cardinal_points.S;
-            //}
-
-
-            //if (this.transform.eulerAngles.z >= 135 && this.transform.eulerAngles.z <= 225)
-            //{
-            //    //Never true
-            //    if (curr_point == Cardinal_points.S)
-            //    {
-            //        rotation++;
-            //    }
-            //    //if(curr_point==Cardinal_points.N)
-            //    //{
-            //    //    rotation--;
-            //    //}
-            //    curr_point = Cardinal_points.W;
-            //}
-
-            //if (this.transform.eulerAngles.z >= 45 && this.transform.eulerAngles.z <= 135)
-            //{
-            //    if (curr_point == Cardinal_points.W)
-            //    {
-            //        rotation++;
-            //    }
-            //    //if (curr_point == Cardinal_points.E)
-            //    //{
-            //    //    rotation--;
-            //    //}
-            //    curr_point = Cardinal_points.N;
-            //}
+            CheckState();
         }
+    }
+
+    private void CheckState()
+    {
+        if (curr_point == Cardinal_points.E)
+        {
+            onDialActivate.Raise(this, 100);
+            curr_point = Cardinal_points.E_Active;
+        }
+        else if (curr_point == Cardinal_points.None)
+        {
+            onDialActivate.Raise(this, 1);
+        }
+        //else if (curr_state == slide_state.Pos2)
+        //{
+        //    onDialActivate.Raise(this, 1);
+        //    //on_off2 = true;
+        //    curr_state = slide_state.Pos2_active;
+        //}
+        //else if (curr_state == slide_state.Pos3)
+        //{
+        //    onDialActivate.Raise(this, 500);
+        //    //on_off2 = true;
+        //    curr_state = slide_state.Pos3_active;
+        //}
     }
 
     private void OnMouseDown()

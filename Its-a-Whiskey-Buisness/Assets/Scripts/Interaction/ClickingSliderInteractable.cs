@@ -26,7 +26,7 @@ public class ClickingSliderInteractable : MonoBehaviour
     public int Room_num;
 
     [Header("Events")]
-    public EventSytem onDialActivate;
+    public EventSytem onSlideActivate;
 
     //Current game object this script is attached to
     public GameObject selectedObject;
@@ -128,19 +128,19 @@ public class ClickingSliderInteractable : MonoBehaviour
     {
         if (curr_state == slide_state.Pos1)
         {
-            onDialActivate.Raise(this, 1);
+            onSlideActivate.Raise(this, 1);
             //on_off2 = false;
             curr_state = slide_state.Pos1_active;
         }
         else if (curr_state == slide_state.Pos2)
         {
-            onDialActivate.Raise(this, 1);
+            onSlideActivate.Raise(this, 1);
             //on_off2 = true;
             curr_state = slide_state.Pos2_active;
         }
         else if (curr_state == slide_state.Pos3)
         {
-            onDialActivate.Raise(this, 500);
+            onSlideActivate.Raise(this, 500);
             //on_off2 = true;
             curr_state = slide_state.Pos3_active;
         }
