@@ -17,6 +17,8 @@ public class Clock : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI TextTimer;
 
+    public GameObject panel;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -54,19 +56,31 @@ public class Clock : MonoBehaviour
     }
     private void UpdateTimer(float time)
     {
+        
 
-        if(timeDuration < 10f * 60f)
+        if (timeDuration < 10f * 60f)
         {
             float hours = Mathf.FloorToInt(time / 60);
             float minutes = Mathf.FloorToInt(time % 60);
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
+
+
+            if (hours == 17)
+            {
+                panel.SetActive(true);
+                Time.timeScale = 0f;
+            }
+
         }
 
         else if (timeDuration > 11f * 60f)
         {
             Debug.Log("Time reached test");
+
         }
+
+
     }
 
     private void Flash()
