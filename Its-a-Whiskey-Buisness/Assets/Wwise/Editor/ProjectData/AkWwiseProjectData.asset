@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: dfa74354bb5ca848813cc502addb6b63
     GuidInternal: 
-    m_lastTime: -8585228062366427301
+    m_lastTime: -8585196996206283639
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585336744186870098
+    m_lastTime: -8585196996202689788
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: acd4bc9419b8e648ba7eb0a8dbcdd638
     GuidInternal: 
-    m_lastTime: -8585228061887854667
+    m_lastTime: -8585196996159250756
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -345,8 +345,36 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f60983dee8197a4fbd8d151eafcdef70
     GuidInternal: 
-    m_lastTime: -8585228062367084097
-    List: []
+    m_lastTime: -8585196996238941027
+    List:
+    - name: Main
+      guid: 3bf94a79c5a4684ba314c8c704d59aa9
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f60983dee8197a4fbd8d151eafcdef70
+      - ElementName: Main
+        ObjectType: 7
+        guid: 3bf94a79c5a4684ba314c8c704d59aa9
+      Path: SoundBanks\Default Work Unit\Main
+    - name: New Virtual Folder
+      guid: 862308e24cf4a3478101706ecd7cf3d8
+      id: 3208186232
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f60983dee8197a4fbd8d151eafcdef70
+      - ElementName: New Virtual Folder
+        ObjectType: 4
+        guid: 862308e24cf4a3478101706ecd7cf3d8
+      Path: SoundBanks\Default Work Unit\New Virtual Folder
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -359,8 +387,144 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a0468e80d35d8d429ee0dc9ed3de5809
     GuidInternal: 
-    m_lastTime: -8585228062366867670
-    List: []
+    m_lastTime: -8585196996092529605
+    List:
+    - name: Play_Ambience_FermentationRoom
+      guid: 522225b0b2d36941bd4539d7ec2eafbe
+      id: 3331282146
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Play_Ambience_FermentationRoom
+        ObjectType: 3
+        guid: 522225b0b2d36941bd4539d7ec2eafbe
+      Path: Events\Default Work Unit\Play_Ambience_FermentationRoom
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_MashRoom
+      guid: 4282aa2097abc7479748264d61c97983
+      id: 612571271
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Play_Ambience_MashRoom
+        ObjectType: 3
+        guid: 4282aa2097abc7479748264d61c97983
+      Path: Events\Default Work Unit\Play_Ambience_MashRoom
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_MillRoom
+      guid: f9746bce9598994ab90aaa229499ecf9
+      id: 1749556454
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Play_Ambience_MillRoom
+        ObjectType: 3
+        guid: f9746bce9598994ab90aaa229499ecf9
+      Path: Events\Default Work Unit\Play_Ambience_MillRoom
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_StillRoom
+      guid: 9c575ffc7387c645b28107ddbe65105e
+      id: 2733880692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Play_Ambience_StillRoom
+        ObjectType: 3
+        guid: 9c575ffc7387c645b28107ddbe65105e
+      Path: Events\Default Work Unit\Play_Ambience_StillRoom
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Ambience_FermentationRoom
+      guid: 9a89f7bffa7f60498c3044a6d140d09a
+      id: 3864659820
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Stop_Ambience_FermentationRoom
+        ObjectType: 3
+        guid: 9a89f7bffa7f60498c3044a6d140d09a
+      Path: Events\Default Work Unit\Stop_Ambience_FermentationRoom
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Ambience_MashRoom
+      guid: 090085efe3c4d148b2d39594dd0622f4
+      id: 1274201121
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Stop_Ambience_MashRoom
+        ObjectType: 3
+        guid: 090085efe3c4d148b2d39594dd0622f4
+      Path: Events\Default Work Unit\Stop_Ambience_MashRoom
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Ambience_MillRoom
+      guid: b976b28202adcd46b34bcb54b20dd122
+      id: 3051851068
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Stop_Ambience_MillRoom
+        ObjectType: 3
+        guid: b976b28202adcd46b34bcb54b20dd122
+      Path: Events\Default Work Unit\Stop_Ambience_MillRoom
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Ambience_StillRoom
+      guid: 8ebee0dac14edf46a28a60bd5fa3376a
+      id: 1469171578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Stop_Ambience_StillRoom
+        ObjectType: 3
+        guid: 8ebee0dac14edf46a28a60bd5fa3376a
+      Path: Events\Default Work Unit\Stop_Ambience_StillRoom
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -373,7 +537,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: bda2b085764b1a41baa398bd228ce1f2
     GuidInternal: 
-    m_lastTime: -8585228062366762612
+    m_lastTime: -8585196996171126209
     List: []
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     PathAndIcons:
@@ -386,7 +550,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8585336740329720694
+    m_lastTime: -8585196996167375960
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -427,7 +591,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585336740440088249
+    m_lastTime: -8585196996163782196
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -581,7 +745,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 87de722511e7524f82ade0211660ffbd
     GuidInternal: 
-    m_lastTime: -8585228062367259221
+    m_lastTime: -8585196996215190189
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -595,7 +759,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 7e03218df11e0641a3b7c0bb3da92a41
     GuidInternal: 
-    m_lastTime: -8585228062366807670
+    m_lastTime: -8585196996074247668
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -609,10 +773,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d3cfb9532b828447976394cad61f7e0f
     GuidInternal: 
-    m_lastTime: -8585228062366477291
+    m_lastTime: -8585196996083466779
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 07000000080000001300000014000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
