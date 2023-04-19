@@ -28,7 +28,7 @@ public class ClickDialObject : MonoBehaviour
 
     [SerializeField]
     [Header("Please only enter three")]
-    List<float> Values;
+    List<int> Values;
 
     [Header("Events")]
     public EventSytem onDialActivate;

@@ -458,9 +458,9 @@ public class GenericRoom : MonoBehaviour
     {
         if (RoomNum == sender.GetComponent<ClickDialObject>().Room_num /*|| RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum*/)
         {
-            if (data is float)
+            if (data is int)
             {
-                Temperature = (float)data;
+                Temperature = (int)data;
                 SetTemperature.Raise(this, Temperature);
                 //Raise new temperature
             }
