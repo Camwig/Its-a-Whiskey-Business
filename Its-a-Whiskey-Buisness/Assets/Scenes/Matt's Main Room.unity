@@ -1767,6 +1767,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4526284776398609824, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526284776398609824, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4657446579535250586}
+    - target: {fileID: 4526284776398609824, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526284776398609824, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526284776398609824, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4526284776549259931, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13355,5 +13375,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainPause
       objectReference: {fileID: 0}
+    - target: {fileID: 4657446579871283594, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+--- !u!114 &4657446579535250586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4657446578771335004, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+  m_PrefabInstance: {fileID: 4657446579535250585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed3d0a82619f2048aca58a2625a7960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
