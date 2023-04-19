@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Ambience_StillRoom" ID="{FC5F579C-8773-45C6-B281-07DDBE65105E}">
+					<ChildrenList>
+						<Action Name="" ID="{07278726-23D9-42A2-BA16-1771647BE0AF}" ShortID="1057424204">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_StillRoom" ID="{4B5264F5-5C5C-4FFA-9FBD-598CA082175F}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambience_StillRoom" ID="{DAE0BE8E-4EC1-46DF-A28A-60BD5FA3376A}">
+					<ChildrenList>
+						<Action Name="" ID="{350B6DF6-C827-480E-A353-0BB8048D4903}" ShortID="385363510">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_StillRoom" ID="{4B5264F5-5C5C-4FFA-9FBD-598CA082175F}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience_FermentationRoom" ID="{B0252252-D3B2-4169-BD45-39D7EC2EAFBE}">
+					<ChildrenList>
+						<Action Name="" ID="{7954FF3A-337D-4B86-9D1C-ACC4EB08C9F3}" ShortID="913749450">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_FermentationRoom" ID="{0BEDCCEA-C967-447D-B0DD-EB4D7EE89C45}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambience_FermentationRoom" ID="{BFF7899A-7FFA-4960-8C30-44A6D140D09A}">
+					<ChildrenList>
+						<Action Name="" ID="{92272512-7E1D-4628-A364-26E2EA44A311}" ShortID="989557200">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_FermentationRoom" ID="{0BEDCCEA-C967-447D-B0DD-EB4D7EE89C45}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience_MashRoom" ID="{20AA8242-AB97-47C7-9748-264D61C97983}">
+					<ChildrenList>
+						<Action Name="" ID="{687095DD-DB79-42BC-97B1-E04F87E76EF6}" ShortID="458222316">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_MashRoom" ID="{2D54818D-FE4E-4B40-A153-FC4B6C48E7CB}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambience_MashRoom" ID="{EF850009-C4E3-48D1-B2D3-9594DD0622F4}">
+					<ChildrenList>
+						<Action Name="" ID="{0ED6406C-0125-4A87-830F-334B5FB73929}" ShortID="23273069">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_MashRoom" ID="{2D54818D-FE4E-4B40-A153-FC4B6C48E7CB}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience_MillRoom" ID="{CE6B74F9-9895-4A99-B90A-AA229499ECF9}">
+					<ChildrenList>
+						<Action Name="" ID="{CCE77D58-F0C1-4F18-93DA-F0A64CC464EA}" ShortID="102896043">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_MillRoom" ID="{92D09A6E-7078-4DC4-B79E-021C4533506D}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambience_MillRoom" ID="{82B276B9-AD02-46CD-B34B-CB54B20DD122}">
+					<ChildrenList>
+						<Action Name="" ID="{4307F87A-23E9-49A7-AEAD-F581D0256CA9}" ShortID="530417165">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_MillRoom" ID="{92D09A6E-7078-4DC4-B79E-021C4533506D}" WorkUnitID="{F7D534B0-0468-4850-84EA-B6B6412A075E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
