@@ -238,5 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c948bc8fa9c089b4fa317f09d989d6ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedObject: {fileID: 0}
   Room_num: 0
+  Values: 
   onDialActivate: {fileID: 0}

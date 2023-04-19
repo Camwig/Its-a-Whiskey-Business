@@ -26,6 +26,10 @@ public class ClickDialObject : MonoBehaviour
     [SerializeField]
     public int Room_num;
 
+    [SerializeField]
+    [Header("Please only enter three")]
+    List<int> Values;
+
     [Header("Events")]
     public EventSytem onDialActivate;
 
@@ -200,17 +204,17 @@ public class ClickDialObject : MonoBehaviour
     {
         if (curr_point == Cardinal_points.E)
         {
-            onDialActivate.Raise(this, 100);
+            onDialActivate.Raise(this, Values[1]);
             curr_point = Cardinal_points.E_Active;
         }
         else if (curr_point == Cardinal_points.S)
         {
-            onDialActivate.Raise(this, 5000);
+            onDialActivate.Raise(this, Values[2]);
             curr_point = Cardinal_points.S_Active;
         }
         else if (curr_point == Cardinal_points.None)
         {
-            onDialActivate.Raise(this, 1);
+            onDialActivate.Raise(this, Values[0]);
         }
         //else if (curr_state == slide_state.Pos2)
         //{

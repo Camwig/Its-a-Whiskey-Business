@@ -25,6 +25,10 @@ public class ClickingSliderInteractable : MonoBehaviour
     [SerializeField]
     public int Room_num;
 
+    [SerializeField]
+    [Header("Please only enter three")]
+    List<int> Values;
+
     [Header("Events")]
     public EventSytem onSlideActivate;
 
@@ -86,24 +90,13 @@ public class ClickingSliderInteractable : MonoBehaviour
             }
 
             //If the mouse moves the object greater or equal to its starting origin
-            if (selectedObject.gameObject.transform.localPosition.y >= OriginPos)
+            if (selectedObject.gameObject.transform.localPosition.y >= OriginPos - 1.5f)
             {
                 //Resets the y_position to the origin
                 selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
                 if (curr_state == slide_state.None)
                 {
                     curr_state = slide_state.Pos1;
-                }
-            }
-
-            //If the mouse attempts to move the object below a certain threshold
-            if (selectedObject.gameObject.transform.localPosition.y <= OriginPos - 3.0f)
-            {
-                //Resets it to the minimum y-position below the the origin
-                selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 3.0f, 0);
-                if (curr_state == slide_state.None)
-                {
-                    curr_state = slide_state.Pos2;
                 }
             }
 
@@ -114,6 +107,17 @@ public class ClickingSliderInteractable : MonoBehaviour
                 check_time = true;
                 origin_time = Time.deltaTime;
 
+                if (curr_state == slide_state.None)
+                {
+                    curr_state = slide_state.Pos2;
+                }
+            }
+
+            //If the mouse attempts to move the object below a certain threshold
+            if (selectedObject.gameObject.transform.localPosition.y <= OriginPos - 3.0f)
+            {
+                //Resets it to the minimum y-position below the the origin
+                selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 3.0f, 0);
                 if (curr_state == slide_state.None)
                 {
                     curr_state = slide_state.Pos3;
@@ -128,19 +132,19 @@ public class ClickingSliderInteractable : MonoBehaviour
     {
         if (curr_state == slide_state.Pos1)
         {
-            onSlideActivate.Raise(this, 1);
+            onSlideActivate.Raise(this, Values[0]);
             //on_off2 = false;
             curr_state = slide_state.Pos1_active;
         }
         else if (curr_state == slide_state.Pos2)
         {
-            onSlideActivate.Raise(this, 1);
+            onSlideActivate.Raise(this, Values[1]);
             //on_off2 = true;
             curr_state = slide_state.Pos2_active;
         }
         else if (curr_state == slide_state.Pos3)
         {
-            onSlideActivate.Raise(this, 500);
+            onSlideActivate.Raise(this, Values[2]);
             //on_off2 = true;
             curr_state = slide_state.Pos3_active;
         }
