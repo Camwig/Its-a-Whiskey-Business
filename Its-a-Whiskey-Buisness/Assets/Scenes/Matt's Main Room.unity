@@ -286,7 +286,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5792322082579738428, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: Room_num
@@ -3825,7 +3825,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5792322082579738428, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: Room_num
@@ -4913,7 +4913,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5792322082579738428, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: Room_num
@@ -6097,7 +6097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571689, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571700, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_Layer
