@@ -2557,7 +2557,7 @@ MonoBehaviour:
   easy: {fileID: 0}
   Normal: {fileID: 0}
   TextTimer: {fileID: 151367128}
-  panel: {fileID: 0}
+  panel: {fileID: 2026468445}
 --- !u!114 &516569043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12130,6 +12130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b97cd591398574484be826abdd692b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2026468445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6020079335974680569, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+  m_PrefabInstance: {fileID: 286587130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2053206905
 GameObject:
   m_ObjectHideFlags: 0
