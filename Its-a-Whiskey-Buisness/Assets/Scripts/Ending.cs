@@ -5,12 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
-    public GameObject panel;
+    public GameObject winningpanel;
+    public GameObject losingpanel;
+    public GameObject mainPanel;
 
     public float winner;
 
     public void OnButtonClick()
     {
-        panel.SetActive(panel);
+        losingpanel.SetActive(losingpanel);
+    }
+
+    public void Resume()
+    {
+        winningpanel.SetActive(false);
+        losingpanel.SetActive(false);
+    }
+
+    public void Return()
+    {
+        mainPanel.SetActive(false);
+
     }
 }
