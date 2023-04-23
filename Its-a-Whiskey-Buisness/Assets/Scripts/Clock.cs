@@ -21,8 +21,11 @@ public class Clock : MonoBehaviour
 
     float hours;
     float minutes;
-    
+
     // Start is called before the first frame update
+    public AK.Wwise.Event QuittinTime;
+    public AK.Wwise.Event Midday;
+
     void Start()
     {
 
@@ -73,6 +76,14 @@ public class Clock : MonoBehaviour
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;
+                //clock beeps at the end of the day
+                QuittinTime.Post(gameObject);
+            }
+
+            //clock beeps halfway through the day
+            if (hours == 13)
+            {
+                Midday.Post(gameObject);
             }
 
         }

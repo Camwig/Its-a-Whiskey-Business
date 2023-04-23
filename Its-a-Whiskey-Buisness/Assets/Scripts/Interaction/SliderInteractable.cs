@@ -37,6 +37,9 @@ public class SliderInteractable : MonoBehaviour
 
     public EventSytem onSliderActivate;
 
+    public AK.Wwise.Event SlideUp;
+    public AK.Wwise.Event slideDown;
+
     private void Start()
     {
         OriginPos = selectedObject.gameObject.transform.localPosition.y;
@@ -93,6 +96,7 @@ public class SliderInteractable : MonoBehaviour
             if (curr_state == slide_state.None)
             {
                 curr_state = slide_state.Up;
+                SlideUp.Post(gameObject);
             }
         }
 
@@ -102,6 +106,7 @@ public class SliderInteractable : MonoBehaviour
             if (curr_state == slide_state.None)
             {
                 curr_state = slide_state.Down;
+                slideDown.Post(gameObject);
             }
         }
 

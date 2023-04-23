@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: Values.Array.data[2]
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: DialTick.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b33bcded17ee5246b6c0d44b5ca3289, type: 2}
     - target: {fileID: 8146459640334333590, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2550,6 +2554,14 @@ MonoBehaviour:
   Normal: {fileID: 0}
   TextTimer: {fileID: 151367128}
   panel: {fileID: 1883543614}
+  QuittinTime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 77fad4cce56b8134190e82f7fc4260af, type: 2}
+  Midday:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e29f460d2aabcd143b18201eb7fa1ff2, type: 2}
 --- !u!114 &516569043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3883,6 +3895,14 @@ PrefabInstance:
       propertyPath: onSliderActivate
       value: 
       objectReference: {fileID: 11400000, guid: cc91e5c75c0f43a458a8970676ca91c2, type: 2}
+    - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
+      propertyPath: SlideUp.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d7c89c0c21546c49943d3eecfb755fe, type: 2}
+    - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
+      propertyPath: slideDown.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ca154e9f08071a4fad30429c6d1003b, type: 2}
     - target: {fileID: 8050844338759452742, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7795,6 +7815,14 @@ PrefabInstance:
       propertyPath: onButtonActivate
       value: 
       objectReference: {fileID: 11400000, guid: 918558ee3d706bd49b26c093975c966d, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: OpenButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e323c59d0920744fb391ff2cb540cec, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: CloseButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b9de3c015ae558246b1b4e31e5eb4489, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
 --- !u!4 &1314504329 stripped
@@ -9006,6 +9034,14 @@ PrefabInstance:
       propertyPath: onLeverActivate
       value: 
       objectReference: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
+    - target: {fileID: 8047417593692586231, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: LeverOpen.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 38a7dafaadc1d8940a422c1acda14c02, type: 2}
+    - target: {fileID: 8047417593692586231, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: LeverClose.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cc01fe10239820543bb17f1fa597e388, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
 --- !u!4 &1477070670 stripped

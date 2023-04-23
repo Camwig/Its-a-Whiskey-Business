@@ -17,6 +17,9 @@ public class ButtonInteractable : MonoBehaviour
     //Event system to call activation
     public EventSytem onButtonActivate;
 
+    public AK.Wwise.Event OpenButton;
+    public AK.Wwise.Event CloseButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +47,13 @@ public class ButtonInteractable : MonoBehaviour
         if (temperature_not_power == true)
         {
             onButtonActivate.Raise(this, data);
+            CloseButton.Post(gameObject);
         }
 
         else if (temperature_not_power == false)
         {
             onButtonActivate.Raise(this, on_off);
+            OpenButton.Post(gameObject);
         }
     }
 }

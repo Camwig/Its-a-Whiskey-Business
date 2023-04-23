@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class LeverInteraction : MonoBehaviour
 {
     //Position of the mouse
@@ -34,6 +36,9 @@ public class LeverInteraction : MonoBehaviour
     [Header("Events")]
     [SerializeField]
     public EventSytem onLeverActivate;
+
+    public AK.Wwise.Event LeverOpen; 
+    public AK.Wwise.Event LeverClose;
 
     //awake and start can most likely be combined
 
@@ -87,11 +92,13 @@ public class LeverInteraction : MonoBehaviour
             if (angle >= 20)
             {
                 onLeverActivate.Raise(selectedObject.GetComponent<LeverInteraction>(), true);
+                LeverOpen.Post(gameObject);
             }
             else
             {
                 //Sets the room to inactive if it is not at the appropriate angle
                 onLeverActivate.Raise(selectedObject.GetComponent<LeverInteraction>(), false);
+                LeverClose.Post(gameObject);
             }
         }
     }

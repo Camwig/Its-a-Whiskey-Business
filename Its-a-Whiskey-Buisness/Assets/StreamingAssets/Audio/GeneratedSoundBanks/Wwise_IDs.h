@@ -17,8 +17,15 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCE_MASHROOM = 612571271U;
         static const AkUniqueID PLAY_AMBIENCE_MILLROOM = 1749556454U;
         static const AkUniqueID PLAY_AMBIENCE_STILLROOM = 2733880692U;
+        static const AkUniqueID PLAY_BUTTONCLOSE_01 = 1834321908U;
+        static const AkUniqueID PLAY_BUTTONOPEN_01 = 3815121872U;
+        static const AkUniqueID PLAY_DIALTICK = 1928287159U;
         static const AkUniqueID PLAY_LEVERCLOSE_01 = 3112348692U;
         static const AkUniqueID PLAY_LEVEROPEN_01 = 3200583152U;
+        static const AkUniqueID PLAY_MIDDAY = 697729946U;
+        static const AkUniqueID PLAY_POWERDOWN_01 = 3045242701U;
+        static const AkUniqueID PLAY_POWERUP_01 = 2903209428U;
+        static const AkUniqueID PLAY_QUITTINTIME = 4253536651U;
         static const AkUniqueID STOP_AMBIENCE_FERMENTATIONROOM = 3864659820U;
         static const AkUniqueID STOP_AMBIENCE_MASHROOM = 1274201121U;
         static const AkUniqueID STOP_AMBIENCE_MILLROOM = 3051851068U;

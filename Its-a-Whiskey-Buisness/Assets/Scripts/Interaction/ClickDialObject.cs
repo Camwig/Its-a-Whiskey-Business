@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class ClickDialObject : MonoBehaviour
 {
     private Vector3 mousePosition;
@@ -32,6 +34,8 @@ public class ClickDialObject : MonoBehaviour
 
     [Header("Events")]
     public EventSytem onDialActivate;
+
+    public AK.Wwise.Event DialTick;
 
     private void Start()
     {
@@ -206,11 +210,13 @@ public class ClickDialObject : MonoBehaviour
         {
             onDialActivate.Raise(this, Values[1]);
             curr_point = Cardinal_points.E_Active;
+            DialTick.Post(gameObject);
         }
         else if (curr_point == Cardinal_points.S)
         {
             onDialActivate.Raise(this, Values[2]);
             curr_point = Cardinal_points.S_Active;
+            DialTick.Post(gameObject);
         }
         else if (curr_point == Cardinal_points.None)
         {
