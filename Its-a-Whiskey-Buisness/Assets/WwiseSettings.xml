@@ -10,8 +10,8 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>M:\Year 3\DES310\ATTEMPT\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../../DES310_Its-A-Whisky-Business_ATS/DES310_Its-A-Whisky-Business_ATS.wproj</WwiseProjectPath>
+  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2021.1.10.7883</WwiseInstallationPathWindows>
+  <WwiseProjectPath>../../../DES310_Its-A-Whisky-Business_ATS/DES310_Its-A-Whisky-Business_ATS.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
