@@ -136,7 +136,7 @@ public class ClickDialObject : MonoBehaviour
         if (check_time == true)
         {
             //origin_time = Time.deltaTime;
-            if (new_time >= origin_time + 0.01125f)
+            if (new_time >= origin_time + 0.001125f)
             {
                 check_time = false;
                 new_time = 0;
@@ -149,21 +149,34 @@ public class ClickDialObject : MonoBehaviour
         }
         else if (check_time == false)
         {
-
-            if (is_being_held == true)
+            //Using this to clamp it between certain angles
+            if (selectedObject.transform.eulerAngles.z <= 135 || selectedObject.transform.eulerAngles.z >= 225)
             {
+                if (is_being_held == true)
+                {
 
-                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                //Slerping is spherically interpolating
+                    Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                    //Slerping is spherically interpolating
+                    selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
+
+
+                    //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
+                    //{
+                    //    //Never runs
+                    //    this.transform.rotation = old_rotate.eulerAngles;
+                    //}
+
+                }
+            }
+            else if(selectedObject.transform.eulerAngles.z > 135 && selectedObject.transform.eulerAngles.z < 180)
+            {
+                Quaternion rotation = Quaternion.AngleAxis(134.9f, Vector3.forward);
                 selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
-
-
-                //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
-                //{
-                //    //Never runs
-                //    this.transform.rotation = old_rotate.eulerAngles;
-                //}
-
+            }
+            else if (selectedObject.transform.eulerAngles.z < 225 && selectedObject.transform.eulerAngles.z > 180)
+            {
+                Quaternion rotation = Quaternion.AngleAxis(225.1f, Vector3.forward);
+                selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
             }
 
             if (selectedObject.transform.eulerAngles.z <= 315 && selectedObject.transform.eulerAngles.z >= 225)
@@ -195,6 +208,7 @@ public class ClickDialObject : MonoBehaviour
             //{
             //curr_point = Cardinal_points.None;
             //}
+
 
             CheckState();
         }
