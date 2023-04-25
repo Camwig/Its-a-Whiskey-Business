@@ -61,14 +61,14 @@ public class LeverInteraction : MonoBehaviour
         //Clamps it between certain angles
         //annoying that it isnt in the same format
         //Have to remeber this 
-        if ((angle > 30))
+        if ((angle > 20))
         {
-            angle = 30;
+            angle = 19.9f;
         }
 
-        if (angle < -30)
+        if (angle < 0)
         {
-            angle = 330;
+            angle = 360.1f;
         }
 
         ////Gets the latest rotation before applying the new angle
@@ -84,7 +84,7 @@ public class LeverInteraction : MonoBehaviour
 
             //Activates the room activation event based on the angle of the object
             //However this currently has a bug which means that if it is rotated at the same angle in the oppositie direction it still activates
-            if (angle >= 20)
+            if (angle <= 20 && angle < 180)
             {
                 onLeverActivate.Raise(selectedObject.GetComponent<LeverInteraction>(), true);
             }
