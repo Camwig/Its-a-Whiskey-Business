@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: NewObjective
   m_EditorClassIdentifier: 
   StartingTime: {x: 9, y: 20}
-  EndingTime: {x: 10, y: 45}
+  EndingTime: {x: 10, y: 20}
   RoomNum: 1
-  Activated: 1
+  Activated: 0
   Modifier: 0
   RateTrack: 1
   RateValue: 500

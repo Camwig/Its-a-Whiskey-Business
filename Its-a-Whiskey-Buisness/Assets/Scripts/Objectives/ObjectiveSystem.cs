@@ -45,6 +45,8 @@ public class ObjectiveSystem : MonoBehaviour
 
     private float deductionValue;
 
+    public List<bool> ObjectiveStop = new List<bool>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +58,7 @@ public class ObjectiveSystem : MonoBehaviour
         for(int k=0; k < Objectives.Count;k++)
         {
             Objectives[k].MyActivated = false;
+            ObjectiveStop.Add(false);
         }
     }
 
@@ -72,44 +75,73 @@ public class ObjectiveSystem : MonoBehaviour
         for (int h = 0; h < Objectives.Count; h++)
         {
             //X is hours and y is minutes
-            if (clock_.ReturnTime().x >= Objectives[h].MyStartingTime.x && clock_.ReturnTime().x < Objectives[h].MyEndingTime.x)
+
+            //Keeps failing
+            //Debug.Log(clock_.ReturnTime().x);
+
+            if (ObjectiveStop[h] != true)
             {
-                if (clock_.ReturnTime().y >= Objectives[h].MyStartingTime.y && clock_.ReturnTime().y < Objectives[h].MyEndingTime.y)
+                if (clock_.ReturnTime().x >= Objectives[h].MyStartingTime.x && clock_.ReturnTime().x <= Objectives[h].MyEndingTime.x)
                 {
-                    for (int j = 0; j < EnergyTrackers.Count; j++)
+                    if(clock_.ReturnTime().y >= Objectives[h].MyStartingTime.y && clock_.ReturnTime().y <= Objectives[h].MyEndingTime.y)
                     {
-                        if (EnergyTrackers[j].MyRoomNum == Objectives[h].MyRoomNum)
+                        ObjectiveStop[h] = true;
+                    }
+                }
+            }
+            
+            if(ObjectiveStop[h] != false)
+            {
+                if (clock_.ReturnTime().x >= Objectives[h].MyEndingTime.x)
+                {
+                    if (clock_.ReturnTime().y >= Objectives[h].MyEndingTime.y)
+                    {
+                        ObjectiveStop[h] = false;
+                    }
+                }
+            }
+
+            //if (clock_.ReturnTime().x >= Objectives[h].MyStartingTime.x && clock_.ReturnTime().y >= Objectives[h].MyStartingTime.y)
+            //{
+            //    if (clock_.ReturnTime().x < Objectives[h].MyEndingTime.x && clock_.ReturnTime().y < Objectives[h].MyEndingTime.y)
+            //    {
+            if(ObjectiveStop[h]==true)
+            {
+                for (int j = 0; j < EnergyTrackers.Count; j++)
+                {
+                    if (EnergyTrackers[j].MyRoomNum == Objectives[h].MyRoomNum)
+                    {
+                        if (EnergyTrackers[j].ActivatedProperty != true)
                         {
-                            if (EnergyTrackers[j].ActivatedProperty != true)
+                            Objectives[h].MyActivated = false;
+                            deductionValue -= 0.1f * Time.deltaTime;
+                        }
+                        else
+                        {
+                            Objectives[h].MyActivated = true;
+                        }
+
+                        if (Objectives[h].MyRateTrack == true)
+                        {
+                            if (EnergyTrackers[j].IncreaseProperty != Objectives[h].MyRateValue)
                             {
                                 Objectives[h].MyActivated = false;
                                 deductionValue -= 0.1f * Time.deltaTime;
                             }
-                            else
-                            {
-                                Objectives[h].MyActivated = true;
-                            }
+                        }
 
-                            if(Objectives[h].MyRateTrack == true)
+                        if (Objectives[h].MyTempTrack == true)
+                        {
+                            if (EnergyTrackers[j].MyTemperature != Objectives[h].MyTempValue)
                             {
-                                if(EnergyTrackers[j].IncreaseProperty != Objectives[h].MyRateValue)
-                                {
-                                    Objectives[h].MyActivated = false;
-                                    deductionValue -= 0.1f * Time.deltaTime;
-                                }
-                            }
-
-                            if (Objectives[h].MyTempTrack == true)
-                            {
-                                if (EnergyTrackers[j].MyTemperature != Objectives[h].MyTempValue)
-                                {
-                                    Objectives[h].MyActivated = false;
-                                    deductionValue -= 0.1f * Time.deltaTime;
-                                }
+                                Objectives[h].MyActivated = false;
+                                deductionValue -= 0.1f * Time.deltaTime;
                             }
                         }
                     }
                 }
+                //    }
+                //}
             }
         }
     }

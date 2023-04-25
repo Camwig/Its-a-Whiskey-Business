@@ -63,13 +63,13 @@ public class Clock : MonoBehaviour
 
         if (timeDuration < 10f * 60f)
         {
-            float hours = Mathf.FloorToInt(time / 60);
-            float minutes = Mathf.FloorToInt(time % 60);
+            /*float*/ hours = Mathf.FloorToInt(time / 60);
+            /*float*/ minutes = Mathf.FloorToInt(time % 60);
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
 
 
-            if (hours == 9 && minutes == 10)
+            if (hours == 17 && minutes == 00)
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;

@@ -5006,6 +5006,7 @@ MonoBehaviour:
   OverheadTracker: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
   this_clock: {fileID: 516569040}
   textElement: {fileID: 2053206907}
+  ObjectiveStop: 
 --- !u!4 &917263297
 Transform:
   m_ObjectHideFlags: 0
@@ -5468,7 +5469,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &972309426
 Canvas:
   m_ObjectHideFlags: 0
