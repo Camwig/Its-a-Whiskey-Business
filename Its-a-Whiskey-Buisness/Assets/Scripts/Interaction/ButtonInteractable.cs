@@ -37,23 +37,24 @@ public class ButtonInteractable : MonoBehaviour
             case true:
                 on_off = false;
                 data = 60;
+                CloseButton.Post(gameObject); //Plays audio if button is turned OFF from ON 
                 break;
+
             case false:
                 on_off = true;
                 data = 180;
+                OpenButton.Post(gameObject); //Plays audio if button is turned ON from OFF 
                 break;
         }
 
         if (temperature_not_power == true)
         {
             onButtonActivate.Raise(this, data);
-            CloseButton.Post(gameObject);
         }
 
         else if (temperature_not_power == false)
         {
             onButtonActivate.Raise(this, on_off);
-            OpenButton.Post(gameObject);
         }
     }
 }

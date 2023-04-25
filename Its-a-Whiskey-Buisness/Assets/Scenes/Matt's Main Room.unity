@@ -3274,7 +3274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 628374319568964384, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 295.54135
+      value: 295.79
       objectReference: {fileID: 0}
     - target: {fileID: 628374319568964384, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3328,6 +3328,14 @@ PrefabInstance:
       propertyPath: temperature_not_power
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: OpenButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e323c59d0920744fb391ff2cb540cec, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: CloseButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b9de3c015ae558246b1b4e31e5eb4489, type: 2}
     m_RemovedComponents:
     - {fileID: 4648945116906128782, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
@@ -3898,11 +3906,11 @@ PrefabInstance:
     - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: SlideUp.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 9d7c89c0c21546c49943d3eecfb755fe, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: slideDown.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 0ca154e9f08071a4fad30429c6d1003b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8050844338759452742, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5421,6 +5429,10 @@ PrefabInstance:
       propertyPath: Values.Array.data[2]
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: DialTick.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b33bcded17ee5246b6c0d44b5ca3289, type: 2}
     - target: {fileID: 8146459640334333590, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6206,6 +6218,14 @@ PrefabInstance:
       propertyPath: onButtonActivate
       value: 
       objectReference: {fileID: 11400000, guid: 918558ee3d706bd49b26c093975c966d, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: OpenButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e323c59d0920744fb391ff2cb540cec, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: CloseButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b9de3c015ae558246b1b4e31e5eb4489, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
 --- !u!1001 &1035818763
@@ -10307,6 +10327,10 @@ PrefabInstance:
     - target: {fileID: 7445036254073856336, guid: c3e2a44f55c08884d87579cb668fc6de, type: 3}
       propertyPath: Values.Array.data[2]
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445036254073856336, guid: c3e2a44f55c08884d87579cb668fc6de, type: 3}
+      propertyPath: HeavyDial.WwiseObjectReference
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7445036254073856339, guid: c3e2a44f55c08884d87579cb668fc6de, type: 3}
       propertyPath: m_LocalPosition.x

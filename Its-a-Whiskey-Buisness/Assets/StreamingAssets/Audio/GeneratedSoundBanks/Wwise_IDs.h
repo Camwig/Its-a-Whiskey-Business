@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID PLAY_BUTTONCLOSE_01 = 1834321908U;
         static const AkUniqueID PLAY_BUTTONOPEN_01 = 3815121872U;
         static const AkUniqueID PLAY_DIALTICK = 1928287159U;
+        static const AkUniqueID PLAY_HEAVYDIAL = 888035577U;
         static const AkUniqueID PLAY_LEVERCLOSE_01 = 3112348692U;
         static const AkUniqueID PLAY_LEVEROPEN_01 = 3200583152U;
         static const AkUniqueID PLAY_MIDDAY = 697729946U;

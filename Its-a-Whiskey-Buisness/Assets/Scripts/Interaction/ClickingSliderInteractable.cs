@@ -37,6 +37,8 @@ public class ClickingSliderInteractable : MonoBehaviour
     //Diffrent levels of the slider so top,middle and bottom
     enum Option {A,B,C};
 
+    public AK.Wwise.Event HeavyDial;
+
     //Runs at the beginning of the application
     private void Start()
     {
@@ -135,18 +137,21 @@ public class ClickingSliderInteractable : MonoBehaviour
             onSlideActivate.Raise(this, Values[0]);
             //on_off2 = false;
             curr_state = slide_state.Pos1_active;
+            HeavyDial.Post(gameObject); 
         }
         else if (curr_state == slide_state.Pos2)
         {
             onSlideActivate.Raise(this, Values[1]);
             //on_off2 = true;
             curr_state = slide_state.Pos2_active;
+            HeavyDial.Post(gameObject);
         }
         else if (curr_state == slide_state.Pos3)
         {
             onSlideActivate.Raise(this, Values[2]);
             //on_off2 = true;
             curr_state = slide_state.Pos3_active;
+            HeavyDial.Post(gameObject);
         }
     }
 

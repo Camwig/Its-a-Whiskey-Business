@@ -345,7 +345,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f60983dee8197a4fbd8d151eafcdef70
     GuidInternal: 
-    m_lastTime: -8585193130810806382
+    m_lastTime: -8585192638871952890
     List:
     - name: Main
       guid: 3bf94a79c5a4684ba314c8c704d59aa9
@@ -387,7 +387,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a0468e80d35d8d429ee0dc9ed3de5809
     GuidInternal: 
-    m_lastTime: -8585193130810609904
+    m_lastTime: -8585192638871675925
     List:
     - name: Ambience
       guid: 9123a9034e33d249be2beb87c43ceb38
@@ -583,6 +583,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.022018
       minDuration: 0.022018
+    - name: Play_HeavyDial
+      guid: b3afc9ac552a0a499eacc0182fe8b22f
+      id: 888035577
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Play_HeavyDial
+        ObjectType: 3
+        guid: b3afc9ac552a0a499eacc0182fe8b22f
+      Path: Events\Default Work Unit\Play_HeavyDial
+      maxAttenuation: 0
+      maxDuration: 0.120363
+      minDuration: 0.120363
     - name: Play_LeverClose_01
       guid: 6fe7dad27a7ce9419832f7e86cc74aea
       id: 3112348692

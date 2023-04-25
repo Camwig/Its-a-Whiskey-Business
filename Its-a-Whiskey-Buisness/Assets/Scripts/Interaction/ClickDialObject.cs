@@ -22,6 +22,9 @@ public class ClickDialObject : MonoBehaviour
     private bool check_time;
     private float origin_time;
 
+    private bool sound_on;
+    private bool checksound;
+
     //Object attached to this script
     public GameObject selectedObject;
 
@@ -35,6 +38,7 @@ public class ClickDialObject : MonoBehaviour
     [Header("Events")]
     public EventSytem onDialActivate;
 
+    //Allows for wwise event to be added to the game object (drag and drop). Keeps it consistent across all gameObjects of this type
     public AK.Wwise.Event DialTick;
 
     private void Start()
@@ -42,11 +46,15 @@ public class ClickDialObject : MonoBehaviour
         //curr_point = Cardinal_points.E_Active;
         power = 0;
         rotation = 0;
-        roatationSpeed = FrictionSpeed.LeverSpeed;
+        //roatationSpeed = FrictionSpeed.LeverSpeed;
+        roatationSpeed = 15.0f;
 
         check_time = false;
         new_time = 0;
         origin_time = 0;
+
+        sound_on = false;
+        checksound = true;
     }
 
     private void Awake()
@@ -161,7 +169,6 @@ public class ClickDialObject : MonoBehaviour
                 //Slerping is spherically interpolating
                 selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
 
-
                 //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
                 //{
                 //    //Never runs
@@ -170,7 +177,13 @@ public class ClickDialObject : MonoBehaviour
 
             }
 
-            if (selectedObject.transform.eulerAngles.z <= 315 && selectedObject.transform.eulerAngles.z >= 225)
+            //if(selectedObject.transform.eulerAngles.z >= 330 && selectedObject.transform.eulerAngles.z <= 30)
+            //{
+            //    sound_on = true;
+            //    DoSound();
+            //}
+
+            if (selectedObject.transform.eulerAngles.z <= 315 && selectedObject.transform.eulerAngles.z >= 220)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;
@@ -178,22 +191,58 @@ public class ClickDialObject : MonoBehaviour
                 if (curr_point == Cardinal_points.None)
                 {
                     curr_point = Cardinal_points.E;
+                        sound_on = true;
+                        DoSound();
                 }
             }
+            //else
+            //{
+            //    checksound = true;
+            //    sound_on = false;
+            //}
             
-            if (selectedObject.transform.eulerAngles.z >= 135 && selectedObject.transform.eulerAngles.z <= 225)
+            if (selectedObject.transform.eulerAngles.z >= 135 && selectedObject.transform.eulerAngles.z <= 228)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;
 
                 if (curr_point == Cardinal_points.None)
                 {
-                    curr_point = Cardinal_points.S;
+                    curr_point = Cardinal_points.S;           
+                        sound_on = true;
+                        DoSound();
+                 
                 }
             }
+
+        //    Debug.Log(angle);
+
+            if (selectedObject.transform.eulerAngles.z <= 135 || selectedObject.transform.eulerAngles.z >= 315)
+            {
+                checksound = true;
+                sound_on = false;
+            }
+
+            if (selectedObject.transform.eulerAngles.z >= 226 && selectedObject.transform.eulerAngles.z <= 228)
+            {
+                checksound = true;
+                sound_on = false;
+            }
+
+            //if (selectedObject.transform.eulerAngles.z <= 0 || selectedObject.transform.eulerAngles.z >= 60)
+            //{
+            //    checksound = true;
+            //    sound_on = false;
+            //}
+
             //else
             //{
-                //curr_point = Cardinal_points.None;
+            //    checksound = true;
+            //    sound_on = false;
+            //}
+            //else
+            //{
+            //curr_point = Cardinal_points.None;
             //}
             //else
             //{
@@ -210,13 +259,11 @@ public class ClickDialObject : MonoBehaviour
         {
             onDialActivate.Raise(this, Values[1]);
             curr_point = Cardinal_points.E_Active;
-            DialTick.Post(gameObject);
         }
         else if (curr_point == Cardinal_points.S)
         {
             onDialActivate.Raise(this, Values[2]);
             curr_point = Cardinal_points.S_Active;
-            DialTick.Post(gameObject);
         }
         else if (curr_point == Cardinal_points.None)
         {
@@ -236,9 +283,28 @@ public class ClickDialObject : MonoBehaviour
         //}
     }
 
+    private void DoSound()
+    {
+
+        if (sound_on == true && checksound == true)
+        {
+            Debug.Log("Bannana1");
+            DialTick.Post(gameObject);
+            //letsoundplay();
+            sound_on = false;
+            checksound = false;
+        }
+    }
+    IEnumerator letsoundplay()
+    {
+        yield return new WaitForSeconds(2);
+    }
+
     private void OnMouseDown()
     {
+
         is_being_held = true;
+        
     }
 
     private void OnMouseUp()
