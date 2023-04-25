@@ -20,6 +20,8 @@ public class ClickDialObject : MonoBehaviour
     private bool check_time;
     private float origin_time;
 
+    public AK.Wwise.Event DialTick;
+
     //Object attached to this script
     public GameObject selectedObject;
 
@@ -221,15 +223,19 @@ public class ClickDialObject : MonoBehaviour
         {
             onDialActivate.Raise(this, Values[1]);
             curr_point = Cardinal_points.E_Active;
+            
         }
         else if (curr_point == Cardinal_points.S)
         {
             onDialActivate.Raise(this, Values[2]);
             curr_point = Cardinal_points.S_Active;
+            
+
         }
         else if (curr_point == Cardinal_points.None)
         {
             onDialActivate.Raise(this, Values[0]);
+
         }
         //else if (curr_state == slide_state.Pos2)
         //{

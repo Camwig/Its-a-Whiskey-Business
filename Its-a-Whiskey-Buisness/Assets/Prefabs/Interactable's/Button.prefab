@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 628374320271886678}
   - component: {fileID: 3419381743955963958}
   - component: {fileID: 628374320271886679}
+  - component: {fileID: 1441474636167278094}
   m_Layer: 0
   m_Name: ButtonSprite
   m_TagString: Untagged
@@ -131,6 +132,14 @@ MonoBehaviour:
   temperature_not_power: 0
   Room_num: 0
   onButtonActivate: {fileID: 0}
+  OpenButton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0fcba2895d4e75a4cbb758b8ca5f36c3, type: 2}
+  CloseButton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8eee0cbc86105d408abae33c6d11b3d, type: 2}
 --- !u!61 &628374320271886679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,3 +166,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1441474636167278094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628374320271886675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 538fabc5125957046a53a9e82a3f58df, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 

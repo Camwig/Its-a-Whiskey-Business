@@ -21,6 +21,10 @@ public class Clock : MonoBehaviour
 
     float hours;
     float minutes;
+
+    //Allows for easy selection of wwise event in the inspector 
+    public AK.Wwise.Event Midday;
+    public AK.Wwise.Event QuittinTime;
     
     // Start is called before the first frame update
     void Start()
@@ -73,6 +77,9 @@ public class Clock : MonoBehaviour
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;
+
+                //event plays at the end of the day 
+                QuittinTime.Post(gameObject);
             }
 
         }
@@ -81,6 +88,12 @@ public class Clock : MonoBehaviour
         {
             Debug.Log("Time reached test");
 
+        }
+
+        //plays the midday event at 1300 hours 
+        if (hours == 13)
+        {
+            Midday.Post(gameObject);
         }
 
 

@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: Values.Array.data[2]
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 7757126670907471908, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
+      propertyPath: DialTick.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 052cd7cf6c482014aaa720b9147d3716, type: 2}
     - target: {fileID: 8146459640334333590, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2557,6 +2561,14 @@ MonoBehaviour:
   Normal: {fileID: 0}
   TextTimer: {fileID: 151367128}
   panel: {fileID: 2026468445}
+  Midday:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4db07bb87a6334c4da285b006c73585c, type: 2}
+  QuittinTime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bc9347fa38836174da4d062b56213830, type: 2}
 --- !u!114 &516569043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,6 +3123,14 @@ PrefabInstance:
       propertyPath: temperature_not_power
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: OpenButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 0fcba2895d4e75a4cbb758b8ca5f36c3, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: CloseButton.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a8eee0cbc86105d408abae33c6d11b3d, type: 2}
     m_RemovedComponents:
     - {fileID: 4648945116906128782, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}

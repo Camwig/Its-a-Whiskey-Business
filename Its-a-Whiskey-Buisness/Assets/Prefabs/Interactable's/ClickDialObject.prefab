@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 8146459641560429677}
   - component: {fileID: 8146459641560429675}
   - component: {fileID: 7757126670907471908}
+  - component: {fileID: 4976782026418898321}
   m_Layer: 0
   m_Name: ClickDialSprite
   m_TagString: Untagged
@@ -238,7 +239,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c948bc8fa9c089b4fa317f09d989d6ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialTick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 052cd7cf6c482014aaa720b9147d3716, type: 2}
   selectedObject: {fileID: 0}
   Room_num: 0
   Values: 
   onDialActivate: {fileID: 0}
+--- !u!114 &4976782026418898321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146459641560429679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 538fabc5125957046a53a9e82a3f58df, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 

@@ -17,6 +17,9 @@ public class ButtonInteractable : MonoBehaviour
     //Event system to call activation
     public EventSytem onButtonActivate;
 
+    public AK.Wwise.Event OpenButton;
+    public AK.Wwise.Event CloseButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +37,13 @@ public class ButtonInteractable : MonoBehaviour
             case true:
                 on_off = false;
                 data = 60;
+                OpenButton.Post(gameObject);
                 break;
+
             case false:
                 on_off = true;
                 data = 180;
+                CloseButton.Post(gameObject);
                 break;
         }
 

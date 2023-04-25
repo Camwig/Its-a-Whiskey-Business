@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1142629036161920178}
   - component: {fileID: 4089512506592267610}
   - component: {fileID: 8047417593692586231}
+  - component: {fileID: 5444089640262333178}
   m_Layer: 0
   m_Name: LeverSprite
   m_TagString: Untagged
@@ -127,6 +128,30 @@ MonoBehaviour:
   Room_num: 0
   selectedObject: {fileID: 0}
   onLeverActivate: {fileID: 0}
+--- !u!114 &5444089640262333178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217441519385222794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 538fabc5125957046a53a9e82a3f58df, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &3474026119675375048
 PrefabInstance:
   m_ObjectHideFlags: 0
