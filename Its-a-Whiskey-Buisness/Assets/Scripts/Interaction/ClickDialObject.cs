@@ -38,7 +38,8 @@ public class ClickDialObject : MonoBehaviour
         //curr_point = Cardinal_points.E_Active;
         power = 0;
         rotation = 0;
-        roatationSpeed = FrictionSpeed.LeverSpeed;
+        //roatationSpeed = FrictionSpeed.LeverSpeed;
+        roatationSpeed = 15.0f;
 
         check_time = false;
         new_time = 0;
