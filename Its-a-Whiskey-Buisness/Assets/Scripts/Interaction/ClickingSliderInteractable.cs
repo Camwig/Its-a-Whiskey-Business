@@ -37,6 +37,8 @@ public class ClickingSliderInteractable : MonoBehaviour
     //Diffrent levels of the slider so top,middle and bottom
     enum Option {A,B,C};
 
+    private float prevValue;
+
     public AK.Wwise.Event HeavyDial;
 
     //Runs at the beginning of the application
@@ -84,6 +86,7 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Moves the object in relation to the mouses y-position
                 selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
+                OnDrag();
             }
 
             if (selectedObject.gameObject.transform.localPosition.y < OriginPos && selectedObject.gameObject.transform.localPosition.y > OriginPos - 3.0f)
@@ -152,6 +155,17 @@ public class ClickingSliderInteractable : MonoBehaviour
             //on_off2 = true;
             curr_state = slide_state.Pos3_active;
             HeavyDial.Post(gameObject);
+        }
+    }
+
+    public void OnDrag()
+    {
+        var diff = prevValue - (-selectedObject.gameObject.transform.localPosition.y);
+        if (Mathf.Abs(diff) > 1)
+        {
+            Debug.Log("difference is bigger than 10, playing sound");
+
+            prevValue = (-selectedObject.gameObject.transform.localPosition.y);
         }
     }
 

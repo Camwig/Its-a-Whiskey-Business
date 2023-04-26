@@ -311,19 +311,13 @@ public class ClickDialObject : MonoBehaviour
 
     public void OnDrag()
     {
-        //Your logic for turning the knob 
-
-        //Here i'm assuming that knobValue is the value of the z rotation of your knob in degrees (its localEularAngle)
         var diff = prevValue - selectedObject.transform.eulerAngles.z;
 
-        //Take the absolute value of diff so it works for turning both ways
         if (Mathf.Abs(diff) > 10)
         {
             Debug.Log("difference is bigger than 10, playing sound");
-            //AudioManager.Instance.PlaySfx(crankSound);
 
-            //Again assuming knobValue is in degrees
-            prevValue = selectedObject.transform.eulerAngles.z; //Only update the prevvalue if the difference was bigger than 1
+            prevValue = selectedObject.transform.eulerAngles.z;
         }
 
     }
