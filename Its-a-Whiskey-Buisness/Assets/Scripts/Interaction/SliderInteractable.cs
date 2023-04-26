@@ -28,6 +28,7 @@ public class SliderInteractable : MonoBehaviour
     [SerializeField]
     public int Room_num;
 
+    [SerializeField]
     public GameObject selectedObject;
 
     //private bool on_off;
