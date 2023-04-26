@@ -131,7 +131,7 @@ public class ClickDialObject : MonoBehaviour
         //
         //Quaternion old_rotate = this.transform.rotation;
 
-        curr_point = Cardinal_points.None;
+        //curr_point = Cardinal_points.None;
 
 
         if (check_time == true)
@@ -167,6 +167,8 @@ public class ClickDialObject : MonoBehaviour
                     //    this.transform.rotation = old_rotate.eulerAngles;
                     //}
 
+                    //Need to give each section 30 degrees each
+
                 }
             }
             else if(selectedObject.transform.eulerAngles.z > 135 && selectedObject.transform.eulerAngles.z < 180)
@@ -180,6 +182,14 @@ public class ClickDialObject : MonoBehaviour
                 selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
             }
 
+            if (selectedObject.transform.eulerAngles.z <= 45 && selectedObject.transform.eulerAngles.z <= 315)
+            {
+                check_time = true;
+                origin_time = Time.deltaTime;
+
+                curr_point = Cardinal_points.None;
+            }
+
             if (selectedObject.transform.eulerAngles.z <= 315 && selectedObject.transform.eulerAngles.z >= 225)
             {
                 check_time = true;
@@ -191,7 +201,9 @@ public class ClickDialObject : MonoBehaviour
                 }
             }
             
-            if (selectedObject.transform.eulerAngles.z >= 135 && selectedObject.transform.eulerAngles.z <= 225)
+
+            //This is the issue
+            if (selectedObject.transform.eulerAngles.z >= 45 && selectedObject.transform.eulerAngles.z <= 135)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;
