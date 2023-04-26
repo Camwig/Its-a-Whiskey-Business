@@ -25,6 +25,8 @@ public class ClickDialObject : MonoBehaviour
     private bool sound_on;
     private bool checksound;
 
+    private float prevValue;
+
     //Object attached to this script
     public GameObject selectedObject;
 
@@ -54,7 +56,7 @@ public class ClickDialObject : MonoBehaviour
         origin_time = 0;
 
         sound_on = false;
-        checksound = true;
+        checksound = false;
     }
 
     private void Awake()
@@ -169,6 +171,8 @@ public class ClickDialObject : MonoBehaviour
                 //Slerping is spherically interpolating
                 selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
 
+                OnDrag();
+
                 //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
                 //{
                 //    //Never runs
@@ -191,8 +195,8 @@ public class ClickDialObject : MonoBehaviour
                 if (curr_point == Cardinal_points.None)
                 {
                     curr_point = Cardinal_points.E;
-                        sound_on = true;
-                        DoSound();
+                        //sound_on = true;
+                        //DoSound();
                 }
             }
             //else
@@ -209,47 +213,68 @@ public class ClickDialObject : MonoBehaviour
                 if (curr_point == Cardinal_points.None)
                 {
                     curr_point = Cardinal_points.S;           
-                        sound_on = true;
-                        DoSound();
+                        //sound_on = true;
+                        //DoSound();
                  
                 }
             }
 
         //    Debug.Log(angle);
 
-            if (selectedObject.transform.eulerAngles.z <= 135 || selectedObject.transform.eulerAngles.z >= 315)
-            {
-                checksound = true;
-                sound_on = false;
-            }
-
-            if (selectedObject.transform.eulerAngles.z >= 226 && selectedObject.transform.eulerAngles.z <= 228)
-            {
-                checksound = true;
-                sound_on = false;
-            }
-
-            //if (selectedObject.transform.eulerAngles.z <= 0 || selectedObject.transform.eulerAngles.z >= 60)
+            //if (selectedObject.transform.eulerAngles.z <= 135 || selectedObject.transform.eulerAngles.z >= 315)
             //{
             //    checksound = true;
             //    sound_on = false;
             //}
 
-            //else
+            //if (selectedObject.transform.eulerAngles.z >= 226 && selectedObject.transform.eulerAngles.z <= 228)
             //{
             //    checksound = true;
             //    sound_on = false;
             //}
-            //else
+
+            //if(selectedObject.transform.eulerAngles.z <= 5 /*|| selectedObject.transform.eulerAngles.z >= 352.5*/ && selectedObject.transform.eulerAngles.z < 180)
             //{
-            //curr_point = Cardinal_points.None;
-            //}
-            //else
-            //{
-            //curr_point = Cardinal_points.None;
+            //    checksound = true;
+            //    sound_on = false;
             //}
 
-            CheckState();
+            //    if (!playedSoundAlready && portaFechada && transform.eulerAngles.z <= 170)
+            //{
+
+                //if (selectedObject.transform.eulerAngles.z <= 75 /*&& selectedObject.transform.eulerAngles.z <= 315*/ && selectedObject.transform.eulerAngles.z > 180)
+                //{
+                //    checksound = true;
+                //    sound_on = false;
+                //}
+
+                //if (selectedObject.transform.eulerAngles.z >= 60 && selectedObject.transform.eulerAngles.z < 180)
+                //{
+                //    checksound = true;
+                //    sound_on = false;
+                //}
+
+                //if (selectedObject.transform.eulerAngles.z <= 0 || selectedObject.transform.eulerAngles.z >= 60)
+                //{
+                //    checksound = true;
+                //    sound_on = false;
+                //}
+
+                //else
+                //{
+                //    checksound = true;
+                //    sound_on = false;
+                //}
+                //else
+                //{
+                //curr_point = Cardinal_points.None;
+                //}
+                //else
+                //{
+                //curr_point = Cardinal_points.None;
+                //}
+
+                CheckState();
         }
     }
 
@@ -268,6 +293,7 @@ public class ClickDialObject : MonoBehaviour
         else if (curr_point == Cardinal_points.None)
         {
             onDialActivate.Raise(this, Values[0]);
+            //DoSound();
         }
         //else if (curr_state == slide_state.Pos2)
         //{
@@ -283,13 +309,32 @@ public class ClickDialObject : MonoBehaviour
         //}
     }
 
+    public void OnDrag()
+    {
+        //Your logic for turning the knob 
+
+        //Here i'm assuming that knobValue is the value of the z rotation of your knob in degrees (its localEularAngle)
+        var diff = prevValue - selectedObject.transform.eulerAngles.z;
+
+        //Take the absolute value of diff so it works for turning both ways
+        if (Mathf.Abs(diff) > 10)
+        {
+            Debug.Log("difference is bigger than 10, playing sound");
+            //AudioManager.Instance.PlaySfx(crankSound);
+
+            //Again assuming knobValue is in degrees
+            prevValue = selectedObject.transform.eulerAngles.z; //Only update the prevvalue if the difference was bigger than 1
+        }
+
+    }
+
     private void DoSound()
     {
 
         if (sound_on == true && checksound == true)
         {
             Debug.Log("Bannana1");
-            DialTick.Post(gameObject);
+            //DialTick.Post(gameObject);
             //letsoundplay();
             sound_on = false;
             checksound = false;
