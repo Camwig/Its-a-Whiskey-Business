@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ObjectiveSystem : MonoBehaviour
@@ -26,9 +27,12 @@ public class ObjectiveSystem : MonoBehaviour
     //increase/decrease a value which will act as a general negative modifier.
     //Can put this out to text for the moment
 
+    public Button EasyMode;
+    public Button NormalMode;
+
 
     [SerializeField]
-    List<Objective> Objectives;
+    public List<Objective> Objectives;
 
     [SerializeField]
     List<EnergyTracker> EnergyTrackers;
@@ -47,6 +51,7 @@ public class ObjectiveSystem : MonoBehaviour
 
     public List<bool> ObjectiveStop = new List<bool>();
 
+    public float Times;
 
     // Start is called before the first frame update
     void Start()
@@ -114,7 +119,7 @@ public class ObjectiveSystem : MonoBehaviour
                         if (EnergyTrackers[j].ActivatedProperty != true)
                         {
                             Objectives[h].MyActivated = false;
-                            deductionValue -= 0.1f * Time.deltaTime;
+                            deductionValue -= Times * Time.deltaTime;
                         }
                         else
                         {
@@ -126,7 +131,7 @@ public class ObjectiveSystem : MonoBehaviour
                             if (EnergyTrackers[j].IncreaseProperty != Objectives[h].MyRateValue)
                             {
                                 Objectives[h].MyActivated = false;
-                                deductionValue -= 0.1f * Time.deltaTime;
+                                deductionValue -= Times * Time.deltaTime;
                             }
                         }
 
@@ -135,7 +140,7 @@ public class ObjectiveSystem : MonoBehaviour
                             if (EnergyTrackers[j].MyTemperature != Objectives[h].MyTempValue)
                             {
                                 Objectives[h].MyActivated = false;
-                                deductionValue -= 0.1f * Time.deltaTime;
+                                deductionValue -= Times * Time.deltaTime;
                             }
                         }
                     }
@@ -145,4 +150,31 @@ public class ObjectiveSystem : MonoBehaviour
             }
         }
     }
+
+    public void IsEasy()
+    {
+        if(EasyMode.GetComponent<Button>() == true)
+        {
+            Times = 0.05f;
+            Debug.Log("0.05");
+        }
+        else
+        {
+            Times = 0.1f;
+        }
+    }
+
+    public void IsNormal()
+    {
+        if (NormalMode.GetComponent<Button>() == true)
+        {
+            Times = 0.1f;
+            Debug.Log("0.1");
+        }
+        else
+        {
+            Times = 0.1f;
+        }
+    }
 }
+

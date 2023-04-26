@@ -752,6 +752,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1086261553}
+        m_TargetAssemblyTypeName: ObjectiveSystem, Assembly-CSharp
+        m_MethodName: IsNormal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &970478455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1170,7 @@ GameObject:
   - component: {fileID: 1086261549}
   - component: {fileID: 1086261548}
   - component: {fileID: 1086261552}
+  - component: {fileID: 1086261553}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1265,6 +1278,27 @@ MonoBehaviour:
   Normal: {fileID: 970478454}
   TextTimer: {fileID: 489898473}
   panel: {fileID: 0}
+--- !u!114 &1086261553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086261547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b139d0e127218f646a6cc99b8f7f8a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EasyMode: {fileID: 1589821263}
+  NormalMode: {fileID: 970478454}
+  Objectives: []
+  EnergyTrackers: []
+  OverheadTracker: {fileID: 0}
+  this_clock: {fileID: 0}
+  textElement: {fileID: 0}
+  ObjectiveStop: 
+  Times: 0
 --- !u!1 &1221807985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1704,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1086261552}
         m_TargetAssemblyTypeName: Clock, Assembly-CSharp
         m_MethodName: SlowTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1086261553}
+        m_TargetAssemblyTypeName: ObjectiveSystem, Assembly-CSharp
+        m_MethodName: IsEasy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
