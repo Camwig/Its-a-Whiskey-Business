@@ -62,7 +62,7 @@ public class ClickingSliderInteractable : MonoBehaviour
         {
             //These two if statements check if the time at which we stopped the object is equal to a copule millisceonds passing
             //Essentially stops the movement of the object for a couple of milliseconds to help give the illusuion of the clicking
-            if (new_time >= origin_time + 0.25f)
+            if (new_time >= origin_time + 0.125f)
             {
                 check_time = false;
                 new_time = 0;
