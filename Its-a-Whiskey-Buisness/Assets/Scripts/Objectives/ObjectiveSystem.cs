@@ -49,6 +49,8 @@ public class ObjectiveSystem : MonoBehaviour
 
     private float deductionValue;
 
+    private static bool easyOrNo;
+
     public List<bool> ObjectiveStop = new List<bool>();
 
     public float Times;
@@ -57,6 +59,8 @@ public class ObjectiveSystem : MonoBehaviour
     void Start()
     {
         clock_ = this_clock.GetComponent<Clock>();
+
+        CheckMode();
 
         deductionValue = 0.0f;
 
@@ -70,6 +74,9 @@ public class ObjectiveSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //CheckMode();
+
         CheckObjectives();
 
         textElement.text = deductionValue.ToString();
@@ -151,12 +158,12 @@ public class ObjectiveSystem : MonoBehaviour
         }
     }
 
-    public void IsEasy()
+    public void CheckMode()
     {
-        if(EasyMode.GetComponent<Button>() == true)
+        if (easyOrNo == true)
         {
             Times = 0.05f;
-            Debug.Log("0.05");
+            //Debug.Log("0.05");
         }
         else
         {
@@ -164,16 +171,33 @@ public class ObjectiveSystem : MonoBehaviour
         }
     }
 
+    public void IsEasy()
+    {
+        if(EasyMode.GetComponent<Button>() == true)
+        {
+            //Times = 0.05f;
+            //Debug.Log("0.05");
+            easyOrNo = true;
+        }
+        else
+        {
+            easyOrNo = false;
+            //Times = 0.1f;
+        }
+    }
+
     public void IsNormal()
     {
         if (NormalMode.GetComponent<Button>() == true)
         {
-            Times = 0.1f;
-            Debug.Log("0.1");
+            //Times = 0.1f;
+            //Debug.Log("0.1");
+            easyOrNo = false;
         }
         else
         {
-            Times = 0.1f;
+            //Times = 0.1f;
+            easyOrNo = false;
         }
     }
 }
