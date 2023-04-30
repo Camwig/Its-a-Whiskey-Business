@@ -862,6 +862,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChangingImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5479489439945375853, guid: b4f2f2a887987b0488f7e89808e20783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 213.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479489439945375853, guid: b4f2f2a887987b0488f7e89808e20783, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479489439945375853, guid: b4f2f2a887987b0488f7e89808e20783, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0049591
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479489439945375853, guid: b4f2f2a887987b0488f7e89808e20783, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 157.08
+      objectReference: {fileID: 0}
     - target: {fileID: 7444135432045492617, guid: b4f2f2a887987b0488f7e89808e20783, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
