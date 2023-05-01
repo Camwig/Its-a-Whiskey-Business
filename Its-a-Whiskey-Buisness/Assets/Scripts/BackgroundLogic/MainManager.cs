@@ -70,7 +70,7 @@ public class MainManager : MonoBehaviour
     {
         if (RoomNum == sender.GetComponent<GenericRoom>().RoomNum)
         {
-            if (data is int || data is float)
+            if (/*data is int ||*/ data is float)
             {
                 energyTrack.MyTemperature = (float)data;
             }

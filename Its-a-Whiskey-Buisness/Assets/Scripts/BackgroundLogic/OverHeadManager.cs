@@ -64,7 +64,7 @@ public class OverHeadManager : MonoBehaviour
         {
             //Initialises all these values as the scriptable objects would remeber the previous values on exit
             //This just makes sure all the values are reset
-            Debug.Log("Starting...\n");
+            //Debug.Log("Starting...\n");
             OriginenergyTrack.EnergyProperty = 0;
             OriginenergyTrack.IncreaseProperty = 1;
             OriginenergyTrack.ActivatedProperty = false;
@@ -102,7 +102,7 @@ public class OverHeadManager : MonoBehaviour
         else
         {
             //If it is not the first time running this piece of code
-            Debug.Log("Running...\n");
+            //Debug.Log("Running...\n");
 
             //Still not super used and is kind of redundant now juts havent had time to remove it yet
             now_state = slide_state.StateProperty;

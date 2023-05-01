@@ -19,9 +19,9 @@ public class LeverInteraction : MonoBehaviour
     //Dont think this is used either
     private static float new_angle;
 
-    //This is also no longer used
-    [SerializeField]
-    public ObjectPositioing these_objects;
+    ////This is also no longer used
+    //[SerializeField]
+    //public ObjectPositioing these_objects;
 
     //Value to track which room we belong to
     [SerializeField]

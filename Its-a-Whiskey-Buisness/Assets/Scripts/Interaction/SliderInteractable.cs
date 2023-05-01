@@ -20,10 +20,10 @@ public class SliderInteractable : MonoBehaviour
     private enum slide_state {Down,Up,Down_active,Up_active,None};
     private slide_state curr_state;
 
-    public ObjectPositioing these_objects;
+    //public ObjectPositioing these_objects;
 
-    [SerializeField]
-    private SliderState slider_state_;
+    //[SerializeField]
+    //private SliderState slider_state_;
 
     [SerializeField]
     public int Room_num;
@@ -51,16 +51,16 @@ public class SliderInteractable : MonoBehaviour
         //    int i = 0;
         //}
 
-        if(slider_state_.StateProperty == false)
-        {
-            //curr_state = slide_state.Up_active;
-            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
-        }
+        //if(slider_state_.StateProperty == false)
+        //{
+        //    //curr_state = slide_state.Up_active;
+        //    selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
+        //}
         
-        if(slider_state_.StateProperty == true)
-        {
-            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
-        }
+        //if(slider_state_.StateProperty == true)
+        //{
+        //    selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
+        //}
 
         //curr_state = slide_state.None;
         //EventSytem.CreateInstance("Room Activate.asset");

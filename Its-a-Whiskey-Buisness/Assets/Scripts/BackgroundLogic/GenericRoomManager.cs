@@ -124,17 +124,17 @@ using UnityEngine;
 public class GenericRoomManager : MonoBehaviour
 {
     //Holds the refrences to certain game objects.
-    public GameObject lever;
-    public GameObject slider;
+    //public GameObject lever;
+    //public GameObject slider;
     public GenericRoom this_room;
 
     //Refences the objects in the scene
-    [SerializeField]
-    public ObjectPositioing these_objects;
+    //[SerializeField]
+    //public ObjectPositioing these_objects;
     [SerializeField]
     public EnergyTracker energyTracker;
-    [SerializeField]
-    public SliderState new_slide_state;
+    //[SerializeField]
+    //public SliderState new_slide_state;
 
     [SerializeField]
     public GameObject this_manager;
@@ -210,7 +210,7 @@ public class GenericRoomManager : MonoBehaviour
 
         if (energyTracker.My_firstPlay == true)
         {
-            Debug.Log("Starting...\n");
+            //Debug.Log("Starting...\n");
             //firstPlay = false;
             energyTracker.My_firstPlay = false;
             //new_slide_state.StateProperty = false;
@@ -219,7 +219,7 @@ public class GenericRoomManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Running...\n");
+            //Debug.Log("Running...\n");
             //Store the angle the lever was at after exit
 
             //Not super needed at the momenmt but I shall keep it in as its not that harmful at the moment
