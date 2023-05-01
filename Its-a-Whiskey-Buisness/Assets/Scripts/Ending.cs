@@ -9,11 +9,33 @@ public class Ending : MonoBehaviour
     public GameObject losingpanel;
     public GameObject mainPanel;
 
+    [SerializeField]
+    Overhead overhead_;
+
+    [SerializeField]
+    ObjectiveSystem objectives;
+
+    [SerializeField]
+    public float MinimumEnergy;
+
+    [SerializeField]
+    public float MaximumEnergy;
+
     public float winner;
 
     public void OnButtonClick()
     {
-        losingpanel.SetActive(losingpanel);
+        float final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
+        Debug.Log(final_value);
+
+        if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
+        {
+            winningpanel.SetActive(winningpanel);
+        }
+        else
+        {
+            losingpanel.SetActive(losingpanel);
+        }
     }
 
     public void Resume()

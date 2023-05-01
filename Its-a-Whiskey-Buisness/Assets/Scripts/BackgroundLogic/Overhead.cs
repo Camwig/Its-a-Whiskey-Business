@@ -155,4 +155,9 @@ public class Overhead : MonoBehaviour
     {
         RunRoom();
     }
+
+    public float returnEnergy()
+    {
+        return Overall_Energy;
+    }
 }

@@ -1806,6 +1806,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6568250798606034408, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: overhead_
+      value: 
+      objectReference: {fileID: 2025061072}
+    - target: {fileID: 6568250798606034408, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: objectives
+      value: 
+      objectReference: {fileID: 917263296}
+    - target: {fileID: 6568250798606034408, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: MaximumEnergy
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6673584184372474657, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -200,5 +200,10 @@ public class ObjectiveSystem : MonoBehaviour
             easyOrNo = false;
         }
     }
+
+    public float RetrunDeduction()
+    {
+        return deductionValue;
+    }
 }
 
