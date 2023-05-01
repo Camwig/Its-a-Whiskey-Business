@@ -25,6 +25,10 @@ public class SliderInteractable : MonoBehaviour
     [SerializeField]
     private SliderState slider_state_;
 
+    [SerializeField]
+    public int Room_num;
+
+    [SerializeField]
     public GameObject selectedObject;
 
     //private bool on_off;
@@ -58,9 +62,14 @@ public class SliderInteractable : MonoBehaviour
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
         }
 
-        curr_state = slide_state.None;
+        //curr_state = slide_state.None;
         //EventSytem.CreateInstance("Room Activate.asset");
         //AssetDatabase.CreateAsset(new_event, "Assets/Scenes/Data/Events/MyEvent");
+    }
+
+    private void Awake()
+    {
+        curr_state = slide_state.None;
     }
 
     // Update is called once per frame
@@ -133,7 +142,7 @@ public class SliderInteractable : MonoBehaviour
     {
         //these_objects.gameObjects[1].transform.position = new Vector3(selectedObject.transform.position.x, OriginPos, 0);
         //these_objects.gameObjects[1].transform.position = selectedObject.transform.position;
-        slider_state_.StateProperty = on_off2;
+        //slider_state_.StateProperty = on_off2;
         //these_objects.gameObjects[1].transform.rotation = this.transform.rotation;
     }
 }

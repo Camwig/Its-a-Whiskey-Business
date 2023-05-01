@@ -1,281 +1,165 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-
-//public class OverHeadManager : MonoBehaviour
-//{
-//    //static private OverHeadManager Instance = null;
-//    public Overhead overhead_;
-//    public EnergyTracker energyTrack;
-//    public EnergyTracker energyTrack2;
-//    public EnergyTracker energyTrack3;
-
-//    public static float energyTrack_amount;
-//    public static float energyTrack2_amount;
-//    public static float energyTrack3_amount;
-
-
-//    public float new_energyTrack_amount;
-//    public float new_energyTrack2_amount;
-//    public float new_energyTrack3_amount;
-
-//    private static bool firstPlay=true;
-
-
-//    void Awake()
-//    {
-//        //if(Instance!=null)
-//        //{
-//        //    Destroy(this);
-//        //    return;
-//        //}
-//        //else if (Instance == null)
-//        //{
-//        //    Instance = this;
-
-//        //    //PlayerPrefs.DeleteAll();
-
-//        //    overhead_.SetEnergy(0);
-//        //    PlayerPrefs.SetFloat("Overall_energy", 0);
-//        //    PlayerPrefs.SetFloat("Energy", 0);
-//        //    energyTrack.EnergyProperty = 0;
-//        //    energyTrack2.EnergyProperty = 0;
-
-//        //    //DontDestroyOnLoad(Instance);
-//        //}
-
-//        //if(firstPlay != false)
-//        //{
-//        //    PlayerPrefs.SetInt("FirstPlay", 1);
-//        //}
-
-//        //if(PlayerPrefs.GetInt("Firstplay")== 1)
-//        //{
-//        //    //runNow = false;
-//        //    PlayerPrefs.SetInt("FirstPlay", 0);
-//        //    PlayerPrefs.Save();
-//        //    Debug.Log("Starting...\n");
-//        //    firstPlay = true;
-//        //}
-//        //else
-//        //{
-//        //    //runNow = true;
-//        //    Debug.Log("Running...\n");
-//        //    firstPlay = false;
-//        //}
-
-//        if(firstPlay == true)
-//        {
-//            Debug.Log("Starting...\n");
-//            //PlayerPrefs.DeleteAll();
-
-//            overhead_.SetEnergy(0);
-//            //PlayerPrefs.SetFloat("Overall_energy", 0);
-//            //PlayerPrefs.SetFloat("Energy", 0);
-
-//            energyTrack.EnergyProperty = 0;
-//            energyTrack2.EnergyProperty = 0;
-//            energyTrack3.EnergyProperty = 0;
-//            energyTrack.IncreaseProperty = 1;
-//            energyTrack2.IncreaseProperty = 1;
-//            energyTrack3.IncreaseProperty = 1;
-//            energyTrack.ActivatedProperty = false;
-//            energyTrack2.ActivatedProperty = false;
-//            energyTrack3.ActivatedProperty = false;
-
-//            energyTrack_amount = 0.0f;
-//            energyTrack2_amount = 0.0f;
-//            energyTrack3_amount = 0.0f;
-
-//            firstPlay = false;
-//        }
-//        else
-//        {
-//            Debug.Log("Running...\n");
-
-//            if (!energyTrack.ActivatedProperty)
-//            {
-//                if (energyTrack.EnergyProperty > energyTrack_amount)
-//                {
-//                    Debug.Log(energyTrack.EnergyProperty);
-//                    //Not doing anything
-//                    new_energyTrack_amount = energyTrack.EnergyProperty - energyTrack_amount;
-//                    energyTrack.EnergyProperty = new_energyTrack_amount;
-//                    Debug.Log(energyTrack.EnergyProperty);
-//                }
-//            }
-
-//            //if (!energyTrack2.ActivatedProperty)
-//            //{
-//            //    if (energyTrack2.EnergyProperty > energyTrack2_amount)
-//            //    {
-//            //        new_energyTrack2_amount = energyTrack2.EnergyProperty - energyTrack2_amount;
-//            //        energyTrack2.EnergyProperty = new_energyTrack2_amount;
-//            //    }
-//            //}
-
-//            if (!energyTrack3.ActivatedProperty)
-//            {
-
-//                if (energyTrack3.EnergyProperty > energyTrack3_amount)
-//                {
-//                    new_energyTrack3_amount = energyTrack3.EnergyProperty - energyTrack3_amount;
-//                    energyTrack3.EnergyProperty = new_energyTrack3_amount;
-//                }
-//            }
-//        }
-//    }
-
-//    private void OnDestroy()
-//    {
-//        energyTrack_amount = energyTrack.EnergyProperty;
-//        //energyTrack2_amount = energyTrack2.EnergyProperty;
-//        energyTrack3_amount = energyTrack3.EnergyProperty;
-//    }
-//}
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OverHeadManager : MonoBehaviour
 {
-    //static private OverHeadManager Instance = null;
+    //Refrence to the overhead function script
     public Overhead overhead_;
-    public EnergyTracker energyTrack;
-    public EnergyTracker energyTrack2;
 
+    //Overhead room energy tracker
+    [SerializeField]
+    public EnergyTracker OriginenergyTrack;
+
+    //List of energy trackers for each room
+    [SerializeField]
+    private List<EnergyTracker> ListOfTrackers;
+
+    //Arrays for each energy tracker to store their new and old amounts of energy
+    public static float[] ListOfTrackers_amount;
+    public static float[] ListOfTrackers_new_amount;
+
+    //Currently not being used will remove later
+    [SerializeField]
     public SliderState slide_state;
     public bool now_state;
-    //public EnergyTracker energyTrack3;
 
-    public static float energyTrack_amount;
-    public static float energyTrack2_amount;
-   // public static float energyTrack3_amount;
+    //Value for the overhead energy tacker old energy amount
+    public static float OriginenergyTrack_amount;
 
+    //Value for the overhead energy tacker new energy amount
+    public float new_OriginenergyTrack_amount;
 
-    public float new_energyTrack_amount;
-    public float new_energyTrack2_amount;
-   // public float new_energyTrack3_amount;
-
+    //Boolean to keep track of if this is the first time running this block of code
     private static bool firstPlay = true;
 
+    //This will always be zero as the overhead room is always room number zero
+    private int RoomNum;
 
-    void Awake()
+    //Refrence to the room state function that holds the enumeration values for the rooms we can enter
+    [SerializeField]
+    public CurrentRoom room_state;
+
+    private void Awake()
     {
-        //if(Instance!=null)
-        //{
-        //    Destroy(this);
-        //    return;
-        //}
-        //else if (Instance == null)
-        //{
-        //    Instance = this;
+        //Initialises the arrays that hold the new and old energy amounts
+        ListOfTrackers_amount =  new float[ListOfTrackers.Count];
+        ListOfTrackers_new_amount = new float[ListOfTrackers.Count];
 
-        //    //PlayerPrefs.DeleteAll();
+        //Calls the runsetup function
+        RunSetup();
+    }
 
-        //    overhead_.SetEnergy(0);
-        //    PlayerPrefs.SetFloat("Overall_energy", 0);
-        //    PlayerPrefs.SetFloat("Energy", 0);
-        //    energyTrack.EnergyProperty = 0;
-        //    energyTrack2.EnergyProperty = 0;
 
-        //    //DontDestroyOnLoad(Instance);
-        //}
+    public void RunSetup()
+    {
+        //Sets the overhead manager to be the same room number as the overhead which will always be zero
+        RoomNum = overhead_.RoomNum;
 
-        //if(firstPlay != false)
-        //{
-        //    PlayerPrefs.SetInt("FirstPlay", 1);
-        //}
+        //Sets the roomstate enumeration based off the room number
+        room_state.SetRoom(RoomNum);
 
-        //if(PlayerPrefs.GetInt("Firstplay")== 1)
-        //{
-        //    //runNow = false;
-        //    PlayerPrefs.SetInt("FirstPlay", 0);
-        //    PlayerPrefs.Save();
-        //    Debug.Log("Starting...\n");
-        //    firstPlay = true;
-        //}
-        //else
-        //{
-        //    //runNow = true;
-        //    Debug.Log("Running...\n");
-        //    firstPlay = false;
-        //}
-
+        //If this is the firts run of this function
         if (firstPlay == true)
         {
-            //Debug.Log("Starting...\n");
-            //PlayerPrefs.DeleteAll();
+            //Initialises all these values as the scriptable objects would remeber the previous values on exit
+            //This just makes sure all the values are reset
+            Debug.Log("Starting...\n");
+            OriginenergyTrack.EnergyProperty = 0;
+            OriginenergyTrack.IncreaseProperty = 1;
+            OriginenergyTrack.ActivatedProperty = false;
 
-            overhead_.SetEnergy(0);
-            //PlayerPrefs.SetFloat("Overall_energy", 0);
-            //PlayerPrefs.SetFloat("Energy", 0);
-
-            energyTrack.EnergyProperty = 0;
-            energyTrack2.EnergyProperty = 0;
-         //   energyTrack3.EnergyProperty = 0;
-            energyTrack.IncreaseProperty = 1;
-            energyTrack2.IncreaseProperty = 1;
-       //    energyTrack3.IncreaseProperty = 1;
-            energyTrack.ActivatedProperty = false;
-            energyTrack2.ActivatedProperty = false;
-       //     energyTrack3.ActivatedProperty = false;
-
-            energyTrack_amount = 0.0f;
-            energyTrack2_amount = 0.0f;
-            //     energyTrack3_amount = 0.0f;
+            OriginenergyTrack.MyTemperature = 0.0f;
 
             slide_state.StateProperty = false;
-
             firstPlay = false;
+            OriginenergyTrack.MyRoomNum = 0;
+            OriginenergyTrack.OtherRoomProperty = false;
 
-            Screen.SetResolution(1920, 1080, true, 60);
+            for (int i = 0; i < ListOfTrackers.Count; i++)
+            {
+                ListOfTrackers[i].EnergyProperty = 0;
+                ListOfTrackers[i].IncreaseProperty = 1;
+                ListOfTrackers[i].ActivatedProperty = false;
+                ListOfTrackers[i].My_firstPlay = true;
+                ListOfTrackers[i].Energy_to_be_added_property = 0.0f;
+
+                ListOfTrackers[i].MyTemperature = 0.0f;
+
+                ListOfTrackers[i].My_ActiveOnEntryAndExit = false;
+                ListOfTrackers[i].OtherRoomProperty = false;
+                ListOfTrackers[i].MyRoomNum = i + 1;
+
+                ListOfTrackers_amount[i] = 0.0f;
+                ListOfTrackers_new_amount[i] = 0.0f;
+
+            }
+
+            //Calls some of the overheads setup functions
+            overhead_.SetupEnergy();
+            overhead_.Startup();
         }
         else
         {
-            //Debug.Log("Running...\n");
+            //If it is not the first time running this piece of code
+            Debug.Log("Running...\n");
 
+            //Still not super used and is kind of redundant now juts havent had time to remove it yet
             now_state = slide_state.StateProperty;
 
-            if (!energyTrack.ActivatedProperty)
+            //Sets the origin energy amount to be the same amount upon the overheads exit
+            OriginenergyTrack.EnergyProperty = OriginenergyTrack_amount;
+
+            //Loops through all the energy trackes
+            for (int i = 0; i < ListOfTrackers.Count; i++)
             {
-                if (energyTrack.EnergyProperty > energyTrack_amount)
+                //Checks if certain criteria is met before entering the loop
+                if (ListOfTrackers[i].ActivatedProperty == false || ListOfTrackers[i].My_ActiveOnEntryAndExit == true || ListOfTrackers[i].OtherRoomProperty == true)
                 {
-                    //Debug.Log(energyTrack.EnergyProperty);
-                    //Not doing anything
-                    new_energyTrack_amount = energyTrack.EnergyProperty - energyTrack_amount;
-                    energyTrack.EnergyProperty = new_energyTrack_amount;
-                    //Debug.Log(energyTrack.EnergyProperty);
+                    //Checks if the new amount of energy is greater than the old amount of energy
+                    if (ListOfTrackers[i].EnergyProperty > ListOfTrackers_amount[i])
+                    {
+                        //Calculates the diffrence which is then set to be the amount of energy added to the overhead
+                        ListOfTrackers_new_amount[i] = ListOfTrackers[i].EnergyProperty - ListOfTrackers_amount[i];
+                        ListOfTrackers[i].Energy_to_be_added_property = ListOfTrackers_new_amount[i];
+
+                        //if the room is not active on exit and was not active on entry
+                        if (ListOfTrackers[i].ActivatedProperty == false && ListOfTrackers[i].My_ActiveOnEntryAndExit == false)
+                        {
+                            //Simply adds the whole new energy to the overhead
+                            ListOfTrackers[i].EnergyProperty = ListOfTrackers[i].Energy_to_be_added_property;
+                        }
+
+                        //Resets certain variables that need resest
+                        if (ListOfTrackers[i].OtherRoomProperty == true)
+                        {
+                            ListOfTrackers[i].OtherRoomProperty = false;
+                        }
+                    }
+                }
+                else
+                {
+                    //If none of the criteria are met simply add the whole energy amount to the overhead
+                    //reseting the new and old amounts to zero
+                    ListOfTrackers_amount[i] = 0.0f;
+                    ListOfTrackers_new_amount[i] = 0.0f;
+                    ListOfTrackers[i].Energy_to_be_added_property = ListOfTrackers[i].EnergyProperty;
+                    ListOfTrackers[i].My_ActiveOnEntryAndExit = false;
                 }
             }
-
-            //if (!energyTrack2.ActivatedProperty)
-            //{
-            //    if (energyTrack2.EnergyProperty > energyTrack2_amount)
-            //    {
-            //        new_energyTrack2_amount = energyTrack2.EnergyProperty - energyTrack2_amount;
-            //        energyTrack2.EnergyProperty = new_energyTrack2_amount;
-            //    }
-            //}
-
-            //if (!energyTrack3.ActivatedProperty)
-            //{
-
-            //    if (energyTrack3.EnergyProperty > energyTrack3_amount)
-            //    {
-            //        new_energyTrack3_amount = energyTrack3.EnergyProperty - energyTrack3_amount;
-            //        energyTrack3.EnergyProperty = new_energyTrack3_amount;
-            //    }
-            //}
         }
     }
 
-    private void OnDestroy()
+    public void On_Close()
     {
-        energyTrack_amount = energyTrack.EnergyProperty;
+        //Sets the old energy amount to be that of the amount upon the changing of rooms
+        OriginenergyTrack_amount = OriginenergyTrack.EnergyProperty;
         slide_state.StateProperty = now_state;
-        //energyTrack2_amount = energyTrack2.EnergyProperty;
-        //energyTrack3_amount = energyTrack3.EnergyProperty;
+        for (int i = 0; i < ListOfTrackers.Count; i++)
+        {
+            ListOfTrackers_amount[i] = ListOfTrackers[i].EnergyProperty;
+            //Resets the energy to be added property
+            ListOfTrackers[i].Energy_to_be_added_property = 0;
+        }
     }
 }
