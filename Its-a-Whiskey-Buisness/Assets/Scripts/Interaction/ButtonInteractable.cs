@@ -34,12 +34,12 @@ public class ButtonInteractable : MonoBehaviour
             case true:
                 on_off = false;
                 data = 60;
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("OldButton");
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Green Buttle Idle (not pressed)");
                 break;
             case false:
                 on_off = true;
                 data = 180;
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("NewButton");
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Red Button Pressed");
                 break;
         }
 
