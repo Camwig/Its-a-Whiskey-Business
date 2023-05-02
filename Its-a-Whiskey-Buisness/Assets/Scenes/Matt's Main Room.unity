@@ -15190,6 +15190,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4657446578555849850, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657446578555849850, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 437b5cae55ee2734e84e573191cad24c, type: 3}
+    - target: {fileID: 4657446579119424976, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4657446579688033266, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
