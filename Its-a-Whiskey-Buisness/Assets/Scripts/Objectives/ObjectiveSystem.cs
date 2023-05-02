@@ -67,7 +67,8 @@ public class ObjectiveSystem : MonoBehaviour
         for(int k=0; k < Objectives.Count;k++)
         {
             Objectives[k].MyActivated = false;
-            ObjectiveStop.Add(false);
+            bool new_stuff = false;
+            ObjectiveStop.Add(new_stuff);
         }
     }
 
@@ -95,7 +96,7 @@ public class ObjectiveSystem : MonoBehaviour
             {
                 if (clock_.ReturnTime().x >= Objectives[h].MyStartingTime.x && clock_.ReturnTime().x <= Objectives[h].MyEndingTime.x)
                 {
-                    if(clock_.ReturnTime().y >= Objectives[h].MyStartingTime.y && clock_.ReturnTime().y <= Objectives[h].MyEndingTime.y)
+                    if(clock_.ReturnTime().y == Objectives[h].MyStartingTime.y && clock_.ReturnTime().y != Objectives[h].MyEndingTime.y)
                     {
                         ObjectiveStop[h] = true;
                     }

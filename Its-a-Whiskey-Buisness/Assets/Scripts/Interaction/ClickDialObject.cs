@@ -4,43 +4,49 @@ using UnityEngine;
 
 public class ClickDialObject : MonoBehaviour
 {
+    //Vector3 to track the mouse position in relation to the object
     private Vector3 mousePosition;
-    private Collider2D targetObject;
-    private Vector3 offset;
+    //Boolean to track if the object is currently being held onto by the mouse
     private bool is_being_held = false;
+    //Float value to track the rotation of the object in degrees
     private float angle;
+    //Enumerator to track what cardianl direction the dial is facing in and whether it has newly entered that area or not
     private enum Cardinal_points { E, S, W, N , E_Active,S_Active,W_Active,N_Active,None};
+    //Current enumeration value
     Cardinal_points curr_point;
-    private int power;
-    private int rotation;
 
+    //Speed the dial will rotate at
     private float roatationSpeed;
 
+    //Timing variables to help give the dial a more clicking feel
+
+    //New time at which the dial can move again
     private float new_time;
+    //Boolean value to check if we need to stop the movement for an amount of time
     private bool check_time;
+    //Time value at which the dial enetered the new cardinal direction
     private float origin_time;
 
     //Object attached to this script
     public GameObject selectedObject;
 
+    //Number of the room this object is corresponding to
     [SerializeField]
     public int Room_num;
 
+    //List to contain the three values the dial can move between
     [SerializeField]
     [Header("Please only enter three")]
     List<int> Values;
 
+    //Event to be triggered that signals the room object this dial is currently tied to.
     [Header("Events")]
     public EventSytem onDialActivate;
 
     private void Start()
     {
-        //curr_point = Cardinal_points.E_Active;
-        power = 0;
-        rotation = 0;
-        //roatationSpeed = FrictionSpeed.LeverSpeed;
+        //Sets the inital values of these select variables upon startup
         roatationSpeed = 15.0f;
-
         check_time = false;
         new_time = 0;
         origin_time = 0;
@@ -54,103 +60,35 @@ public class ClickDialObject : MonoBehaviour
 
     void Update()
     {
+        //Sets the mouse position value to that of the current position of the mouse
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
 
-        //float roatationSpeed = 10f;
-
+        //Calculates the direction of the mouse cursor from the forward direction of the gameobject
         Vector2 direction = mousePosition - selectedObject.transform.position;
+        //Calculates the angle the object is at in degrees from the forward direction as the origin
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //angle = Mathf.Clamp(angle, 30, 330);
 
-        //Clamps it between certain angles
-        //annoying that it isnt in the same format
-        //Have to remeber this 
-        //if ((angle >= 30))
-        //{
-        //    angle = 30;
-        //    Debug.Log(angle);
-        //}
-
-        //if(angle <= 30)
-        //{
-        //    angle += 360;
-        //}
-        //else if(angle >= 330)
-        //{
-        //    angle -= 360;
-        //}
-
-        //angle = Mathf.Repeat(angle, 360);
-
-        //if(angle ==30)
-        //{
-        //    if ((angle >= 30))
-        //    {
-        //        angle = 30;
-        //    }
-        //}
-
-        //else if( angle == 330)
-        //{
-        //    if (angle <= 330)
-        //    {
-        //        angle = 330;
-        //    }
-        //}
-
-
-        //else if (angle <= -30)
-        //{
-        //    angle = -30;
-        //    Debug.Log(angle);
-        //}
-
-        //if(angle < 30 && angle > -30)
-        //{
-        //    angle = 0;
-        //    Debug.Log(angle);
-        //}
-        //else
-        //{
-        //    angle= 180;
-        //    Debug.Log(angle);
-        //}
-
-        //if ((angle > 30))
-        //{
-        //    angle = 30;
-        //}
-
-        //if (angle < -30)
-        //{
-        //    angle = 330;
-        //}
-
-        //Debug.Log(angle);
-
-        //
-        //Quaternion old_rotate = this.transform.rotation;
-
-        //curr_point = Cardinal_points.None;
-
-
+        //Checks if the check time boolean is true
         if (check_time == true)
         {
-            //origin_time = Time.deltaTime;
+            //Checks if the newtime is greater or equal to the old time plus a couple of milliseconds
+            //Essentially creating a sense of the dial waiting for a bit
             if (new_time >= origin_time + 0.001125f)
             {
+                //Resets the timing variables values
                 check_time = false;
                 new_time = 0;
                 origin_time = 0;
             }
             else
             {
+                //Increases the new time value
                 new_time += Time.deltaTime;
             }
         }
         else if (check_time == false)
         {
-            //Using this to clamp it between certain angles
+            //Makes sure to clamp the dial between certain angles
             if (selectedObject.transform.eulerAngles.z <= 135 || selectedObject.transform.eulerAngles.z >= 225)
             {
                 if (is_being_held == true)
@@ -159,15 +97,6 @@ public class ClickDialObject : MonoBehaviour
                     Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                     //Slerping is spherically interpolating
                     selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
-
-
-                    //if (this.transform.rotation.z >= 330 && this.transform.rotation.z >= 30)
-                    //{
-                    //    //Never runs
-                    //    this.transform.rotation = old_rotate.eulerAngles;
-                    //}
-
-                    //Need to give each section 30 degrees each
 
                 }
             }
@@ -201,8 +130,6 @@ public class ClickDialObject : MonoBehaviour
                 }
             }
             
-
-            //This is the issue
             if (selectedObject.transform.eulerAngles.z >= 45 && selectedObject.transform.eulerAngles.z <= 135)
             {
                 check_time = true;
@@ -213,14 +140,6 @@ public class ClickDialObject : MonoBehaviour
                     curr_point = Cardinal_points.S;
                 }
             }
-            //else
-            //{
-                //curr_point = Cardinal_points.None;
-            //}
-            //else
-            //{
-            //curr_point = Cardinal_points.None;
-            //}
 
 
             CheckState();
@@ -243,18 +162,6 @@ public class ClickDialObject : MonoBehaviour
         {
             onDialActivate.Raise(this, Values[0]);
         }
-        //else if (curr_state == slide_state.Pos2)
-        //{
-        //    onDialActivate.Raise(this, 1);
-        //    //on_off2 = true;
-        //    curr_state = slide_state.Pos2_active;
-        //}
-        //else if (curr_state == slide_state.Pos3)
-        //{
-        //    onDialActivate.Raise(this, 500);
-        //    //on_off2 = true;
-        //    curr_state = slide_state.Pos3_active;
-        //}
     }
 
     private void OnMouseDown()
