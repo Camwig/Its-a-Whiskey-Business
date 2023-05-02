@@ -25,7 +25,17 @@ public class Ending : MonoBehaviour
 
     public void OnButtonClick()
     {
-        float final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
+        float final_value =0.0f;
+
+        if(overhead_.returnEnergy() >= (MaximumEnergy /2))
+        {
+            final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
+        }
+        else if(overhead_.returnEnergy() < (MaximumEnergy / 2))
+        {
+            final_value = overhead_.returnEnergy() - objectives.RetrunDeduction();
+        }
+
         Debug.Log(final_value);
 
         if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)

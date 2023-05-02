@@ -438,7 +438,7 @@ public class GenericRoom : MonoBehaviour
         if (RoomNum == sender.GetComponent<ClickDialObject>().Room_num /*|| RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum*/)
         {
             //Checks if the data we are checking are booleans
-            if (data is int)
+            if (data is float || data is int)
             {
                 IncreaseProduct = (int)data;
                 UpdateProductionRate.Raise(this, IncreaseProduct);
@@ -458,9 +458,9 @@ public class GenericRoom : MonoBehaviour
     {
         if (RoomNum == sender.GetComponent<ClickDialObject>().Room_num /*|| RoomNum == sender.GetComponent<GenericRoomManager>().Roomnum*/)
         {
-            if (data is float)
+            if (data is int)
             {
-                Temperature = (float)data;
+                Temperature = (int)data;
                 SetTemperature.Raise(this, Temperature);
                 //Raise new temperature
             }
