@@ -131,6 +131,14 @@ MonoBehaviour:
   temperature_not_power: 0
   Room_num: 0
   onButtonActivate: {fileID: 0}
+  ButtonOpen:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  ButtonClose:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!61 &628374320271886679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +156,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.06, y: 6.06}
+    oldSize: {x: 2.02, y: 2.02}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

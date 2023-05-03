@@ -3737,6 +3737,14 @@ PrefabInstance:
       propertyPath: temperature_not_power
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: ButtonOpen.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 74c807ead4afbe14c8a496d6a6432231, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: ButtonClose.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e13b75e20ffe7a54b8d46a74612bc75a, type: 2}
     m_RemovedComponents:
     - {fileID: 4648945116906128782, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
@@ -6737,6 +6745,14 @@ PrefabInstance:
       propertyPath: onButtonActivate
       value: 
       objectReference: {fileID: 11400000, guid: 918558ee3d706bd49b26c093975c966d, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: ButtonOpen.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 74c807ead4afbe14c8a496d6a6432231, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: ButtonClose.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e13b75e20ffe7a54b8d46a74612bc75a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
 --- !u!1001 &1035818763
@@ -8881,6 +8897,14 @@ PrefabInstance:
       propertyPath: onButtonActivate
       value: 
       objectReference: {fileID: 11400000, guid: 918558ee3d706bd49b26c093975c966d, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: ButtonOpen.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 74c807ead4afbe14c8a496d6a6432231, type: 2}
+    - target: {fileID: 3419381743955963958, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
+      propertyPath: ButtonClose.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e13b75e20ffe7a54b8d46a74612bc75a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a88f9d66bc68c049abf5ea6347933e2, type: 3}
 --- !u!4 &1314504329 stripped
@@ -10592,6 +10616,11 @@ GameObject:
   - component: {fileID: 1587661512}
   - component: {fileID: 1587661511}
   - component: {fileID: 1587661510}
+  - component: {fileID: 1587661514}
+  - component: {fileID: 1587661513}
+  - component: {fileID: 1587661509}
+  - component: {fileID: 1587661516}
+  - component: {fileID: 1587661515}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -10619,6 +10648,18 @@ RectTransform:
   m_AnchoredPosition: {x: -350.53, y: -59.6}
   m_SizeDelta: {x: 701.06, y: 191.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1587661509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587661507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb460f728357ec448cadf3287f4b291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1587661510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10761,6 +10802,112 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587661507}
   m_CullTransparentMesh: 1
+--- !u!114 &1587661513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587661507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd3cfcd87834e24b9b94136444de701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 9864aaa1
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f536899207957c447b838efc9a49b9a0, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &1587661514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587661507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36b39df8b0253445bacf74fbc95df77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!61 &1587661515
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587661507}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 620, y: 200}
+  m_EdgeRadius: 0
+--- !u!114 &1587661516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587661507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1597923139
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,7 +58,7 @@ public class MouseBehaiviour : MonoBehaviour
 
         if (targetUI = Physics2D.OverlapPoint(mousePosition))
         {
-            Debug.Log("Overlap");
+            //Debug.Log("Overlap");
         }
 
         //if (targetButton == Button.)
@@ -146,7 +146,7 @@ public class MouseBehaiviour : MonoBehaviour
 
     public void ChangeSprite()
     {
-        Debug.Log("Overlap");
+        //Debug.Log("Overlap");
     }
 
     private void Clicksound()

@@ -21,6 +21,9 @@ public class ButtonInteractable : MonoBehaviour
 
     private bool firstPlay;
 
+    public AK.Wwise.Event ButtonOpen;
+    public AK.Wwise.Event ButtonClose;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,25 +61,28 @@ public class ButtonInteractable : MonoBehaviour
                 on_off = false;
                 data = 60;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Green Buttle Idle (not pressed)");
+                ButtonOpen.Post(gameObject);
+                Debug.Log("sdhuashd 12121");
                 break;
+
             case false:
                 on_off = true;
                 data = 180;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Red Button Pressed");
+                ButtonClose.Post(gameObject);
+                Debug.Log("sdhuashd");
                 break;
         }
 
         //Checks if this object is setting power or temperature and then sends off the apprpriate data
         if (temperature_not_power == true)
         {
-            onButtonActivate.Raise(this, data);
-            //Audio!
+            onButtonActivate.Raise(this, data); 
         }
 
         else if (temperature_not_power == false)
         {
             onButtonActivate.Raise(this, on_off);
-            //Audio!
         }
     }
 }

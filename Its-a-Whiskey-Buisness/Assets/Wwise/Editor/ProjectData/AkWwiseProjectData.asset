@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: dfa74354bb5ca848813cc502addb6b63
     GuidInternal: 
-    m_lastTime: -8585185692378800249
+    m_lastTime: -8585196924757737737
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585185692378800249
+    m_lastTime: -8585196924757727770
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: acd4bc9419b8e648ba7eb0a8dbcdd638
     GuidInternal: 
-    m_lastTime: -8585185692388956781
+    m_lastTime: -8585196924758913411
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -345,7 +345,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f60983dee8197a4fbd8d151eafcdef70
     GuidInternal: 
-    m_lastTime: -8585185692379581458
+    m_lastTime: -8585184831025662866
     List:
     - name: Main
       guid: 3bf94a79c5a4684ba314c8c704d59aa9
@@ -387,10 +387,104 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a0468e80d35d8d429ee0dc9ed3de5809
     GuidInternal: 
-    m_lastTime: -8585185692391613049
+    m_lastTime: -8585184831025577901
     List:
+    - name: Ambience
+      guid: 9123a9034e33d249be2beb87c43ceb38
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Buttons
+      guid: fd28dd1e241ad84a8f72a9c60857299c
+      id: 203100604
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Buttons
+        ObjectType: 4
+        guid: fd28dd1e241ad84a8f72a9c60857299c
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Buttons
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Buttons-Levers-Switches
+      guid: 0091a6448248944581aeef5cdb541a60
+      id: 2836318295
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      Path: Events\Default Work Unit\Buttons-Levers-Switches
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Levers
+      guid: 09546f2173672749a5224744356881c0
+      id: 3047338098
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Levers
+        ObjectType: 4
+        guid: 09546f2173672749a5224744356881c0
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Levers
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
+      guid: 6df7bdfad1f7da4f9df00ceca56bd52a
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Play
+        ObjectType: 4
+        guid: 6df7bdfad1f7da4f9df00ceca56bd52a
+      Path: Events\Default Work Unit\Ambience\Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Ambience_FermentationRoom
-      guid: 522225b0b2d36941bd4539d7ec2eafbe
+      guid: 367626bfc46a8144a581e6f3b7e556f6
       id: 3331282146
       PathAndIcons:
       - ElementName: Events
@@ -399,15 +493,44 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Play
+        ObjectType: 4
+        guid: 6df7bdfad1f7da4f9df00ceca56bd52a
       - ElementName: Play_Ambience_FermentationRoom
         ObjectType: 3
-        guid: 522225b0b2d36941bd4539d7ec2eafbe
-      Path: Events\Default Work Unit\Play_Ambience_FermentationRoom
+        guid: 367626bfc46a8144a581e6f3b7e556f6
+      Path: Events\Default Work Unit\Ambience\Play\Play_Ambience_FermentationRoom
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_MainRoom
+      guid: 287f67177e532e4f8142bd82453613fe
+      id: 288305127
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Play
+        ObjectType: 4
+        guid: 6df7bdfad1f7da4f9df00ceca56bd52a
+      - ElementName: Play_Ambience_MainRoom
+        ObjectType: 3
+        guid: 287f67177e532e4f8142bd82453613fe
+      Path: Events\Default Work Unit\Ambience\Play\Play_Ambience_MainRoom
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_Ambience_MashRoom
-      guid: 4282aa2097abc7479748264d61c97983
+      guid: b3b2d9f6952dca41bc5e5114c138c219
       id: 612571271
       PathAndIcons:
       - ElementName: Events
@@ -416,15 +539,21 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Play
+        ObjectType: 4
+        guid: 6df7bdfad1f7da4f9df00ceca56bd52a
       - ElementName: Play_Ambience_MashRoom
         ObjectType: 3
-        guid: 4282aa2097abc7479748264d61c97983
-      Path: Events\Default Work Unit\Play_Ambience_MashRoom
+        guid: b3b2d9f6952dca41bc5e5114c138c219
+      Path: Events\Default Work Unit\Ambience\Play\Play_Ambience_MashRoom
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_Ambience_MillRoom
-      guid: f9746bce9598994ab90aaa229499ecf9
+      guid: c1209f44a0b0654fafb1d36773b87504
       id: 1749556454
       PathAndIcons:
       - ElementName: Events
@@ -433,15 +562,21 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Play
+        ObjectType: 4
+        guid: 6df7bdfad1f7da4f9df00ceca56bd52a
       - ElementName: Play_Ambience_MillRoom
         ObjectType: 3
-        guid: f9746bce9598994ab90aaa229499ecf9
-      Path: Events\Default Work Unit\Play_Ambience_MillRoom
+        guid: c1209f44a0b0654fafb1d36773b87504
+      Path: Events\Default Work Unit\Ambience\Play\Play_Ambience_MillRoom
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_Ambience_StillRoom
-      guid: 9c575ffc7387c645b28107ddbe65105e
+      guid: f2d8b2a311c7bb4f8d1a5591dece4fea
       id: 2733880692
       PathAndIcons:
       - ElementName: Events
@@ -450,15 +585,342 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Play
+        ObjectType: 4
+        guid: 6df7bdfad1f7da4f9df00ceca56bd52a
       - ElementName: Play_Ambience_StillRoom
         ObjectType: 3
-        guid: 9c575ffc7387c645b28107ddbe65105e
-      Path: Events\Default Work Unit\Play_Ambience_StillRoom
+        guid: f2d8b2a311c7bb4f8d1a5591dece4fea
+      Path: Events\Default Work Unit\Ambience\Play\Play_Ambience_StillRoom
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ButtonClose_01
+      guid: 40e1c5accdd4c747b08d268d77176118
+      id: 1834321908
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Buttons
+        ObjectType: 4
+        guid: fd28dd1e241ad84a8f72a9c60857299c
+      - ElementName: Play_ButtonClose_01
+        ObjectType: 3
+        guid: 40e1c5accdd4c747b08d268d77176118
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Buttons\Play_ButtonClose_01
+      maxAttenuation: 0
+      maxDuration: 0.392063
+      minDuration: 0.392063
+    - name: Play_ButtonClose_02
+      guid: faca7d16e72e8e4d8f0e2e1d228b8200
+      id: 1834321911
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Buttons
+        ObjectType: 4
+        guid: fd28dd1e241ad84a8f72a9c60857299c
+      - ElementName: Play_ButtonClose_02
+        ObjectType: 3
+        guid: faca7d16e72e8e4d8f0e2e1d228b8200
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Buttons\Play_ButtonClose_02
+      maxAttenuation: 0
+      maxDuration: 0.392063
+      minDuration: 0.392063
+    - name: Play_ButtonClose_03
+      guid: 3fe9280143c83242b7c0506edf5d21e7
+      id: 1834321910
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Buttons
+        ObjectType: 4
+        guid: fd28dd1e241ad84a8f72a9c60857299c
+      - ElementName: Play_ButtonClose_03
+        ObjectType: 3
+        guid: 3fe9280143c83242b7c0506edf5d21e7
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Buttons\Play_ButtonClose_03
+      maxAttenuation: 0
+      maxDuration: 0.588299
+      minDuration: 0.588299
+    - name: Play_ButtonOpen_01
+      guid: 60b5ebd8a0bc8d4b9b9725680385a993
+      id: 3815121872
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Buttons
+        ObjectType: 4
+        guid: fd28dd1e241ad84a8f72a9c60857299c
+      - ElementName: Play_ButtonOpen_01
+        ObjectType: 3
+        guid: 60b5ebd8a0bc8d4b9b9725680385a993
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Buttons\Play_ButtonOpen_01
+      maxAttenuation: 0
+      maxDuration: 0.392063
+      minDuration: 0.392063
+    - name: Play_ButtonOpen_02
+      guid: e0ea9d127972ea4b80571401057461b7
+      id: 3815121875
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Buttons
+        ObjectType: 4
+        guid: fd28dd1e241ad84a8f72a9c60857299c
+      - ElementName: Play_ButtonOpen_02
+        ObjectType: 3
+        guid: e0ea9d127972ea4b80571401057461b7
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Buttons\Play_ButtonOpen_02
+      maxAttenuation: 0
+      maxDuration: 0.392063
+      minDuration: 0.392063
+    - name: Play_ButtonOpen_03
+      guid: d041607592d3dd46a7c6172d7721844b
+      id: 3815121874
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Buttons
+        ObjectType: 4
+        guid: fd28dd1e241ad84a8f72a9c60857299c
+      - ElementName: Play_ButtonOpen_03
+        ObjectType: 3
+        guid: d041607592d3dd46a7c6172d7721844b
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Buttons\Play_ButtonOpen_03
+      maxAttenuation: 0
+      maxDuration: 0.500544
+      minDuration: 0.500544
+    - name: Play_DialTick
+      guid: bd78076c0988994d9346fb21edf92aba
+      id: 1928287159
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Play_DialTick
+        ObjectType: 3
+        guid: bd78076c0988994d9346fb21edf92aba
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Play_DialTick
+      maxAttenuation: 0
+      maxDuration: 0.022018
+      minDuration: 0.022018
+    - name: Play_HeavyDial
+      guid: b3afc9ac552a0a499eacc0182fe8b22f
+      id: 888035577
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Play_HeavyDial
+        ObjectType: 3
+        guid: b3afc9ac552a0a499eacc0182fe8b22f
+      Path: Events\Default Work Unit\Play_HeavyDial
+      maxAttenuation: 0
+      maxDuration: 0.120363
+      minDuration: 0.120363
+    - name: Play_LeverClose_01
+      guid: 6fe7dad27a7ce9419832f7e86cc74aea
+      id: 3112348692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Levers
+        ObjectType: 4
+        guid: 09546f2173672749a5224744356881c0
+      - ElementName: Play_LeverClose_01
+        ObjectType: 3
+        guid: 6fe7dad27a7ce9419832f7e86cc74aea
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Levers\Play_LeverClose_01
+      maxAttenuation: 0
+      maxDuration: 1.92678
+      minDuration: 1.92678
+    - name: Play_LeverOpen_01
+      guid: f89fe31632a74a49820d0d66c02d0a4b
+      id: 3200583152
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Levers
+        ObjectType: 4
+        guid: 09546f2173672749a5224744356881c0
+      - ElementName: Play_LeverOpen_01
+        ObjectType: 3
+        guid: f89fe31632a74a49820d0d66c02d0a4b
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Levers\Play_LeverOpen_01
+      maxAttenuation: 0
+      maxDuration: 1.92678
+      minDuration: 1.92678
+    - name: Play_Midday
+      guid: 26db694dfc523741bf05457f818a5b59
+      id: 697729946
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Tech
+        ObjectType: 4
+        guid: c0296ffa3b9de44f860957c5e0a7213f
+      - ElementName: Play_Midday
+        ObjectType: 3
+        guid: 26db694dfc523741bf05457f818a5b59
+      Path: Events\Default Work Unit\Tech\Play_Midday
+      maxAttenuation: 0
+      maxDuration: 0.301859
+      minDuration: 0.301859
+    - name: Play_PowerDown_01
+      guid: dbd926aabf90b64d88db5309d1196cf6
+      id: 3045242701
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Play_PowerDown_01
+        ObjectType: 3
+        guid: dbd926aabf90b64d88db5309d1196cf6
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Play_PowerDown_01
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
+    - name: Play_PowerUp_01
+      guid: f6562345f5ce6b4c8eb433850e209a68
+      id: 2903209428
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Play_PowerUp_01
+        ObjectType: 3
+        guid: f6562345f5ce6b4c8eb433850e209a68
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Play_PowerUp_01
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
+    - name: Play_QuittinTime
+      guid: a48bc49634d0cf46917d95b2b0cd3a33
+      id: 4253536651
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Tech
+        ObjectType: 4
+        guid: c0296ffa3b9de44f860957c5e0a7213f
+      - ElementName: Play_QuittinTime
+        ObjectType: 3
+        guid: a48bc49634d0cf46917d95b2b0cd3a33
+      Path: Events\Default Work Unit\Tech\Play_QuittinTime
+      maxAttenuation: 0
+      maxDuration: 2.059932
+      minDuration: 2.059932
+    - name: Stop
+      guid: 094d73a8b79890449dc9addab277ff2b
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 094d73a8b79890449dc9addab277ff2b
+      Path: Events\Default Work Unit\Ambience\Stop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Stop_Ambience_FermentationRoom
-      guid: 9a89f7bffa7f60498c3044a6d140d09a
+      guid: 96c868ccdf8b0347b629783c4a2e9d41
       id: 3864659820
       PathAndIcons:
       - ElementName: Events
@@ -467,15 +929,44 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 094d73a8b79890449dc9addab277ff2b
       - ElementName: Stop_Ambience_FermentationRoom
         ObjectType: 3
-        guid: 9a89f7bffa7f60498c3044a6d140d09a
-      Path: Events\Default Work Unit\Stop_Ambience_FermentationRoom
+        guid: 96c868ccdf8b0347b629783c4a2e9d41
+      Path: Events\Default Work Unit\Ambience\Stop\Stop_Ambience_FermentationRoom
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Ambience_MainRoom
+      guid: 5757682552a52640994f592c01fe1080
+      id: 3755185401
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 094d73a8b79890449dc9addab277ff2b
+      - ElementName: Stop_Ambience_MainRoom
+        ObjectType: 3
+        guid: 5757682552a52640994f592c01fe1080
+      Path: Events\Default Work Unit\Ambience\Stop\Stop_Ambience_MainRoom
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Ambience_MashRoom
-      guid: 090085efe3c4d148b2d39594dd0622f4
+      guid: bc5faa05538e1b4c92bc10c9bbf6f81e
       id: 1274201121
       PathAndIcons:
       - ElementName: Events
@@ -484,15 +975,21 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 094d73a8b79890449dc9addab277ff2b
       - ElementName: Stop_Ambience_MashRoom
         ObjectType: 3
-        guid: 090085efe3c4d148b2d39594dd0622f4
-      Path: Events\Default Work Unit\Stop_Ambience_MashRoom
+        guid: bc5faa05538e1b4c92bc10c9bbf6f81e
+      Path: Events\Default Work Unit\Ambience\Stop\Stop_Ambience_MashRoom
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Ambience_MillRoom
-      guid: b976b28202adcd46b34bcb54b20dd122
+      guid: 7f6000f836f3f4419ca78195a2ac332c
       id: 3051851068
       PathAndIcons:
       - ElementName: Events
@@ -501,15 +998,21 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 094d73a8b79890449dc9addab277ff2b
       - ElementName: Stop_Ambience_MillRoom
         ObjectType: 3
-        guid: b976b28202adcd46b34bcb54b20dd122
-      Path: Events\Default Work Unit\Stop_Ambience_MillRoom
+        guid: 7f6000f836f3f4419ca78195a2ac332c
+      Path: Events\Default Work Unit\Ambience\Stop\Stop_Ambience_MillRoom
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Ambience_StillRoom
-      guid: 8ebee0dac14edf46a28a60bd5fa3376a
+      guid: 1466732395214143a84b65e271970dba
       id: 1469171578
       PathAndIcons:
       - ElementName: Events
@@ -518,10 +1021,79 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 9123a9034e33d249be2beb87c43ceb38
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 094d73a8b79890449dc9addab277ff2b
       - ElementName: Stop_Ambience_StillRoom
         ObjectType: 3
-        guid: 8ebee0dac14edf46a28a60bd5fa3376a
-      Path: Events\Default Work Unit\Stop_Ambience_StillRoom
+        guid: 1466732395214143a84b65e271970dba
+      Path: Events\Default Work Unit\Ambience\Stop\Stop_Ambience_StillRoom
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_LeverClose_01
+      guid: 73e5a4dcd5a19946b4e6e74121dcd875
+      id: 2963670614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Levers
+        ObjectType: 4
+        guid: 09546f2173672749a5224744356881c0
+      - ElementName: Stop_LeverClose_01
+        ObjectType: 3
+        guid: 73e5a4dcd5a19946b4e6e74121dcd875
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Levers\Stop_LeverClose_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_LeverOpen_01
+      guid: 8b8d8e730d7bba46a29c4e7894587e9d
+      id: 1577461818
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Buttons-Levers-Switches
+        ObjectType: 4
+        guid: 0091a6448248944581aeef5cdb541a60
+      - ElementName: Levers
+        ObjectType: 4
+        guid: 09546f2173672749a5224744356881c0
+      - ElementName: Stop_LeverOpen_01
+        ObjectType: 3
+        guid: 8b8d8e730d7bba46a29c4e7894587e9d
+      Path: Events\Default Work Unit\Buttons-Levers-Switches\Levers\Stop_LeverOpen_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Tech
+      guid: c0296ffa3b9de44f860957c5e0a7213f
+      id: 3425445029
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Tech
+        ObjectType: 4
+        guid: c0296ffa3b9de44f860957c5e0a7213f
+      Path: Events\Default Work Unit\Tech
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -537,7 +1109,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: bda2b085764b1a41baa398bd228ce1f2
     GuidInternal: 
-    m_lastTime: -8585185692391456786
+    m_lastTime: -8585196924759352017
     List: []
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     PathAndIcons:
@@ -550,7 +1122,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8585185692391300580
+    m_lastTime: -8585196924759352017
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -591,7 +1163,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585185692391300580
+    m_lastTime: -8585196924759352017
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -745,7 +1317,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 87de722511e7524f82ade0211660ffbd
     GuidInternal: 
-    m_lastTime: -8585185692379268941
+    m_lastTime: -8585196924757747705
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -759,7 +1331,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 7e03218df11e0641a3b7c0bb3da92a41
     GuidInternal: 
-    m_lastTime: -8585185692379112710
+    m_lastTime: -8585196924757737737
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -773,10 +1345,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d3cfb9532b828447976394cad61f7e0f
     GuidInternal: 
-    m_lastTime: -8585185692378956527
+    m_lastTime: -8585196924757737737
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 01000000060000000700000008000000090000000a0000000f000000100000002b0000002c00000035000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
