@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OverHeadManager : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class OverHeadManager : MonoBehaviour
     [SerializeField]
     public CurrentRoom room_state;
 
-    private void Awake()
+    private void OnEnable()
     {
         //Initialises the arrays that hold the new and old energy amounts
         ListOfTrackers_amount =  new float[ListOfTrackers.Count];

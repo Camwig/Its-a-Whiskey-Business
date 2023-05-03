@@ -31,7 +31,7 @@ public class SliderInteractable : MonoBehaviour
         CanPlay = false;
     }
 
-    private void Awake()
+    private void OnEnabled()
     {
         curr_state = slide_state.None;
     }

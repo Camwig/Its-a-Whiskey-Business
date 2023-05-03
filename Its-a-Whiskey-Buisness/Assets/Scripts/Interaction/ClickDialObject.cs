@@ -57,7 +57,7 @@ public class ClickDialObject : MonoBehaviour
         //curr_point = Cardinal_points.None;
     }
 
-    private void Awake()
+    private void OnEnabled()
     {
         //Upon activation will set the rotation
         selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);

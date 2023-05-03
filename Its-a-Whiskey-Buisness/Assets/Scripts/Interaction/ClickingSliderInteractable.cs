@@ -53,7 +53,7 @@ public class ClickingSliderInteractable : MonoBehaviour
     }
 
 
-    private void Awake()
+    private void OnEnabled()
     {
         curr_state = slide_state.None;
     }

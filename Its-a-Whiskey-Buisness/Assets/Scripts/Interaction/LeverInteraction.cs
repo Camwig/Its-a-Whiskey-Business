@@ -40,7 +40,7 @@ public class LeverInteraction : MonoBehaviour
 
     //awake and start can most likely be combined
 
-    private void Awake()
+    private void OnEnabled()
     {
         //Upon activation will set the rotation
         selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
