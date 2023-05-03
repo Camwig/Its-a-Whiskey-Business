@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69bd363d25b57f946ab6636778eefd74, type: 3}
-  m_Name: FC5F579C-8773-45C6-B281-07DDBE65105E
+  m_Name: F6D9B2B3-2D95-41CA-BC5E-5114C138C219
   m_EditorClassIdentifier: 
-  objectName: Play_Ambience_StillRoom
-  id: 2733880692
-  guid: FC5F579C-8773-45C6-B281-07DDBE65105E
+  objectName: Play_Ambience_MashRoom
+  id: 612571271
+  guid: F6D9B2B3-2D95-41CA-BC5E-5114C138C219

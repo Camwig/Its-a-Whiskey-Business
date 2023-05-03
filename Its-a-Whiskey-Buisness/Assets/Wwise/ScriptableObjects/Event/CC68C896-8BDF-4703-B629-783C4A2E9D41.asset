@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69bd363d25b57f946ab6636778eefd74, type: 3}
-  m_Name: 1D3A7360-44D8-49F1-B604-C71556BDAD52
+  m_Name: CC68C896-8BDF-4703-B629-783C4A2E9D41
   m_EditorClassIdentifier: 
-  objectName: Play_ButtonOpen_01
-  id: 3815121872
-  guid: 1D3A7360-44D8-49F1-B604-C71556BDAD52
+  objectName: Stop_Ambience_FermentationRoom
+  id: 3864659820
+  guid: CC68C896-8BDF-4703-B629-783C4A2E9D41

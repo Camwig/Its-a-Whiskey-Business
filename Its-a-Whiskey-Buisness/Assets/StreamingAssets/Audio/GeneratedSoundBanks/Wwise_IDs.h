@@ -14,11 +14,16 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBIENCE_FERMENTATIONROOM = 3331282146U;
+        static const AkUniqueID PLAY_AMBIENCE_MAINROOM = 288305127U;
         static const AkUniqueID PLAY_AMBIENCE_MASHROOM = 612571271U;
         static const AkUniqueID PLAY_AMBIENCE_MILLROOM = 1749556454U;
         static const AkUniqueID PLAY_AMBIENCE_STILLROOM = 2733880692U;
         static const AkUniqueID PLAY_BUTTONCLOSE_01 = 1834321908U;
+        static const AkUniqueID PLAY_BUTTONCLOSE_02 = 1834321911U;
+        static const AkUniqueID PLAY_BUTTONCLOSE_03 = 1834321910U;
         static const AkUniqueID PLAY_BUTTONOPEN_01 = 3815121872U;
+        static const AkUniqueID PLAY_BUTTONOPEN_02 = 3815121875U;
+        static const AkUniqueID PLAY_BUTTONOPEN_03 = 3815121874U;
         static const AkUniqueID PLAY_DIALTICK = 1928287159U;
         static const AkUniqueID PLAY_HEAVYDIAL = 888035577U;
         static const AkUniqueID PLAY_LEVERCLOSE_01 = 3112348692U;
@@ -28,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_POWERUP_01 = 2903209428U;
         static const AkUniqueID PLAY_QUITTINTIME = 4253536651U;
         static const AkUniqueID STOP_AMBIENCE_FERMENTATIONROOM = 3864659820U;
+        static const AkUniqueID STOP_AMBIENCE_MAINROOM = 3755185401U;
         static const AkUniqueID STOP_AMBIENCE_MASHROOM = 1274201121U;
         static const AkUniqueID STOP_AMBIENCE_MILLROOM = 3051851068U;
         static const AkUniqueID STOP_AMBIENCE_STILLROOM = 1469171578U;

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69bd363d25b57f946ab6636778eefd74, type: 3}
-  m_Name: 82B276B9-AD02-46CD-B34B-CB54B20DD122
+  m_Name: A3B2D8F2-C711-4FBB-8D1A-5591DECE4FEA
   m_EditorClassIdentifier: 
-  objectName: Stop_Ambience_MillRoom
-  id: 3051851068
-  guid: 82B276B9-AD02-46CD-B34B-CB54B20DD122
+  objectName: Play_Ambience_StillRoom
+  id: 2733880692
+  guid: A3B2D8F2-C711-4FBB-8D1A-5591DECE4FEA

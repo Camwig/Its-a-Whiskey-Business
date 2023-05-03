@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69bd363d25b57f946ab6636778eefd74, type: 3}
-  m_Name: ACA704D1-98CB-4A94-98C7-E9CE859F22E1
+  m_Name: 23736614-2195-4341-A84B-65E271970DBA
   m_EditorClassIdentifier: 
-  objectName: Play_ButtonClose_01
-  id: 1834321908
-  guid: ACA704D1-98CB-4A94-98C7-E9CE859F22E1
+  objectName: Stop_Ambience_StillRoom
+  id: 1469171578
+  guid: 23736614-2195-4341-A84B-65E271970DBA

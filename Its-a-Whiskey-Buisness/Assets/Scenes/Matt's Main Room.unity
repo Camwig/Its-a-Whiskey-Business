@@ -4178,7 +4178,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 71d5d96df92157c40b3569aef8d62463, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 3d95409d3432a69499896e4046272284, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -4224,7 +4224,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1fcd258ebe4248440894fc7630f8eddb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f1b718948ffd523458cbf3199dcc826d, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -8353,7 +8353,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 37ac54431e045f24cb8a871c56ca2fae, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: bc910eadd1134594e91fe5502135d194, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -8399,7 +8399,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: da3c21d1a31ef3c4483f717315e0b257, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 452cf1089ed4a3443a499c4a13ffb543, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -9629,7 +9629,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7fb0c80a4bcdcab4bbe5d542b0de0d45, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 717928b969c16f14ca8a46b88ca85178, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -9675,7 +9675,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 33b9c18811308434686f7270666a4978, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f536899207957c447b838efc9a49b9a0, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -11637,6 +11637,8 @@ GameObject:
   - component: {fileID: 1814713789}
   - component: {fileID: 1814713788}
   - component: {fileID: 1814713787}
+  - component: {fileID: 1814713792}
+  - component: {fileID: 1814713791}
   m_Layer: 5
   m_Name: Email
   m_TagString: Untagged
@@ -11725,6 +11727,62 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1814713791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814713786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd3cfcd87834e24b9b94136444de701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1b066c19575f80d489a0b5229be7c6c5, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &1814713792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814713786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36b39df8b0253445bacf74fbc95df77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1815096835
 GameObject:
   m_ObjectHideFlags: 0
@@ -13147,7 +13205,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 568318865993b624bb997516468a5509, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 8bef751b33fd0da4dab0badc6d66fa60, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -13193,7 +13251,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2e92adc9020ada043aefd7351751e6bb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9eeb9e99a9367c34c8db7a0d028854bb, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
