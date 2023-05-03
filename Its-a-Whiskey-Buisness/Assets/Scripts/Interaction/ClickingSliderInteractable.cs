@@ -86,12 +86,20 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Moves the object in relation to the mouses y-position
                 selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
-                OnDrag();
+
+                //if(selectedObject.gameObject.transform.localPosition.y <= OriginPos && selectedObject.gameObject.transform.localPosition.y >= OriginPos - 3.0f)
+                //{
+                //    OnDrag();
+                //}
             }
 
             if (selectedObject.gameObject.transform.localPosition.y < OriginPos && selectedObject.gameObject.transform.localPosition.y > OriginPos - 3.0f)
             {
                 curr_state = slide_state.None;
+                if (is_being_held == true)
+                {
+                    OnDrag();
+                }
             }
 
             //If the mouse moves the object greater or equal to its starting origin
@@ -161,7 +169,7 @@ public class ClickingSliderInteractable : MonoBehaviour
     public void OnDrag()
     {
         var diff = prevValue - (-selectedObject.gameObject.transform.localPosition.y);
-        if (Mathf.Abs(diff) > 1)
+        if (Mathf.Abs(diff) >= 1.5f)
         {
             Debug.Log("difference is bigger than 10, playing sound");
 

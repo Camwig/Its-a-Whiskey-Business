@@ -33,6 +33,8 @@ public class SliderInteractable : MonoBehaviour
     //private bool on_off;
     private bool on_off2;
 
+    private float prevValue;
+
     [Header("Events")]
 
     public EventSytem onSliderActivate;
@@ -88,6 +90,10 @@ public class SliderInteractable : MonoBehaviour
         if(selectedObject.gameObject.transform.localPosition.y < OriginPos && selectedObject.gameObject.transform.localPosition.y > OriginPos - 1.5f)
         {
             curr_state = slide_state.None;
+            if(is_being_held == true)
+            {
+                OnDrag();
+            }
         }
 
         if(selectedObject.gameObject.transform.localPosition.y >= OriginPos)
@@ -126,6 +132,17 @@ public class SliderInteractable : MonoBehaviour
             onSliderActivate.Raise(this, true);
             on_off2 = true;
             curr_state = slide_state.Down_active;
+        }
+    }
+
+    public void OnDrag()
+    {
+        var diff = prevValue - (-selectedObject.gameObject.transform.localPosition.y);
+        if (Mathf.Abs(diff) > 1)
+        {
+            Debug.Log("difference is bigger than 10, playing sound");
+
+            prevValue = (-selectedObject.gameObject.transform.localPosition.y);
         }
     }
 
