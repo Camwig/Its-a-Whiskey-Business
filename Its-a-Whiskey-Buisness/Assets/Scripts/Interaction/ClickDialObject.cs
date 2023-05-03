@@ -11,7 +11,7 @@ public class ClickDialObject : MonoBehaviour
     //Float value to track the rotation of the object in degrees
     private float angle;
     //Enumerator to track what cardianl direction the dial is facing in and whether it has newly entered that area or not
-    private enum Cardinal_points { E, S, W, N , E_Active,S_Active,W_Active,N_Active,None};
+    private enum Cardinal_points { E, S, W, N , E_Active,S_Active,W_Active,N_Active,None,None_Active};
     //Current enumeration value
     Cardinal_points curr_point;
 
@@ -50,12 +50,15 @@ public class ClickDialObject : MonoBehaviour
         check_time = false;
         new_time = 0;
         origin_time = 0;
+        //curr_point = Cardinal_points.None;
     }
 
     private void Awake()
     {
         //Upon activation will set the rotation
         selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        curr_point = Cardinal_points.None;
     }
 
     void Update()
@@ -91,40 +94,51 @@ public class ClickDialObject : MonoBehaviour
             //Makes sure to clamp the dial between certain angles
             if (selectedObject.transform.eulerAngles.z <= 135 || selectedObject.transform.eulerAngles.z >= 225)
             {
+                //Checks if the dial is currently being held/interected with/being clicked on
                 if (is_being_held == true)
                 {
-
+                    //Determines a new rotation of the object based off the new angle against the forward direction
                     Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+                    //Slerps the the object based off the new rotation value and the rotation speed
                     //Slerping is spherically interpolating
                     selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
-
                 }
-            }
+            }//Checks if the objects rotation is greater is less than 135 degrees in counter clockwise direction(Clamps the possible rotation of the dial)
             else if(selectedObject.transform.eulerAngles.z > 135 && selectedObject.transform.eulerAngles.z < 180)
             {
+                //If it exceeds the rotation resets the rotation to 0.1 less than the limit
                 Quaternion rotation = Quaternion.AngleAxis(134.9f, Vector3.forward);
                 selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
-            }
+            }//Same check as before except on the opposite side
             else if (selectedObject.transform.eulerAngles.z < 225 && selectedObject.transform.eulerAngles.z > 180)
             {
+                //If it exceeds the rotation resets the rotation to 0.1 more than the limit
                 Quaternion rotation = Quaternion.AngleAxis(225.1f, Vector3.forward);
                 selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
             }
-
+            //Checks if the rotation of the dial is between certain angles
             if (selectedObject.transform.eulerAngles.z <= 45 && selectedObject.transform.eulerAngles.z <= 315)
             {
+                //Sets the check time boolean to true which stops movement of the dial for a small amount of time to give it a more click dial feel
                 check_time = true;
                 origin_time = Time.deltaTime;
+                //Sets the cardinal direction enumerator to none
 
-                curr_point = Cardinal_points.None;
+                if(curr_point != Cardinal_points.None_Active)
+                {
+                    curr_point = Cardinal_points.None;
+                }
             }
-
+            //Repeats the process for both of the following checks
             if (selectedObject.transform.eulerAngles.z <= 315 && selectedObject.transform.eulerAngles.z >= 225)
             {
                 check_time = true;
                 origin_time = Time.deltaTime;
 
-                if (curr_point == Cardinal_points.None)
+                //Makes sure we are not coming from the wrong directin and somehow bipassed the clamping
+                //And makes sure we 
+                if (curr_point == Cardinal_points.None || curr_point == Cardinal_points.None_Active)
                 {
                     curr_point = Cardinal_points.E;
                 }
@@ -135,19 +149,19 @@ public class ClickDialObject : MonoBehaviour
                 check_time = true;
                 origin_time = Time.deltaTime;
 
-                if (curr_point == Cardinal_points.None)
+                if (curr_point == Cardinal_points.None || curr_point == Cardinal_points.None_Active)
                 {
                     curr_point = Cardinal_points.S;
                 }
             }
-
-
-            CheckState();
         }
+
+        CheckState();
     }
 
     private void CheckState()
     {
+        //checks the current direction enumerator
         if (curr_point == Cardinal_points.E)
         {
             onDialActivate.Raise(this, Values[1]);
@@ -161,6 +175,7 @@ public class ClickDialObject : MonoBehaviour
         else if (curr_point == Cardinal_points.None)
         {
             onDialActivate.Raise(this, Values[0]);
+            curr_point = Cardinal_points.None_Active;
         }
     }
 

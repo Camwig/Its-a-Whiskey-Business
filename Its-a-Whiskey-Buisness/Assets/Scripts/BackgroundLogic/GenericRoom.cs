@@ -261,7 +261,7 @@ public class GenericRoom : MonoBehaviour
     {
         curr_state = Room_state.Inactive;
         Energy = 0;
-        Temperature = 60;
+        //Temperature = 0;
     }
 
     //Sets the energy of the room when the player enters it
