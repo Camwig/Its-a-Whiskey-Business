@@ -36,6 +36,11 @@ public class SliderInteractable : MonoBehaviour
         curr_state = slide_state.None;
     }
 
+    //private void Awake()
+    //{
+    //    curr_state = slide_state.None;
+    //}
+
     // Update is called once per frame
     void Update()
     {

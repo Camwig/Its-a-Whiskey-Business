@@ -65,6 +65,14 @@ public class ClickDialObject : MonoBehaviour
         curr_point = Cardinal_points.None;
     }
 
+    //private void Awake()
+    //{
+    //    //Upon activation will set the rotation
+    //    selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+    //    curr_point = Cardinal_points.None;
+    //}
+
     void Update()
     {
         //Sets the mouse position value to that of the current position of the mouse

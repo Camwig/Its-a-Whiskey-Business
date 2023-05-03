@@ -46,6 +46,12 @@ public class LeverInteraction : MonoBehaviour
         selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
+    //private void Awake()
+    //{
+    //    //Upon activation will set the rotation
+    //    selectedObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+    //}
+
     private void Start()
     {
         //Upon activation sets the rotation speed to that of the header object
