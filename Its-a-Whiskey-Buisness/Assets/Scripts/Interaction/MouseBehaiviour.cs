@@ -84,6 +84,8 @@ public class MouseBehaiviour : MonoBehaviour
                 line.transform.rotation = Quaternion.Slerp(targetObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
             }
 
+            //Clicksound();
+
             //Draw a line from the current gameobject to the mouse position
         }
         
@@ -98,6 +100,8 @@ public class MouseBehaiviour : MonoBehaviour
 
             //Delete the line
             //Or at least make it invisible
+
+            Clicksound();
         }
 
         //if (is_being_held == true)
@@ -110,5 +114,10 @@ public class MouseBehaiviour : MonoBehaviour
         //{
         //    sprender.enabled = false;
         //}
+    }
+
+    private void Clicksound()
+    {
+        //AUDIO!
     }
 }
