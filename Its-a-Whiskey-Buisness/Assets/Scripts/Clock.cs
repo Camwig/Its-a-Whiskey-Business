@@ -74,7 +74,7 @@ public class Clock : MonoBehaviour
                 panel.SetActive(true);
                 Time.timeScale = 0f;
             }
-            else
+            else if (hours == 9 && minutes == 00)
             {
                 panel.SetActive(false);
                 Time.timeScale = 1.0f;
