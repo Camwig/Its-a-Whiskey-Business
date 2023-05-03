@@ -16,9 +16,7 @@ public class MouseBehaiviour : MonoBehaviour
     private float roatationSpeed;
 
     private Collider2D targetObject;
-    private Collider2D targetObject2;
-
-    private Button targetButton;
+    private Collider2D targetUI;
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +37,7 @@ public class MouseBehaiviour : MonoBehaviour
 
         targetObject = null;
 
-        targetObject2 = null;
-
-        targetButton = null;
+        targetUI = null;
 
         offset = new Vector3(0, 0, 2);
 
@@ -52,14 +48,15 @@ public class MouseBehaiviour : MonoBehaviour
     void Update()
     {
 
-        //sprender.enabled = true;
+        sprender.enabled = true;
         //is_being_held = true;
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
         selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
 
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("NewButton");
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("OldButton");
+        this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        if (targetObject2 = Physics2D.OverlapPoint(mousePosition))
+        if (targetUI = Physics2D.OverlapPoint(mousePosition))
         {
             Debug.Log("Overlap");
         }
@@ -81,7 +78,7 @@ public class MouseBehaiviour : MonoBehaviour
             //mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
             //selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
 
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("OldButton");
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("NewButton");
 
             if (got_pos == false)
             {
@@ -98,7 +95,7 @@ public class MouseBehaiviour : MonoBehaviour
                 got_pos = true;
             }
 
-            if (targetObject != null && got_pos == true)
+            if (targetObject != null /*&& got_pos == true*/)
             {
                 line.enabled = true;
 
