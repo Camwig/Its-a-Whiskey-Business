@@ -69,7 +69,7 @@ public class Clock : MonoBehaviour
             TextTimer.text = currentTime;
 
 
-            if (hours == 11/*17*/ && minutes == 00)
+            if (hours == 17/*17*/ && minutes == 00)
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;

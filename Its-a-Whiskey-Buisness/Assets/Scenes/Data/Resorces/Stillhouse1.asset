@@ -19,5 +19,5 @@ MonoBehaviour:
   Modifier: 0
   RateTrack: 1
   RateValue: 1
-  TempTrack: 0
+  TempTrack: 1
   TempValue: 50
