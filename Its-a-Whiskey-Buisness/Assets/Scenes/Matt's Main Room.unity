@@ -5993,7 +5993,20 @@ MonoBehaviour:
   EasyMode: {fileID: 0}
   NormalMode: {fileID: 0}
   Objectives:
-  - {fileID: 11400000, guid: 07f01240dbdf5bc48ac840866c88cc7b, type: 2}
+  - {fileID: 11400000, guid: b5929ae67e2b8ba48a9acb9bd623db98, type: 2}
+  - {fileID: 11400000, guid: 3f907385559e97b4c95e98f9cf4f2070, type: 2}
+  - {fileID: 11400000, guid: e4a72b4fc35bd334099b8525c3b8dee7, type: 2}
+  - {fileID: 11400000, guid: 6680e6e22d78c664b929323810a6b4b8, type: 2}
+  - {fileID: 11400000, guid: bb2e04e903f240b48b030997b45146e1, type: 2}
+  - {fileID: 11400000, guid: c9bb793bc05949549996c30c7c479c2f, type: 2}
+  - {fileID: 11400000, guid: cb630f13315896d408bf20dcdbf5ea89, type: 2}
+  - {fileID: 11400000, guid: e3e75b1aa76575144a3d7d8177f44ca8, type: 2}
+  - {fileID: 11400000, guid: c2eb8605488c4b843ad4d3f01b9dbd60, type: 2}
+  - {fileID: 11400000, guid: fec16c68c4eb2794eabdb0cb3f25f0ef, type: 2}
+  - {fileID: 11400000, guid: ed939e039d09de34f9a3e037e24b65dd, type: 2}
+  - {fileID: 11400000, guid: 52673f0c1abf50e48b1857247126d44c, type: 2}
+  - {fileID: 11400000, guid: b56d965b87fe18b4f9081c7123498c93, type: 2}
+  - {fileID: 11400000, guid: 7be2847c1da975945961c2f3b88ce1bc, type: 2}
   EnergyTrackers:
   - {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
   - {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}

@@ -136,7 +136,7 @@ public class ObjectiveSystem : MonoBehaviour
 
                         if (Objectives[h].MyRateTrack == true)
                         {
-                            if (EnergyTrackers[j].IncreaseProperty != Objectives[h].MyRateValue)
+                            if (EnergyTrackers[j].IncreaseProperty < Objectives[h].MyRateValue)
                             {
                                 Objectives[h].MyActivated = false;
                                 deductionValue -= Times * Time.deltaTime;
