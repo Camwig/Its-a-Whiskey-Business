@@ -137,7 +137,7 @@ public class ClickDialObject : MonoBehaviour
                 origin_time = Time.deltaTime;
 
                 //Makes sure we are not coming from the wrong directin and somehow bipassed the clamping
-                //And makes sure we 
+                //And makes sure we are not constantly raisning the event
                 if (curr_point == Cardinal_points.None || curr_point == Cardinal_points.None_Active)
                 {
                     curr_point = Cardinal_points.E;
@@ -164,7 +164,9 @@ public class ClickDialObject : MonoBehaviour
         //checks the current direction enumerator
         if (curr_point == Cardinal_points.E)
         {
+            //Raises the event with the appropriate value
             onDialActivate.Raise(this, Values[1]);
+            //Sets it to the active version of the cardinal point
             curr_point = Cardinal_points.E_Active;
         }
         else if (curr_point == Cardinal_points.S)
@@ -181,11 +183,13 @@ public class ClickDialObject : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //Sets the held boolean to be true
         is_being_held = true;
     }
 
     private void OnMouseUp()
     {
+        //Sets the held boolean to be false
         is_being_held = false;
     }
 }
