@@ -38,16 +38,15 @@ public class Ending : MonoBehaviour
 
         Debug.Log(final_value);
 
-        //if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
-        //{
-        //    winningpanel.SetActive(winningpanel);
-        //}
-        //else
-        //{
-        //    losingpanel.SetActive(losingpanel);
-        //}
+        if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
+        {
+            winningpanel.SetActive(winningpanel);
+        }
+        else
+        {
+            losingpanel.SetActive(losingpanel);
+        }
 
-        losingpanel.SetActive(losingpanel);
     }
 
     public void Resume()
