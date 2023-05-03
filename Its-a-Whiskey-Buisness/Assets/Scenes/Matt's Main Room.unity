@@ -5993,7 +5993,7 @@ MonoBehaviour:
   EasyMode: {fileID: 0}
   NormalMode: {fileID: 0}
   Objectives:
-  - {fileID: 11400000, guid: 07f01240dbdf5bc48ac840866c88cc7b, type: 2}
+  - {fileID: 11400000, guid: 34aed3a3c386ae144b4417c3712e7565, type: 2}
   EnergyTrackers:
   - {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
   - {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}

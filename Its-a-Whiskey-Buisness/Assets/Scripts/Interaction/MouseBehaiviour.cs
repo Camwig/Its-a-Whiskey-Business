@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseBehaiviour : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class MouseBehaiviour : MonoBehaviour
     private float roatationSpeed;
 
     private Collider2D targetObject;
+    private Collider2D targetObject2;
+
+    private Button targetButton;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +39,10 @@ public class MouseBehaiviour : MonoBehaviour
 
         targetObject = null;
 
+        targetObject2 = null;
+
+        targetButton = null;
+
         offset = new Vector3(0, 0, 2);
 
         roatationSpeed = 10f;
@@ -44,13 +52,36 @@ public class MouseBehaiviour : MonoBehaviour
     void Update()
     {
 
+        //sprender.enabled = true;
+        //is_being_held = true;
+        mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
+        selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
+
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("NewButton");
+
+        if (targetObject2 = Physics2D.OverlapPoint(mousePosition))
+        {
+            Debug.Log("Overlap");
+        }
+
+        //if (targetButton == Button.)
+        //{
+
+        //    if (targetButton.GetComponent<Rect>().Contains(mousePosition))
+        //    {
+        //        Debug.Log("Overlap");
+        //    }
+        //}
+
         if (Input.GetMouseButton(0))
         {
 
             sprender.enabled = true;
-            //is_being_held = true;
-            mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
-            selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
+            ////is_being_held = true;
+            //mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
+            //selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
+
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("OldButton");
 
             if (got_pos == false)
             {
@@ -67,7 +98,7 @@ public class MouseBehaiviour : MonoBehaviour
                 got_pos = true;
             }
 
-            if (targetObject != null)
+            if (targetObject != null && got_pos == true)
             {
                 line.enabled = true;
 
@@ -114,6 +145,11 @@ public class MouseBehaiviour : MonoBehaviour
         //{
         //    sprender.enabled = false;
         //}
+    }
+
+    public void ChangeSprite()
+    {
+        Debug.Log("Overlap");
     }
 
     private void Clicksound()
