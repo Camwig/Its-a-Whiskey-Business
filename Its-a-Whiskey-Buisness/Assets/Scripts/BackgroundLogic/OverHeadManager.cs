@@ -32,7 +32,7 @@ public class OverHeadManager : MonoBehaviour
     public float new_OriginenergyTrack_amount;
 
     //Boolean to keep track of if this is the first time running this block of code
-    private static bool firstPlay = true;
+    private bool firstPlay = true;
 
     //This will always be zero as the overhead room is always room number zero
     private int RoomNum;
@@ -50,6 +50,16 @@ public class OverHeadManager : MonoBehaviour
         //Calls the runsetup function
         RunSetup();
     }
+
+    //private void Awake()
+    //{
+    //    //Initialises the arrays that hold the new and old energy amounts
+    //    ListOfTrackers_amount = new float[ListOfTrackers.Count];
+    //    ListOfTrackers_new_amount = new float[ListOfTrackers.Count];
+
+    //    //Calls the runsetup function
+    //    RunSetup();
+    //}
 
 
     public void RunSetup()
