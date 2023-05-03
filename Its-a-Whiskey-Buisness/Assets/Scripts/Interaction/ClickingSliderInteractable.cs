@@ -142,6 +142,8 @@ public class ClickingSliderInteractable : MonoBehaviour
             if (CanPlay == true)
             {
                 //Debug.Log("Bum1");
+
+                //Audio!
             }
         }
         else if (curr_state == slide_state.Pos2)
@@ -152,6 +154,8 @@ public class ClickingSliderInteractable : MonoBehaviour
             if (CanPlay == true)
             {
                 //Debug.Log("Bum2");
+
+                //Audio!
             }
         }
         else if (curr_state == slide_state.Pos3)
@@ -162,6 +166,8 @@ public class ClickingSliderInteractable : MonoBehaviour
             if (CanPlay == true)
             {
                 //Debug.Log("Bum3");
+
+                //Audio!
             }
         }
     }

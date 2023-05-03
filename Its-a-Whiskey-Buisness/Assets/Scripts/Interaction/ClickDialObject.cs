@@ -182,7 +182,9 @@ public class ClickDialObject : MonoBehaviour
 
             if(CanPlay ==true)
             {
-               //Debug.Log("Bum1");
+                //Debug.Log("Bum1");
+
+                //Audio!
             }
         }
         else if (curr_point == Cardinal_points.S)
@@ -193,6 +195,8 @@ public class ClickDialObject : MonoBehaviour
             if (CanPlay == true)
             {
                 //Debug.Log("Bum2");
+
+                //Audio!
             }
         }
         else if (curr_point == Cardinal_points.None)
@@ -203,6 +207,8 @@ public class ClickDialObject : MonoBehaviour
             if (CanPlay == true)
             {
                 //Debug.Log("Bum3");
+
+                //Audio!
             }
         }
     }

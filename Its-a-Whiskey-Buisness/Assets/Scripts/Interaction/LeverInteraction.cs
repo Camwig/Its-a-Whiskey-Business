@@ -19,6 +19,9 @@ public class LeverInteraction : MonoBehaviour
     //Dont think this is used either
     private static float new_angle;
 
+    //Needed for new audio
+    private bool Playaudio;
+
     ////This is also no longer used
     //[SerializeField]
     //public ObjectPositioing these_objects;
@@ -47,6 +50,7 @@ public class LeverInteraction : MonoBehaviour
     {
         //Upon activation sets the rotation speed to that of the header object
         roatationSpeed = FrictionSpeed.LeverSpeed;
+        Playaudio = true;
     }
 
     void Update()
@@ -87,12 +91,27 @@ public class LeverInteraction : MonoBehaviour
             if (angle <= 20 && angle < 180)
             {
                 onLeverActivate.Raise(selectedObject.GetComponent<LeverInteraction>(), true);
+                CheckAudio();
             }
             else
             {
                 //Sets the room to inactive if it is not at the appropriate angle
                 onLeverActivate.Raise(selectedObject.GetComponent<LeverInteraction>(), false);
+                Playaudio = true;
             }
+        }
+    }
+
+    private void CheckAudio()
+    {
+        if (Playaudio == true)
+        {
+            //Play audio clip
+            //Debug.Log("AUDIO!");
+
+            //Audio!
+
+            Playaudio = false;
         }
     }
 
