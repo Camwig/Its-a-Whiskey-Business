@@ -6,7 +6,7 @@ public class ChangePicture : MonoBehaviour
 {
     public GameObject activatingimage;
     public GameObject deactivatingimage;
-
+    public GameObject activateStart;
 
 
     public void MoveToScene()
@@ -35,5 +35,8 @@ public class ChangePicture : MonoBehaviour
         deactivatingimage.SetActive(false);
     }
 
-
+    public void ActivateButton()
+    {
+        activateStart.SetActive(true);
+    }
 }

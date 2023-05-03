@@ -40,7 +40,7 @@ public class Clock : MonoBehaviour
             UpdateTimer(timer);
         }
         else if (timer > 60)
-            Flash();
+         Flash();
     }
 
     private void Timer()
@@ -69,10 +69,15 @@ public class Clock : MonoBehaviour
             TextTimer.text = currentTime;
 
 
-            if (hours == 11/*17*/ && minutes == 00)
+            if (hours == 9/*17*/ && minutes == 10)
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;
+            }
+            else
+            {
+                panel.SetActive(false);
+                Time.timeScale = 1.0f;
             }
 
         }
