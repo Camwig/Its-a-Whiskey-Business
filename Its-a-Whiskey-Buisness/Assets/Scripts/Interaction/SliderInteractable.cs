@@ -22,9 +22,13 @@ public class SliderInteractable : MonoBehaviour
     [Header("Events")]
     public EventSytem onSliderActivate;
 
+    private bool CanPlay;
+
     private void Start()
     {
         OriginPos = selectedObject.gameObject.transform.localPosition.y;
+
+        CanPlay = false;
     }
 
     private void Awake()
@@ -39,6 +43,11 @@ public class SliderInteractable : MonoBehaviour
         if (is_being_held == true)
         {
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
+            CanPlay = true;
+        }
+        else
+        {
+            CanPlay = false;
         }
 
         if(selectedObject.gameObject.transform.localPosition.y < OriginPos && selectedObject.gameObject.transform.localPosition.y > OriginPos - 1.5f)
@@ -73,11 +82,21 @@ public class SliderInteractable : MonoBehaviour
         {
             onSliderActivate.Raise(this, false);
             curr_state = slide_state.Up_active;
+
+            if (CanPlay == true)
+            {
+                //Debug.Log("Bum1");
+            }
         }
         else if(curr_state == slide_state.Down)
         {
             onSliderActivate.Raise(this, true);
             curr_state = slide_state.Down_active;
+
+            if (CanPlay == true)
+            {
+                //Debug.Log("Bum2");
+            }
         }
     }
 

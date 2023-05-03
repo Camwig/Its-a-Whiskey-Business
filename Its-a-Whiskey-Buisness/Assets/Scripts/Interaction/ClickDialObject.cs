@@ -43,6 +43,8 @@ public class ClickDialObject : MonoBehaviour
     [Header("Events")]
     public EventSytem onDialActivate;
 
+    private bool CanPlay;
+
     private void Start()
     {
         //Sets the inital values of these select variables upon startup
@@ -50,6 +52,8 @@ public class ClickDialObject : MonoBehaviour
         check_time = false;
         new_time = 0;
         origin_time = 0;
+
+        CanPlay = false;
         //curr_point = Cardinal_points.None;
     }
 
@@ -103,6 +107,12 @@ public class ClickDialObject : MonoBehaviour
                     //Slerps the the object based off the new rotation value and the rotation speed
                     //Slerping is spherically interpolating
                     selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
+
+                    CanPlay = true;
+                }
+                else
+                {
+                    CanPlay = false;
                 }
             }//Checks if the objects rotation is greater is less than 135 degrees in counter clockwise direction(Clamps the possible rotation of the dial)
             else if(selectedObject.transform.eulerAngles.z > 135 && selectedObject.transform.eulerAngles.z < 180)
@@ -168,16 +178,32 @@ public class ClickDialObject : MonoBehaviour
             onDialActivate.Raise(this, Values[1]);
             //Sets it to the active version of the cardinal point
             curr_point = Cardinal_points.E_Active;
+
+
+            if(CanPlay ==true)
+            {
+               //Debug.Log("Bum1");
+            }
         }
         else if (curr_point == Cardinal_points.S)
         {
             onDialActivate.Raise(this, Values[2]);
             curr_point = Cardinal_points.S_Active;
+
+            if (CanPlay == true)
+            {
+                //Debug.Log("Bum2");
+            }
         }
         else if (curr_point == Cardinal_points.None)
         {
             onDialActivate.Raise(this, Values[0]);
             curr_point = Cardinal_points.None_Active;
+
+            if (CanPlay == true)
+            {
+                //Debug.Log("Bum3");
+            }
         }
     }
 

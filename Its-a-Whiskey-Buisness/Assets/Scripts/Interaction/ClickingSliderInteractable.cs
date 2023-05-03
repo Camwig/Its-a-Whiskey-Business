@@ -37,6 +37,8 @@ public class ClickingSliderInteractable : MonoBehaviour
     //Diffrent levels of the slider so top,middle and bottom
     enum Option {A,B,C};
 
+    private bool CanPlay;
+
     //Runs at the beginning of the application
     private void Start()
     {
@@ -46,6 +48,8 @@ public class ClickingSliderInteractable : MonoBehaviour
         check_time = false;
         new_time = 0;
         origin_time = 0;
+
+        CanPlay = false;
     }
 
 
@@ -82,11 +86,11 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Moves the object in relation to the mouses y-position
                 selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
+                CanPlay = true;
             }
-
-            if (selectedObject.gameObject.transform.localPosition.y < OriginPos && selectedObject.gameObject.transform.localPosition.y > OriginPos - 3.0f)
+            else
             {
-                curr_state = slide_state.None;
+                CanPlay = false;
             }
 
             //If the mouse moves the object greater or equal to its starting origin
@@ -94,7 +98,7 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Resets the y_position to the origin
                 selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
-                if (curr_state == slide_state.None)
+                if (curr_state == slide_state.None || curr_state ==slide_state.Pos2_active || curr_state == slide_state.Pos3_active)
                 {
                     curr_state = slide_state.Pos1;
                 }
@@ -107,7 +111,7 @@ public class ClickingSliderInteractable : MonoBehaviour
                 check_time = true;
                 origin_time = Time.deltaTime;
 
-                if (curr_state == slide_state.None)
+                if (curr_state == slide_state.None || curr_state == slide_state.Pos1_active || curr_state == slide_state.Pos3_active)
                 {
                     curr_state = slide_state.Pos2;
                 }
@@ -118,7 +122,7 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Resets it to the minimum y-position below the the origin
                 selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 3.0f, 0);
-                if (curr_state == slide_state.None)
+                if (curr_state == slide_state.None || curr_state == slide_state.Pos2_active || curr_state == slide_state.Pos1_active)
                 {
                     curr_state = slide_state.Pos3;
                 }
@@ -133,20 +137,32 @@ public class ClickingSliderInteractable : MonoBehaviour
         if (curr_state == slide_state.Pos1)
         {
             onSlideActivate.Raise(this, Values[0]);
-            //on_off2 = false;
             curr_state = slide_state.Pos1_active;
+
+            if (CanPlay == true)
+            {
+                //Debug.Log("Bum1");
+            }
         }
         else if (curr_state == slide_state.Pos2)
         {
             onSlideActivate.Raise(this, Values[1]);
-            //on_off2 = true;
             curr_state = slide_state.Pos2_active;
+
+            if (CanPlay == true)
+            {
+                //Debug.Log("Bum2");
+            }
         }
         else if (curr_state == slide_state.Pos3)
         {
             onSlideActivate.Raise(this, Values[2]);
-            //on_off2 = true;
             curr_state = slide_state.Pos3_active;
+
+            if (CanPlay == true)
+            {
+                //Debug.Log("Bum3");
+            }
         }
     }
 
