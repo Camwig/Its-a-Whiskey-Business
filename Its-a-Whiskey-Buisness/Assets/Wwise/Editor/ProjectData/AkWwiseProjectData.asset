@@ -541,8 +541,8 @@ MonoBehaviour:
         guid: d104a7accb98944a98c7e9ce859f22e1
       Path: Events\Default Work Unit\Buttons-Levers-Switches\Play_ButtonClose_01
       maxAttenuation: 0
-      maxDuration: 0.391769
-      minDuration: 0.391769
+      maxDuration: 0.392063
+      minDuration: 0.392063
     - name: Play_ButtonOpen_01
       guid: 60733a1dd844f149b604c71556bdad52
       id: 3815121872
@@ -561,8 +561,8 @@ MonoBehaviour:
         guid: 60733a1dd844f149b604c71556bdad52
       Path: Events\Default Work Unit\Buttons-Levers-Switches\Play_ButtonOpen_01
       maxAttenuation: 0
-      maxDuration: 0.391769
-      minDuration: 0.391769
+      maxDuration: 0.392063
+      minDuration: 0.392063
     - name: Play_DialTick
       guid: bd78076c0988994d9346fb21edf92aba
       id: 1928287159
