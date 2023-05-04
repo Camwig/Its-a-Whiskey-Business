@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>\\StuHomeEven\HomeDrive6$\2001066\Year 3\DES310\ATTEMPT\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\</ProjectRoot>
-		<SourceFilesRoot>\\StuHomeEven\HomeDrive6$\2001066\Year 3\DES310\ATTEMPT\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>\\StuHomeEven\HomeDrive6$\2001066\Year 3\DES310\ATTEMPT\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>\\StuHomeEven\HomeDrive6$\2001066\Year 3\DES310\ATTEMPT\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="441746695">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1958929096">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3441388780">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1953197297">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>

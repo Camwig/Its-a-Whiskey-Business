@@ -27,24 +27,33 @@ public class Ending : MonoBehaviour
     {
         float final_value =0.0f;
 
-        if(overhead_.returnEnergy() >= (MaximumEnergy /2))
+        if(objectives.AllObjectivesFailed() == true)
         {
-            final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
-        }
-        else if(overhead_.returnEnergy() < (MaximumEnergy / 2))
-        {
-            final_value = overhead_.returnEnergy() - objectives.RetrunDeduction();
-        }
-
-        Debug.Log(final_value);
-
-        if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
-        {
-            winningpanel.SetActive(winningpanel);
+            losingpanel.SetActive(losingpanel);
+            Debug.Log("Failed");
         }
         else
         {
-            losingpanel.SetActive(losingpanel);
+            Debug.Log("No Failed");
+            if (overhead_.returnEnergy() >= (MaximumEnergy / 2))
+            {
+                final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
+            }
+            else if (overhead_.returnEnergy() < (MaximumEnergy / 2))
+            {
+                final_value = overhead_.returnEnergy() - objectives.RetrunDeduction();
+            }
+
+            Debug.Log(final_value);
+
+            if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
+            {
+                winningpanel.SetActive(winningpanel);
+            }
+            else
+            {
+                losingpanel.SetActive(losingpanel);
+            }
         }
 
     }

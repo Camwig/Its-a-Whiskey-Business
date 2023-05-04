@@ -80,6 +80,8 @@ public class ObjectiveSystem : MonoBehaviour
 
         CheckObjectives();
 
+        //Audio to let player know they are messing up
+
         textElement.text = deductionValue.ToString();
     }
 
@@ -200,6 +202,26 @@ public class ObjectiveSystem : MonoBehaviour
             //Times = 0.1f;
             easyOrNo = false;
         }
+    }
+
+    public bool AllObjectivesFailed()
+    {
+        int j = 0;
+        bool retrunValue = false;
+        for(int h=0; h< Objectives.Count;h++)
+        {
+            if(Objectives[h].MyActivated==false)
+            {
+                j++;
+            }
+        }
+
+        if(j == Objectives.Count)
+        {
+            retrunValue = true;
+        }
+
+        return retrunValue;
     }
 
     public float RetrunDeduction()

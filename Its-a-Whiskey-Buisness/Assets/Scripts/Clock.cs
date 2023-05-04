@@ -81,7 +81,7 @@ public class Clock : MonoBehaviour
             TextTimer.text = currentTime;
 
 
-            if (hours == 11/*17*/ && minutes == 10)
+            if (hours == 10/*17*/ && minutes == 0)
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;
