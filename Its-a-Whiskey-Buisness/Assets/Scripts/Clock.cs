@@ -21,22 +21,10 @@ public class Clock : MonoBehaviour
 
     float hours;
     float minutes;
-
-    public AK.Wwise.Event Midday;
-    public AK.Wwise.Event QuittinTime;
     
     // Start is called before the first frame update
     void Start()
     {
-        if (hours == 13)
-        {
-            Midday.Post(gameObject);
-        }
-
-        if (hours == 17)
-        {
-            QuittinTime.Post(gameObject);
-        }
 
         Timer();
     }
@@ -52,7 +40,7 @@ public class Clock : MonoBehaviour
             UpdateTimer(timer);
         }
         else if (timer > 60)
-         Flash();
+            Flash();
     }
 
     private void Timer()
@@ -81,15 +69,10 @@ public class Clock : MonoBehaviour
             TextTimer.text = currentTime;
 
 
-            if (hours == 10/*17*/ && minutes == 0)
+            if (hours == 17/*17*/ && minutes == 00)
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;
-            }
-            else if (hours == 9 && minutes == 00)
-            {
-                panel.SetActive(false);
-                Time.timeScale = 1.0f;
             }
 
         }
