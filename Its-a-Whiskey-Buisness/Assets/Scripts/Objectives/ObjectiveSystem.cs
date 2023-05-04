@@ -129,7 +129,7 @@ public class ObjectiveSystem : MonoBehaviour
                         if (EnergyTrackers[j].ActivatedProperty != true)
                         {
                             Objectives[h].MyActivated = false;
-                            deductionValue -= Times * Time.deltaTime;
+                            deductionValue -= 0.1f * Time.deltaTime;
                         }
                         else
                         {
@@ -141,7 +141,7 @@ public class ObjectiveSystem : MonoBehaviour
                             if (EnergyTrackers[j].IncreaseProperty < Objectives[h].MyRateValue)
                             {
                                 Objectives[h].MyActivated = false;
-                                deductionValue -= Times * Time.deltaTime;
+                                deductionValue -= 0.1f * Time.deltaTime;
                             }
                         }
 
@@ -150,7 +150,7 @@ public class ObjectiveSystem : MonoBehaviour
                             if (EnergyTrackers[j].MyTemperature != Objectives[h].MyTempValue)
                             {
                                 Objectives[h].MyActivated = false;
-                                deductionValue -= Times * Time.deltaTime;
+                                deductionValue -= 0.1f * Time.deltaTime;
                             }
                         }
                     }
