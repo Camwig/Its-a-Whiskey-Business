@@ -21,10 +21,22 @@ public class Clock : MonoBehaviour
 
     float hours;
     float minutes;
+
+    public AK.Wwise.Event Midday;
+    public AK.Wwise.Event QuittinTime;
     
     // Start is called before the first frame update
     void Start()
     {
+        if (hours == 13)
+        {
+            Midday.Post(gameObject);
+        }
+
+        if (hours == 17)
+        {
+            QuittinTime.Post(gameObject);
+        }
 
         Timer();
     }

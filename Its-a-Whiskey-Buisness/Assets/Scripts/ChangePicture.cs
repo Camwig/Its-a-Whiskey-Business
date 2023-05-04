@@ -8,6 +8,7 @@ public class ChangePicture : MonoBehaviour
     public GameObject deactivatingimage;
     public GameObject activateStart;
 
+    public AK.Wwise.Event PageTurn;
 
     public void MoveToScene()
     {

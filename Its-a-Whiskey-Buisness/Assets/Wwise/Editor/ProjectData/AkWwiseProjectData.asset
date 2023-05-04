@@ -345,7 +345,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f60983dee8197a4fbd8d151eafcdef70
     GuidInternal: 
-    m_lastTime: -8585184831025662866
+    m_lastTime: -8585184070489455785
     List:
     - name: Main
       guid: 3bf94a79c5a4684ba314c8c704d59aa9
@@ -387,7 +387,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a0468e80d35d8d429ee0dc9ed3de5809
     GuidInternal: 
-    m_lastTime: -8585184831025577901
+    m_lastTime: -8585184070489895965
     List:
     - name: Ambience
       guid: 9123a9034e33d249be2beb87c43ceb38
@@ -839,6 +839,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.301859
       minDuration: 0.301859
+    - name: Play_MouseClick
+      guid: 61fd6c6e945ce247be6a453e9c3eee1a
+      id: 1802956237
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a0468e80d35d8d429ee0dc9ed3de5809
+      - ElementName: Play_MouseClick
+        ObjectType: 3
+        guid: 61fd6c6e945ce247be6a453e9c3eee1a
+      Path: Events\Default Work Unit\Play_MouseClick
+      maxAttenuation: 0
+      maxDuration: 0.163745
+      minDuration: 0.163745
     - name: Play_PowerDown_01
       guid: dbd926aabf90b64d88db5309d1196cf6
       id: 3045242701
@@ -1348,7 +1365,7 @@ MonoBehaviour:
     m_lastTime: -8585196924757737737
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000060000000700000008000000090000000a0000000f000000100000002b0000002c00000035000000
+  ExpandedWaapiItemIds: 01000000060000000700000008000000090000000a0000000c0000000f00000010000000110000002b0000002c00000035000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
