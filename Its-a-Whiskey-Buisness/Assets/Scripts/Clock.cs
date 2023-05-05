@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
-    public Button easy;
-    public Button Normal;
-
+   
     private float timeDuration = 9f * 60f;
     private float timer;
 
@@ -27,6 +25,8 @@ public class Clock : MonoBehaviour
 
     [SerializeField]
     public float minutes;
+
+    private static bool easyOrNo;
 
     // Start is called before the first frame update
     void Start()
@@ -86,7 +86,14 @@ public class Clock : MonoBehaviour
             else if (hours == 9 && minutes == 00)
             {
                 panel.SetActive(false);
-
+                /*if (easyOrNo == true)
+                {
+                    Time.timeScale = 0.5f;
+                }
+                else if (easyOrNo == false)
+                {
+                    Time.timeScale = 1.0f;
+                }*/
             }
         }
 
@@ -107,4 +114,18 @@ public class Clock : MonoBehaviour
         Vector2 this_time = new Vector2(hours, minutes);
         return this_time;
     }
+
+    public void Slowy()
+    {
+        if (moders.easy.GetComponent<Button>() == true)
+        {
+            easyOrNo = true;
+        }
+        else
+        {
+            easyOrNo = false;
+        }
+    }
+
+
 }

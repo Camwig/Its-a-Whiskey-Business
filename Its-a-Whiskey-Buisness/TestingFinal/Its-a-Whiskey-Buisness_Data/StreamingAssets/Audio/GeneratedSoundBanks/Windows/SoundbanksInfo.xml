@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="1958929096">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="1953197297">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3331282146" Name="Play_Ambience_FermentationRoom" ObjectPath="\Events\Default Work Unit\Play_Ambience_FermentationRoom" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="342192304" Language="SFX">
+							<ShortName>Ambience_FermentationRoom.wav</ShortName>
+							<Path>SFX\Ambience_FermentationRoom_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="612571271" Name="Play_Ambience_MashRoom" ObjectPath="\Events\Default Work Unit\Play_Ambience_MashRoom" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="915800556" Language="SFX">
+							<ShortName>Ambience_MashRoom.wav</ShortName>
+							<Path>SFX\Ambience_MashRoom_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1749556454" Name="Play_Ambience_MillRoom" ObjectPath="\Events\Default Work Unit\Play_Ambience_MillRoom" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="160271719" Language="SFX">
+							<ShortName>Ambience_MillRoom.wav</ShortName>
+							<Path>SFX\Ambience_MillRoom_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2733880692" Name="Play_Ambience_StillRoom" ObjectPath="\Events\Default Work Unit\Play_Ambience_StillRoom" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="127365473" Language="SFX">
+							<ShortName>Ambience_StillRoom.wav</ShortName>
+							<Path>SFX\Ambience_StillRoom_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3864659820" Name="Stop_Ambience_FermentationRoom" ObjectPath="\Events\Default Work Unit\Stop_Ambience_FermentationRoom" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1274201121" Name="Stop_Ambience_MashRoom" ObjectPath="\Events\Default Work Unit\Stop_Ambience_MashRoom" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3051851068" Name="Stop_Ambience_MillRoom" ObjectPath="\Events\Default Work Unit\Stop_Ambience_MillRoom" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1469171578" Name="Stop_Ambience_StillRoom" ObjectPath="\Events\Default Work Unit\Stop_Ambience_StillRoom" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
