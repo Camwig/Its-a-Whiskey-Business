@@ -228,5 +228,6 @@ public class ObjectiveSystem : MonoBehaviour
     {
         return deductionValue;
     }
+
 }
 

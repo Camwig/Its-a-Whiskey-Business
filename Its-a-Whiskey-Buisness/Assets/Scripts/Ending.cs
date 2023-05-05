@@ -34,27 +34,36 @@ public class Ending : MonoBehaviour
         }
         else
         {
-            Debug.Log("No Failed");
-            if (overhead_.returnEnergy() >= (MaximumEnergy / 2))
-            {
-                final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
-            }
-            else if (overhead_.returnEnergy() < (MaximumEnergy / 2))
-            {
-                final_value = overhead_.returnEnergy() - objectives.RetrunDeduction();
-            }
+            Debug.Log("Not Failed");
 
-            Debug.Log(final_value);
-
-            if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
+            if (objectives.RetrunDeduction() >= -20)
             {
+            
                 winningpanel.SetActive(winningpanel);
+            
+                if (overhead_.returnEnergy() >= (MaximumEnergy / 2))
+                {
+                  final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
+                }
+                else if (overhead_.returnEnergy() < (MaximumEnergy / 2))
+                {
+                  final_value = overhead_.returnEnergy() - objectives.RetrunDeduction();
+                }
+
+                Debug.Log(final_value);
+
+                if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
+                {
+                    winningpanel.SetActive(winningpanel);
+                }
             }
             else
             {
                 losingpanel.SetActive(losingpanel);
             }
         }
+
+     
 
     }
 

@@ -69,11 +69,18 @@ public class Clock : MonoBehaviour
             TextTimer.text = currentTime;
 
 
-            if (hours == 17/*17*/ && minutes == 00)
+            if (hours == 17 && minutes == 00)
             {
                 panel.SetActive(true);
                 Time.timeScale = 0f;
             }
+            else if (hours == 9 && minutes == 00)
+            {
+                panel.SetActive(false);
+                Time.timeScale = 1.0f;
+            }
+
+
 
         }
 
@@ -82,7 +89,6 @@ public class Clock : MonoBehaviour
             Debug.Log("Time reached test");
 
         }
-
 
     }
 
