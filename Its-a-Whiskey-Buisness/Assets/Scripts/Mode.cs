@@ -11,7 +11,8 @@ public class Mode : MonoBehaviour
 
     private static bool easyOrNo;
 
-    private ObjectiveSystem objectives;
+    [SerializeField]
+    ObjectiveSystem objectives;
 
     public void SlowTime()
     {

@@ -55,7 +55,8 @@ public class ObjectiveSystem : MonoBehaviour
 
     public float Times;
 
-    private Mode modes;
+    [SerializeField]
+    Mode modes;
 
     // Start is called before the first frame update
     void Start()
