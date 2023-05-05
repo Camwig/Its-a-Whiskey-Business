@@ -20,7 +20,8 @@ public class Clock : MonoBehaviour
     [SerializeField]
     public GameObject panel;
 
-    Mode moders;
+    [SerializeField]
+    public Mode moders;
 
     [SerializeField]
     public float hours;
@@ -28,19 +29,26 @@ public class Clock : MonoBehaviour
     [SerializeField]
     public float minutes;
 
+    private bool firstPass;
+
     // Start is called before the first frame update
     void Start()
     {
-
         Timer();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (firstPass == false)
+        {
+            SetTimer();
+            firstPass = true;
+        }
+
+
         if (timer > 0)
         {
-            
             timer += Time.deltaTime;
 
             UpdateTimer(timer);
@@ -106,5 +114,17 @@ public class Clock : MonoBehaviour
     {
         Vector2 this_time = new Vector2(hours, minutes);
         return this_time;
+    }
+
+    private void SetTimer()
+    {
+        if (moders.RetrunEasyOrNormal() == true)
+        {
+            Time.timeScale = 0.5f;
+        }
+        else if (moders.RetrunEasyOrNormal() == false)
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 }
