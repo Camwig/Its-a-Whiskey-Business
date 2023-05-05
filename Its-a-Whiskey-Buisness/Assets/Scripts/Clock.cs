@@ -17,11 +17,14 @@ public class Clock : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI TextTimer;
 
+    [SerializeField]
     public GameObject panel;
+
+    Mode moders;
 
     float hours;
     float minutes;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +43,7 @@ public class Clock : MonoBehaviour
             UpdateTimer(timer);
         }
         else if (timer > 60)
-            Flash();
+        Flash();
     }
 
     private void Timer()
@@ -68,20 +71,18 @@ public class Clock : MonoBehaviour
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
 
-
-            if (hours == 17 && minutes == 00)
+            if (hours == 9 && minutes == 10)
             {
                 panel.SetActive(true);
-                Time.timeScale = 0f;
+                if (panel.activeSelf == true)
+                {
+                    Time.timeScale = 0f;
+                }
             }
             else if (hours == 9 && minutes == 00)
             {
                 panel.SetActive(false);
-                Time.timeScale = 1.0f;
             }
-
-
-
         }
 
         else if (timeDuration > 11f * 60f)
@@ -96,22 +97,6 @@ public class Clock : MonoBehaviour
     {
         Debug.Log("Time reached test");
     }
-
-    public void SlowTime()
-    {
-        if (easy.GetComponent<Button>() == true)
-        {
-            Time.timeScale = 0.5f;
-        }
-    }
-    public void NormalTime()
-    {
-        if (Normal.GetComponent<Button>() == true)
-        {
-            Time.timeScale = 1.0f;
-        }
-    }
-
     public Vector2 ReturnTime()
     {
         Vector2 this_time = new Vector2(hours, minutes);

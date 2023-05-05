@@ -55,12 +55,14 @@ public class ObjectiveSystem : MonoBehaviour
 
     public float Times;
 
+    private Mode modes;
+
     // Start is called before the first frame update
     void Start()
     {
         clock_ = this_clock.GetComponent<Clock>();
 
-        CheckMode();
+        modes.CheckMode();
 
         deductionValue = 0.0f;
 
@@ -176,7 +178,7 @@ public class ObjectiveSystem : MonoBehaviour
 
     public void IsEasy()
     {
-        if(EasyMode.GetComponent<Button>() == true)
+        if (EasyMode.GetComponent<Button>() == true)
         {
             //Times = 0.05f;
             //Debug.Log("0.05");
