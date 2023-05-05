@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
-   
+    public Button easy;
+    public Button Normal;
+
     private float timeDuration = 9f * 60f;
     private float timer;
 
@@ -18,7 +20,8 @@ public class Clock : MonoBehaviour
     [SerializeField]
     public GameObject panel;
 
-    Mode moders;
+    [SerializeField]
+    public Mode moders;
 
     [SerializeField]
     public float hours;
@@ -26,18 +29,37 @@ public class Clock : MonoBehaviour
     [SerializeField]
     public float minutes;
 
-    private static bool easyOrNo;
+    private bool firstPass;
+
+    //private void OnEnable()
+    //{
+    //    //if (easyOrNo == true)
+    //    //{
+    //    //    Time.timeScale = 0.5f;
+    //    //}
+    //    //else if (easyOrNo == false)
+    //    //{
+    //    //    Time.timeScale = 1.0f;
+    //    //}
+    //    moders.CheckMode();
+    //}
 
     // Start is called before the first frame update
     void Start()
     {
-
         Timer();
+        firstPass = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(firstPass==false)
+        {
+            SetTimer();
+            firstPass = true;
+        }
+
         if (timer > 0)
         {
             
@@ -86,14 +108,7 @@ public class Clock : MonoBehaviour
             else if (hours == 9 && minutes == 00)
             {
                 panel.SetActive(false);
-                /*if (easyOrNo == true)
-                {
-                    Time.timeScale = 0.5f;
-                }
-                else if (easyOrNo == false)
-                {
-                    Time.timeScale = 1.0f;
-                }*/
+
             }
         }
 
@@ -115,17 +130,15 @@ public class Clock : MonoBehaviour
         return this_time;
     }
 
-    public void Slowy()
+    private void SetTimer()
     {
-        if (moders.easy.GetComponent<Button>() == true)
+        if (moders.RetrunEasyOrNormal() == true)
         {
-            easyOrNo = true;
+            Time.timeScale = 0.5f;
         }
-        else
+        else if (moders.RetrunEasyOrNormal() == false)
         {
-            easyOrNo = false;
+            Time.timeScale = 1.0f;
         }
     }
-
-
 }
