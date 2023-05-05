@@ -48,15 +48,32 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void SlowOrFast()
+    public void Slow()
     {
         if (EasyButton.GetComponent<Button>() == true)
         {
             easyOrNo = true;
         }
+    }
+
+    public void Normal()
+    {
         if (NormalButton.GetComponent<Button>() == true)
         {
             easyOrNo = false;
         }
     }
+
+    public void Retry()
+    {
+        if (easyOrNo == true)
+        {
+            Time.timeScale = 0.5f;
+        }
+        else if (easyOrNo == false)
+        {
+            Time.timeScale = 1.0f;
+        }
+    }
+
 }

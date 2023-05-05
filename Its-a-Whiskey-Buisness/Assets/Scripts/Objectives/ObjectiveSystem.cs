@@ -164,48 +164,48 @@ public class ObjectiveSystem : MonoBehaviour
         }
     }
 
-    public void CheckMode()
-    {
-        if (easyOrNo == true)
-        {
-            Times = 0.05f;
-            //Debug.Log("0.05");
-        }
-        else
-        {
-            Times = 0.1f;
-        }
-    }
+    //public void CheckMode()
+    //{
+    //    if (easyOrNo == true)
+    //    {
+    //        Times = 0.05f;
+    //        //Debug.Log("0.05");
+    //    }
+    //    else
+    //    {
+    //        Times = 0.1f;
+    //    }
+    //}
 
-    public void IsEasy()
-    {
-        if (EasyMode.GetComponent<Button>() == true)
-        {
-            //Times = 0.05f;
-            //Debug.Log("0.05");
-            easyOrNo = true;
-        }
-        else
-        {
-            easyOrNo = false;
-            //Times = 0.1f;
-        }
-    }
+    //public void IsEasy()
+    //{
+    //    if (EasyMode.GetComponent<Button>() == true)
+    //    {
+    //        //Times = 0.05f;
+    //        //Debug.Log("0.05");
+    //        easyOrNo = true;
+    //    }
+    //    else
+    //    {
+    //        easyOrNo = false;
+    //        //Times = 0.1f;
+    //    }
+    //}
 
-    public void IsNormal()
-    {
-        if (NormalMode.GetComponent<Button>() == true)
-        {
-            //Times = 0.1f;
-            //Debug.Log("0.1");
-            easyOrNo = false;
-        }
-        else
-        {
-            //Times = 0.1f;
-            easyOrNo = false;
-        }
-    }
+    //public void IsNormal()
+    //{
+    //    if (NormalMode.GetComponent<Button>() == true)
+    //    {
+    //        //Times = 0.1f;
+    //        //Debug.Log("0.1");
+    //        easyOrNo = false;
+    //    }
+    //    else
+    //    {
+    //        //Times = 0.1f;
+    //        easyOrNo = false;
+    //    }
+    //}
 
     public bool AllObjectivesFailed()
     {

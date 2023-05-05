@@ -14,10 +14,16 @@ public class Mode : MonoBehaviour
     [SerializeField]
     ObjectiveSystem objectives;
 
+    [SerializeField]
+    Clock clocks;
+
+    public float newValue;
+
     public void SlowTime()
     {
         if (easy.GetComponent<Button>() == true)
         {
+            
             Time.timeScale = 0.5f;
             easyOrNo = true;
         }
@@ -34,10 +40,18 @@ public class Mode : MonoBehaviour
     {
         if (easyOrNo == true)
         {
+            if (clocks.hours == 9 && clocks.minutes == 00)
+            {
+                Time.timeScale = 0.5f;
+            }
             objectives.Times = 0.05f;
         }
-        else
-        { 
+        else if (easyOrNo == false)
+        {
+            if (clocks.hours == 9 && clocks.minutes == 00)
+            {
+                Time.timeScale = 1.0f;
+            }
             objectives.Times = 0.1f;
         }
     }

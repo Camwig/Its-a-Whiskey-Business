@@ -23,6 +23,9 @@ public class Ending : MonoBehaviour
 
     public float winner;
 
+    [SerializeField]
+    Mode modeys;
+
 
     public void OnButtonClick()
     {
@@ -63,9 +66,6 @@ public class Ending : MonoBehaviour
                 losingpanel.SetActive(losingpanel);
             }
         }
-
-     
-
     }
 
     public void Resume()
@@ -74,9 +74,5 @@ public class Ending : MonoBehaviour
         losingpanel.SetActive(false);
     }
 
-    public void Return()
-    {
-        mainPanel.SetActive(false);
-
-    }
+    
 }
