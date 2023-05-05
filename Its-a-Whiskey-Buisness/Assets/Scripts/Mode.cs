@@ -56,5 +56,10 @@ public class Mode : MonoBehaviour
         }
     }
 
+    public bool RetrunEasyOrNormal()
+    {
+        return easyOrNo;
+    }
+
     
 }

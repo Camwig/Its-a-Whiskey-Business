@@ -34,11 +34,11 @@ public class Ending : MonoBehaviour
         if(objectives.AllObjectivesFailed() == true)
         {
             losingpanel.SetActive(losingpanel);
-            Debug.Log("Failed");
+            //Debug.Log("Failed");
         }
         else
         {
-            Debug.Log("Not Failed");
+            //Debug.Log("Not Failed");
 
             if (objectives.RetrunDeduction() >= -20)
             {
