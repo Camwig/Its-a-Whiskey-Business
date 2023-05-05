@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mashtun1
   m_EditorClassIdentifier: 
   StartingTime: {x: 9, y: 30}
-  EndingTime: {x: 10, y: 15}
+  EndingTime: {x: 11, y: 30}
   RoomNum: 3
   Activated: 0
   Modifier: 0

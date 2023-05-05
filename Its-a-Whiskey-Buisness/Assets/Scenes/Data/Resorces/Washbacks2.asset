@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65154ba9cd1f9864b874ad8482616810, type: 3}
   m_Name: Washbacks2
   m_EditorClassIdentifier: 
-  StartingTime: {x: 11, y: 10}
-  EndingTime: {x: 13, y: 45}
+  StartingTime: {x: 12, y: 40}
+  EndingTime: {x: 14, y: 15}
   RoomNum: 1
   Activated: 0
   Modifier: 0
-  RateTrack: 0
-  RateValue: 0
+  RateTrack: 1
+  RateValue: 500
   TempTrack: 1
   TempValue: 60

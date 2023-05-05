@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65154ba9cd1f9864b874ad8482616810, type: 3}
   m_Name: Stillhouse1
   m_EditorClassIdentifier: 
-  StartingTime: {x: 12, y: 0}
-  EndingTime: {x: 14, y: 10}
+  StartingTime: {x: 11, y: 45}
+  EndingTime: {x: 12, y: 50}
   RoomNum: 4
   Activated: 0
   Modifier: 0

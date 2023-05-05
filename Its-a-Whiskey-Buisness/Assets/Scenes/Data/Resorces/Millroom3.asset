@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65154ba9cd1f9864b874ad8482616810, type: 3}
   m_Name: Millroom3
   m_EditorClassIdentifier: 
-  StartingTime: {x: 11, y: 30}
-  EndingTime: {x: 15, y: 15}
+  StartingTime: {x: 14, y: 5}
+  EndingTime: {x: 16, y: 0}
   RoomNum: 2
   Activated: 0
   Modifier: 0
   RateTrack: 1
-  RateValue: 1000
+  RateValue: 10
   TempTrack: 0
   TempValue: 0
