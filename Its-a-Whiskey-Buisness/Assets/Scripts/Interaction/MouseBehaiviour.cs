@@ -42,6 +42,8 @@ public class MouseBehaiviour : MonoBehaviour
         offset = new Vector3(0, 0, 2);
 
         roatationSpeed = 10f;
+
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

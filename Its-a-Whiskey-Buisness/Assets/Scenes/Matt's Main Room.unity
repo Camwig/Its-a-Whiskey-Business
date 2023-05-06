@@ -2103,6 +2103,10 @@ PrefabInstance:
       propertyPath: MaximumEnergy
       value: 100000
       objectReference: {fileID: 0}
+    - target: {fileID: 6568250798606034408, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: MinimumEnergy
+      value: 37092.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6673584184372474657, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -8698,7 +8702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 273.31, y: -29.98999}
+  m_AnchoredPosition: {x: 273.31, y: -29.989975}
   m_SizeDelta: {x: -463.96, y: -140.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210032089

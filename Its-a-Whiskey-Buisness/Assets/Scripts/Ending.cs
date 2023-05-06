@@ -31,14 +31,14 @@ public class Ending : MonoBehaviour
     {
         float final_value =0.0f;
 
-        if(objectives.AllObjectivesFailed() == true)
+        if (objectives.AllObjectivesFailed() == true)
         {
             losingpanel.SetActive(losingpanel);
-            Debug.Log("Failed");
+            //Debug.Log("Failed");
         }
         else
         {
-            Debug.Log("Not Failed");
+            //Debug.Log("Not Failed");
 
             if (objectives.RetrunDeduction() >= -20)
             {
@@ -54,11 +54,15 @@ public class Ending : MonoBehaviour
                   final_value = overhead_.returnEnergy() - objectives.RetrunDeduction();
                 }
 
-                Debug.Log(final_value);
+                //Debug.Log(final_value);
 
                 if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
                 {
                     winningpanel.SetActive(winningpanel);
+                }
+                else
+                {
+                    losingpanel.SetActive(losingpanel);
                 }
             }
             else
