@@ -39,5 +39,6 @@ public class ChangePicture : MonoBehaviour
     public void ActivateButton()
     {
         activateStart.SetActive(true);
+        PageTurn.Post(gameObject);
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\dylan\OneDrive - Abertay University\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\dylan\OneDrive - Abertay University\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\dylan\OneDrive - Abertay University\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\The-w\Documents\Univertsity Year 3 Term 2\DES310 Project\Project Builds\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\dylan\OneDrive - Abertay University\Its-a-Whiskey-Business\DES310_Its-A-Whisky-Business_ATS\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1953197297">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1596515895">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>

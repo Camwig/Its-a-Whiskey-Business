@@ -6,8 +6,12 @@ public class PanelOpener : MonoBehaviour
 {
     public GameObject Panel;
 
+    public AK.Wwise.Event Mouseclick;
+
     public void OpenPanel()
     {
+        Mouseclick.Post(gameObject);
+
         if (Panel != null)
         {
             bool isActive = Panel.activeSelf;

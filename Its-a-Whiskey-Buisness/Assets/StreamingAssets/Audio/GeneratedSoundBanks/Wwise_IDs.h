@@ -30,6 +30,7 @@ namespace AK
         static const AkUniqueID PLAY_LEVEROPEN_01 = 3200583152U;
         static const AkUniqueID PLAY_MIDDAY = 697729946U;
         static const AkUniqueID PLAY_MOUSECLICK = 1802956237U;
+        static const AkUniqueID PLAY_PAGETURN = 2771828150U;
         static const AkUniqueID PLAY_POWERDOWN_01 = 3045242701U;
         static const AkUniqueID PLAY_POWERUP_01 = 2903209428U;
         static const AkUniqueID PLAY_QUITTINTIME = 4253536651U;

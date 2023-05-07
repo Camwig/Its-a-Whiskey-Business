@@ -31,6 +31,9 @@ public class Clock : MonoBehaviour
 
     private bool firstPass;
 
+    public AK.Wwise.Event Midday;
+    public AK.Wwise.Event QuittinTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,20 +85,19 @@ public class Clock : MonoBehaviour
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
 
-            if (hours == 9 && minutes == 10)
+            if (hours == 10 && minutes == 00)
             {
                 panel.SetActive(true);
                 if (panel.activeSelf == true)
                 {
                     Time.timeScale = 0f;
                 }
-               
             }
+
             else if (hours == 9 && minutes == 00)
             {
                 panel.SetActive(false);
-
-            }
+            } 
         }
 
         else if (timeDuration > 11f * 60f)
@@ -104,6 +106,18 @@ public class Clock : MonoBehaviour
 
         }
 
+      /* if (hours == 9 && minutes == 20)
+        {
+            QuittinTime.Post(gameObject);
+            Debug.Log("QuittinTime");
+        }
+
+        else if (hours == 9 && minutes == 10)
+        {
+            Midday.Post(gameObject);
+            Debug.Log("Midday");
+        }
+      */
     }
 
     private void Flash()
