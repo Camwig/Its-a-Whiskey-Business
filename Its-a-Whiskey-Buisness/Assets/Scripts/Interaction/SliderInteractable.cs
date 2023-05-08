@@ -31,7 +31,7 @@ public class SliderInteractable : MonoBehaviour
         CanPlay = false;
     }
 
-    private void OnEnabled()
+    private void OnEnable()
     {
         curr_state = slide_state.None;
     }
@@ -95,7 +95,8 @@ public class SliderInteractable : MonoBehaviour
                 //Audio!
             }
         }
-        else if(curr_state == slide_state.Down)
+        
+        if(curr_state == slide_state.Down)
         {
             onSliderActivate.Raise(this, true);
             curr_state = slide_state.Down_active;
