@@ -210,6 +210,10 @@ MonoBehaviour:
   Values: 
   onSlideActivate: {fileID: 0}
   selectedObject: {fileID: 7445036255298209838}
+  SlideClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 959b79faf72676f4f856874af8d8bae8, type: 2}
 --- !u!1 &7445036255298209838
 GameObject:
   m_ObjectHideFlags: 0

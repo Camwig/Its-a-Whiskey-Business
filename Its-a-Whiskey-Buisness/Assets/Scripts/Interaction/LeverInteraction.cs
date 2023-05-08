@@ -38,6 +38,9 @@ public class LeverInteraction : MonoBehaviour
     [SerializeField]
     public EventSytem onLeverActivate;
 
+    public AK.Wwise.Event LeverUp;
+    public AK.Wwise.Event LeverDown;
+
     //awake and start can most likely be combined
 
     private void OnEnabled()
@@ -115,7 +118,7 @@ public class LeverInteraction : MonoBehaviour
             //Play audio clip
             //Debug.Log("AUDIO!");
 
-            //Audio!
+            LeverUp.Post(gameObject);
 
             Playaudio = false;
         }

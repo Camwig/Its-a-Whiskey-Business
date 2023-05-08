@@ -39,6 +39,8 @@ public class ClickingSliderInteractable : MonoBehaviour
 
     private bool CanPlay;
 
+    public AK.Wwise.Event SlideClick;
+
     //Runs at the beginning of the application
     private void Start()
     {
@@ -148,7 +150,7 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Debug.Log("Bum1");
 
-                //Audio!
+                SlideClick.Post(gameObject);
             }
         }
         else if (curr_state == slide_state.Pos2)
@@ -160,7 +162,7 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Debug.Log("Bum2");
 
-                //Audio!
+                SlideClick.Post(gameObject);
             }
         }
         else if (curr_state == slide_state.Pos3)
@@ -172,7 +174,7 @@ public class ClickingSliderInteractable : MonoBehaviour
             {
                 //Debug.Log("Bum3");
 
-                //Audio!
+                SlideClick.Post(gameObject);
             }
         }
     }

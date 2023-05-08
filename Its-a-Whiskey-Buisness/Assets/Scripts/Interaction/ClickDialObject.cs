@@ -11,7 +11,7 @@ public class ClickDialObject : MonoBehaviour
     //Float value to track the rotation of the object in degrees
     private float angle;
     //Enumerator to track what cardianl direction the dial is facing in and whether it has newly entered that area or not
-    private enum Cardinal_points { E, S, W, N , E_Active,S_Active,W_Active,N_Active,None,None_Active};
+    private enum Cardinal_points { E, S, W, N, E_Active, S_Active, W_Active, N_Active, None, None_Active };
     //Current enumeration value
     Cardinal_points curr_point;
 
@@ -44,6 +44,8 @@ public class ClickDialObject : MonoBehaviour
     public EventSytem onDialActivate;
 
     private bool CanPlay;
+
+    public AK.Wwise.Event ClickDial;
 
     private void Start()
     {
@@ -123,7 +125,7 @@ public class ClickDialObject : MonoBehaviour
                     CanPlay = false;
                 }
             }//Checks if the objects rotation is greater is less than 135 degrees in counter clockwise direction(Clamps the possible rotation of the dial)
-            else if(selectedObject.transform.eulerAngles.z > 135 && selectedObject.transform.eulerAngles.z < 180)
+            else if (selectedObject.transform.eulerAngles.z > 135 && selectedObject.transform.eulerAngles.z < 180)
             {
                 //If it exceeds the rotation resets the rotation to 0.1 less than the limit
                 Quaternion rotation = Quaternion.AngleAxis(134.9f, Vector3.forward);
@@ -143,7 +145,7 @@ public class ClickDialObject : MonoBehaviour
                 origin_time = Time.deltaTime;
                 //Sets the cardinal direction enumerator to none
 
-                if(curr_point != Cardinal_points.None_Active)
+                if (curr_point != Cardinal_points.None_Active)
                 {
                     curr_point = Cardinal_points.None;
                 }
@@ -161,7 +163,7 @@ public class ClickDialObject : MonoBehaviour
                     curr_point = Cardinal_points.E;
                 }
             }
-            
+
             if (selectedObject.transform.eulerAngles.z >= 45 && selectedObject.transform.eulerAngles.z <= 135)
             {
                 check_time = true;
@@ -188,11 +190,12 @@ public class ClickDialObject : MonoBehaviour
             curr_point = Cardinal_points.E_Active;
 
 
-            if(CanPlay ==true)
+            if (CanPlay == true)
             {
                 //Debug.Log("Bum1");
 
-                //Audio!
+                ClickDial.Post(gameObject);
+
             }
         }
         else if (curr_point == Cardinal_points.S)
@@ -204,7 +207,7 @@ public class ClickDialObject : MonoBehaviour
             {
                 //Debug.Log("Bum2");
 
-                //Audio!
+                ClickDial.Post(gameObject);
             }
         }
         else if (curr_point == Cardinal_points.None)
@@ -216,7 +219,7 @@ public class ClickDialObject : MonoBehaviour
             {
                 //Debug.Log("Bum3");
 
-                //Audio!
+                ClickDial.Post(gameObject);
             }
         }
     }

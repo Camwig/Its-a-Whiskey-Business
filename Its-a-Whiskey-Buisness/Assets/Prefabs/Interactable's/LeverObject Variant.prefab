@@ -123,10 +123,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13b248a0e4e8ec4e82846c1d6c1cc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  these_objects: {fileID: 0}
   Room_num: 0
   selectedObject: {fileID: 0}
   onLeverActivate: {fileID: 0}
+  LeverUp:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c6b47f1af7dc5944d984391a5707b674, type: 2}
+  LeverDown:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &3474026119675375048
 PrefabInstance:
   m_ObjectHideFlags: 0

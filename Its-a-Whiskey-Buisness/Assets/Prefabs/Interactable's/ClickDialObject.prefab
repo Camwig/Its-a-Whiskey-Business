@@ -215,8 +215,8 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    border: {x: 0.4766667, y: 0.29333335, z: 0.46333334, w: 0.28666666}
+    pivot: {x: 0.51023394, y: 0.41228068}
     oldSize: {x: 2.0266666, y: 2.0266666}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -242,3 +242,7 @@ MonoBehaviour:
   Room_num: 0
   Values: 
   onDialActivate: {fileID: 0}
+  ClickDial:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5d78028a8611ed54bbe5e29f3a1493e3, type: 2}
