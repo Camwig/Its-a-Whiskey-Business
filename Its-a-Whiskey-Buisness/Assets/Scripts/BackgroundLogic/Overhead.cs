@@ -18,10 +18,10 @@ public class Overhead : MonoBehaviour
 
     //Text elements
     public Text textelement;
-    public Text textRoom1;
-    public Text textRoom2;
-    public Text textRoom3;
-    public Text textRoom4;
+    //public Text textRoom1;
+    //public Text textRoom2;
+    //public Text textRoom3;
+    //public Text textRoom4;
 
     //I am unsure if this needed aswell so I will into removing this later
     public static Overhead New_Instance;
@@ -91,19 +91,19 @@ public class Overhead : MonoBehaviour
         {
             time_ += Time.deltaTime;
             string_text = Overall_Energy.ToString();
-            textelement.text = string_text;
+            textelement.text = "Overall Energy : " + string_text;
 
-            string_room1 = ListOfTrackers[0].EnergyProperty.ToString();
-            textRoom1.text = string_room1;
+            //string_room1 = ListOfTrackers[0].EnergyProperty.ToString();
+            //textRoom1.text = string_room1;
 
-            string_room2 = ListOfTrackers[1].EnergyProperty.ToString();
-            textRoom2.text = string_room2;
+            //string_room2 = ListOfTrackers[1].EnergyProperty.ToString();
+            //textRoom2.text = string_room2;
 
-            string_room3 = ListOfTrackers[2].EnergyProperty.ToString();
-            textRoom3.text = string_room3;
+            //string_room3 = ListOfTrackers[2].EnergyProperty.ToString();
+            //textRoom3.text = string_room3;
 
-            string_room4 = ListOfTrackers[3].EnergyProperty.ToString();
-            textRoom4.text = string_room4;
+            //string_room4 = ListOfTrackers[3].EnergyProperty.ToString();
+            //textRoom4.text = string_room4;
         }
 
         //Loop through each energy tracker

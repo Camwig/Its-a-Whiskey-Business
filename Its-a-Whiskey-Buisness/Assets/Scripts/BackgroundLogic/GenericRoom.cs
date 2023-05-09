@@ -41,6 +41,9 @@ public class GenericRoom : MonoBehaviour
     public EventSytem onActivation;
     public EventSytem UpdateProductionRate;
     public EventSytem SetTemperature;
+
+
+    public bool NoTemperatureReadOut;
     //Need a new tempearture event
 
     public bool first_run;
@@ -50,6 +53,7 @@ public class GenericRoom : MonoBehaviour
     {
         string_text_Energy = "Default";
         IncreaseProduct = 1;
+        //NoTemperatureReadOut = false;
     }
 
     //Function used to initialise some this rooms initial variables when it is first run
@@ -266,8 +270,11 @@ public class GenericRoom : MonoBehaviour
         string_text_Energy = "Room Energy : " + Energy.ToString();
         textenergy.text = string_text_Energy;
 
-        string_text_Temp = "Temperature : " + Temperature.ToString();
-        texttemperature.text = string_text_Temp;
+        if(NoTemperatureReadOut == false)
+        {
+            string_text_Temp = "Temperature : " + Temperature.ToString();
+            texttemperature.text = string_text_Temp;
+        }
         //Debug.Log(string_text_Temp);
         //UpdateProductionRate.Raise(this, IncreaseProduct);
 
