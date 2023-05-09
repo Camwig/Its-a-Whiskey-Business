@@ -18,6 +18,10 @@ public class MouseBehaiviour : MonoBehaviour
     private Collider2D targetObject;
     private Collider2D targetUI;
 
+    private EventSytem HoverMouse;
+
+    private bool NoLongerHovering;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +48,10 @@ public class MouseBehaiviour : MonoBehaviour
         roatationSpeed = 10f;
 
         Cursor.visible = false;
+
+        HoverMouse = Resources.Load<EventSytem>("HoverMouse");
+
+        NoLongerHovering = true;
     }
 
     // Update is called once per frame
@@ -55,13 +63,24 @@ public class MouseBehaiviour : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
         selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
 
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_");
+
+        if(NoLongerHovering == true)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_");
+        }
+        
+        if(NoLongerHovering == false)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
+        }
+
         this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         if (targetUI = Physics2D.OverlapPoint(mousePosition))
         {
             //Debug.Log("Overlap");
-            ChangeSprite();
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
+            //NoLongerHovering = true;
         }
 
         //if (targetButton == Button.)
@@ -149,9 +168,29 @@ public class MouseBehaiviour : MonoBehaviour
 
     public void ChangeSprite()
     {
-        //Debug.Log("Overlap");
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
+        EventSytem HoverMouse = Resources.Load<EventSytem>("HoverMouse");
+        HoverMouse.Raise(this, false);
     }
+
+    public void ChangeSprite2()
+    {
+        EventSytem HoverMouse = Resources.Load<EventSytem>("HoverMouse");
+        HoverMouse.Raise(this, true);
+    }
+
+    public void RaisedEvent(Component sender, object data)
+    {
+        if(data is bool)
+        {
+            //StartCoroutine(ChangingImage());
+            NoLongerHovering = (bool)data;
+        }
+    }
+    //IEnumerator ChangingImage()
+    //{
+    //    this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
+    //    yield return new WaitForFixedUpdate();
+    //}
 
     private void Clicksound()
     {

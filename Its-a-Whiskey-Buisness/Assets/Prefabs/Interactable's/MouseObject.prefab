@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5188622293821571689}
   - component: {fileID: 5188622293821571690}
   - component: {fileID: 5188622293821571688}
+  - component: {fileID: 79929129561202732}
   m_Layer: 0
   m_Name: MouseSprite
   m_TagString: Untagged
@@ -106,7 +107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 8afb284b9fd469e49a537b3f4e022f24, type: 3}
-  m_Color: {r: 0, g: 0.9225335, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 5188622293799874046}
+  HoverMouse: {fileID: 11400000, guid: ed27f46c20f3a0d439386c74a909866a, type: 2}
 --- !u!120 &5188622293821571688
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -228,3 +230,31 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &79929129561202732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5188622293821571700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ed27f46c20f3a0d439386c74a909866a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5188622293821571690}
+        m_TargetAssemblyTypeName: MouseBehaiviour, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
