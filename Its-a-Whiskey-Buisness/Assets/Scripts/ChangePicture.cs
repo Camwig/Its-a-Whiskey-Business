@@ -21,7 +21,7 @@ public class ChangePicture : MonoBehaviour
 
         activatingimage.SetActive(true);
         deactivatingimage.SetActive(true);
-
+        
     }
 
 
@@ -29,16 +29,18 @@ public class ChangePicture : MonoBehaviour
     {
 
         activatingimage.SetActive(true);
+       
     }
 
     public void DeactivatingScene()
     {
-        deactivatingimage.SetActive(false);
+        deactivatingimage.SetActive(false); 
+        Debug.Log("audio");
+       // PageTurn.Post(gameObject);
     }
 
     public void ActivateButton()
     {
         activateStart.SetActive(true);
-        PageTurn.Post(gameObject);
     }
 }
