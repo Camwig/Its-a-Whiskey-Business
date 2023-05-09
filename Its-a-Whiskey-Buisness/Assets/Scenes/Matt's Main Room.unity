@@ -5228,11 +5228,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &847794754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3359372330793199673, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
-  m_PrefabInstance: {fileID: 4657446579535250585}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &854967580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8146459641560429679, guid: 38f4114b9f6147d4e87887aa3e95afac, type: 3}
@@ -7347,8 +7342,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293799874046, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5188622293799874046, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_Name
       value: MainCursor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188622293799874046, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571688, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_SortingOrder
@@ -7372,7 +7375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571689, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_SortingOrder
-      value: 6
+      value: 478
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571700, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_Layer
@@ -13492,7 +13495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.040005, y: -85.5}
+  m_AnchoredPosition: {x: -33.04001, y: -85.5}
   m_SizeDelta: {x: -71.88001, y: -5.800003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1806202807
@@ -16503,6 +16506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCursor
       objectReference: {fileID: 0}
+    - target: {fileID: 3359372330793199673, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4657446577958007347, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -16533,7 +16540,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 437b5cae55ee2734e84e573191cad24c, type: 3}
     - target: {fileID: 4657446578555849851, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4657446578555849851, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -16566,7 +16573,11 @@ PrefabInstance:
     - target: {fileID: 4657446578771335004, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: PauseCursor
       value: 
-      objectReference: {fileID: 847794754}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657446578771335007, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4657446579119424976, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -16673,6 +16684,10 @@ PrefabInstance:
       objectReference: {fileID: 1014868736}
     - target: {fileID: 4657446579688033267, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657446579688033267, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4657446579688033278, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}

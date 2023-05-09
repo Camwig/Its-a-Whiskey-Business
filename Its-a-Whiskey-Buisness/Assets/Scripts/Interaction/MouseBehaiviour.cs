@@ -22,6 +22,8 @@ public class MouseBehaiviour : MonoBehaviour
 
     private bool NoLongerHovering;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,13 +60,16 @@ public class MouseBehaiviour : MonoBehaviour
     void Update()
     {
 
+        Renderer sprendery = GetComponent<Renderer>();
+
         sprender.enabled = true;
         //is_being_held = true;
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
         selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
+        sprendery.sortingOrder = 10;
 
 
-        if(NoLongerHovering == true)
+        if (NoLongerHovering == true)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_");
         }

@@ -19,8 +19,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject MainCursor;
 
-    public GameObject PauseCursor;
-
 
     public void Pause()
     {
