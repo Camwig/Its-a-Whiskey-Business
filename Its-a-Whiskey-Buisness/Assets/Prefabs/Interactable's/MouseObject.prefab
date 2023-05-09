@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 5188622293799874046}
-  HoverMouse: {fileID: 11400000, guid: ed27f46c20f3a0d439386c74a909866a, type: 2}
 --- !u!120 &5188622293821571688
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -248,8 +247,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5188622293821571690}
         m_TargetAssemblyTypeName: MouseBehaiviour, Assembly-CSharp
-        m_MethodName: RaiseEvent
-        m_Mode: 1
+        m_MethodName: RaisedEvent
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
