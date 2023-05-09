@@ -85,7 +85,9 @@ public class ObjectiveSystem : MonoBehaviour
 
         //Audio to let player know they are messing up
 
-        textElement.text = deductionValue.ToString();
+        float newValue = Mathf.Round(deductionValue);
+
+        textElement.text = "Missed Production : " + newValue.ToString();
     }
 
     void CheckObjectives()
