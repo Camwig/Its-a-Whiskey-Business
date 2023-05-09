@@ -22,14 +22,14 @@ public class MouseBehaiviour : MonoBehaviour
     void Start()
     {
 
-        Color c1 = Color.cyan;
+        Color c1 = Color.white;
 
         //is_being_held = false;
         //sprender = selectedObject.gameObject.GetComponent<SpriteRenderer>();
         sprender = selectedObject.gameObject.GetComponentInChildren<SpriteRenderer>();
         sprender.enabled = false;
         line = selectedObject.gameObject.GetComponentInChildren<LineRenderer>();
-        line.sortingOrder = 2;
+        line.sortingOrder = 5;
 
         line.material = new Material(Shader.Find("Sprites/Default"));
         line.startColor= c1;
@@ -55,12 +55,13 @@ public class MouseBehaiviour : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
         selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
 
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("OldButton");
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_");
         this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         if (targetUI = Physics2D.OverlapPoint(mousePosition))
         {
             //Debug.Log("Overlap");
+            ChangeSprite();
         }
 
         //if (targetButton == Button.)
@@ -80,7 +81,7 @@ public class MouseBehaiviour : MonoBehaviour
             //mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
             //selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
 
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("NewButton");
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
 
             if (got_pos == false)
             {
@@ -149,6 +150,7 @@ public class MouseBehaiviour : MonoBehaviour
     public void ChangeSprite()
     {
         //Debug.Log("Overlap");
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
     }
 
     private void Clicksound()
