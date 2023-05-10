@@ -44,22 +44,22 @@ public class Ending : MonoBehaviour
 
     public void OnButtonClick()
     {
+
+
+
         //Sets the mouse cursor to on
         mouse_.SetCursorOn();
 
         //Sets the final value to zero
         float final_value =0.0f;
 
-
-        string_text = final_value.ToString();
-
-
+        ShowEnergy();
         //Check if the all the objectives have been failed
         if (objectives.AllObjectivesFailed() == true)
         {
             //Set the losing panel to on
             losingpanel.SetActive(losingpanel);
-            textelement.text = string_text;
+
         }
         else
         {
@@ -94,13 +94,13 @@ public class Ending : MonoBehaviour
                     //set panel to lost
                     losingpanel.SetActive(losingpanel);
                 }
-                textelement.text = string_text;
+
             }
             else
             {
                 //set panel to lost
                 losingpanel.SetActive(losingpanel);
-                textelement.text = string_text;
+
             }
         }
         
@@ -111,7 +111,19 @@ public class Ending : MonoBehaviour
         //Sets both panels to false
         winningpanel.SetActive(false);
         losingpanel.SetActive(false);
+
     }
 
+
+    public void ShowEnergy()
+    {
+        finalenergy = overhead_.returnEnergy();
+
+
+        textelement.gameObject.SetActive(true);
+
+        string_text = finalenergy.ToString();
+        textelement.text = string_text;
+    }
     
 }
