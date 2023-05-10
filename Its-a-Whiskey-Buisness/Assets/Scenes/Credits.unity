@@ -654,7 +654,7 @@ Canvas:
   m_GameObject: {fileID: 876592551}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 671748509}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -664,7 +664,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &876592556
 RectTransform:
@@ -941,7 +941,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571689, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_SortingOrder
-      value: 6
+      value: 2423
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188622293821571691, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188622293821571691, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571700, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_Layer
