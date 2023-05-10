@@ -1863,6 +1863,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152908019898422673, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -642
+      objectReference: {fileID: 0}
+    - target: {fileID: 152908019898422673, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -169
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005611691064956232, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005611691064956232, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4526284776398609824, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2191,6 +2207,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8084609723617239602, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: this_room
+      value: 
+      objectReference: {fileID: 1454648273}
+    - target: {fileID: 8084609723617239602, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: OriginEnergyTrack
+      value: 
+      objectReference: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
     - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2231,6 +2255,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8516408571116724402, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: this_room
+      value: 
+      objectReference: {fileID: 1454648273}
     - target: {fileID: 8737149824016755089, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2259,7 +2287,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8516408571116724403, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+    - {fileID: 8084609723617239603, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
 --- !u!1 &317717357
 GameObject:
@@ -3356,7 +3386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.12011719, y: -49.869995}
+  m_AnchoredPosition: {x: 0.12011719, y: -49.86998}
   m_SizeDelta: {x: -1793.85, y: -1050.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516569042
@@ -9287,7 +9317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 273.31, y: -29.98999}
+  m_AnchoredPosition: {x: 273.31, y: -29.989975}
   m_SizeDelta: {x: -463.96, y: -140.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210032089
@@ -13522,6 +13552,10 @@ PrefabInstance:
     - target: {fileID: 3351718826179908503, guid: 5e878d54e1d006c4e827320876e079c6, type: 3}
       propertyPath: m_Name
       value: OverheadManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351718826179908503, guid: 5e878d54e1d006c4e827320876e079c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e878d54e1d006c4e827320876e079c6, type: 3}
