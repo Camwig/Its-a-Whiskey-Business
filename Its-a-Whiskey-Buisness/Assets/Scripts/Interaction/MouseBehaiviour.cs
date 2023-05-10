@@ -200,9 +200,10 @@ public class MouseBehaiviour : MonoBehaviour
     //Sets the sprite of the actual mouse cursor for the pause menu and the end screens.
     public void SetCursorSprite()
     {
+        //mouseArrow = TextureFormat.RGBA32;
         CursorMode mode = CursorMode.ForceSoftware;
-        float xspot = mouseArrow.width / 4;
-        float yspot = mouseArrow.height / 4;
+        float xspot = mouseArrow.width / 2;
+        float yspot = mouseArrow.height / 2;
         Vector2 hotspot = new Vector2(xspot, yspot);
         Cursor.SetCursor(mouseArrow, hotspot, mode);
     }

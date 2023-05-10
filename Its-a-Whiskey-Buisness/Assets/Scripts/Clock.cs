@@ -34,6 +34,9 @@ public class Clock : MonoBehaviour
     public AK.Wwise.Event Midday;
     public AK.Wwise.Event QuittinTime;
 
+    [SerializeField]
+    MouseBehaiviour mouse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,7 +88,7 @@ public class Clock : MonoBehaviour
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
 
-            if (hours == 10 && minutes == 00)
+            if (hours == 9 && minutes == 10)
             {
                 panel.SetActive(true);
                 if (panel.activeSelf == true)
@@ -96,6 +99,7 @@ public class Clock : MonoBehaviour
 
             else if (hours == 9 && minutes == 00)
             {
+                mouse.SetCursorOn();
                 panel.SetActive(false);
             } 
         }

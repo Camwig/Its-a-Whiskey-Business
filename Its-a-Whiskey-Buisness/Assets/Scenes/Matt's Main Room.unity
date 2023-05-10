@@ -2036,6 +2036,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6568250798606034408, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: modeys
+      value: 
+      objectReference: {fileID: 1333033397}
+    - target: {fileID: 6568250798606034408, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: mouse_
       value: 
       objectReference: {fileID: 1985403662}
@@ -2184,6 +2188,46 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8060353076423842915, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 264822705}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 264822705}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Ending, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Ending, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085904436541237985, guid: 5ac87aa05873fad4ebb67a3032a5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -3342,6 +3386,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c3004c72c46178f4c8cc1fc0ccf52f25, type: 2}
+  mouse: {fileID: 1985403662}
 --- !u!114 &516569043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7472,7 +7517,7 @@ PrefabInstance:
     - target: {fileID: 5188622293821571690, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: mouseArrow
       value: 
-      objectReference: {fileID: 2800000, guid: 7523d155d7c4fce4c906e9da4b21bb32, type: 3}
+      objectReference: {fileID: 2800000, guid: 9f22b3876e1a41c4ca5c0755ed2e6703, type: 3}
     - target: {fileID: 5188622293821571700, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_Layer
       value: 5
