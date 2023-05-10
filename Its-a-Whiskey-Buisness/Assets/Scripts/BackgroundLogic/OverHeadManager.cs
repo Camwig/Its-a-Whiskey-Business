@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Cameron Wiggan
 public class OverHeadManager : MonoBehaviour
 {
     //Refrence to the overhead function script
@@ -50,17 +51,6 @@ public class OverHeadManager : MonoBehaviour
         //Calls the runsetup function
         RunSetup();
     }
-
-    //private void Awake()
-    //{
-    //    //Initialises the arrays that hold the new and old energy amounts
-    //    ListOfTrackers_amount = new float[ListOfTrackers.Count];
-    //    ListOfTrackers_new_amount = new float[ListOfTrackers.Count];
-
-    //    //Calls the runsetup function
-    //    RunSetup();
-    //}
-
 
     public void RunSetup()
     {

@@ -21,4 +21,10 @@ public class PanelOpener : MonoBehaviour
 
     }
 
+    public void ClosePanel()
+    {
+        Panel.SetActive(false);
+
+    }
+
 }

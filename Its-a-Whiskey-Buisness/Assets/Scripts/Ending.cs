@@ -3,70 +3,90 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Cameron Wiggan and Matthew Gibera
 public class Ending : MonoBehaviour
 {
+    //Hold the panel objects
     public GameObject winningpanel;
     public GameObject losingpanel;
     public GameObject mainPanel;
 
+    //Overhead object
     [SerializeField]
     Overhead overhead_;
 
+    //Objective object
     [SerializeField]
     ObjectiveSystem objectives;
 
+    //Mouse Object
+    [SerializeField]
+    MouseBehaiviour mouse_;
+
+    //Minmum energy value
     [SerializeField]
     public float MinimumEnergy;
 
+    //Maximum energy value
     [SerializeField]
     public float MaximumEnergy;
 
-    public float winner;
-
+    //Mode object
     [SerializeField]
     Mode modeys;
 
 
     public void OnButtonClick()
     {
+        //Sets the mouse cursor to on
+        mouse_.SetCursorOn();
+
+        //Sets the final value to zero
         float final_value =0.0f;
 
+        //Check if the all the objectives have been failed
         if (objectives.AllObjectivesFailed() == true)
         {
+            //Set the losing panel to on
             losingpanel.SetActive(losingpanel);
-            //Debug.Log("Failed");
         }
         else
         {
-            //Debug.Log("Not Failed");
-
+            //Checks if the deduction value is greater to equal to minus twenty
             if (objectives.RetrunDeduction() >= -20)
             {
-            
-                winningpanel.SetActive(winningpanel);
-            
+                //Checks if the final energy value is gerater or equal to the maximum energy by half
                 if (overhead_.returnEnergy() >= (MaximumEnergy / 2))
                 {
-                  final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
-                }
-                else if (overhead_.returnEnergy() < (MaximumEnergy / 2))
-                {
+                    //We then add the deduction value
+
+                    //Was +
                   final_value = overhead_.returnEnergy() - objectives.RetrunDeduction();
                 }
+                //if it is less than the half
+                else if (overhead_.returnEnergy() < (MaximumEnergy / 2))
+                {
+                    //subtract the value
 
-                //Debug.Log(final_value);
+                    //Was -
+                  final_value = overhead_.returnEnergy() + objectives.RetrunDeduction();
+                }
 
+                //if this final value is between the minimum and maximum energy
                 if (final_value >= MinimumEnergy && final_value <= MaximumEnergy)
                 {
+                    //Set the pannel to wining
                     winningpanel.SetActive(winningpanel);
                 }
                 else
                 {
+                    //set panel to lost
                     losingpanel.SetActive(losingpanel);
                 }
             }
             else
             {
+                //set panel to lost
                 losingpanel.SetActive(losingpanel);
             }
         }
@@ -74,6 +94,7 @@ public class Ending : MonoBehaviour
 
     public void Resume()
     {
+        //Sets both panels to false
         winningpanel.SetActive(false);
         losingpanel.SetActive(false);
     }

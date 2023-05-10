@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 public class MainManager : MonoBehaviour
 {
     //The new amount of energy that should be set to the energy tracker

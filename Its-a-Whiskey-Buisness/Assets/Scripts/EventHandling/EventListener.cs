@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//Cameron Wiggan
+
 //Sets up a class object based on the UnityEvent System
 [System.Serializable]
 public class CustomGameEvent : UnityEvent<Component, object> {}

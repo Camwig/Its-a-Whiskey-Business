@@ -17,6 +17,9 @@ public class PauseMenu : MonoBehaviour
 
     private static bool easyOrNo;
 
+    public GameObject MainCursor;
+
+
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -75,5 +78,16 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1.0f;
         }
     }
+
+    public void ChangeCursor()
+    {
+        MainCursor.SetActive(false);
+    }
+
+    public void ResetCursor()
+    {
+        MainCursor.SetActive(true);
+    }
+
 
 }

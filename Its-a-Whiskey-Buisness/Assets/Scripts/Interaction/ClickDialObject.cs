@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 public class ClickDialObject : MonoBehaviour
 {
     //Vector3 to track the mouse position in relation to the object
