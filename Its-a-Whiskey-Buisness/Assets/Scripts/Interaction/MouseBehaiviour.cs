@@ -18,11 +18,11 @@ public class MouseBehaiviour : MonoBehaviour
     private Collider2D targetObject;
     private Collider2D targetUI;
 
-    private EventSytem HoverMouse;
+    //private EventSytem HoverMouse;
 
     private bool NoLongerHovering;
 
-    
+    public Texture2D mouseArrow;
 
     // Start is called before the first frame update
     void Start()
@@ -51,9 +51,15 @@ public class MouseBehaiviour : MonoBehaviour
 
         Cursor.visible = false;
 
-        HoverMouse = Resources.Load<EventSytem>("HoverMouse");
+        //HoverMouse = Resources.Load<EventSytem>("HoverMouse");
 
         NoLongerHovering = true;
+
+        //Cursor.SetCursor(mouseArrow, Vector2.zero, CursorMode.ForceSoftware);
+
+        SetCursorSprite();
+
+        //float i = this.gameObject.GetComponent<Renderer>().material.color.a;
     }
 
     // Update is called once per frame
@@ -188,6 +194,27 @@ public class MouseBehaiviour : MonoBehaviour
             NoLongerHovering = (bool)data;
         }
     }
+
+    public void SetCursorOn()
+    {
+        Cursor.visible = true;
+    }
+
+    public void SetCursorfalse()
+    {
+        Cursor.visible = false;
+    }
+
+    public void SetCursorSprite()
+    {
+
+        CursorMode mode = CursorMode.ForceSoftware;
+        float xspot = mouseArrow.width / 4;
+        float yspot = mouseArrow.height / 4;
+        Vector2 hotspot = new Vector2(xspot, yspot);
+        Cursor.SetCursor(mouseArrow, hotspot, mode);
+    }
+
 
     private void Clicksound()
     {

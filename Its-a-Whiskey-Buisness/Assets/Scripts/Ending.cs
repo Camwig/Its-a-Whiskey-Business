@@ -16,6 +16,9 @@ public class Ending : MonoBehaviour
     ObjectiveSystem objectives;
 
     [SerializeField]
+    MouseBehaiviour mouse_;
+
+    [SerializeField]
     public float MinimumEnergy;
 
     [SerializeField]
@@ -29,6 +32,8 @@ public class Ending : MonoBehaviour
 
     public void OnButtonClick()
     {
+        mouse_.SetCursorOn();
+
         float final_value =0.0f;
 
         if (objectives.AllObjectivesFailed() == true)
