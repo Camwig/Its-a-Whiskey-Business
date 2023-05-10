@@ -7435,11 +7435,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571688, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571688, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188622293821571688, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
+      propertyPath: m_Parameters.shadowBias
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188622293821571688, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.0026245117
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188622293821571688, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.14760399
       objectReference: {fileID: 0}
     - target: {fileID: 5188622293821571689, guid: ac5ee8c53f75cdc489713db66cab8ce0, type: 3}
       propertyPath: m_Color.b
@@ -14322,10 +14334,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 30
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
