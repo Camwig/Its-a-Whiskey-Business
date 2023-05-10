@@ -62,7 +62,6 @@ public class ButtonInteractable : MonoBehaviour
                 data = 60;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Green Buttle Idle (not pressed)");
                 ButtonOpen.Post(gameObject);
-                Debug.Log("sdhuashd 12121");
                 break;
 
             case false:
@@ -70,7 +69,6 @@ public class ButtonInteractable : MonoBehaviour
                 data = 180;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Red Button Pressed");
                 ButtonClose.Post(gameObject);
-                Debug.Log("sdhuashd");
                 break;
         }
 
