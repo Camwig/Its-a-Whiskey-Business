@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//Cameron Wiggan
+
 public class ObjectiveSystem : MonoBehaviour
 {
     //Button to set easy mode and normal mode

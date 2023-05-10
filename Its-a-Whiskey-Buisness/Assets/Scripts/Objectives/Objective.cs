@@ -4,24 +4,11 @@ using UnityEngine;
 
 [CreateAssetMenu]
 
+//Cameron Wiggan
+
 public class Objective : ScriptableObject
-{
-    //Starting time - Done
-    //Ending time - Done
-
-    //The times should be the equivilent of an std::pair of floats one for hours and the other for minutes
-
-    //Float modifier which will act as way to tell how well the player did depending on how high or low the value is.
-
-    //What room needs to be on - DONE
-    //What other settings need to be
-        //Should have a way to describe as any.
-
-        //List will expand as I go
-
-        // -Energy activation
-
-    
+{    
+    //Starting time the objective should be active
     [SerializeField]
     private Vector2 StartingTime;
 
@@ -31,6 +18,7 @@ public class Objective : ScriptableObject
         set { StartingTime = value; }
     }
 
+    //Time at which the objective ends being tracked
     [SerializeField]
     private Vector2 EndingTime;
 
@@ -40,8 +28,7 @@ public class Objective : ScriptableObject
         set { EndingTime = value; }
     }
 
-    //Number of the room that these apply to
-
+    //Number of the room we are being tracked
     [SerializeField]
     private int RoomNum;
 
@@ -51,6 +38,7 @@ public class Objective : ScriptableObject
         set { RoomNum = value; }
     }
 
+    //Boolean that tracks if the objective is being tracked
     [SerializeField]
     private bool Activated;
 
@@ -69,8 +57,7 @@ public class Objective : ScriptableObject
         set { Modifier = value; }
     }
 
-    //Need to have thing to say if you need to track energy rate  and/or temperature
-
+    //Tracks if the objective should keep a track of the rate of production
     [SerializeField]
     private bool RateTrack;
 
@@ -80,6 +67,7 @@ public class Objective : ScriptableObject
         set { RateTrack = value; }
     }
 
+    //Value at which the energy should produced at
     [SerializeField]
     private float RateValue;
 
@@ -89,6 +77,7 @@ public class Objective : ScriptableObject
         set { RateValue = value; }
     }
 
+    //Tracks if the objective should keep a track of the temperature
     [SerializeField]
     private bool TempTrack;
 
@@ -98,6 +87,7 @@ public class Objective : ScriptableObject
         set { TempTrack = value; }
     }
 
+    //Value the temperarature should be at
     [SerializeField]
     private float TempValue;
 

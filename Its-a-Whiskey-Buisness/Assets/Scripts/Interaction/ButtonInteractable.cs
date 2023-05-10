@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
 public class ButtonInteractable : MonoBehaviour
 {
     //Boolean to track activation

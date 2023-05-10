@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 public class CurrentRoom : MonoBehaviour
 {
     //This is used to track the current state the player is in

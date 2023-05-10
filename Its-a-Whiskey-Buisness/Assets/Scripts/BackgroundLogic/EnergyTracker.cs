@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 //Used to create assets of this scriptable object
 //Which can be used as a type of object with the following variables/traits
 [CreateAssetMenu]

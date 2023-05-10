@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Cameron Wiggan
+
 public class MouseBehaiviour : MonoBehaviour
 {
     //Selectedobject is the spirte object attached to the mouse object

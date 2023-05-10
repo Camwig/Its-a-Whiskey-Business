@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 public class ObjectInteraction : MonoBehaviour
 {
     // Start is called before the first frame update

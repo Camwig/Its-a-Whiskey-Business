@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 public class FrictionSpeed : MonoBehaviour
 {
     //Could be changed to scriptable object

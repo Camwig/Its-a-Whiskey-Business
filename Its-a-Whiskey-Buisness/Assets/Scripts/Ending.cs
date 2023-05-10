@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Cameron Wiggan and Matthew Gibera
 public class Ending : MonoBehaviour
 {
     //Hold the panel objects

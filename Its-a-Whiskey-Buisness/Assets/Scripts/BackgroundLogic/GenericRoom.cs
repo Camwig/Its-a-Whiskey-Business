@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//Cameron Wiggan
 public class GenericRoom : MonoBehaviour
 {
     //Energy variable being produced within the 'Room'

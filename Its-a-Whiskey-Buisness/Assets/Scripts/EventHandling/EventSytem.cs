@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 //Creates an asset of this object
 [CreateAssetMenu(menuName = "GameEvent")]
 

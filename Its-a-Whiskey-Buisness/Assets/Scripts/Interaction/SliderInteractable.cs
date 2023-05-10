@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+//Cameron Wiggan
 public class SliderInteractable : MonoBehaviour
 {
     //Position of the mouse

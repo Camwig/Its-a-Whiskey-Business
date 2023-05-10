@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Cameron Wiggan
+
 public class LeverInteraction : MonoBehaviour
 {
     //Position of the mouse
