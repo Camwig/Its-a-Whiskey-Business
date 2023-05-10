@@ -74,7 +74,7 @@ public class MouseBehaiviour : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_");
         }
         
-        if(NoLongerHovering == false)
+        else if(NoLongerHovering == false)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
         }
@@ -83,9 +83,7 @@ public class MouseBehaiviour : MonoBehaviour
 
         if (targetUI = Physics2D.OverlapPoint(mousePosition))
         {
-            //Debug.Log("Overlap");
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
-            //NoLongerHovering = true;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand"); 
         }
 
         //if (targetButton == Button.)
@@ -187,15 +185,9 @@ public class MouseBehaiviour : MonoBehaviour
     {
         if(data is bool)
         {
-            //StartCoroutine(ChangingImage());
             NoLongerHovering = (bool)data;
         }
     }
-    //IEnumerator ChangingImage()
-    //{
-    //    this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
-    //    yield return new WaitForFixedUpdate();
-    //}
 
     private void Clicksound()
     {
