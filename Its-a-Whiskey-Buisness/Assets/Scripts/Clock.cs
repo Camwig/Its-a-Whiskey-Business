@@ -90,6 +90,7 @@ public class Clock : MonoBehaviour
 
             if (hours == 9 && minutes == 10)
             {
+                mouse.SetCursorOn();
                 panel.SetActive(true);
                 if (panel.activeSelf == true)
                 {
@@ -99,7 +100,6 @@ public class Clock : MonoBehaviour
 
             else if (hours == 9 && minutes == 00)
             {
-                mouse.SetCursorOn();
                 panel.SetActive(false);
             } 
         }
