@@ -85,21 +85,24 @@ public class MouseBehaiviour : MonoBehaviour
         //Sets the renderer to true
         sprender.enabled = true;
         //Sets the mouse position to that of the screen world point
-        mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
+        //mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
+        transform.position = Input.mousePosition;
+
         //Sets the selectedobject local position to the mouse position
         selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
-        //Sets the sorting order of the sprite renderer
-        sprendery.sortingOrder = 10;
+ 
 
         //Checks if the cursor is NOT hovering over any button
         if (NoLongerHovering == true)
         {
             //Sets the object to the correct sprite
+            sprendery.sortingOrder = 10;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_");
         }
         //Checks if the cursor is hovering over any button
         else if (NoLongerHovering == false)
         {
+            sprendery.sortingOrder = 10;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");
         }
         //Sets the rotation of the object origin
@@ -109,6 +112,7 @@ public class MouseBehaiviour : MonoBehaviour
         if (targetUI = Physics2D.OverlapPoint(mousePosition))
         {
             //Sets the correct sprite
+            sprendery.sortingOrder = 10;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand"); 
         }
 
@@ -117,6 +121,8 @@ public class MouseBehaiviour : MonoBehaviour
         {
             //Sets the sprite renderer to true
             sprender.enabled = true;
+
+            sprendery.sortingOrder = 10;
 
             //Sets the object to the correct sprite
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Mouse_click_hand");

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //Cameron Wiggan and Matthew Gibera
 public class Ending : MonoBehaviour
@@ -10,6 +11,10 @@ public class Ending : MonoBehaviour
     public GameObject winningpanel;
     public GameObject losingpanel;
     public GameObject mainPanel;
+
+    public Text textelement;
+
+    private float finalenergy;
 
     //Overhead object
     [SerializeField]
@@ -35,20 +40,26 @@ public class Ending : MonoBehaviour
     [SerializeField]
     Mode modeys;
 
+    private string string_text;
 
     public void OnButtonClick()
     {
+
+
+
         //Sets the mouse cursor to on
         mouse_.SetCursorOn();
 
         //Sets the final value to zero
         float final_value =0.0f;
 
+        ShowEnergy();
         //Check if the all the objectives have been failed
         if (objectives.AllObjectivesFailed() == true)
         {
             //Set the losing panel to on
             losingpanel.SetActive(losingpanel);
+
         }
         else
         {
@@ -83,13 +94,16 @@ public class Ending : MonoBehaviour
                     //set panel to lost
                     losingpanel.SetActive(losingpanel);
                 }
+
             }
             else
             {
                 //set panel to lost
                 losingpanel.SetActive(losingpanel);
+
             }
         }
+        
     }
 
     public void Resume()
@@ -97,7 +111,19 @@ public class Ending : MonoBehaviour
         //Sets both panels to false
         winningpanel.SetActive(false);
         losingpanel.SetActive(false);
+
     }
 
+
+    public void ShowEnergy()
+    {
+        finalenergy = overhead_.returnEnergy();
+
+
+        textelement.gameObject.SetActive(true);
+
+        string_text = finalenergy.ToString();
+        textelement.text = string_text;
+    }
     
 }

@@ -42,6 +42,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Blob/Email.unity
     guid: 460db1104db104f469d936f9ea9b6f6e
   - enabled: 0
-    path: Assets/Scenes/Main Room.unity
+    path: Assets/Scenes/Blob/Main Room.unity
     guid: 6598b5e71a75ced41a50facdfe5d6e98
   m_configObjects: {}
