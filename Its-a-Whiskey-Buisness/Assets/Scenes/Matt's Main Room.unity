@@ -281,6 +281,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37069961}
   m_CullTransparentMesh: 1
+--- !u!1 &37797306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4657446579688033278, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+  m_PrefabInstance: {fileID: 4657446579535250585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &37797308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37797306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d5ef682da18da4ebf55eac32f7db82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 37797311}
+  room1Cam: {fileID: 417592117}
+  room2Cam: {fileID: 1815096837}
+  room3Cam: {fileID: 1813285341}
+  room4Cam: {fileID: 1876931443}
+  emailCam: {fileID: 2072925178}
+  mainRoomCam: {fileID: 1014868736}
+--- !u!223 &37797311 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4657446579688033267, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+  m_PrefabInstance: {fileID: 4657446579535250585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &40194228
 GameObject:
   m_ObjectHideFlags: 0
@@ -16843,6 +16872,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4657446579119424976, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657446579688033264, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4657446579688033266, guid: 1cf3ecd51236df140a4c07d01980a63b, type: 3}

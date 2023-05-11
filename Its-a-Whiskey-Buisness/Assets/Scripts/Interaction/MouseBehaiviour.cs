@@ -85,8 +85,8 @@ public class MouseBehaiviour : MonoBehaviour
         //Sets the renderer to true
         sprender.enabled = true;
         //Sets the mouse position to that of the screen world point
-        mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
-        //transform.position = Input.mousePosition;
+        //mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
+        transform.position = Input.mousePosition;
 
         //Sets the selectedobject local position to the mouse position
         selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x, mousePosition.y, 0);
