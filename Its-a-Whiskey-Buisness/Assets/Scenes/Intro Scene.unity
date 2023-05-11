@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 515335109}
   - component: {fileID: 515335110}
   - component: {fileID: 515335111}
+  - component: {fileID: 515335112}
   m_Layer: 0
   m_Name: Comicpage1
   m_TagString: Untagged
@@ -465,7 +466,31 @@ MonoBehaviour:
   PageTurn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 56989100ede5d7041bb0026807a1bfb9, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b6fadb87e6a9b834db72ef4d89583af1, type: 2}
+--- !u!114 &515335112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515335108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &533547876
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +502,7 @@ GameObject:
   - component: {fileID: 533547877}
   - component: {fileID: 533547878}
   - component: {fileID: 533547879}
+  - component: {fileID: 533547880}
   m_Layer: 0
   m_Name: Comicpage7
   m_TagString: Untagged
@@ -569,7 +595,31 @@ MonoBehaviour:
   PageTurn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 56989100ede5d7041bb0026807a1bfb9, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b6fadb87e6a9b834db72ef4d89583af1, type: 2}
+--- !u!114 &533547880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533547876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &536605879
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +631,7 @@ GameObject:
   - component: {fileID: 536605880}
   - component: {fileID: 536605881}
   - component: {fileID: 536605882}
+  - component: {fileID: 536605883}
   m_Layer: 0
   m_Name: Comicpage4
   m_TagString: Untagged
@@ -673,7 +724,31 @@ MonoBehaviour:
   PageTurn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 56989100ede5d7041bb0026807a1bfb9, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b6fadb87e6a9b834db72ef4d89583af1, type: 2}
+--- !u!114 &536605883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536605879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &559358660
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 559358661}
   - component: {fileID: 559358662}
+  - component: {fileID: 559358663}
   m_Layer: 0
   m_Name: Comicpage8
   m_TagString: Untagged
@@ -758,6 +834,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &559358663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559358660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &634342671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1009,6 +1109,7 @@ GameObject:
   - component: {fileID: 1046151765}
   - component: {fileID: 1046151766}
   - component: {fileID: 1046151767}
+  - component: {fileID: 1046151768}
   m_Layer: 0
   m_Name: Comicpage6
   m_TagString: Untagged
@@ -1101,7 +1202,31 @@ MonoBehaviour:
   PageTurn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 56989100ede5d7041bb0026807a1bfb9, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b6fadb87e6a9b834db72ef4d89583af1, type: 2}
+--- !u!114 &1046151768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046151764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1129855551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,6 +1557,7 @@ GameObject:
   - component: {fileID: 1296622790}
   - component: {fileID: 1296622791}
   - component: {fileID: 1296622792}
+  - component: {fileID: 1296622793}
   m_Layer: 0
   m_Name: Comicpage5
   m_TagString: Untagged
@@ -1524,7 +1650,31 @@ MonoBehaviour:
   PageTurn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 56989100ede5d7041bb0026807a1bfb9, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b6fadb87e6a9b834db72ef4d89583af1, type: 2}
+--- !u!114 &1296622793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296622789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!224 &1477465341 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1064715596936562475, guid: b4f2f2a887987b0488f7e89808e20783, type: 3}
@@ -1612,6 +1762,7 @@ GameObject:
   - component: {fileID: 1823635450}
   - component: {fileID: 1823635451}
   - component: {fileID: 1823635452}
+  - component: {fileID: 1823635453}
   m_Layer: 0
   m_Name: Comicpage2
   m_TagString: Untagged
@@ -1704,7 +1855,31 @@ MonoBehaviour:
   PageTurn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 56989100ede5d7041bb0026807a1bfb9, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b6fadb87e6a9b834db72ef4d89583af1, type: 2}
+--- !u!114 &1823635453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823635449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &1847564813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1974,6 +2149,7 @@ GameObject:
   - component: {fileID: 1965187473}
   - component: {fileID: 1965187474}
   - component: {fileID: 1965187475}
+  - component: {fileID: 1965187476}
   m_Layer: 0
   m_Name: Comicpage3
   m_TagString: Untagged
@@ -2066,7 +2242,31 @@ MonoBehaviour:
   PageTurn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 56989100ede5d7041bb0026807a1bfb9, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b6fadb87e6a9b834db72ef4d89583af1, type: 2}
+--- !u!114 &1965187476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965187472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &2012547589
 PrefabInstance:
   m_ObjectHideFlags: 0

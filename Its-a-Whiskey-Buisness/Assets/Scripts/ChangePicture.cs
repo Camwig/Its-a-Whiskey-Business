@@ -36,7 +36,7 @@ public class ChangePicture : MonoBehaviour
     {
         deactivatingimage.SetActive(false); 
         Debug.Log("audio");
-       // PageTurn.Post(gameObject);
+        PageTurn.Post(gameObject);
     }
 
     public void ActivateButton()

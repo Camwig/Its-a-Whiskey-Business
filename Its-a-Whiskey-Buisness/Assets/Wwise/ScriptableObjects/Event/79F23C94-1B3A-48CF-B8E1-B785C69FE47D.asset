@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69bd363d25b57f946ab6636778eefd74, type: 3}
-  m_Name: 49F346C4-F815-4732-9C39-70C2BBF4C49E
+  m_Name: 79F23C94-1B3A-48CF-B8E1-B785C69FE47D
   m_EditorClassIdentifier: 
   objectName: Play_PageTurn
   id: 2771828150
-  guid: 49F346C4-F815-4732-9C39-70C2BBF4C49E
+  guid: 79F23C94-1B3A-48CF-B8E1-B785C69FE47D
