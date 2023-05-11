@@ -35,7 +35,7 @@ public class ChangePicture : MonoBehaviour
     public void DeactivatingScene()
     {
         deactivatingimage.SetActive(false); 
-        Debug.Log("audio");
+        //Debug.Log("audio");
         PageTurn.Post(gameObject);
     }
 
