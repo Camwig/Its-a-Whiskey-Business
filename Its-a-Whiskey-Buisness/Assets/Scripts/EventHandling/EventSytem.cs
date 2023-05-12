@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,11 @@ public class EventSytem : ScriptableObject
                 Listeners[i].OnEventRaised(sender,data);
             }
         }
+    }
+
+    internal void Raise(Interactables interactables)
+    {
+        throw new NotImplementedException();
     }
 
     //Registers a listner into the event (adds listener to this events list of listeners)
