@@ -88,7 +88,7 @@ public class Clock : MonoBehaviour
             string currentTime = string.Format("{00:00} {1:00}", hours, minutes);
             TextTimer.text = currentTime;
 
-            if (hours == 9 && minutes == 10)
+            if (hours == 10 && minutes == 00)
             {
                 mouse.SetCursorOn();
                 panel.SetActive(true);
