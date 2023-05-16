@@ -95,13 +95,33 @@ public class Clock : MonoBehaviour
                 if (panel.activeSelf == true)
                 {
                     Time.timeScale = 0f;
+                    QuittinTime.Stop(gameObject);
                 }
+                
             }
 
             else if (hours == 9 && minutes == 00)
             {
                 panel.SetActive(false);
-            } 
+            }
+
+            else if (hours == 16 && minutes == 58)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    QuittinTime.Post(gameObject);
+                    //Debug.Log("QuittinTime");
+                }
+            }
+            else if (hours == 13)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    Midday.Post(gameObject);
+                   // Debug.Log("Midday");
+                }
+            }
+
         }
 
         else if (timeDuration > 11f * 60f)

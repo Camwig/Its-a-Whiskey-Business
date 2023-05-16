@@ -293,7 +293,7 @@ RectTransform:
   m_GameObject: {fileID: 4657446578771335005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 4657446579688033266}
   m_RootOrder: 0
@@ -426,6 +426,10 @@ MonoBehaviour:
   EasyButton: {fileID: 0}
   NormalButton: {fileID: 0}
   MainCursor: {fileID: 0}
+  MouseClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &4657446579119424976
 GameObject:
   m_ObjectHideFlags: 0

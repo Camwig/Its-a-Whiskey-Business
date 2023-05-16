@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class Scroller : MonoBehaviour
 {
     public ScrollRect scrollRect;
-    public float scrollAmount = 10000f; // Adjust the scrolling speed as needed
+    public float scrollAmount = 1000f; // Adjust the scrolling speed as needed
+
+    public AK.Wwise.Event MouseClick;
 
     public void ScrollContentDown1()
     {
         // Scroll the content vertically
         scrollRect.verticalNormalizedPosition -= scrollAmount / scrollRect.content.rect.height;
 
-        Debug.Log(scrollRect.verticalNormalizedPosition);
+        //Debug.Log(scrollRect.verticalNormalizedPosition);
+
+        MouseClick.Post(gameObject);
 
         if (scrollRect.verticalNormalizedPosition < -0.02405182)
         {
@@ -26,7 +30,9 @@ public class Scroller : MonoBehaviour
         // Scroll the content vertically
         scrollRect.verticalNormalizedPosition += scrollAmount / scrollRect.content.rect.height;
 
-        Debug.Log(scrollRect.verticalNormalizedPosition);
+        //Debug.Log(scrollRect.verticalNormalizedPosition);
+
+        MouseClick.Post(gameObject);
 
         if (scrollRect.verticalNormalizedPosition > 0.9970921)
         {

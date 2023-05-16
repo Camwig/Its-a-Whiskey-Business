@@ -1746,7 +1746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -94.400024, y: -0.099975586}
+  m_AnchoredPosition: {x: -105.1, y: -0.099975586}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &217470925
@@ -6536,7 +6536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -37.76001, y: 0}
+  m_AnchoredPosition: {x: -43.4, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &835724495
@@ -6778,7 +6778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843294423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.559998, y: -0.099975586, z: -297.68143}
+  m_LocalPosition: {x: -22.9, y: -0.099975586, z: -297.68143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2072925180}
@@ -7251,6 +7251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 39083491}
+  MouseClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f89fdf36b4f8a6943a03fd1ca49058ce, type: 2}
 --- !u!114 &876374827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9643,7 +9647,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1b3258756fe24724388497d647fb775e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 736b0ba927f82804aaa401df546d93ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9663,7 +9667,7 @@ Transform:
   m_GameObject: {fileID: 1094947694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.236795, y: 1.2705996, z: 297.14755}
-  m_LocalScale: {x: 2.2003403, y: 1.6508893, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1067393322}
   m_RootOrder: 7
@@ -10159,7 +10163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75.8, y: -0.099975586}
+  m_AnchoredPosition: {x: -85.6, y: -0.099975586}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1153419920
@@ -15431,8 +15435,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollRect: {fileID: 1210032092}
   scrollAmount: 1000
-  minScrollPosition: -0.02405182
-  maxScrollPosition: 0.9970921
+  MouseClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f89fdf36b4f8a6943a03fd1ca49058ce, type: 2}
 --- !u!1 &1718644718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5859815611551439562, guid: a3dfdd2945415ab44804ea48617efbfa, type: 3}
@@ -18981,7 +18987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63.91, y: -5.27}
+  m_AnchoredPosition: {x: -74.9, y: -5.27}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2141053336

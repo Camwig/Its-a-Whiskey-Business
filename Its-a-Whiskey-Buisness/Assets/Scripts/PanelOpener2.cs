@@ -8,12 +8,13 @@ public class PanelOpener2 : MonoBehaviour
 
     //  public Animator Flash;
 
-   
 
+    public AK.Wwise.Event MouseClick;
 
     public void OpenPanel()
     {
-       
+
+        MouseClick.Post(gameObject);
 
         if (Panel != null)
         {
@@ -27,6 +28,8 @@ public class PanelOpener2 : MonoBehaviour
 
     public void ClosePanel()
     {
+
+        MouseClick.Post(gameObject);
         Panel.SetActive(false);
 
 
