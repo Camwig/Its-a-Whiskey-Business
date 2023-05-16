@@ -258,6 +258,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneID: 1
+  MouseClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f89fdf36b4f8a6943a03fd1ca49058ce, type: 2}
 --- !u!114 &552693094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,6 +853,7 @@ GameObject:
   - component: {fileID: 1086261548}
   - component: {fileID: 1086261552}
   - component: {fileID: 1086261553}
+  - component: {fileID: 1086261554}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -974,6 +979,35 @@ MonoBehaviour:
   mody: {fileID: 0}
   EasyButton: {fileID: 1589821263}
   NormalButton: {fileID: 970478454}
+  MainCursor: {fileID: 0}
+  MouseClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f89fdf36b4f8a6943a03fd1ca49058ce, type: 2}
+--- !u!114 &1086261554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086261547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43d706b4170324589f22e77d63abc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ea8e4b9122f0544697f7f4afd697958, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1221807985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,6 +1927,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneID: 5
+  MouseClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f89fdf36b4f8a6943a03fd1ca49058ce, type: 2}
 --- !u!114 &1981655470
 MonoBehaviour:
   m_ObjectHideFlags: 0

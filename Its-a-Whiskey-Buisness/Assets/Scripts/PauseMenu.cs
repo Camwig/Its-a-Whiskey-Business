@@ -19,11 +19,14 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject MainCursor;
 
+    public AK.Wwise.Event MouseClick;
+
 
     public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        MouseClick.Post(gameObject);
     }
 
     public void Resume()
@@ -38,17 +41,21 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1.0f;
         }
 
+        MouseClick.Post(gameObject);
+
     }
 
     public void Home(int SceneID)
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneID);
+        MouseClick.Post(gameObject);
     }
 
     public void Quit()
     {
         Application.Quit();
+        MouseClick.Post(gameObject);
     }
 
     public void Slow()
@@ -56,6 +63,7 @@ public class PauseMenu : MonoBehaviour
         if (EasyButton.GetComponent<Button>() == true)
         {
             easyOrNo = true;
+            MouseClick.Post(gameObject);
         }
     }
 
@@ -64,11 +72,13 @@ public class PauseMenu : MonoBehaviour
         if (NormalButton.GetComponent<Button>() == true)
         {
             easyOrNo = false;
+            MouseClick.Post(gameObject);
         }
     }
 
     public void Retry()
     {
+
         if (easyOrNo == true)
         {
             Time.timeScale = 0.5f;
@@ -77,6 +87,8 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
+
+        MouseClick.Post(gameObject);
     }
 
     public void ChangeCursor()

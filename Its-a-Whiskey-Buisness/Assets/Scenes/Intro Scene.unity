@@ -1279,6 +1279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneID: 3
+  MouseClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f89fdf36b4f8a6943a03fd1ca49058ce, type: 2}
 --- !u!114 &1129855554
 MonoBehaviour:
   m_ObjectHideFlags: 0
