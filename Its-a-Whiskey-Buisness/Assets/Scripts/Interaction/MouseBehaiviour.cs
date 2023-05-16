@@ -35,6 +35,7 @@ public class MouseBehaiviour : MonoBehaviour
     private bool NoLongerHovering;
 
     //TExture 2D for the mouse cursor
+    [SerializeField]
     public Texture2D mouseArrow;
 
     // Start is called before the first frame update
