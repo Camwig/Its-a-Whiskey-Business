@@ -8,13 +8,27 @@ public class PanelOpener2 : MonoBehaviour
 
     //  public Animator Flash;
 
+   
+
+
     public void OpenPanel()
     {
-      if (Panel != null)
-            {
+       
+
+        if (Panel != null)
+        {
             bool isActive = Panel.activeSelf;
+
             Panel.SetActive(!isActive);
-            }
+        }
+
     }
 
+
+    public void ClosePanel()
+    {
+        Panel.SetActive(false);
+
+
+    }
 }
