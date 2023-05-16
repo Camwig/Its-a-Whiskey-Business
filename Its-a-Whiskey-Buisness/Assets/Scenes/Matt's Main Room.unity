@@ -9175,7 +9175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000042534222, y: 0.0009813549}
+  m_AnchoredPosition: {x: -0.019900264, y: 0.0009813549}
   m_SizeDelta: {x: 1255.4, y: 650.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068714274
@@ -11156,10 +11156,10 @@ MonoBehaviour:
   m_Horizontal: 1
   m_Vertical: 1
   m_MovementType: 1
-  m_Elasticity: 1.87
+  m_Elasticity: 16.03
   m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_DecelerationRate: 0.95
+  m_ScrollSensitivity: 5
   m_Viewport: {fileID: 802385024}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -15295,7 +15295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollRect: {fileID: 1210032092}
-  scrollAmount: 100
+  scrollAmount: 1000
 --- !u!1 &1718644718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5859815611551439562, guid: a3dfdd2945415ab44804ea48617efbfa, type: 3}

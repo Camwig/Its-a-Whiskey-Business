@@ -12,11 +12,25 @@ public class Scroller : MonoBehaviour
     {
         // Scroll the content vertically
         scrollRect.verticalNormalizedPosition -= scrollAmount / scrollRect.content.rect.height;
+
+        Debug.Log(scrollRect.verticalNormalizedPosition);
+
+        if (scrollRect.verticalNormalizedPosition <= -0.02405182)
+        {
+            scrollRect.verticalNormalizedPosition
+        }
     }
 
     public void ScrollContentUp1()
     {
         // Scroll the content vertically
         scrollRect.verticalNormalizedPosition += scrollAmount / scrollRect.content.rect.height;
+
+        Debug.Log(scrollRect.verticalNormalizedPosition);
+
+        if (scrollRect.verticalNormalizedPosition >= 0.9970921)
+        {
+            
+        }
     }
 }
