@@ -15,9 +15,9 @@ public class Scroller : MonoBehaviour
 
         Debug.Log(scrollRect.verticalNormalizedPosition);
 
-        if (scrollRect.verticalNormalizedPosition <= -0.02405182)
+        if (scrollRect.verticalNormalizedPosition < -0.02405182)
         {
-            scrollRect.verticalNormalizedPosition
+            scrollRect.verticalNormalizedPosition += scrollAmount / scrollRect.content.rect.height;
         }
     }
 
@@ -28,9 +28,9 @@ public class Scroller : MonoBehaviour
 
         Debug.Log(scrollRect.verticalNormalizedPosition);
 
-        if (scrollRect.verticalNormalizedPosition >= 0.9970921)
+        if (scrollRect.verticalNormalizedPosition > 0.9970921)
         {
-            
+            scrollRect.verticalNormalizedPosition -= scrollAmount / scrollRect.content.rect.height;
         }
     }
 }
