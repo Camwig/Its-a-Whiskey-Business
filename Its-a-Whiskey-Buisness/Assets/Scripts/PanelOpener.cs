@@ -8,6 +8,8 @@ public class PanelOpener : MonoBehaviour
 
     public AK.Wwise.Event Mouseclick;
 
+    public GameObject button;
+
     public void OpenPanel()
     {
         Mouseclick.Post(gameObject);
@@ -21,9 +23,27 @@ public class PanelOpener : MonoBehaviour
 
     }
 
+    public void OpenPanel2()
+    {
+        Mouseclick.Post(gameObject);
+
+        if (Panel != null)
+        {
+            bool isActive = Panel.activeSelf;
+
+            Panel.SetActive(!isActive);
+
+            button.SetActive(false);
+        }
+
+    }
+
+
     public void ClosePanel()
     {
         Panel.SetActive(false);
+
+        button.SetActive(true);
 
     }
 

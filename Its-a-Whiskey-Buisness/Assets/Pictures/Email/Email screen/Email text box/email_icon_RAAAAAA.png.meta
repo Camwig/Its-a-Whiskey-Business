@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: ac9334d779cd41c488e5b7c91581ecba
+guid: 983384767730c99458f524fac91d523e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5831715625679133175
-    second: white text highlight box to replace from subjectd date, if u dont wanna
-      use it_0
+      213: -9179827007721753129
+    second: email_icon_RAAAAAA_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -83,14 +82,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: white text highlight box to replace from subjectd date, if u dont wanna
-        use it_0
+      name: email_icon_RAAAAAA_0
       rect:
         serializedVersion: 2
-        x: 579
-        y: 1501
-        width: 1828
-        height: 80
+        x: 151
+        y: 1910
+        width: 101
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -98,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 906ec444985911fa0800000000000000
-      internalID: -5831715625679133175
+      spriteID: 7d5353929f3ba9080800000000000000
+      internalID: -9179827007721753129
       vertices: []
       indices: 
       edges: []
