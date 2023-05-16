@@ -57,7 +57,7 @@ public class ActivatingLayers : MonoBehaviour
         Room2.SetActive(false);
         Room3.SetActive(false);
         Room4.SetActive(false);
-        Email.SetActive(true);
+        Email.SetActive(false);
     }
 
     public void Reset()
