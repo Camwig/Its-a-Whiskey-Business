@@ -25,7 +25,7 @@ public class PanelOpener : MonoBehaviour
 
     public void OpenPanel2()
     {
-        Mouseclick.Post(gameObject);
+        //Mouseclick.Post(gameObject);
 
         if (Panel != null)
         {
