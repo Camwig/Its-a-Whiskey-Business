@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: Medium
 --- !u!222 &17448984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: Medium
 --- !u!222 &37069964
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 500
+  m_Text: Fast
 --- !u!222 &68903009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2775,7 +2775,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rate of production
+  m_Text: Charge Rate
 --- !u!222 &317717360
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4071,7 +4071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: Slow
 --- !u!222 &521883153
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5670,7 +5670,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000
+  m_Text: Fast
 --- !u!222 &770517682
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6175,8 +6175,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.52, y: 2.68}
-  m_SizeDelta: {x: 18.3, y: 1}
+  m_AnchoredPosition: {x: 0.52, y: 2.61}
+  m_SizeDelta: {x: 18.2769, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802385026
 MonoBehaviour:
@@ -9309,7 +9309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.019900264, y: 0.0009813549}
+  m_AnchoredPosition: {x: -0.08342592, y: 0.0009813549}
   m_SizeDelta: {x: 1255.4, y: 650.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068714274
@@ -9334,22 +9334,23 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Dear valued employee,\r\n\nPlease find below your tasks for your probationary
     shift. \r\nWe hope you do not disappoint.\r\n\nRegards, \r\nMr Graggle\n\r\nMill
-    Room\r\n1.Run the Mill at Slow from 09:10 to 10:15.\r\n2.Then change to Fast
-    from 10:25 to 12:45.\r\n3.Finally, run the Mill at Medium from 14:05 to 16:00.\r\nMash
-    Tun\r\n1.Set the Water Temperature in the Mash Tun to 50\xB0 from 09:30 to 11:30.\r\n2.Then
-    from 11:30 to 14:10, increase the Water Temperature to 75\xB0 and the Rake Speed
-    to Medium.\r\n3.From 14:10 - 15:00 increase the Rake Speed to Fast and the Water
-    Temperature to 100\xB0.\r\n4.From 15:10 to 16:30 decrease the Water Temperature
-    to 50\xB0 and maintain the Rake Speed at fast.\r\n\r\nWashbacks\r\n1.From 10:00
+    Room - Top Left\n1.Run the Mill at Slow from 09:10 to 10:15.\r\n2.Then change
+    to Fast from 10:25 to 12:45.\r\n3.Finally, run the Mill at Medium from 14:05
+    to 16:00.\r\n\nMash Tun\r                    -  Bottom Left\n1.Set the Water
+    Temperature in the Mash Tun to 50\xB0 from 09:30 to 11:30.\r\n2.Then from 11:30
+    to 14:10, increase the Water Temperature to 75\xB0 and the Rake Speed to Medium.\r\n3.From
+    14:10 - 15:00 increase the Rake Speed to Fast and the Water Temperature to 100\xB0.\r\n4.From
+    15:10 to 16:30 decrease the Water Temperature to 50\xB0 and maintain the Rake
+    Speed at fast.\r\n\r\nWashbacks\r                       - Top Right\n1.From 10:00
     to 11:30 set the Agitator Speed in the Washbacks to Fast.\r\n2.From 12:40 to
-    14:15, again set the Agitator Speed set the Temperature to 30\xB0.\r\n3.From
-    14:25 to 16:40, set the Agitator Speed to slow and set the Temperature to 40\xB0.
-    \r\n\r\nStillhouse\r\n1.In the Stillhouse, from 11:45 to 12:50, set the Charge
-    Rate to Slow and the Still Temperature to 50\xB0.\r\n2.From 12:50 till 14:50,
-    set the Charge Rate to Medium and the Still Temperature to 75\xB0.\r\n3.From
-    14:50 till 15:30, set the Charge Rate to Fast maintain the Still Temperature
-    at 75\xB0.\r\n4.From 15:30 till 16:57, set the Charge Rate to Slow and the Still
-    Temperature to 100\xB0."
+    14:15, again set the Agitator Speed set the Temperature to 60\xB0.\r\n3.From
+    14:25 to 16:40, set the Agitator Speed to slow and set the Temperature to 180\xB0.
+    \r\n\r\nStillhouse\r                     - Bottom Right\n1.In the Stillhouse,
+    from 11:45 to 12:50, set the Charge Rate to Slow and the Still Temperature to
+    50\xB0.\r\n2.From 12:50 till 14:50, set the Charge Rate to Medium and the Still
+    Temperature to 75\xB0.\r\n3.From 14:50 till 15:30, set the Charge Rate to Fast
+    maintain the Still Temperature at 75\xB0.\r\n4.From 15:30 till 16:57, set the
+    Charge Rate to Slow and the Still Temperature to 100\xB0."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -9737,7 +9738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rate of energy production
+  m_Text: Agitator Speed
 --- !u!222 &1103584750
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10107,7 +10108,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rate of energy
+  m_Text: Mill Speed
 --- !u!222 &1138625104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11137,7 +11138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12, y: 34}
+  m_AnchoredPosition: {x: 12, y: 29.700012}
   m_SizeDelta: {x: -662.98, y: -223.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1193199731
@@ -12090,7 +12091,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: Slow
 --- !u!222 &1363190381
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13350,7 +13351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1521162841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13651,7 +13652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000
+  m_Text: High
 --- !u!222 &1539403898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14879,7 +14880,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000
+  m_Text: Fast
 --- !u!222 &1639775475
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15274,7 +15275,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: Medium
 --- !u!222 &1694804155
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17605,7 +17606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: Slow
 --- !u!222 &1883221600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18935,7 +18936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: Slow
 --- !u!222 &2127151256
 CanvasRenderer:
   m_ObjectHideFlags: 0
