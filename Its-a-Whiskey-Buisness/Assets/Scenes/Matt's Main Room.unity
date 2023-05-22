@@ -3014,6 +3014,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2217441519385222794, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
   m_PrefabInstance: {fileID: 1477070669}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &661833239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661833238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fef35946cd52c428571ce6d006c585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 661833242}
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!212 &661833242 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1142629036161920178, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+  m_PrefabInstance: {fileID: 1477070669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &664560885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6523,6 +6542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1140160511}
+  - component: {fileID: 1140160512}
   m_Layer: 0
   m_Name: Room3
   m_TagString: Untagged
@@ -6560,6 +6580,20 @@ RectTransform:
   m_AnchoredPosition: {x: -75.8, y: -0.099975586}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1140160512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140160510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fef35946cd52c428571ce6d006c585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  highlightColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1161004238
 GameObject:
   m_ObjectHideFlags: 0
@@ -6796,7 +6830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c43c39106cd6646a0ccccb541c45e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 0.14285529, g: 1, b: 0, a: 0.3254902}
+  highlightColor: {r: 0.9245283, g: 0.8242257, b: 0.8242257, a: 0.3254902}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1164250919
 MonoBehaviour:
@@ -7488,6 +7522,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2217441519385222794, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
   m_PrefabInstance: {fileID: 1979134520}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1332605377 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1142629036161920178, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+  m_PrefabInstance: {fileID: 1979134520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1332605379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332605374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fef35946cd52c428571ce6d006c585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1332605377}
+  highlightColor: {r: 0, g: 0.22824574, b: 1, a: 1}
 --- !u!114 &1340050532 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
@@ -7919,7 +7972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c43c39106cd6646a0ccccb541c45e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 0.14285529, g: 1, b: 0, a: 0.3254902}
+  highlightColor: {r: 0.9245283, g: 0.8242257, b: 0.8242257, a: 0.3254902}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1437009921
 MonoBehaviour:
@@ -8227,12 +8280,32 @@ PrefabInstance:
       value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 1142629036161920178, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142629036161920178, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 555
       objectReference: {fileID: 0}
     - target: {fileID: 1142629036161920178, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.63190675
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.044075
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.6287699
       objectReference: {fileID: 0}
     - target: {fileID: 4089512506592267610, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: m_Size.x
@@ -8309,6 +8382,10 @@ PrefabInstance:
     - target: {fileID: 7774982586792016292, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: m_Name
       value: LeverObject Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878058543997332751, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8047417593692586231, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: Room_num
@@ -8978,7 +9055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c43c39106cd6646a0ccccb541c45e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 0.14285529, g: 1, b: 0, a: 0.3254902}
+  highlightColor: {r: 0.9245283, g: 0.8242257, b: 0.8242257, a: 0.3254902}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1587661510
 MonoBehaviour:
@@ -10454,7 +10531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c43c39106cd6646a0ccccb541c45e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 0.14285529, g: 1, b: 0, a: 0.3254902}
+  highlightColor: {r: 0.9245283, g: 0.8242257, b: 0.8242257, a: 0.3254902}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1806202808
 MonoBehaviour:
@@ -11963,6 +12040,22 @@ PrefabInstance:
     - target: {fileID: 1142629036161920178, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_Pivot.x
+      value: -5.0327797
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.43106303
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -155.82857
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138898793472827114, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.78305817
       objectReference: {fileID: 0}
     - target: {fileID: 4089512506592267610, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: m_Size.x
