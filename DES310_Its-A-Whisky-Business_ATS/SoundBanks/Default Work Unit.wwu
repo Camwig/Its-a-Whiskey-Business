@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DE8309F6-19E8-4F7A-BD8D-151EAFCDEF70}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{DE8309F6-19E8-4F7A-BD8D-151EAFCDEF70}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="New Virtual Folder" ID="{E2082386-F44C-47A3-8101-706ECD7CF3D8}" ShortID="580181082"/>
+				<SoundBank Name="Main" ID="{794AF93B-A4C5-4B68-A314-C8C704D59AA9}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Ambience_FermentationRoom" ID="{B0252252-D3B2-4169-BD45-39D7EC2EAFBE}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_StillRoom" ID="{FC5F579C-8773-45C6-B281-07DDBE65105E}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Ambience_MillRoom" ID="{82B276B9-AD02-46CD-B34B-CB54B20DD122}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Ambience_StillRoom" ID="{DAE0BE8E-4EC1-46DF-A28A-60BD5FA3376A}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_MashRoom" ID="{20AA8242-AB97-47C7-9748-264D61C97983}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Ambience_MashRoom" ID="{EF850009-C4E3-48D1-B2D3-9594DD0622F4}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Ambience_FermentationRoom" ID="{BFF7899A-7FFA-4960-8C30-44A6D140D09A}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_MillRoom" ID="{CE6B74F9-9895-4A99-B90A-AA229499ECF9}" WorkUnitID="{808E46A0-5DD3-428D-9EE0-DC9ED3DE5809}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

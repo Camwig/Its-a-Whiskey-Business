@@ -3,96 +3,101 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+//Cameron Wiggan
 public class SliderInteractable : MonoBehaviour
 {
-    //Need to make sure it only moves along the y-axis
-    //Limit it on the y-axis
-
+    //Position of the mouse
     private Vector3 mousePosition;
+    //Original position of the slider
     private float OriginPos;
-    //private Collider2D targetObject;
-    //private Vector3 offset;
+    //Boolean to track if its being held
     private bool is_being_held = false;
-    // private float startpos_x;
+    //New position in the y position
     private float newpos_y;
-    //public GameObject selectedObject;
 
+    //enumerator state for the slider
     private enum slide_state {Down,Up,Down_active,Up_active,None};
+    //Current state for the slider
     private slide_state curr_state;
 
-    public ObjectPositioing these_objects;
-
+    //Room number that this object resides in
     [SerializeField]
-    private SliderState slider_state_;
+    public int Room_num;
 
+    //Object attached to this script
+    [SerializeField]
     public GameObject selectedObject;
 
-    //private bool on_off;
-    private bool on_off2;
-
+    //Event to for the changing of values
     [Header("Events")]
-
     public EventSytem onSliderActivate;
+
+    //Boolean to let the script no when it can play a sound clip
+    //As it would play on boot up if not
+    private bool CanPlay;
 
     private void Start()
     {
+        //Sets the origin positon of the object to the sliders initial y position
         OriginPos = selectedObject.gameObject.transform.localPosition.y;
 
-        //EventSytem new_event = new EventSytem();
-        //Need to load it as a script asset
-        //onSliderActivate = (EventSytem)Resources.Load("Assets/Scenes/Data/Events/ProductRateRaised.asset");
-        //onSliderActivate = Resources.Load<EventSytem>("ProductRateRaised");
-        //if (onSliderActivate == null)
-        //{
-        //    int i = 0;
-        //}
+        //Set can play to false
+        CanPlay = false;
+    }
 
-        if(slider_state_.StateProperty == false)
-        {
-            //curr_state = slide_state.Up_active;
-            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
-        }
-        
-        if(slider_state_.StateProperty == true)
-        {
-            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
-        }
-
+    private void OnEnable()
+    {
+        //Sets the current state to none
         curr_state = slide_state.None;
-        //EventSytem.CreateInstance("Room Activate.asset");
-        //AssetDatabase.CreateAsset(new_event, "Assets/Scenes/Data/Events/MyEvent");
     }
 
     // Update is called once per frame
     void Update()
-    /*This works by setting the Selected Object reference to the parent object of the Collider 
-     * that’s under the mouse whenever the left mouse button is pressed down.*/
     {
+        //Sets the mouse position in refrence to the screen space
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
+        //checks if the object is being held onto by the mouse
         if (is_being_held == true)
         {
+            //Sets the object attached to this script position based on the y position of the mouse
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
+            //Sets this boolean to true to let it know it can play sound
+            CanPlay = true;
         }
-
+        else
+        {
+            //Sets this boolean to false to let it know it cant play sound
+            CanPlay = false;
+        }
+        //Checks if the slider object is within a certain range
         if(selectedObject.gameObject.transform.localPosition.y < OriginPos && selectedObject.gameObject.transform.localPosition.y > OriginPos - 1.5f)
         {
+            //Sets the current state to none
             curr_state = slide_state.None;
         }
 
+        //If the selected object is above the original y position or equal to it
         if(selectedObject.gameObject.transform.localPosition.y >= OriginPos)
         {
+            //sets the selected object to the origin position
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
+            //If there is no current state
             if (curr_state == slide_state.None)
             {
+                //set ths current state to up
                 curr_state = slide_state.Up;
             }
         }
 
+        //if the selected object is below the orginal position minus an amount
         if (selectedObject.gameObject.transform.localPosition.y <= OriginPos - 1.5f)
         {
+            //set the selected objects position to that of the minimum
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
+            //If there is no current state
             if (curr_state == slide_state.None)
             {
+                //Sets the current state to down
                 curr_state = slide_state.Down;
             }
         }
@@ -102,38 +107,44 @@ public class SliderInteractable : MonoBehaviour
 
     private void CheckState()
     {
+        //checks the current state
         if(curr_state == slide_state.Up)
         {
+            //raise the event with the approriate value
             onSliderActivate.Raise(this, false);
-            on_off2 = false;
+            //Set the currnt state to active
             curr_state = slide_state.Up_active;
+
+            //if it can play sound play it
+            if (CanPlay == true)
+            {
+                //Audio!
+            }
         }
-        else if(curr_state == slide_state.Down)
+        
+        if(curr_state == slide_state.Down)
         {
             onSliderActivate.Raise(this, true);
-            on_off2 = true;
             curr_state = slide_state.Down_active;
+
+            if (CanPlay == true)
+            {
+                //Audio!
+            }
         }
     }
 
     private void OnMouseDown()
     {
-        //startpos_x = mousePosition.x - selectedObject.transform.localPosition.x;
+        //Sets the new position in the y to that of the y position of the mouse minus the objects
         newpos_y = mousePosition.y - selectedObject.transform.localPosition.y;
-
+        //Sets being held to true
         is_being_held = true;
     }
 
     private void OnMouseUp()
     {
+        //Sets being held to false
         is_being_held = false;
-    }
-
-    private void OnDestroy()
-    {
-        //these_objects.gameObjects[1].transform.position = new Vector3(selectedObject.transform.position.x, OriginPos, 0);
-        //these_objects.gameObjects[1].transform.position = selectedObject.transform.position;
-        slider_state_.StateProperty = on_off2;
-        //these_objects.gameObjects[1].transform.rotation = this.transform.rotation;
     }
 }

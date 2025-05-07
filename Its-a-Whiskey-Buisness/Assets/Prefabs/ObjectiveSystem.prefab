@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9189157001430265337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9189157001430265223}
+  - component: {fileID: 9189157001430265222}
+  m_Layer: 0
+  m_Name: ObjectiveSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9189157001430265223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189157001430265337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.3422122, y: -1.8724563, z: -72.71897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9189157001430265222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189157001430265337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b139d0e127218f646a6cc99b8f7f8a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EasyMode: {fileID: 0}
+  NormalMode: {fileID: 0}
+  Objectives:
+  - {fileID: 11400000, guid: b5929ae67e2b8ba48a9acb9bd623db98, type: 2}
+  - {fileID: 11400000, guid: 3f907385559e97b4c95e98f9cf4f2070, type: 2}
+  - {fileID: 11400000, guid: e4a72b4fc35bd334099b8525c3b8dee7, type: 2}
+  - {fileID: 11400000, guid: 6680e6e22d78c664b929323810a6b4b8, type: 2}
+  - {fileID: 11400000, guid: bb2e04e903f240b48b030997b45146e1, type: 2}
+  - {fileID: 11400000, guid: c9bb793bc05949549996c30c7c479c2f, type: 2}
+  - {fileID: 11400000, guid: cb630f13315896d408bf20dcdbf5ea89, type: 2}
+  - {fileID: 11400000, guid: e3e75b1aa76575144a3d7d8177f44ca8, type: 2}
+  - {fileID: 11400000, guid: c2eb8605488c4b843ad4d3f01b9dbd60, type: 2}
+  - {fileID: 11400000, guid: fec16c68c4eb2794eabdb0cb3f25f0ef, type: 2}
+  - {fileID: 11400000, guid: ed939e039d09de34f9a3e037e24b65dd, type: 2}
+  - {fileID: 11400000, guid: 52673f0c1abf50e48b1857247126d44c, type: 2}
+  - {fileID: 11400000, guid: b56d965b87fe18b4f9081c7123498c93, type: 2}
+  - {fileID: 11400000, guid: 7be2847c1da975945961c2f3b88ce1bc, type: 2}
+  EnergyTrackers:
+  - {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
+  - {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
+  - {fileID: 11400000, guid: cb1c73966a806fe4a98236a59bdc9a30, type: 2}
+  - {fileID: 11400000, guid: a828cc457e28ba342840d7fd4d8386b0, type: 2}
+  OverheadTracker: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
+  this_clock: {fileID: 0}
+  textElement: {fileID: 0}
+  ObjectiveStop: 
+  Times: 0
+  modes: {fileID: 0}

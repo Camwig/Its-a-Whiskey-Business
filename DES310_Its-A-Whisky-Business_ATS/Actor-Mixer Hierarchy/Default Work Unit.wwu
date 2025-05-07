@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F7D534B0-0468-4850-84EA-B6B6412A075E}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{F7D534B0-0468-4850-84EA-B6B6412A075E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Ambience" ID="{13BC6A54-062D-4FF3-80ED-CBFC3829EA11}" ShortID="197038184">
+					<ChildrenList>
+						<Sound Name="Ambience_StillRoom" ID="{4B5264F5-5C5C-4FFA-9FBD-598CA082175F}" ShortID="7262546">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>56</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>35</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B2916F9-C739-4771-B7AE-FAD7D0DE8BC7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BCD4AC-B819-48E6-BA7E-B0A8DBCDD638}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience_StillRoom" ID="{00902DFB-0E30-4E70-9EDA-087ED502F2C0}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience_StillRoom.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="127365473"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience_StillRoom" ID="{00902DFB-0E30-4E70-9EDA-087ED502F2C0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambience_FermentationRoom" ID="{0BEDCCEA-C967-447D-B0DD-EB4D7EE89C45}" ShortID="285667178">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B2916F9-C739-4771-B7AE-FAD7D0DE8BC7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BCD4AC-B819-48E6-BA7E-B0A8DBCDD638}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience_FermentationRoom" ID="{3E6DCAF8-AAD8-40D8-9044-37EAB928B114}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience_FermentationRoom.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="342192304"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience_FermentationRoom" ID="{3E6DCAF8-AAD8-40D8-9044-37EAB928B114}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambience_MashRoom" ID="{2D54818D-FE4E-4B40-A153-FC4B6C48E7CB}" ShortID="1070200207">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B2916F9-C739-4771-B7AE-FAD7D0DE8BC7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BCD4AC-B819-48E6-BA7E-B0A8DBCDD638}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience_MashRoom" ID="{C96703E2-90C2-453E-9783-68682E34E8C3}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience_MashRoom.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="915800556"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience_MashRoom" ID="{C96703E2-90C2-453E-9783-68682E34E8C3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambience_MillRoom" ID="{92D09A6E-7078-4DC4-B79E-021C4533506D}" ShortID="453274202">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1B2916F9-C739-4771-B7AE-FAD7D0DE8BC7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BCD4AC-B819-48E6-BA7E-B0A8DBCDD638}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience_MillRoom" ID="{AAA7CC92-581C-4DF2-89CD-FAA777A33338}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience_MillRoom.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="160271719"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience_MillRoom" ID="{AAA7CC92-581C-4DF2-89CD-FAA777A33338}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
